@@ -1,0 +1,12 @@
+LegoMännchen vom Mayr Thomas Übungsrunde01
+
+Modeliertes Legomännchen:
+
+Kopf und Arme bestehen aus Nurbs rest aus Polygonen
+im Outliner wurde alles benannt und ich glaube man kann sich dadruch sehr leicht zurechtfinden.
+
+email: e0825331@mail.student.tuwien.ac.at
+
+
+Mein Teammitglieder haben alle selber ein Objekt gemacht (Marlis Streicher, Mark Ormos, Phillip Mayer)
+
