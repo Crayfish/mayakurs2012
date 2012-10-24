@@ -1,0 +1,4 @@
+ - die richtung der normalvektoren wurde bereits nach "innen" gedreht.
+ - der skydome kann ggf ein bisschen "tiefer" als (0,0,0) in die szene gegeben werden um auch einen größeren sichtbereich nach unten abzudecken.
+
+greetz!
