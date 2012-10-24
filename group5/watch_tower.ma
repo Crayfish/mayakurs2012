@@ -1,6 +1,6 @@
 //Maya ASCII 2013 scene
 //Name: watch_tower.ma
-//Last modified: Wed, Oct 24, 2012 12:39:23 PM
+//Last modified: Wed, Oct 24, 2012 01:09:02 PM
 //Codeset: UTF-8
 requires maya "2013";
 currentUnit -l centimeter -a degree -t film;
@@ -12,14 +12,14 @@ fileInfo "osv" "Mac OS X 10.8.2";
 fileInfo "license" "student";
 createNode transform -s -n "persp";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 1373.4866886332065 906.31333498796459 -804.89164197482114 ;
-	setAttr ".r" -type "double3" -18.938352730003444 122.19999999998375 0 ;
+	setAttr ".t" -type "double3" 1775.3105669112099 1479.7917972718096 -1584.8928479331307 ;
+	setAttr ".r" -type "double3" -25.538352729999421 133.79999999997676 0 ;
 	setAttr ".rp" -type "double3" 0 -5.6843418860808015e-14 0 ;
 	setAttr ".rpt" -type "double3" -3.2110597322963084e-15 -5.5137372934293926e-16 -5.2456828603001536e-15 ;
 createNode camera -s -n "perspShape" -p "persp";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999979;
-	setAttr ".coi" 1497.7093817696118;
+	setAttr ".coi" 2457.7214177772994;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -46,7 +46,7 @@ createNode camera -s -n "frontShape" -p "front";
 	setAttr -k off ".v" no;
 	setAttr ".rnd" no;
 	setAttr ".coi" 100.1;
-	setAttr ".ow" 204.69072051002846;
+	setAttr ".ow" 204.69072051002848;
 	setAttr ".imn" -type "string" "front";
 	setAttr ".den" -type "string" "front_depth";
 	setAttr ".man" -type "string" "front_mask";
@@ -5090,10 +5090,11 @@ createNode mesh -n "post_railShape" -p "post_rail";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-createNode transform -n "pCube1";
-	setAttr ".t" -type "double3" 0 630 110 ;
-	setAttr ".r" -type "double3" 0 0 45 ;
-createNode mesh -n "pCubeShape1" -p "pCube1";
+createNode transform -n "strut_left_1" -p "watch_tower";
+	setAttr ".t" -type "double3" 0 63 11 ;
+	setAttr ".r" -type "double3" 0 0 45.000000000000014 ;
+	setAttr ".s" -type "double3" 0.1 0.1 0.1 ;
+createNode mesh -n "strut_left_Shape1" -p "strut_left_1";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
@@ -5102,45 +5103,11 @@ createNode mesh -n "pCubeShape1" -p "pCube1";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-createNode transform -n "pCube2";
-	setAttr ".t" -type "double3" 0 630 -110 ;
-	setAttr ".r" -type "double3" 0 0 45 ;
-createNode mesh -n "pCubeShape2" -p "pCube2";
-	setAttr -k off ".v";
-	setAttr ".vir" yes;
-	setAttr ".vif" yes;
-	setAttr ".uvst[0].uvsn" -type "string" "map1";
-	setAttr -s 14 ".uvst[0].uvsp[0:13]" -type "float2" 0.375 0 0.625 0 0.375
-		 0.25 0.625 0.25 0.375 0.5 0.625 0.5 0.375 0.75 0.625 0.75 0.375 1 0.625 1 0.875 0
-		 0.875 0.25 0.125 0 0.125 0.25;
-	setAttr ".cuvs" -type "string" "map1";
-	setAttr ".dcc" -type "string" "Ambient+Diffuse";
-	setAttr ".covm[0]"  0 1 1;
-	setAttr ".cdvm[0]"  0 1 1;
-	setAttr -s 8 ".vt[0:7]"  -150 -5 1 150 -5 1 -150 5 1 150 5 1 -150 5 -1
-		 150 5 -1 -150 -5 -1 150 -5 -1;
-	setAttr -s 12 ".ed[0:11]"  0 1 0 2 3 0 4 5 0 6 7 0 0 2 0 1 3 0 2 4 0
-		 3 5 0 4 6 0 5 7 0 6 0 0 7 1 0;
-	setAttr -s 6 -ch 24 ".fc[0:5]" -type "polyFaces" 
-		f 4 0 5 -2 -5
-		mu 0 4 0 1 3 2
-		f 4 1 7 -3 -7
-		mu 0 4 2 3 5 4
-		f 4 2 9 -4 -9
-		mu 0 4 4 5 7 6
-		f 4 3 11 -1 -11
-		mu 0 4 6 7 9 8
-		f 4 -12 -10 -8 -6
-		mu 0 4 1 10 11 3
-		f 4 10 4 6 8
-		mu 0 4 12 0 2 13;
-	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
-	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
-	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-createNode transform -n "pCube3";
-	setAttr ".t" -type "double3" 0 410 -110 ;
-	setAttr ".r" -type "double3" 0 0 -45 ;
-createNode mesh -n "pCubeShape3" -p "pCube3";
+createNode transform -n "strut_right_1" -p "watch_tower";
+	setAttr ".t" -type "double3" 0 63 -11 ;
+	setAttr ".r" -type "double3" 0 0 45.000000000000014 ;
+	setAttr ".s" -type "double3" 0.1 0.1 0.1 ;
+createNode mesh -n "strut_right_Shape1" -p "strut_right_1";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
@@ -5172,10 +5139,11 @@ createNode mesh -n "pCubeShape3" -p "pCube3";
 	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-createNode transform -n "pCube4";
-	setAttr ".t" -type "double3" 0 190 -110 ;
-	setAttr ".r" -type "double3" 0 0 45 ;
-createNode mesh -n "pCubeShape4" -p "pCube4";
+createNode transform -n "strut_right_2" -p "watch_tower";
+	setAttr ".t" -type "double3" 0 41 -11 ;
+	setAttr ".r" -type "double3" 0 0 -45.000000000000014 ;
+	setAttr ".s" -type "double3" 0.1 0.1 0.1 ;
+createNode mesh -n "strut_right_Shape2" -p "strut_right_2";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
@@ -5207,10 +5175,11 @@ createNode mesh -n "pCubeShape4" -p "pCube4";
 	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-createNode transform -n "pCube5";
-	setAttr ".t" -type "double3" 0 190 110 ;
-	setAttr ".r" -type "double3" 0 0 45 ;
-createNode mesh -n "pCubeShape5" -p "pCube5";
+createNode transform -n "strut_right_3" -p "watch_tower";
+	setAttr ".t" -type "double3" 0 19 -11 ;
+	setAttr ".r" -type "double3" 0 0 45.000000000000014 ;
+	setAttr ".s" -type "double3" 0.1 0.1 0.1 ;
+createNode mesh -n "strut_right_Shape3" -p "strut_right_3";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
@@ -5242,10 +5211,11 @@ createNode mesh -n "pCubeShape5" -p "pCube5";
 	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-createNode transform -n "pCube6";
-	setAttr ".t" -type "double3" 0 410 110 ;
-	setAttr ".r" -type "double3" 0 0 -45 ;
-createNode mesh -n "pCubeShape6" -p "pCube6";
+createNode transform -n "strut_left_3" -p "watch_tower";
+	setAttr ".t" -type "double3" 0 19 11 ;
+	setAttr ".r" -type "double3" 0 0 45.000000000000014 ;
+	setAttr ".s" -type "double3" 0.1 0.1 0.1 ;
+createNode mesh -n "strut_left_Shape3" -p "strut_left_3";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
@@ -5277,11 +5247,11 @@ createNode mesh -n "pCubeShape6" -p "pCube6";
 	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-createNode transform -n "pCube7";
-	setAttr ".t" -type "double3" -110 630 0 ;
-	setAttr ".r" -type "double3" 90 45 90 ;
-	setAttr ".s" -type "double3" -1 1 1 ;
-createNode mesh -n "pCubeShape7" -p "pCube7";
+createNode transform -n "strut_left_2" -p "watch_tower";
+	setAttr ".t" -type "double3" 0 41 11 ;
+	setAttr ".r" -type "double3" 0 0 -45.000000000000014 ;
+	setAttr ".s" -type "double3" 0.1 0.1 0.1 ;
+createNode mesh -n "strut_left_Shape2" -p "strut_left_2";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
@@ -5313,11 +5283,11 @@ createNode mesh -n "pCubeShape7" -p "pCube7";
 	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-createNode transform -n "pCube8";
-	setAttr ".t" -type "double3" -110 410 0 ;
-	setAttr ".r" -type "double3" 90 -45 90 ;
-	setAttr ".s" -type "double3" -1 1 1 ;
-createNode mesh -n "pCubeShape8" -p "pCube8";
+createNode transform -n "strut_back_1" -p "watch_tower";
+	setAttr ".t" -type "double3" -11 63 0 ;
+	setAttr ".r" -type "double3" 90.000000000000014 -45 -90 ;
+	setAttr ".s" -type "double3" 0.10000000000000002 0.1 -0.10000000000000003 ;
+createNode mesh -n "strut_back_Shape1" -p "strut_back_1";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
@@ -5349,11 +5319,11 @@ createNode mesh -n "pCubeShape8" -p "pCube8";
 	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-createNode transform -n "pCube9";
-	setAttr ".t" -type "double3" -110 190 0 ;
-	setAttr ".r" -type "double3" 90 45 90 ;
-	setAttr ".s" -type "double3" -1 1 1 ;
-createNode mesh -n "pCubeShape9" -p "pCube9";
+createNode transform -n "strut_back_2" -p "watch_tower";
+	setAttr ".t" -type "double3" -11 41 0 ;
+	setAttr ".r" -type "double3" 90.000000000000014 45.000000000000014 -90.000000000000014 ;
+	setAttr ".s" -type "double3" 0.1 0.1 -0.1 ;
+createNode mesh -n "strut_back_Shape2" -p "strut_back_2";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
@@ -5385,11 +5355,11 @@ createNode mesh -n "pCubeShape9" -p "pCube9";
 	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-createNode transform -n "pCube10";
-	setAttr ".t" -type "double3" 110 630 0 ;
-	setAttr ".r" -type "double3" 90 45 90 ;
-	setAttr ".s" -type "double3" -1 1 1 ;
-createNode mesh -n "pCubeShape10" -p "pCube10";
+createNode transform -n "strut_back_3" -p "watch_tower";
+	setAttr ".t" -type "double3" -11 19 0 ;
+	setAttr ".r" -type "double3" 90.000000000000014 -45 -90 ;
+	setAttr ".s" -type "double3" 0.10000000000000002 0.1 -0.10000000000000003 ;
+createNode mesh -n "strut_back_Shape3" -p "strut_back_3";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
@@ -5421,11 +5391,11 @@ createNode mesh -n "pCubeShape10" -p "pCube10";
 	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-createNode transform -n "pCube11";
-	setAttr ".t" -type "double3" 110 410 0 ;
-	setAttr ".r" -type "double3" 90 -45 90 ;
-	setAttr ".s" -type "double3" -1 1 1 ;
-createNode mesh -n "pCubeShape11" -p "pCube11";
+createNode transform -n "strut_front_1" -p "watch_tower";
+	setAttr ".t" -type "double3" 11 63 0 ;
+	setAttr ".r" -type "double3" 90.000000000000014 -45 -90 ;
+	setAttr ".s" -type "double3" 0.10000000000000002 0.1 -0.10000000000000003 ;
+createNode mesh -n "strut_front_Shape1" -p "strut_front_1";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
@@ -5457,11 +5427,47 @@ createNode mesh -n "pCubeShape11" -p "pCube11";
 	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-createNode transform -n "pCube12";
-	setAttr ".t" -type "double3" 110 190 0 ;
-	setAttr ".r" -type "double3" 90 45 90 ;
-	setAttr ".s" -type "double3" -1 1 1 ;
-createNode mesh -n "pCubeShape12" -p "pCube12";
+createNode transform -n "strut_front_2" -p "watch_tower";
+	setAttr ".t" -type "double3" 11 41 0 ;
+	setAttr ".r" -type "double3" 90.000000000000014 45.000000000000014 -90.000000000000014 ;
+	setAttr ".s" -type "double3" 0.1 0.1 -0.1 ;
+createNode mesh -n "strut_front_2Shape" -p "strut_front_2";
+	setAttr -k off ".v";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr -s 14 ".uvst[0].uvsp[0:13]" -type "float2" 0.375 0 0.625 0 0.375
+		 0.25 0.625 0.25 0.375 0.5 0.625 0.5 0.375 0.75 0.625 0.75 0.375 1 0.625 1 0.875 0
+		 0.875 0.25 0.125 0 0.125 0.25;
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr -s 8 ".vt[0:7]"  -150 -5 1 150 -5 1 -150 5 1 150 5 1 -150 5 -1
+		 150 5 -1 -150 -5 -1 150 -5 -1;
+	setAttr -s 12 ".ed[0:11]"  0 1 0 2 3 0 4 5 0 6 7 0 0 2 0 1 3 0 2 4 0
+		 3 5 0 4 6 0 5 7 0 6 0 0 7 1 0;
+	setAttr -s 6 -ch 24 ".fc[0:5]" -type "polyFaces" 
+		f 4 0 5 -2 -5
+		mu 0 4 0 1 3 2
+		f 4 1 7 -3 -7
+		mu 0 4 2 3 5 4
+		f 4 2 9 -4 -9
+		mu 0 4 4 5 7 6
+		f 4 3 11 -1 -11
+		mu 0 4 6 7 9 8
+		f 4 -12 -10 -8 -6
+		mu 0 4 1 10 11 3
+		f 4 10 4 6 8
+		mu 0 4 12 0 2 13;
+	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
+	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
+	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
+createNode transform -n "strut_front_3" -p "watch_tower";
+	setAttr ".t" -type "double3" 11 19 0 ;
+	setAttr ".r" -type "double3" 90.000000000000014 -45 -90 ;
+	setAttr ".s" -type "double3" 0.10000000000000002 0.1 -0.10000000000000003 ;
+createNode mesh -n "strut_front_Shape3" -p "strut_front_3";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
@@ -5724,7 +5730,7 @@ createNode polyCube -n "polyCube6";
 	setAttr ".cuv" 4;
 createNode hyperGraphInfo -n "nodeEditorPanel2Info";
 createNode hyperView -n "hyperView1";
-	setAttr ".vl" -type "double2" -114.28571428571429 -288.09523809523813 ;
+	setAttr ".vl" -type "double2" -114.28571428571428 -288.09523809523813 ;
 	setAttr ".vh" -type "double2" 441.66666666666674 30.952380952380956 ;
 	setAttr ".dag" no;
 createNode hyperLayout -n "hyperLayout1";
@@ -5758,8 +5764,6 @@ select -ne :hardwareRenderGlobals;
 select -ne :defaultHardwareRenderGlobals;
 	setAttr ".fn" -type "string" "im";
 	setAttr ".res" -type "string" "ntsc_4d 646 485 1.333";
-select -ne :ikSystem;
-	setAttr -s 4 ".sol";
 connectAttr "groupId1.id" "pCylinderShape1.iog.og[0].gid";
 connectAttr ":initialShadingGroup.mwc" "pCylinderShape1.iog.og[0].gco";
 connectAttr "groupParts1.og" "pCylinderShape1.i";
@@ -5856,7 +5860,7 @@ connectAttr "polyCube3.out" "rail_backShape.i";
 connectAttr "polyCube4.out" "rail_rightShape.i";
 connectAttr "polyCube5.out" "rail_frontShape.i";
 connectAttr "polyCube6.out" "post_railShape.i";
-connectAttr "polyCube7.out" "pCubeShape1.i";
+connectAttr "polyCube7.out" "strut_left_Shape1.i";
 relationship "link" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" ":initialParticleSE.message" ":defaultLightSet.message";
 relationship "shadowLink" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
@@ -5995,18 +5999,18 @@ connectAttr "rail_rightShape.iog" ":initialShadingGroup.dsm" -na;
 connectAttr "rail_leftShape.iog" ":initialShadingGroup.dsm" -na;
 connectAttr "rail_frontShape.iog" ":initialShadingGroup.dsm" -na;
 connectAttr "post_railShape.iog" ":initialShadingGroup.dsm" -na;
-connectAttr "pCubeShape1.iog" ":initialShadingGroup.dsm" -na;
-connectAttr "pCubeShape2.iog" ":initialShadingGroup.dsm" -na;
-connectAttr "pCubeShape3.iog" ":initialShadingGroup.dsm" -na;
-connectAttr "pCubeShape4.iog" ":initialShadingGroup.dsm" -na;
-connectAttr "pCubeShape5.iog" ":initialShadingGroup.dsm" -na;
-connectAttr "pCubeShape6.iog" ":initialShadingGroup.dsm" -na;
-connectAttr "pCubeShape7.iog" ":initialShadingGroup.dsm" -na;
-connectAttr "pCubeShape8.iog" ":initialShadingGroup.dsm" -na;
-connectAttr "pCubeShape9.iog" ":initialShadingGroup.dsm" -na;
-connectAttr "pCubeShape10.iog" ":initialShadingGroup.dsm" -na;
-connectAttr "pCubeShape11.iog" ":initialShadingGroup.dsm" -na;
-connectAttr "pCubeShape12.iog" ":initialShadingGroup.dsm" -na;
+connectAttr "strut_left_Shape1.iog" ":initialShadingGroup.dsm" -na;
+connectAttr "strut_right_Shape1.iog" ":initialShadingGroup.dsm" -na;
+connectAttr "strut_right_Shape2.iog" ":initialShadingGroup.dsm" -na;
+connectAttr "strut_right_Shape3.iog" ":initialShadingGroup.dsm" -na;
+connectAttr "strut_left_Shape3.iog" ":initialShadingGroup.dsm" -na;
+connectAttr "strut_left_Shape2.iog" ":initialShadingGroup.dsm" -na;
+connectAttr "strut_back_Shape1.iog" ":initialShadingGroup.dsm" -na;
+connectAttr "strut_back_Shape2.iog" ":initialShadingGroup.dsm" -na;
+connectAttr "strut_back_Shape3.iog" ":initialShadingGroup.dsm" -na;
+connectAttr "strut_front_Shape1.iog" ":initialShadingGroup.dsm" -na;
+connectAttr "strut_front_2Shape.iog" ":initialShadingGroup.dsm" -na;
+connectAttr "strut_front_Shape3.iog" ":initialShadingGroup.dsm" -na;
 connectAttr "groupId1.msg" ":initialShadingGroup.gn" -na;
 connectAttr "groupId2.msg" ":initialShadingGroup.gn" -na;
 connectAttr "groupId3.msg" ":initialShadingGroup.gn" -na;
