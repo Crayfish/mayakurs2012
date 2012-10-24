@@ -1,4 +1,5 @@
  - die richtung der normalvektoren wurde bereits nach "innen" gedreht.
  - der skydome kann ggf ein bisschen "tiefer" als (0,0,0) in die szene gegeben werden um auch einen größeren sichtbereich nach unten abzudecken.
+ - ein bisschen mit "Cylindrical Mapping" spielen und die "Sky3" textur schaut gleich ein bisserl besser aus...  ;-)
 
 greetz!
