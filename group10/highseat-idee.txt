@@ -2,4 +2,6 @@ Highseat-Idee
 
 
 Ein Charakter der über den Highseat Ausschau hält und dann elegant über die Leiter runterrtuscht (geht ja schneller :D)
-wgnr.tom@gmail.com
+Es lassen sich sicher Polygone einsparen (bspw. bei den Zylindern...)
+
+e1027484@student.tuwien.ac.at
