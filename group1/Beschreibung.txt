@@ -1,0 +1,12 @@
+Unser Environment für die kommenden Aufgaben eine Art Insel. Sie besteht aus einer ebenen Fläche (Gras,Sand), durch die ein Fluss fließt und die von Bergen umgeben ist. Diese und das Meer dienen auch als Abgrenzung der Szene. 
+Weiters wurde ein Skydome entworfen, damit die Szene auch nach oben hin geschlossen wirkt.
+
+Alle Objekte wurden dementsprechend benannt. So sollte es kein Problem sein, sich in der Szene zurecht zu finden.
+
+Kontaktdaten:
+johann_houszka@gmx.at
+matthias.eigner@gmx.at
+
+Aufgabenbereiche:
+Das Environment wurde gemeinsam von Gruppe 1 und Gruppe 7 entworfen.
+Gruppe 7 war für den Skydome verantwortlich. Gruppe 1 hat die Ebene entworfen und die entsprechenden Szenen dann referenziert und zusammengefügt.
