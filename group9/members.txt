@@ -1,4 +1,3 @@
-
 Modellierung:
 
 Florian Spechtenhauser		0826226		f.spechtenhauser@gmail.com
@@ -6,9 +5,9 @@ Loris Zanella				0825717		loris.zanella.1988@gmail.com
 Jakob Blattner				1026117		jakoblattner@gmail.com
 Christoph Kukovic			1025759		christoph.kukovic@gmx.at
 
-Axt_01_fin.ma 	Christoph Kukovic
-Reifen_v1.ma   Loris Zanella
-Stuhl_v1.ma   Loris Zanella
-Tisch_v1.ma 	Loris Zanella
-paddle_01.mb 	Jakob Blattner 
-sword.ma 	 	Florian Spechtenhauser
+Axt_01_fin.ma Christoph Kukovic
+Reifen_v1.ma Loris Zanella
+Stuhl_v1.ma Loris Zanella
+Tisch_v1.ma  Loris Zanella
+paddle_01.mb Jakob Blattner 
+sword.ma  Florian Spechtenhauser
