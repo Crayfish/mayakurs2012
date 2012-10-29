@@ -1,0 +1,5 @@
+Herbert Moldan: sodala, nach langem kampf das UV mapping mal so hinbekommen (bzw hingezogen), dass 
+mehr oder weniger rechtecke sauber sichtbar sind. ist zumindest mal nicht das schelchteste 
+ausgangsmapping für die texturierung -aber ein bisschen feinschliff verträgts schon noch  ;-)
+bei fragen: happy.moldan@gmail.com
+-----------------------------------------------------------------------------
