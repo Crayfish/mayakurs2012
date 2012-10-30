@@ -1,8 +1,9 @@
-Übung 1 - Gruppe (Modelling)
+Ãœbung 1 - Gruppe (Modelling)
 Daniel C. - e0726194@student.tuwien.ac.at (banana, park bench)
 Lukas P. - e0625948@student.tuwien.ac.at (street lamp, street signs)
 Andreas W. - e0926780@student.tuwien.ac.at (hammer, tent)
 Christoph W. - e0625044@student.tuwien.ac.at (wastebin)
 
-Übung 2 - Gruppe (UV-Layout, Texturing)
+Ãœbung 2 - Gruppe (UV-Layout, Texturing)
 Matthias Adorjan - matthias.adorjan@student.tuwien.ac.at (street lamp, street signs)
+Jakob Michael Blattner - jakoblattner@gmail.com (hammer)
