@@ -11,3 +11,7 @@ Stuhl_v1.ma Loris Zanella
 Tisch_v1.ma  Loris Zanella
 paddle_01.mb Jakob Blattner 
 sword.ma  Florian Spechtenhauser
+
+UV Layouting:
+
+sword.ma	Christoph Weinzierl-Heigl	0625044	e0625044@student.tuwien.ac.at
