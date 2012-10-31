@@ -14,4 +14,7 @@ sword.ma  Florian Spechtenhauser
 
 UV Layouting:
 
-sword.ma	Christoph Weinzierl-Heigl	0625044	e0625044@student.tuwien.ac.at
+sword.ma:
+Christoph Weinzierl-Heigl  0625044  e0625044@student.tuwien.ac.at
+axt_01_fin.ma:
+Michael Präauer  0728095  mike_prae@gmx.at
