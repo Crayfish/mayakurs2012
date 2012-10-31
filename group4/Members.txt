@@ -6,6 +6,6 @@ Zebra: Alexandra (alexandra.mai.92@gmail.com)
 
 Round2:
 Kreuzer Felix
-Haube UV Mapping: Nowak Kasper (kasper.nowak@gmail.com) - hauve_UV.ma, haube_UV_snapshot.png
+Haube UV Mapping: Nowak Kasper (kasper.nowak@gmail.com) - haube_UV.ma, haube_UV_snapshot.png
 Ormos Mark
 Töpfer Markus
