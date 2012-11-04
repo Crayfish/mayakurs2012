@@ -12,9 +12,9 @@ Tisch_v1.ma  Loris Zanella
 paddle_01.mb Jakob Blattner 
 sword.ma  Florian Spechtenhauser
 
-UV Layouting:
+UV Layouting + Texturing:
 
 sword.ma:
 Christoph Weinzierl-Heigl  0625044  e0625044@student.tuwien.ac.at
-axt_01_fin.ma:
+Axt.ma:
 Michael Präauer  0728095  mike_prae@gmx.at
