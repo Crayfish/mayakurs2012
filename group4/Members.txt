@@ -5,7 +5,7 @@ Perücke/Haube: Andreas (andreas@jurdak.at)
 Zebra: Alexandra (alexandra.mai.92@gmail.com)
 
 Round2:
-Kreuzer Felix
+Kreuzer Felix (e0827433@student.tuwien.ac.at) - weitere modellkorrekturen, UVs korrigiert, neue textur draufgekltascht
 Haube UV Mapping: Nowak Kasper (kasper.nowak@gmail.com) - haube_UV.ma, haube_UV_snapshot.png, modell korrigiert
 Ormos Mark
 Töpfer Markus
