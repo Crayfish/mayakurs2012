@@ -3,3 +3,12 @@ mehr oder weniger rechtecke sauber sichtbar sind. ist zumindest mal nicht das sc
 ausgangsmapping für die texturierung -aber ein bisschen feinschliff verträgts schon noch  ;-)
 bei fragen: happy.moldan@gmail.com
 -----------------------------------------------------------------------------
+
+Herbert Moldan: so, textur ist drauf. schaut imho ganz nett aus.
+die textur findet ihr unter ..\group7\sourceimages
+bump-mapping ist auch drauf. mid mudbox spiel ich mich bei gelegenheit noch
+Nachtrag: ok, hab jetzt in dem PSD file auch eine normal-map drinnen, finde
+aber dass die bumpmap besser aussieht. wenns interessiert der kanns ja mal im psd-file umändern.
+(bei art der bump map "Tangent Space Normals" einstellen halt nicht vergessen...  ;-)   )
+
+-----------------------------------------------------------------------------
