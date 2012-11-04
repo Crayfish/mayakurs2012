@@ -1,6 +1,6 @@
 //Maya ASCII 2013 scene
 //Name: Axt.ma
-//Last modified: Sun, Nov 04, 2012 02:33:19 PM
+//Last modified: Sun, Nov 04, 2012 02:50:06 PM
 //Codeset: 1252
 requires maya "2013";
 requires "stereoCamera" "10.0";
@@ -12,14 +12,14 @@ fileInfo "cutIdentifier" "201202220747-825128";
 fileInfo "osv" "Microsoft Windows 7 Business Edition, 32-bit Windows 7 Service Pack 1 (Build 7601)\n";
 fileInfo "license" "student";
 createNode transform -s -n "persp";
-	setAttr ".t" -type "double3" -53.558960431041548 21.14575237111076 136.43969443736981 ;
-	setAttr ".r" -type "double3" -4.5383527296677855 -738.99999999998158 2.1023877554753306e-016 ;
+	setAttr ".t" -type "double3" 36.146058568122136 85.086756974863533 133.27990083039444 ;
+	setAttr ".r" -type "double3" -30.938352729669649 -702.60000000000161 -8.3326877580432204e-016 ;
 	setAttr ".rp" -type "double3" 7.1054273576010019e-015 -1.2434497875801753e-014 7.1054273576010019e-015 ;
 	setAttr ".rpt" -type "double3" -8.8104187791232516e-015 9.980216777889607e-015 -7.9919517904858497e-015 ;
 createNode camera -s -n "perspShape" -p "persp";
 	setAttr -k off ".v";
 	setAttr ".fl" 34.999999999999986;
-	setAttr ".coi" 154.19490482263166;
+	setAttr ".coi" 171.41283567646877;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -2709,7 +2709,7 @@ createNode polyTweakUV -n "polyTweakUV6";
 	setAttr ".uvtk[1049]" -type "float2" 0.0015152743 -0.0088452157 ;
 	setAttr ".uvtk[1050]" -type "float2" 0.00025856972 -0.0088452157 ;
 createNode psdFileTex -n "PSD_blinn1_color";
-	setAttr ".ftn" -type "string" "C:/Users/Van/Dropbox/Maya-Kurs/GIT/mayakurs2012/group9/reference images/Axt.png";
+	setAttr ".ftn" -type "string" "C:/Users/Van/Documents/maya/projects/Kurs2//reference images/Axt.png";
 createNode place2dTexture -n "place2dTexture3";
 select -ne :time1;
 	setAttr ".o" 1;
