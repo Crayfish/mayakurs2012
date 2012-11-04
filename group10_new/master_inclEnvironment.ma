@@ -1,6 +1,6 @@
 //Maya ASCII 2013 scene
 //Name: master_inclEnvironment.ma
-//Last modified: Sun, Nov 04, 2012 12:40:26 PM
+//Last modified: Sun, Nov 04, 2012 02:09:20 PM
 //Codeset: 1252
 file -rdi 1 -ns "Environment_referenced" -rfn "Environment_referencedRN" -shd
 		 "displayLayers" -shd "shadingNetworks" -shd "renderLayersByName" "D:/TUWien/9Sem/Maya/mayakurs2012/group1_old/Environment-referenced.mb";
@@ -8,9 +8,11 @@ file -rdi 2 -ns "Environment_Group2_env0_3final" -rfn "Environment_referenced:En
 		 "/Users/johann/Documents/mayakurs2012//group2/Environment-Group2-env0.3final.mb";
 file -rdi 2 -ns "Env1" -rfn "Environment_referenced:Env1RN1" "/Users/johann/Documents/mayakurs2012//group7/Env1.ma";
 file -rdi 1 -ns "Feldlager" -rfn "FeldlagerRN" "D:/TU Wien/Semester 8/Maya Kurs/ue/mayakurs2012/Gruppe2/Feldlager.ma";
+file -rdi 1 -ns "stone_tower" -rfn "stone_towerRN" "D:/TU Wien/Semester 8/Maya Kurs/ue/mayakurs2012/group10_new/stone_tower.mb";
 file -r -ns "Environment_referenced" -dr 1 -rfn "Environment_referencedRN" -shd "displayLayers"
 		 -shd "shadingNetworks" -shd "renderLayersByName" "D:/TUWien/9Sem/Maya/mayakurs2012/group1_old/Environment-referenced.mb";
 file -r -ns "Feldlager" -dr 1 -rfn "FeldlagerRN" "D:/TU Wien/Semester 8/Maya Kurs/ue/mayakurs2012/Gruppe2/Feldlager.ma";
+file -r -ns "stone_tower" -dr 1 -rfn "stone_towerRN" "D:/TU Wien/Semester 8/Maya Kurs/ue/mayakurs2012/group10_new/stone_tower.mb";
 requires maya "2013";
 requires "Fur" "2013 x64";
 requires "stereoCamera" "10.0";
@@ -23,13 +25,13 @@ fileInfo "osv" "Microsoft Windows 7 Business Edition, 64-bit Windows 7 Service P
 fileInfo "license" "student";
 createNode transform -s -n "persp";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -299.53889993769826 1832.1386630456964 3573.5993125930413 ;
-	setAttr ".r" -type "double3" -22.53835272960335 -386.19999999998026 8.8618696379990321e-016 ;
+	setAttr ".t" -type "double3" 2824.0876807554919 569.1885383365094 1908.679298534068 ;
+	setAttr ".r" -type "double3" -4.5383527296113222 -686.19999999991057 -2.3921586376369909e-016 ;
 createNode camera -s -n "perspShape" -p "persp";
 	setAttr -k off ".v" no;
 	setAttr ".rnd" no;
 	setAttr ".fl" 34.999999999999986;
-	setAttr ".coi" 3969.9578211928483;
+	setAttr ".coi" 8352.7787110135869;
 	setAttr ".ow" 3695.1676629299113;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
@@ -82,8 +84,9 @@ createNode lightLinker -s -n "lightLinker1";
 	setAttr -s 31 ".slnk";
 createNode displayLayerManager -n "layerManager";
 	setAttr ".cdl" 2;
-	setAttr -s 2 ".dli[2:3]"  1 2;
 	setAttr -s 3 ".dli";
+	setAttr ".dli[2]" 1;
+	setAttr ".dli[3]" 2;
 createNode displayLayer -n "defaultLayer";
 createNode renderLayerManager -n "renderLayerManager";
 createNode renderLayer -n "defaultRenderLayer";
@@ -1127,19 +1130,21 @@ createNode displayLayer -n "Environment";
 	setAttr ".do" 1;
 createNode reference -n "FeldlagerRN";
 	setAttr -s 10 ".phl";
-	setAttr ".phl[1]" 0;
-	setAttr ".phl[2]" 0;
-	setAttr ".phl[3]" 0;
-	setAttr ".phl[4]" 0;
-	setAttr ".phl[5]" 0;
-	setAttr ".phl[6]" 0;
-	setAttr ".phl[7]" 0;
-	setAttr ".phl[8]" 0;
-	setAttr ".phl[9]" 0;
-	setAttr ".phl[10]" 0;
+	setAttr ".phl[11]" 0;
+	setAttr ".phl[12]" 0;
+	setAttr ".phl[13]" 0;
+	setAttr ".phl[14]" 0;
+	setAttr ".phl[15]" 0;
+	setAttr ".phl[16]" 0;
+	setAttr ".phl[17]" 0;
+	setAttr ".phl[18]" 0;
+	setAttr ".phl[19]" 0;
+	setAttr ".phl[20]" 0;
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"FeldlagerRN"
-		"FeldlagerRN" 0
+		"FeldlagerRN" 1
+		5 4 "FeldlagerRN" "Feldlager:defaultFurGlobals.furNodeList" "FeldlagerRN.placeHolderList[10]" 
+		""
 		"FeldlagerRN" 5874
 		2 "|Feldlager:pCylinder1" "translate" " -type \"double3\" 2463.257539 127.660367 -351.641637"
 		
@@ -14806,45 +14811,51 @@ createNode reference -n "FeldlagerRN";
 		2 "Feldlager:Fässer_ohne_History:Grass" "furReference" " 1"
 		3 ":defaultRenderGlobals.rendercallback" "Feldlager:defaultFurGlobals.callback" 
 		""
-		5 4 "FeldlagerRN" "|Feldlager:pCylinder1.drawOverride" "FeldlagerRN.placeHolderList[1]" 
+		5 4 "FeldlagerRN" "|Feldlager:pCylinder1.drawOverride" "FeldlagerRN.placeHolderList[11]" 
 		""
-		5 4 "FeldlagerRN" "|Feldlager:Zaun.drawOverride" "FeldlagerRN.placeHolderList[2]" 
+		5 4 "FeldlagerRN" "|Feldlager:Zaun.drawOverride" "FeldlagerRN.placeHolderList[12]" 
 		""
-		5 4 "FeldlagerRN" "|Feldlager:Gebäude.drawOverride" "FeldlagerRN.placeHolderList[3]" 
+		5 4 "FeldlagerRN" "|Feldlager:Gebäude.drawOverride" "FeldlagerRN.placeHolderList[13]" 
 		""
-		5 4 "FeldlagerRN" "|Feldlager:Speer:Speer.drawOverride" "FeldlagerRN.placeHolderList[4]" 
+		5 4 "FeldlagerRN" "|Feldlager:Speer:Speer.drawOverride" "FeldlagerRN.placeHolderList[14]" 
 		""
-		5 4 "FeldlagerRN" "|Feldlager:Kanonen.drawOverride" "FeldlagerRN.placeHolderList[5]" 
+		5 4 "FeldlagerRN" "|Feldlager:Kanonen.drawOverride" "FeldlagerRN.placeHolderList[15]" 
 		""
-		5 4 "FeldlagerRN" "|Feldlager:Speere.drawOverride" "FeldlagerRN.placeHolderList[6]" 
+		5 4 "FeldlagerRN" "|Feldlager:Speere.drawOverride" "FeldlagerRN.placeHolderList[16]" 
 		""
 		5 4 "FeldlagerRN" "|Feldlager:Fässer_ohne_History:Fässer.drawOverride" 
-		"FeldlagerRN.placeHolderList[7]" ""
-		5 4 "FeldlagerRN" "|Feldlager:Tisch01:Tisch.drawOverride" "FeldlagerRN.placeHolderList[8]" 
+		"FeldlagerRN.placeHolderList[17]" ""
+		5 4 "FeldlagerRN" "|Feldlager:Tisch01:Tisch.drawOverride" "FeldlagerRN.placeHolderList[18]" 
 		""
 		5 4 "FeldlagerRN" "|Feldlager:Globus01ohne_tex:Globus.drawOverride" 
-		"FeldlagerRN.placeHolderList[9]" ""
-		5 4 "FeldlagerRN" "Feldlager:defaultFurGlobals.furNodeList" "FeldlagerRN.placeHolderList[10]" 
+		"FeldlagerRN.placeHolderList[19]" ""
+		5 4 "FeldlagerRN" "Feldlager:defaultFurGlobals.furNodeList" "FeldlagerRN.placeHolderList[20]" 
 		"";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
-createNode FurGlobals -n "defaultFurGlobals";
-	addAttr -ci true -sn "cb" -ln "callback" -at "message";
-	addAttr -ci true -sn "rogl" -ln "referencedFurGlobals" -at "message";
-	addAttr -ci true -h true -sn "fgrf" -ln "furGlobalReference" -min 0 -max 1 -at "bool";
-	setAttr ".av" 2;
-	setAttr ".rep" -type "string" "renderData/fur/furEqualMap/master_inclEnvironment";
-	setAttr ".pjl" -type "string" "C:/Users/Chri/Documents/maya/projects/default";
 createNode displayLayer -n "Feldlager1";
 	setAttr ".c" 11;
 	setAttr ".do" 2;
+createNode FurGlobals -n "defaultFurGlobals";
+	addAttr -ci true -sn "cb" -ln "callback" -at "message";
+	addAttr -ci true -sn "rogl" -ln "referencedFurGlobals" -at "message";
+	setAttr ".av" 2;
+	setAttr ".pjl" -type "string" "C:/Users/Chri/Documents/maya/projects/default";
+createNode reference -n "stone_towerRN";
+	setAttr ".ed" -type "dataReferenceEdits" 
+		"stone_towerRN"
+		"stone_towerRN" 0
+		"stone_towerRN" 1
+		2 "|stone_tower:pCube1" "translate" " -type \"double3\" -2137.949007 346.140668 -3624.248926";
+	setAttr ".ptag" -type "string" "";
+lockNode -l 1 ;
 select -ne :time1;
 	setAttr ".o" 1;
 	setAttr ".unw" 1;
 select -ne :renderPartition;
 	setAttr -s 31 ".st";
 select -ne :initialShadingGroup;
-	setAttr -s 1925 ".dsm";
+	setAttr -s 1926 ".dsm";
 	setAttr ".ro" yes;
 	setAttr -s 4 ".gn";
 select -ne :initialParticleSE;
@@ -14860,7 +14871,7 @@ select -ne :postProcessList1;
 select -ne :defaultRenderUtilityList1;
 	setAttr -s 16 ".u";
 select -ne :defaultRenderingList1;
-	setAttr -s 5 ".r";
+	setAttr -s 6 ".r";
 select -ne :renderGlobalsList1;
 select -ne :defaultLightSet;
 	setAttr -s 3 ".dsm";
@@ -14870,8 +14881,6 @@ select -ne :hardwareRenderGlobals;
 select -ne :defaultHardwareRenderGlobals;
 	setAttr ".fn" -type "string" "im";
 	setAttr ".res" -type "string" "ntsc_4d 646 485 1.333";
-select -ne :ikSystem;
-	setAttr -s 4 ".sol";
 connectAttr "Environment.di" "Environment_referencedRN.phl[1]";
 connectAttr "Environment.di" "Environment_referencedRN.phl[2]";
 connectAttr "Environment.di" "Environment_referencedRN.phl[3]";
@@ -14884,16 +14893,16 @@ connectAttr "Environment.di" "Environment_referencedRN.phl[9]";
 connectAttr "Environment.di" "Environment_referencedRN.phl[10]";
 connectAttr "Environment.di" "Environment_referencedRN.phl[11]";
 connectAttr "Environment.di" "Environment_referencedRN.phl[12]";
-connectAttr "Feldlager1.di" "FeldlagerRN.phl[1]";
-connectAttr "Feldlager1.di" "FeldlagerRN.phl[2]";
-connectAttr "Feldlager1.di" "FeldlagerRN.phl[3]";
-connectAttr "Feldlager1.di" "FeldlagerRN.phl[4]";
-connectAttr "Feldlager1.di" "FeldlagerRN.phl[5]";
-connectAttr "Feldlager1.di" "FeldlagerRN.phl[6]";
-connectAttr "Feldlager1.di" "FeldlagerRN.phl[7]";
-connectAttr "Feldlager1.di" "FeldlagerRN.phl[8]";
-connectAttr "Feldlager1.di" "FeldlagerRN.phl[9]";
-connectAttr "defaultFurGlobals.rogl" "FeldlagerRN.phl[10]";
+connectAttr "Feldlager1.di" "FeldlagerRN.phl[11]";
+connectAttr "Feldlager1.di" "FeldlagerRN.phl[12]";
+connectAttr "Feldlager1.di" "FeldlagerRN.phl[13]";
+connectAttr "Feldlager1.di" "FeldlagerRN.phl[14]";
+connectAttr "Feldlager1.di" "FeldlagerRN.phl[15]";
+connectAttr "Feldlager1.di" "FeldlagerRN.phl[16]";
+connectAttr "Feldlager1.di" "FeldlagerRN.phl[17]";
+connectAttr "Feldlager1.di" "FeldlagerRN.phl[18]";
+connectAttr "Feldlager1.di" "FeldlagerRN.phl[19]";
+connectAttr "defaultFurGlobals.rogl" "FeldlagerRN.phl[20]";
 relationship "link" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" ":initialParticleSE.message" ":defaultLightSet.message";
 relationship "shadowLink" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
@@ -14906,7 +14915,7 @@ connectAttr "hyperLayout1.msg" "hyperView1.hl";
 connectAttr "uiConfigurationScriptNode.msg" "hyperLayout1.hyp[1].dn";
 connectAttr "sceneConfigurationScriptNode.msg" "hyperLayout1.hyp[2].dn";
 connectAttr ":layerManager.dli[2]" "Environment.id";
-connectAttr ":defaultRenderGlobals.rcb" "defaultFurGlobals.cb";
 connectAttr ":layerManager.dli[3]" "Feldlager1.id";
+connectAttr ":defaultRenderGlobals.rcb" "defaultFurGlobals.cb";
 connectAttr "defaultRenderLayer.msg" ":defaultRenderingList1.r" -na;
 // End of master_inclEnvironment.ma
