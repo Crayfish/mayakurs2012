@@ -6,6 +6,6 @@ Zebra: Alexandra (alexandra.mai.92@gmail.com)
 
 Round2:
 Kreuzer Felix (e0827433@student.tuwien.ac.at) - weitere modellkorrekturen, UVs korrigiert, neue textur draufgekltascht
-Haube UV Mapping: Nowak Kasper (kasper.nowak@gmail.com) - haube_UV.ma, haube_UV_snapshot.png, modell korrigiert
+Nowak Kasper (kasper.nowak@gmail.com) - Haube UV Mapping, Zebra neu modelliert: haube_UV.ma, haube_UV_snapshot.png, modell korrigiert, zebra_neu.ma
 Ormos Mark
 Töpfer Markus
