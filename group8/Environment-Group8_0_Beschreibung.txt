@@ -5,10 +5,15 @@ bei fragen: happy.moldan@gmail.com
 -----------------------------------------------------------------------------
 
 Herbert Moldan: so, textur ist drauf. schaut imho ganz nett aus.
-die textur findet ihr unter ..\group7\sourceimages
+die textur findet ihr unter ..\group7\sourceimages EDIT: ist jetzt im root-verzeichnis
 bump-mapping ist auch drauf. mid mudbox spiel ich mich bei gelegenheit noch
 Nachtrag: ok, hab jetzt in dem PSD file auch eine normal-map drinnen, finde
 aber dass die bumpmap besser aussieht. wenns interessiert der kanns ja mal im psd-file umändern.
 (bei art der bump map "Tangent Space Normals" einstellen halt nicht vergessen...  ;-)   )
+
+-----------------------------------------------------------------------------
+
+Herbert Moldan: nochmal die Textur neu eingebunden -ich hoffe der Pfad ist jetzt "relativ" und jeder
+sieht die Textur. PSD datei jetzt im root verzeichnis -preview der ebene hinzugefügt.
 
 -----------------------------------------------------------------------------
