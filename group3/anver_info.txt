@@ -1,0 +1,1 @@
+Ich habe die Anver Szene auf 2 Teile aufgeteilt, da in der ursprünglichen Szene leider eine Verlinkung oder so drin sein muss, da sich wenn ich die Textur von dem einen Gegenstand geändert hat auch die Textur von dem anderen Gegenstand geändert hat und umgekehrt. Fand leider keine Lösung dafür, deshalb jetzt die 2 Parts.
