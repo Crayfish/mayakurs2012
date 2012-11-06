@@ -3,8 +3,13 @@ Bernhard Steiner(bsteiner@cg.tuwien.ac.at) - wasserfass
 Matthias Boindl(matthias.boindl@gmail.com) - tennis
 bechtold.fabrizia@gmail.com - frisbee
 
-(2) 24.10.2012
-Moldan Herbert - happy.moldan@gmail.com
-Spechtenhauser Florian - f.spechtenhauser@gmail.com
-Wagner Thomas - e1027484@student.tuwien.ac.at
-Walch Andreas - walch.andreas89@gmail.com
+(2) 24.10.2012 
+UV-Mapping, Texturing vom Environment von Group 1 und 7
+Boden/Berge/Meer von Ordner Group 1 in Ordner Group 8 verschoben.
+Himmel befindet sich in Group 7 - Datei in Himmel.ma umbenannt
+
+Mitglieder der Gruppe 8 der zweiten Runde und ihre Aufgaben:
+Moldan Herbert - happy.moldan@gmail.com - Boden/Berge
+Spechtenhauser Florian - f.spechtenhauser@gmail.com - Himmel
+Wagner Thomas - e1027484@student.tuwien.ac.at - Boden/Berge
+Walch Andreas - walch.andreas89@gmail.com - Boden/Berge
