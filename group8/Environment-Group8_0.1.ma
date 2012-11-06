@@ -1,6 +1,6 @@
 //Maya ASCII 2013 scene
 //Name: Environment-Group8_0.1.ma
-//Last modified: Sun, Nov 04, 2012 01:58:12 PM
+//Last modified: Mon, Nov 05, 2012 06:23:11 PM
 //Codeset: 1252
 requires maya "2013";
 requires "stereoCamera" "10.0";
@@ -13732,15 +13732,14 @@ createNode polyTweakUV -n "polyTweakUV1";
 createNode polyTweakUV -n "polyTweakUV2";
 	setAttr ".uopa" yes;
 createNode psdFileTex -n "PSD_lambert2_color";
-	setAttr ".ftn" -type "string" "E:/01 TU Wien/10. Semester/Maya Kurs/Git/mayakurs2012/group7//sourceimages/Environment-Group8_0_bodenShape.psd";
+	setAttr ".ftn" -type "string" "E:/01 TU Wien/10. Semester/Maya Kurs/Git/mayakurs2012/group8//Environment-Group8_0_bodenShape.psd";
 	setAttr ".lsn" -type "string" "lambert2.color";
 createNode place2dTexture -n "place2dTexture2";
 createNode psdFileTex -n "PSD_environment_normalCamera";
 	setAttr ".ail" yes;
-	setAttr ".ftn" -type "string" "E:/01 TU Wien/10. Semester/Maya Kurs/Git/mayakurs2012/group7//sourceimages/Environment-Group8_0_bodenShape.psd";
+	setAttr ".ftn" -type "string" "E:/01 TU Wien/10. Semester/Maya Kurs/Git/mayakurs2012/group7/sourceimages/Environment-Group8_0_bodenShape.psd";
 	setAttr ".lsn" -type "string" "environment.bump";
 createNode bump2d -n "bump2d1";
-	setAttr ".vc1" -type "float3" 0 0.00088000047 0 ;
 	setAttr ".vc2" -type "float3" 9.9999997e-006 9.9999997e-006 0 ;
 createNode place2dTexture -n "place2dTexture3";
 createNode polyAutoProj -n "polyAutoProj1";
