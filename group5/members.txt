@@ -1,4 +1,3 @@
-
 Elisabeth Broneder / bronedere@gmail.com, 0625555
 - Gitarre
 
@@ -18,3 +17,5 @@ Markus Toepfer:
 - Schutzhelm, 
 - Taschenlampe, 
 - Tisch
+
+Lajos-Zoltan Zsombori: Texturierung Baum (tree_texturiert)
