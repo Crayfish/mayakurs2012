@@ -2,13 +2,13 @@ Modeling:
 
 Elisabeth Broneder: Gitarre
 Marko Mlinaric: Wachturm
-Markus Schütz: Strassenlaterne, Baum
+Markus SchÃ¼tz: Strassenlaterne, Baum
 Markus Toepfer: Klappsessel, Schnapsglas, Schutzhelm, Taschenlampe, Tisch
 
 
 Texturing:
 
 Daniel C.: Gitarre, Wachturm
-Alexandra M.
+Alexandra M.: Laterne, Glas
 Marlis S.
 Lajos-Zolta Z.
