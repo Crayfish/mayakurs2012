@@ -6,6 +6,6 @@ Zebra: Alexandra (alexandra.mai.92@gmail.com)
 
 Round2:
 Kreuzer Felix (e0827433@student.tuwien.ac.at) - weitere modellkorrekturen, UVs korrigiert, neue textur draufgekltascht(copyright siehe filename)
-Nowak Kasper (kasper.nowak@gmail.com) - Haube UV Mapping, Zebra neu modelliert: haube_UV.ma, haube_UV_snapshot.png, haube modell korrigiert, zebra_neu.ma
+Nowak Kasper (kasper.nowak@gmail.com) - Haube UV Mapping, Zebra neu modelliert+texturiert: haube_UV.ma, haube_UV_snapshot.png, haube modell korrigiert, zebra_neu.ma, zebra_neu_textur.png
 Ormos Mark
 Töpfer Markus: SchwebebalkenWorked - Modell korrigiert, Texturen & UVMaps neugemacht, TreeWorked - Modell verbessert/korrigiert, UVMaps und Texturen neugemacht, Alte Orange eingefügt
