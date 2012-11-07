@@ -20,3 +20,5 @@ Axt.ma:
 Michael Präauer  0728095  mike_prae@gmx.at
 stuhl & tish
 Micha Londo 0302363 michal_londo@yahoo.com
+paddle_01.mb
+Bernhard Steiner 0825391 bsteiner@cg.tuwien.ac.at
