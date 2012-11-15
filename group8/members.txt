@@ -14,8 +14,13 @@ Spechtenhauser Florian - f.spechtenhauser@gmail.com - Himmel
 Wagner Thomas - e1027484@student.tuwien.ac.at - Boden/Berge
 Walch Andreas - walch.andreas89@gmail.com - Boden/Berge
 
-(3) Mitglieder der Gruppe 8 der dritten Runde:
+(3) Animation:
+Wir animieren die Szene aus Matrix wo "Neo" den Kugeln ausweicht:
+http://www.youtube.com/watch?v=KNrSNcaYiZg
+Startzeit: 02:00, Endzeit: 02:24
+
+Mitglieder der Gruppe 8 der dritten Runde:
 Felix Kreuzer			e0827433@student.tuwien.ac.at
 Matthias Boindl			e0727922@student.tuwien.ac.at
-Michael Pr‰auer			mike_prae@gmx.at
+Michael Pr√§auer			mike_prae@gmx.at
 Thomas Wagner			e1027484@student.tuwien.ac.at
