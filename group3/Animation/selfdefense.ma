@@ -1,6 +1,6 @@
 //Maya ASCII 2013 scene
 //Name: selfdefense.ma
-//Last modified: Mon, Nov 19, 2012 03:03:44 PM
+//Last modified: Mon, Nov 19, 2012 06:11:03 PM
 //Codeset: UTF-8
 file -rdi 1 -ns "instructor" -rfn "instructorRN" "instructor.ma";
 file -rdi 2 -ns "Male_normal" -rfn "instructor:V005_RN" "../characters/male_standard/male_standard_rig_animation.ma";
@@ -8,6 +8,7 @@ file -rdi 3 -ns "mesh_" -rfn "instructor:Male_normal:mesh_RN" "../characters/mal
 file -rdi 1 -ns "recruit" -rfn "recruitRN" "recruit.ma";
 file -rdi 2 -ns "Male_normal" -rfn "recruit:V005_RN" "../characters/male_standard/male_standard_rig_animation.ma";
 file -rdi 3 -ns "mesh_" -rfn "recruit:Male_normal:mesh_RN" "../characters/male_standard/male_standard_rig_export.ma";
+file -rdi 2 -ns "banana" -rfn "recruit:bananaRN" "C:/Projekte/Shared/mayakurs2012/group6/banana.ma";
 file -rdi 1 -ns "recruit2" -rfn "recruit2RN" "C:/Projekte/Shared/mayakurs2012/group3/Animation//recruit2.ma";
 file -rdi 2 -ns "Male_normal" -rfn "recruit2:V005_RN" "../characters/male_standard/male_standard_rig_animation.ma";
 file -rdi 3 -ns "mesh_" -rfn "recruit2:Male_normal:mesh_RN" "../characters/male_standard/male_standard_rig_export.ma";
@@ -34,12 +35,12 @@ fileInfo "osv" "Mac OS X 10.7.5";
 fileInfo "license" "student";
 createNode transform -s -n "persp";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 15.099121734432428 29.244425400944866 65.61564060670392 ;
-	setAttr ".r" -type "double3" -18.938352729597007 -6.2000000000000766 -7.9981682780727239e-16 ;
+	setAttr ".t" -type "double3" 22.18610078336534 22.242742715149568 67.765816168465193 ;
+	setAttr ".r" -type "double3" -11.138352729596216 1.7999999999941734 -1.4916210318724527e-16 ;
 createNode camera -s -n "perspShape" -p "persp";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 53.296672101758645;
+	setAttr ".coi" 53.296672101758489;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -92,8 +93,8 @@ createNode transform -n "Recruit2";
 createNode transform -n "Recruit3";
 createNode transform -n "Recruit4";
 createNode lightLinker -s -n "lightLinker1";
-	setAttr -s 462 ".lnk";
-	setAttr -s 407 ".slnk";
+	setAttr -s 463 ".lnk";
+	setAttr -s 408 ".slnk";
 createNode displayLayerManager -n "layerManager";
 createNode displayLayer -n "defaultLayer";
 createNode renderLayerManager -n "renderLayerManager";
@@ -166,7 +167,7 @@ createNode script -n "uiConfigurationScriptNode";
 		+ "\t\t\t\t$configName;\n\n            setNamedPanelLayout (localizedPanelLabel(\"Current Layout\"));\n        }\n\n        panelHistory -e -clear mainPanelHistory;\n        setFocus `paneLayout -q -p1 $gMainPane`;\n        sceneUIReplacement -deleteRemaining;\n        sceneUIReplacement -clear;\n\t}\n\n\ttimeControl -e -displaySound 1 -sound banana $gPlayBackSlider;\n\ngrid -spacing 5 -size 12 -divisions 5 -displayAxes yes -displayGridLines yes -displayDivisionLines yes -displayPerspectiveLabels no -displayOrthographicLabels no -displayAxesBold yes -perspectiveLabelPosition axis -orthographicLabelPosition edge;\nviewManip -drawCompass 0 -compassAngle 0 -frontParameters \"\" -homeParameters \"\" -selectionLockParameters \"\";\n}\n");
 	setAttr ".st" 3;
 createNode script -n "sceneConfigurationScriptNode";
-	setAttr ".b" -type "string" "playbackOptions -min 1 -max 750 -ast 1 -aet 750 ";
+	setAttr ".b" -type "string" "playbackOptions -min 0 -max 750 -ast 0 -aet 750 ";
 	setAttr ".st" 6;
 createNode audio -n "banana";
 	setAttr ".ef" 743.304;
@@ -176,7 +177,7 @@ createNode reference -n "instructorRN";
 	setAttr ".fn[0]" -type "string" "/Users/johann/Documents/mayakurs2012//group3/Animation/instructor.ma";
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"instructorRN"
-		"instructor:Male_normal:mesh_RN" 0
+		"instructorRN" 0
 		"instructor:V005_RN" 12
 		2 "instructor:Male_normal:male_normal" "attributeAliasList" " -type \"attributeAlias\" RightArm_Arm_IK_rotateY"
 		
@@ -202,10 +203,8 @@ createNode reference -n "instructorRN";
 		"-na"
 		3 "instructor:Male_normal:male_normal.unitlessValues[122]" "|Instructor|instructor:Male_normal:Character.scaleX" 
 		""
-		"instructorRN" 1
-		3 ":defaultRenderGlobals.rendercallback" "instructor:defaultFurGlobals.callback" 
-		""
-		"instructorRN" 14
+		"instructor:Male_normal:mesh_RN" 0
+		"instructorRN" 15
 		0 "|instructor:ctr_RNfosterParent1" "|Instructor" "-s -r "
 		0 "|instructor:defaultLight" "|Instructor" "-s -r "
 		0 "|instructor:annotationLocator1" "|Instructor" "-s -r "
@@ -220,6 +219,8 @@ createNode reference -n "instructorRN";
 		0 "|instructor:persp3" "|Instructor" "-s -r "
 		0 "|instructor:persp2" "|Instructor" "-s -r "
 		0 "|instructor:persp1" "|Instructor" "-s -r "
+		3 ":defaultRenderGlobals.rendercallback" "instructor:defaultFurGlobals.callback" 
+		""
 		"instructor:V005_RN" 664
 		0 "|instructor:Male_normal:Character" "|Instructor" "-s -r "
 		2 "|Instructor|instructor:Male_normal:Character" "visibility" " -av 1"
@@ -333,7 +334,7 @@ createNode reference -n "instructorRN";
 		2 "|Instructor|instructor:Male_normal:Character|instructor:Male_normal:Upper_Body|instructor:Male_normal:JOINTS|instructor:Male_normal:Spine_JOINTS|instructor:Male_normal:Spine_joint1|instructor:Male_normal:Spine_joint2|instructor:Male_normal:Spine_joint3|instructor:Male_normal:Spine_joint4|instructor:Male_normal:Spine_joint5|instructor:Male_normal:Spine_joint6|instructor:Male_normal:Spine_joint7|instructor:Male_normal:LeftArm_scalingCompensate|instructor:Male_normal:LeftArm_pivotCompensate|instructor:Male_normal:LeftArm_RIG|instructor:Male_normal:LeftArm_fk|instructor:Male_normal:LeftArm_shouldernull|instructor:Male_normal:LeftArm_Shoulder|instructor:Male_normal:LeftArm_upperarmcontrolnull|instructor:Male_normal:LeftArm_Upper_Arm|instructor:Male_normal:LeftArm_lowerarmcontrolnull|instructor:Male_normal:LeftArm_Lower_Arm|instructor:Male_normal:LeftArm_handcontrolnull|instructor:Male_normal:LeftArm_HandTranslate" 
 		"translateX" " -av"
 		2 "|Instructor|instructor:Male_normal:Character|instructor:Male_normal:Upper_Body|instructor:Male_normal:JOINTS|instructor:Male_normal:Spine_JOINTS|instructor:Male_normal:Spine_joint1|instructor:Male_normal:Spine_joint2|instructor:Male_normal:Spine_joint3|instructor:Male_normal:Spine_joint4|instructor:Male_normal:Spine_joint5|instructor:Male_normal:Spine_joint6|instructor:Male_normal:Spine_joint7|instructor:Male_normal:LeftArm_scalingCompensate|instructor:Male_normal:LeftArm_pivotCompensate|instructor:Male_normal:LeftArm_RIG|instructor:Male_normal:LeftArm_fk|instructor:Male_normal:LeftArm_shouldernull|instructor:Male_normal:LeftArm_Shoulder|instructor:Male_normal:LeftArm_upperarmcontrolnull|instructor:Male_normal:LeftArm_Upper_Arm|instructor:Male_normal:LeftArm_lowerarmcontrolnull|instructor:Male_normal:LeftArm_Lower_Arm|instructor:Male_normal:LeftArm_handcontrolnull|instructor:Male_normal:LeftArm_HandTranslate|instructor:Male_normal:LeftArm_Hand" 
-		"rotate" " -type \"double3\" -56.586322 -9.915787 11.164739"
+		"rotate" " -type \"double3\" -39.129525 31.587491 9.178452"
 		2 "|Instructor|instructor:Male_normal:Character|instructor:Male_normal:Upper_Body|instructor:Male_normal:JOINTS|instructor:Male_normal:Spine_JOINTS|instructor:Male_normal:Spine_joint1|instructor:Male_normal:Spine_joint2|instructor:Male_normal:Spine_joint3|instructor:Male_normal:Spine_joint4|instructor:Male_normal:Spine_joint5|instructor:Male_normal:Spine_joint6|instructor:Male_normal:Spine_joint7|instructor:Male_normal:LeftArm_scalingCompensate|instructor:Male_normal:LeftArm_pivotCompensate|instructor:Male_normal:LeftArm_RIG|instructor:Male_normal:LeftArm_fk|instructor:Male_normal:LeftArm_shouldernull|instructor:Male_normal:LeftArm_Shoulder|instructor:Male_normal:LeftArm_upperarmcontrolnull|instructor:Male_normal:LeftArm_Upper_Arm|instructor:Male_normal:LeftArm_lowerarmcontrolnull|instructor:Male_normal:LeftArm_Lower_Arm|instructor:Male_normal:LeftArm_handcontrolnull|instructor:Male_normal:LeftArm_HandTranslate|instructor:Male_normal:LeftArm_Hand" 
 		"rotateZ" " -av"
 		2 "|Instructor|instructor:Male_normal:Character|instructor:Male_normal:Upper_Body|instructor:Male_normal:JOINTS|instructor:Male_normal:Spine_JOINTS|instructor:Male_normal:Spine_joint1|instructor:Male_normal:Spine_joint2|instructor:Male_normal:Spine_joint3|instructor:Male_normal:Spine_joint4|instructor:Male_normal:Spine_joint5|instructor:Male_normal:Spine_joint6|instructor:Male_normal:Spine_joint7|instructor:Male_normal:LeftArm_scalingCompensate|instructor:Male_normal:LeftArm_pivotCompensate|instructor:Male_normal:LeftArm_RIG|instructor:Male_normal:LeftArm_fk|instructor:Male_normal:LeftArm_shouldernull|instructor:Male_normal:LeftArm_Shoulder|instructor:Male_normal:LeftArm_upperarmcontrolnull|instructor:Male_normal:LeftArm_Upper_Arm|instructor:Male_normal:LeftArm_lowerarmcontrolnull|instructor:Male_normal:LeftArm_Lower_Arm|instructor:Male_normal:LeftArm_handcontrolnull|instructor:Male_normal:LeftArm_HandTranslate|instructor:Male_normal:LeftArm_Hand" 
@@ -395,7 +396,7 @@ createNode reference -n "instructorRN";
 		2 "|Instructor|instructor:Male_normal:Character|instructor:Male_normal:Upper_Body|instructor:Male_normal:JOINTS|instructor:Male_normal:Spine_JOINTS|instructor:Male_normal:Spine_joint1|instructor:Male_normal:Spine_joint2|instructor:Male_normal:Spine_joint3|instructor:Male_normal:Spine_joint4|instructor:Male_normal:Spine_joint5|instructor:Male_normal:Spine_joint6|instructor:Male_normal:Spine_joint7|instructor:Male_normal:LeftArm_scalingCompensate|instructor:Male_normal:LeftArm_pivotCompensate|instructor:Male_normal:LeftArm_RIG|instructor:Male_normal:LeftArm_fk|instructor:Male_normal:LeftArm_shouldernull|instructor:Male_normal:LeftArm_Shoulder|instructor:Male_normal:LeftArm_upperarmcontrolnull|instructor:Male_normal:LeftArm_Arm_Pole_Vector" 
 		"AddToTwist" " -av -k 1 0"
 		2 "|Instructor|instructor:Male_normal:Character|instructor:Male_normal:Upper_Body|instructor:Male_normal:JOINTS|instructor:Male_normal:Spine_JOINTS|instructor:Male_normal:Spine_joint1|instructor:Male_normal:Spine_joint2|instructor:Male_normal:Spine_joint3|instructor:Male_normal:Spine_joint4|instructor:Male_normal:Spine_joint5|instructor:Male_normal:Spine_joint6|instructor:Male_normal:Spine_joint7|instructor:Male_normal:RightArm_scalingCompensate|instructor:Male_normal:RightArm_JOINTS|instructor:Male_normal:RightArm_joint1|instructor:Male_normal:RightArm_joint2|instructor:Male_normal:RightArm_joint3|instructor:Male_normal:RightArm_joint4|instructor:Male_normal:RightArm_elbowcounterscale|instructor:Male_normal:RightArm_joint5" 
-		"rotate" " -type \"double3\" 0 -82.416949 0"
+		"rotate" " -type \"double3\" -2.46833e-07 -82.41695 -1.00418e-06"
 		2 "|Instructor|instructor:Male_normal:Character|instructor:Male_normal:Upper_Body|instructor:Male_normal:JOINTS|instructor:Male_normal:Spine_JOINTS|instructor:Male_normal:Spine_joint1|instructor:Male_normal:Spine_joint2|instructor:Male_normal:Spine_joint3|instructor:Male_normal:Spine_joint4|instructor:Male_normal:Spine_joint5|instructor:Male_normal:Spine_joint6|instructor:Male_normal:Spine_joint7|instructor:Male_normal:RightArm_scalingCompensate|instructor:Male_normal:RightArm_JOINTS|instructor:Male_normal:RightArm_joint1|instructor:Male_normal:RightArm_joint2|instructor:Male_normal:RightArm_joint3|instructor:Male_normal:RightArm_joint4|instructor:Male_normal:RightArm_elbowcounterscale|instructor:Male_normal:RightArm_joint5" 
 		"rotateX" " -av"
 		2 "|Instructor|instructor:Male_normal:Character|instructor:Male_normal:Upper_Body|instructor:Male_normal:JOINTS|instructor:Male_normal:Spine_JOINTS|instructor:Male_normal:Spine_joint1|instructor:Male_normal:Spine_joint2|instructor:Male_normal:Spine_joint3|instructor:Male_normal:Spine_joint4|instructor:Male_normal:Spine_joint5|instructor:Male_normal:Spine_joint6|instructor:Male_normal:Spine_joint7|instructor:Male_normal:RightArm_scalingCompensate|instructor:Male_normal:RightArm_JOINTS|instructor:Male_normal:RightArm_joint1|instructor:Male_normal:RightArm_joint2|instructor:Male_normal:RightArm_joint3|instructor:Male_normal:RightArm_joint4|instructor:Male_normal:RightArm_elbowcounterscale|instructor:Male_normal:RightArm_joint5" 
@@ -415,7 +416,7 @@ createNode reference -n "instructorRN";
 		2 "|Instructor|instructor:Male_normal:Character|instructor:Male_normal:Upper_Body|instructor:Male_normal:JOINTS|instructor:Male_normal:Spine_JOINTS|instructor:Male_normal:Spine_joint1|instructor:Male_normal:Spine_joint2|instructor:Male_normal:Spine_joint3|instructor:Male_normal:Spine_joint4|instructor:Male_normal:Spine_joint5|instructor:Male_normal:Spine_joint6|instructor:Male_normal:Spine_joint7|instructor:Male_normal:RightArm_scalingCompensate|instructor:Male_normal:RightArm_pivotCompensate|instructor:Male_normal:RightArm_RIG|instructor:Male_normal:RightArm_fk|instructor:Male_normal:RightArm_shouldernull|instructor:Male_normal:RightArm_extra|instructor:Male_normal:RightArm_Shoulder" 
 		"rotateX" " -av"
 		2 "|Instructor|instructor:Male_normal:Character|instructor:Male_normal:Upper_Body|instructor:Male_normal:JOINTS|instructor:Male_normal:Spine_JOINTS|instructor:Male_normal:Spine_joint1|instructor:Male_normal:Spine_joint2|instructor:Male_normal:Spine_joint3|instructor:Male_normal:Spine_joint4|instructor:Male_normal:Spine_joint5|instructor:Male_normal:Spine_joint6|instructor:Male_normal:Spine_joint7|instructor:Male_normal:RightArm_scalingCompensate|instructor:Male_normal:RightArm_pivotCompensate|instructor:Male_normal:RightArm_RIG|instructor:Male_normal:RightArm_fk|instructor:Male_normal:RightArm_shouldernull|instructor:Male_normal:RightArm_extra|instructor:Male_normal:RightArm_Shoulder|instructor:Male_normal:RightArm_upperarmcontrolnull|instructor:Male_normal:RightArm_Upper_Arm" 
-		"rotate" " -type \"double3\" 30.070097 -61.977816 28.176686"
+		"rotate" " -type \"double3\" 26.113972 -49.705376 14.725567"
 		2 "|Instructor|instructor:Male_normal:Character|instructor:Male_normal:Upper_Body|instructor:Male_normal:JOINTS|instructor:Male_normal:Spine_JOINTS|instructor:Male_normal:Spine_joint1|instructor:Male_normal:Spine_joint2|instructor:Male_normal:Spine_joint3|instructor:Male_normal:Spine_joint4|instructor:Male_normal:Spine_joint5|instructor:Male_normal:Spine_joint6|instructor:Male_normal:Spine_joint7|instructor:Male_normal:RightArm_scalingCompensate|instructor:Male_normal:RightArm_pivotCompensate|instructor:Male_normal:RightArm_RIG|instructor:Male_normal:RightArm_fk|instructor:Male_normal:RightArm_shouldernull|instructor:Male_normal:RightArm_extra|instructor:Male_normal:RightArm_Shoulder|instructor:Male_normal:RightArm_upperarmcontrolnull|instructor:Male_normal:RightArm_Upper_Arm" 
 		"rotateY" " -av"
 		2 "|Instructor|instructor:Male_normal:Character|instructor:Male_normal:Upper_Body|instructor:Male_normal:JOINTS|instructor:Male_normal:Spine_JOINTS|instructor:Male_normal:Spine_joint1|instructor:Male_normal:Spine_joint2|instructor:Male_normal:Spine_joint3|instructor:Male_normal:Spine_joint4|instructor:Male_normal:Spine_joint5|instructor:Male_normal:Spine_joint6|instructor:Male_normal:Spine_joint7|instructor:Male_normal:RightArm_scalingCompensate|instructor:Male_normal:RightArm_pivotCompensate|instructor:Male_normal:RightArm_RIG|instructor:Male_normal:RightArm_fk|instructor:Male_normal:RightArm_shouldernull|instructor:Male_normal:RightArm_extra|instructor:Male_normal:RightArm_Shoulder|instructor:Male_normal:RightArm_upperarmcontrolnull|instructor:Male_normal:RightArm_Upper_Arm" 
@@ -451,7 +452,7 @@ createNode reference -n "instructorRN";
 		2 "|Instructor|instructor:Male_normal:Character|instructor:Male_normal:Upper_Body|instructor:Male_normal:JOINTS|instructor:Male_normal:Spine_JOINTS|instructor:Male_normal:Spine_joint1|instructor:Male_normal:Spine_joint2|instructor:Male_normal:Spine_joint3|instructor:Male_normal:Spine_joint4|instructor:Male_normal:Spine_joint5|instructor:Male_normal:Spine_joint6|instructor:Male_normal:Spine_joint7|instructor:Male_normal:RightArm_scalingCompensate|instructor:Male_normal:RightArm_pivotCompensate|instructor:Male_normal:RightArm_RIG|instructor:Male_normal:RightArm_fk|instructor:Male_normal:RightArm_shouldernull|instructor:Male_normal:RightArm_extra|instructor:Male_normal:RightArm_Shoulder|instructor:Male_normal:RightArm_upperarmcontrolnull|instructor:Male_normal:RightArm_Upper_Arm|instructor:Male_normal:RightArm_lowerarmcontrolnull|instructor:Male_normal:RightArm_Lower_Arm|instructor:Male_normal:RightArm_handcontrolnull|instructor:Male_normal:RightArm_HandTranslate" 
 		"translateX" " -av"
 		2 "|Instructor|instructor:Male_normal:Character|instructor:Male_normal:Upper_Body|instructor:Male_normal:JOINTS|instructor:Male_normal:Spine_JOINTS|instructor:Male_normal:Spine_joint1|instructor:Male_normal:Spine_joint2|instructor:Male_normal:Spine_joint3|instructor:Male_normal:Spine_joint4|instructor:Male_normal:Spine_joint5|instructor:Male_normal:Spine_joint6|instructor:Male_normal:Spine_joint7|instructor:Male_normal:RightArm_scalingCompensate|instructor:Male_normal:RightArm_pivotCompensate|instructor:Male_normal:RightArm_RIG|instructor:Male_normal:RightArm_fk|instructor:Male_normal:RightArm_shouldernull|instructor:Male_normal:RightArm_extra|instructor:Male_normal:RightArm_Shoulder|instructor:Male_normal:RightArm_upperarmcontrolnull|instructor:Male_normal:RightArm_Upper_Arm|instructor:Male_normal:RightArm_lowerarmcontrolnull|instructor:Male_normal:RightArm_Lower_Arm|instructor:Male_normal:RightArm_handcontrolnull|instructor:Male_normal:RightArm_HandTranslate|instructor:Male_normal:RightArm_Hand" 
-		"rotate" " -type \"double3\" -19.132581 27.837066 1.346701"
+		"rotate" " -type \"double3\" -54.538932 37.047833 -16.812254"
 		2 "|Instructor|instructor:Male_normal:Character|instructor:Male_normal:Upper_Body|instructor:Male_normal:JOINTS|instructor:Male_normal:Spine_JOINTS|instructor:Male_normal:Spine_joint1|instructor:Male_normal:Spine_joint2|instructor:Male_normal:Spine_joint3|instructor:Male_normal:Spine_joint4|instructor:Male_normal:Spine_joint5|instructor:Male_normal:Spine_joint6|instructor:Male_normal:Spine_joint7|instructor:Male_normal:RightArm_scalingCompensate|instructor:Male_normal:RightArm_pivotCompensate|instructor:Male_normal:RightArm_RIG|instructor:Male_normal:RightArm_fk|instructor:Male_normal:RightArm_shouldernull|instructor:Male_normal:RightArm_extra|instructor:Male_normal:RightArm_Shoulder|instructor:Male_normal:RightArm_upperarmcontrolnull|instructor:Male_normal:RightArm_Upper_Arm|instructor:Male_normal:RightArm_lowerarmcontrolnull|instructor:Male_normal:RightArm_Lower_Arm|instructor:Male_normal:RightArm_handcontrolnull|instructor:Male_normal:RightArm_HandTranslate|instructor:Male_normal:RightArm_Hand" 
 		"rotateZ" " -av"
 		2 "|Instructor|instructor:Male_normal:Character|instructor:Male_normal:Upper_Body|instructor:Male_normal:JOINTS|instructor:Male_normal:Spine_JOINTS|instructor:Male_normal:Spine_joint1|instructor:Male_normal:Spine_joint2|instructor:Male_normal:Spine_joint3|instructor:Male_normal:Spine_joint4|instructor:Male_normal:Spine_joint5|instructor:Male_normal:Spine_joint6|instructor:Male_normal:Spine_joint7|instructor:Male_normal:RightArm_scalingCompensate|instructor:Male_normal:RightArm_pivotCompensate|instructor:Male_normal:RightArm_RIG|instructor:Male_normal:RightArm_fk|instructor:Male_normal:RightArm_shouldernull|instructor:Male_normal:RightArm_extra|instructor:Male_normal:RightArm_Shoulder|instructor:Male_normal:RightArm_upperarmcontrolnull|instructor:Male_normal:RightArm_Upper_Arm|instructor:Male_normal:RightArm_lowerarmcontrolnull|instructor:Male_normal:RightArm_Lower_Arm|instructor:Male_normal:RightArm_handcontrolnull|instructor:Male_normal:RightArm_HandTranslate|instructor:Male_normal:RightArm_Hand" 
@@ -1077,7 +1078,7 @@ createNode reference -n "instructorRN";
 		2 "|Instructor|instructor:Male_normal:Character|instructor:Male_normal:Upper_Body|instructor:Male_normal:weaponNull|instructor:Male_normal:weapon|instructor:Male_normal:LeftHand_Pad" 
 		"scaleX" " -av"
 		2 "|Instructor|instructor:Male_normal:Character|instructor:Male_normal:IK|instructor:Male_normal:LeftArm_IK" 
-		"translate" " -type \"double3\" -4.867983 13.666167 1.163878"
+		"translate" " -type \"double3\" -1.617177 18.960782 1.385992"
 		2 "|Instructor|instructor:Male_normal:Character|instructor:Male_normal:IK|instructor:Male_normal:LeftArm_IK" 
 		"translateX" " -av"
 		2 "|Instructor|instructor:Male_normal:Character|instructor:Male_normal:IK|instructor:Male_normal:LeftArm_IK" 
@@ -1411,7 +1412,7 @@ createNode reference -n "instructorRN";
 		2 "instructor:Male_normal:male_normal" "linearValues[52]" " -av"
 		2 "instructor:Male_normal:male_normal" "linearValues[53]" " -av"
 		2 "instructor:Male_normal:male_normal" "linearValues[54]" " -av"
-		2 "instructor:Male_normal:male_normal" "av[1:168]" " -s 168 0 0 0 1.534982 9.8491 0 0 0 0 -1.072811 0.14049 -7.058429 0 0 0 -7.672505 135.152458 97.744456 -4.381082 4.434662 0 0 0 0 7.931937 20.776358 7.170698 0 0 0 7.54675 2.828901 -39.126756 0 0 0 0 -18.630936 -2.914773 0 0 -7.76637 0 0 -8.381934 0 0 0 20.840468 -5.097649 3.41199 0 0 0 0 0 0 1.346701 27.837066 -19.132581 -82.416949 0 0 0 0 -61.977816 30.070097 0 0 0 -26.638 0 0 0 0 0 2.712014 1.677871 0.369934 0 184.612652 0 0 0 0 -34.578074 -30.226242 9.282089 -87.561307 0 0 0 11.164739 -9.915787 -56.586322 0 0 0 0 -0.000134816 2.44354e-06 0 0 -3.36919e-06 0 0 0 0 0 0 -3.36919e-06 0 0 0 0 0 0 0 0 10.214873 0 -0.557723 -5.705624 -9.298 0 0 0 -0.164023 -5.539287 -9.227106 0 0 0 0 1.90221e-07 0 0 0 0 0 0 0 -2.945 -4.661083 -11.257637 0 0 0 0 0 0 -46.158648 -5.811742 0.488116 -0.996989 -0.995794 0.0173304 0 0 0 -46.233335 -4.645865 3.709445 18.11119 -23.892186 2.095514 -2.945 -36.112678"
+		2 "instructor:Male_normal:male_normal" "av[1:168]" " -s 168 0 0 0 1.534982 9.8491 0 0 0 0 -1.072811 0.14049 -7.058429 0 0 0 -7.672505 135.152458 97.744456 -4.381082 4.434662 0 0 0 0 7.931937 20.776358 7.170698 0 0 0 7.54675 2.828901 -39.126756 0 0 0 0 -18.630936 -2.914773 0 0 -7.76637 0 0 -8.381934 0 0 0 20.840468 -5.097649 3.41199 0 0 0 0 0 0 -16.812254 37.047833 -54.538932 -82.416949 0 0 0 0 -49.705376 26.113972 0 0 0 -26.638 0 0 0 0 0 2.712014 1.677871 0.369934 0 184.612652 0 0 0 0 -34.578074 -30.226242 9.282089 -87.561307 0 0 0 9.178452 31.587491 -39.129525 0 0 0 0 -0.000134816 2.44354e-06 0 0 -3.36919e-06 0 0 0 0 0 0 -3.36919e-06 0 0 0 0 0 0 0 0 10.214873 0 -0.557723 -5.705624 -9.298 0 0 0 -0.164023 -5.539287 -9.227106 0 0 0 0 1.90221e-07 0 0 0 0 0 0 0 -2.945 -4.661083 -11.257637 0 0 0 0 0 0 -46.158648 -5.811742 0.488116 -0.996989 -0.995794 0.0173304 0 0 0 -46.233335 -4.645865 3.709445 18.11119 -23.892186 2.095514 -2.945 -36.112678"
 		
 		2 "instructor:Male_normal:male_normal" "angularValues" " -s 160"
 		2 "instructor:Male_normal:male_normal" "angularValues[4]" " -av"
@@ -1783,7 +1784,7 @@ createNode reference -n "instructorRN";
 		"rotateY" " -av"
 		2 "|Instructor|instructor:Male_normal:mesh_:BackRoot|instructor:Male_normal:mesh_:Back2|instructor:Male_normal:mesh_:Back3|instructor:Male_normal:mesh_:Back4|instructor:Male_normal:mesh_:Back5|instructor:Male_normal:mesh_:Neck|instructor:Male_normal:mesh_:Head" 
 		"rotateZ" " -av"
-		2 "|Instructor|instructor:Male_normal:mesh_:G_meshes_arms" "translate" " -type \"double3\" 6.320907 2.826748 28.158193"
+		2 "|Instructor|instructor:Male_normal:mesh_:G_meshes_arms" "translate" " -type \"double3\" 0.68705 7.91107 31.418504"
 		
 		2 "|Instructor|instructor:Male_normal:mesh_:G_meshes_arms" "translateX" " -av"
 		
@@ -1791,7 +1792,7 @@ createNode reference -n "instructorRN";
 		
 		2 "|Instructor|instructor:Male_normal:mesh_:G_meshes_arms" "translateZ" " -av"
 		
-		2 "|Instructor|instructor:Male_normal:mesh_:G_meshes_arms" "rotate" " -type \"double3\" 61.824402 -66.137978 -85.644388"
+		2 "|Instructor|instructor:Male_normal:mesh_:G_meshes_arms" "rotate" " -type \"double3\" -8.947971 -115.611139 -37.379942"
 		
 		2 "|Instructor|instructor:Male_normal:mesh_:G_meshes_arms" "rotateX" " -av"
 		
@@ -1973,14 +1974,13 @@ createNode reference -n "recruitRN";
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"recruitRN"
 		"recruit:V005_RN" 0
-		"recruit:bananaRN" 1
-		0 "|recruit:banana:Banana" "|Recruit" "-s -r "
+		"recruit:bananaRN" 0
 		"recruitRN" 0
 		"recruit:Male_normal:mesh_RN" 0
 		"recruit:V005_RN" 590
 		0 "|recruit:Male_normal:Character" "|Recruit" "-s -r "
 		2 "|Recruit|recruit:Male_normal:Character" "visibility" " -av 1"
-		2 "|Recruit|recruit:Male_normal:Character" "translate" " -type \"double3\" 0 0 0"
+		2 "|Recruit|recruit:Male_normal:Character" "translate" " -type \"double3\" -2.05474 0 0"
 		
 		2 "|Recruit|recruit:Male_normal:Character" "translateZ" " -av"
 		2 "|Recruit|recruit:Male_normal:Character" "translateY" " -av"
@@ -3169,6 +3169,8 @@ createNode reference -n "recruitRN";
 		2 "recruit:Male_normal:male_normal" "clipIndexMap" (" -type \"Int32Array\" 411 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100 101 102 103 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 123 124 125 126 127 128 129 130 131 132 133 134 135 136 137 138 139 140 141 142 143 144 145 146 147 148 149 150 151 152 153 154 155 156 157 158 159 160 161 162 163 164 165 166 167 168 169 170 171 172 173 174 175 176 177 178 179 180 181 182 183 184 185 186 187 188 189 190 191 192 193 194 195 196 197 198 199 200 201 202 203 204 205 206 207 208 209 210 211 212 213 214 215 216 217 218 219 220 221 222 223 224 225 226 227 228 229 230 231 232 233 234 235 236 237 238 239 240 241 242 243 244 245 246 247 248 249 250 251 252 253 254 255 256 257 258 259 260 261 262 263 264 265 266 267 268 269 270 271 272 273 274 275 276 27"
 		+ "7 278 279 280 281 282 283 284 285 286 287 288 289 290 291 292 293 294 295 296 297 298 299 300 301 302 303 304 305 306 307 308 309 310 311 312 313 314 315 316 317 318 319 320 321 322 323 324 325 326 327 328 329 330 331 332 333 334 335 336 337 338 339 340 341 342 343 344 345 346 347 348 349 350 351 352 353 354 355 356 357 358 359 360 361 362 363 364 365 366 367 368 369 370 371 372 373 374 375 376 377 378 379 380 381 382 383 384 385 386 387 388 389 390 391 392 393 394 395 396 397 398 399 400 401 402 403 404 405 406 407 408 409 410"
 		)
+		"recruit:bananaRN" 1
+		0 "|recruit:banana:Banana" "|Recruit" "-s -r "
 		"recruitRN" 15
 		0 "|recruit:ctr_RNfosterParent1" "|Recruit" "-s -r "
 		0 "|recruit:defaultLight" "|Recruit" "-s -r "
@@ -3470,11 +3472,11 @@ createNode reference -n "recruit2RN";
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"recruit2RN"
 		"recruit2:V005_RN" 0
-		"recruit2:Male_normal:mesh_RN" 0
 		"recruit2RN" 0
+		"recruit2:Male_normal:mesh_RN" 0
 		"recruit2:V005_RN" 589
 		0 "|recruit2:Male_normal:Character" "|Recruit2" "-s -r "
-		2 "|Recruit2|recruit2:Male_normal:Character" "translate" " -type \"double3\" 11.972622 0 0"
+		2 "|Recruit2|recruit2:Male_normal:Character" "translate" " -type \"double3\" 7.786247 0 0"
 		
 		2 "|Recruit2|recruit2:Male_normal:Character" "translateZ" " -av"
 		2 "|Recruit2|recruit2:Male_normal:Character" "translateY" " -av"
@@ -3490,7 +3492,7 @@ createNode reference -n "recruit2RN";
 		2 "|Recruit2|recruit2:Male_normal:Character" "scaleY" " -av"
 		2 "|Recruit2|recruit2:Male_normal:Character" "scaleX" " -av"
 		2 "|Recruit2|recruit2:Male_normal:Character|recruit2:Male_normal:Upper_Body" 
-		"translate" " -type \"double3\" 0 0 0"
+		"translate" " -type \"double3\" 0 -5.229071 4.220976"
 		2 "|Recruit2|recruit2:Male_normal:Character|recruit2:Male_normal:Upper_Body" 
 		"translateY" " -av"
 		2 "|Recruit2|recruit2:Male_normal:Character|recruit2:Male_normal:Upper_Body" 
@@ -3498,7 +3500,7 @@ createNode reference -n "recruit2RN";
 		2 "|Recruit2|recruit2:Male_normal:Character|recruit2:Male_normal:Upper_Body" 
 		"translateX" " -av"
 		2 "|Recruit2|recruit2:Male_normal:Character|recruit2:Male_normal:Upper_Body" 
-		"rotate" " -type \"double3\" -2.362424 -5.33452 0.489062"
+		"rotate" " -type \"double3\" 83.30175 -5.33452 0.489062"
 		2 "|Recruit2|recruit2:Male_normal:Character|recruit2:Male_normal:Upper_Body" 
 		"rotateZ" " -av"
 		2 "|Recruit2|recruit2:Male_normal:Character|recruit2:Male_normal:Upper_Body" 
@@ -3548,7 +3550,7 @@ createNode reference -n "recruit2RN";
 		2 "|Recruit2|recruit2:Male_normal:Character|recruit2:Male_normal:Upper_Body|recruit2:Male_normal:JOINTS|recruit2:Male_normal:Spine_JOINTS|recruit2:Male_normal:Spine_joint1|recruit2:Male_normal:Spine_joint2|recruit2:Male_normal:Spine_joint3|recruit2:Male_normal:Spine_joint4|recruit2:Male_normal:Spine_joint5|recruit2:Male_normal:Spine_joint6|recruit2:Male_normal:Spine_joint7|recruit2:Male_normal:LeftArm_scalingCompensate|recruit2:Male_normal:LeftArm_pivotCompensate|recruit2:Male_normal:LeftArm_RIG|recruit2:Male_normal:LeftArm_fk|recruit2:Male_normal:LeftArm_shouldernull|recruit2:Male_normal:LeftArm_Shoulder" 
 		"rotateX" " -av"
 		2 "|Recruit2|recruit2:Male_normal:Character|recruit2:Male_normal:Upper_Body|recruit2:Male_normal:JOINTS|recruit2:Male_normal:Spine_JOINTS|recruit2:Male_normal:Spine_joint1|recruit2:Male_normal:Spine_joint2|recruit2:Male_normal:Spine_joint3|recruit2:Male_normal:Spine_joint4|recruit2:Male_normal:Spine_joint5|recruit2:Male_normal:Spine_joint6|recruit2:Male_normal:Spine_joint7|recruit2:Male_normal:LeftArm_scalingCompensate|recruit2:Male_normal:LeftArm_pivotCompensate|recruit2:Male_normal:LeftArm_RIG|recruit2:Male_normal:LeftArm_fk|recruit2:Male_normal:LeftArm_shouldernull|recruit2:Male_normal:LeftArm_Shoulder|recruit2:Male_normal:LeftArm_upperarmcontrolnull|recruit2:Male_normal:LeftArm_Upper_Arm" 
-		"rotate" " -type \"double3\" 26.866961 3.480732 -41.95878"
+		"rotate" " -type \"double3\" 28.213908 -96.736977 39.107039"
 		2 "|Recruit2|recruit2:Male_normal:Character|recruit2:Male_normal:Upper_Body|recruit2:Male_normal:JOINTS|recruit2:Male_normal:Spine_JOINTS|recruit2:Male_normal:Spine_joint1|recruit2:Male_normal:Spine_joint2|recruit2:Male_normal:Spine_joint3|recruit2:Male_normal:Spine_joint4|recruit2:Male_normal:Spine_joint5|recruit2:Male_normal:Spine_joint6|recruit2:Male_normal:Spine_joint7|recruit2:Male_normal:LeftArm_scalingCompensate|recruit2:Male_normal:LeftArm_pivotCompensate|recruit2:Male_normal:LeftArm_RIG|recruit2:Male_normal:LeftArm_fk|recruit2:Male_normal:LeftArm_shouldernull|recruit2:Male_normal:LeftArm_Shoulder|recruit2:Male_normal:LeftArm_upperarmcontrolnull|recruit2:Male_normal:LeftArm_Upper_Arm" 
 		"rotateZ" " -av"
 		2 "|Recruit2|recruit2:Male_normal:Character|recruit2:Male_normal:Upper_Body|recruit2:Male_normal:JOINTS|recruit2:Male_normal:Spine_JOINTS|recruit2:Male_normal:Spine_joint1|recruit2:Male_normal:Spine_joint2|recruit2:Male_normal:Spine_joint3|recruit2:Male_normal:Spine_joint4|recruit2:Male_normal:Spine_joint5|recruit2:Male_normal:Spine_joint6|recruit2:Male_normal:Spine_joint7|recruit2:Male_normal:LeftArm_scalingCompensate|recruit2:Male_normal:LeftArm_pivotCompensate|recruit2:Male_normal:LeftArm_RIG|recruit2:Male_normal:LeftArm_fk|recruit2:Male_normal:LeftArm_shouldernull|recruit2:Male_normal:LeftArm_Shoulder|recruit2:Male_normal:LeftArm_upperarmcontrolnull|recruit2:Male_normal:LeftArm_Upper_Arm" 
@@ -3584,7 +3586,7 @@ createNode reference -n "recruit2RN";
 		2 "|Recruit2|recruit2:Male_normal:Character|recruit2:Male_normal:Upper_Body|recruit2:Male_normal:JOINTS|recruit2:Male_normal:Spine_JOINTS|recruit2:Male_normal:Spine_joint1|recruit2:Male_normal:Spine_joint2|recruit2:Male_normal:Spine_joint3|recruit2:Male_normal:Spine_joint4|recruit2:Male_normal:Spine_joint5|recruit2:Male_normal:Spine_joint6|recruit2:Male_normal:Spine_joint7|recruit2:Male_normal:LeftArm_scalingCompensate|recruit2:Male_normal:LeftArm_pivotCompensate|recruit2:Male_normal:LeftArm_RIG|recruit2:Male_normal:LeftArm_fk|recruit2:Male_normal:LeftArm_shouldernull|recruit2:Male_normal:LeftArm_Shoulder|recruit2:Male_normal:LeftArm_upperarmcontrolnull|recruit2:Male_normal:LeftArm_Upper_Arm|recruit2:Male_normal:LeftArm_lowerarmcontrolnull|recruit2:Male_normal:LeftArm_Lower_Arm|recruit2:Male_normal:LeftArm_handcontrolnull|recruit2:Male_normal:LeftArm_HandTranslate" 
 		"translateX" " -av"
 		2 "|Recruit2|recruit2:Male_normal:Character|recruit2:Male_normal:Upper_Body|recruit2:Male_normal:JOINTS|recruit2:Male_normal:Spine_JOINTS|recruit2:Male_normal:Spine_joint1|recruit2:Male_normal:Spine_joint2|recruit2:Male_normal:Spine_joint3|recruit2:Male_normal:Spine_joint4|recruit2:Male_normal:Spine_joint5|recruit2:Male_normal:Spine_joint6|recruit2:Male_normal:Spine_joint7|recruit2:Male_normal:LeftArm_scalingCompensate|recruit2:Male_normal:LeftArm_pivotCompensate|recruit2:Male_normal:LeftArm_RIG|recruit2:Male_normal:LeftArm_fk|recruit2:Male_normal:LeftArm_shouldernull|recruit2:Male_normal:LeftArm_Shoulder|recruit2:Male_normal:LeftArm_upperarmcontrolnull|recruit2:Male_normal:LeftArm_Upper_Arm|recruit2:Male_normal:LeftArm_lowerarmcontrolnull|recruit2:Male_normal:LeftArm_Lower_Arm|recruit2:Male_normal:LeftArm_handcontrolnull|recruit2:Male_normal:LeftArm_HandTranslate|recruit2:Male_normal:LeftArm_Hand" 
-		"rotate" " -type \"double3\" 0 0 0"
+		"rotate" " -type \"double3\" 0 0 47.500479"
 		2 "|Recruit2|recruit2:Male_normal:Character|recruit2:Male_normal:Upper_Body|recruit2:Male_normal:JOINTS|recruit2:Male_normal:Spine_JOINTS|recruit2:Male_normal:Spine_joint1|recruit2:Male_normal:Spine_joint2|recruit2:Male_normal:Spine_joint3|recruit2:Male_normal:Spine_joint4|recruit2:Male_normal:Spine_joint5|recruit2:Male_normal:Spine_joint6|recruit2:Male_normal:Spine_joint7|recruit2:Male_normal:LeftArm_scalingCompensate|recruit2:Male_normal:LeftArm_pivotCompensate|recruit2:Male_normal:LeftArm_RIG|recruit2:Male_normal:LeftArm_fk|recruit2:Male_normal:LeftArm_shouldernull|recruit2:Male_normal:LeftArm_Shoulder|recruit2:Male_normal:LeftArm_upperarmcontrolnull|recruit2:Male_normal:LeftArm_Upper_Arm|recruit2:Male_normal:LeftArm_lowerarmcontrolnull|recruit2:Male_normal:LeftArm_Lower_Arm|recruit2:Male_normal:LeftArm_handcontrolnull|recruit2:Male_normal:LeftArm_HandTranslate|recruit2:Male_normal:LeftArm_Hand" 
 		"rotateZ" " -av"
 		2 "|Recruit2|recruit2:Male_normal:Character|recruit2:Male_normal:Upper_Body|recruit2:Male_normal:JOINTS|recruit2:Male_normal:Spine_JOINTS|recruit2:Male_normal:Spine_joint1|recruit2:Male_normal:Spine_joint2|recruit2:Male_normal:Spine_joint3|recruit2:Male_normal:Spine_joint4|recruit2:Male_normal:Spine_joint5|recruit2:Male_normal:Spine_joint6|recruit2:Male_normal:Spine_joint7|recruit2:Male_normal:LeftArm_scalingCompensate|recruit2:Male_normal:LeftArm_pivotCompensate|recruit2:Male_normal:LeftArm_RIG|recruit2:Male_normal:LeftArm_fk|recruit2:Male_normal:LeftArm_shouldernull|recruit2:Male_normal:LeftArm_Shoulder|recruit2:Male_normal:LeftArm_upperarmcontrolnull|recruit2:Male_normal:LeftArm_Upper_Arm|recruit2:Male_normal:LeftArm_lowerarmcontrolnull|recruit2:Male_normal:LeftArm_Lower_Arm|recruit2:Male_normal:LeftArm_handcontrolnull|recruit2:Male_normal:LeftArm_HandTranslate|recruit2:Male_normal:LeftArm_Hand" 
@@ -3656,7 +3658,7 @@ createNode reference -n "recruit2RN";
 		2 "|Recruit2|recruit2:Male_normal:Character|recruit2:Male_normal:Upper_Body|recruit2:Male_normal:JOINTS|recruit2:Male_normal:Spine_JOINTS|recruit2:Male_normal:Spine_joint1|recruit2:Male_normal:Spine_joint2|recruit2:Male_normal:Spine_joint3|recruit2:Male_normal:Spine_joint4|recruit2:Male_normal:Spine_joint5|recruit2:Male_normal:Spine_joint6|recruit2:Male_normal:Spine_joint7|recruit2:Male_normal:RightArm_scalingCompensate|recruit2:Male_normal:RightArm_pivotCompensate|recruit2:Male_normal:RightArm_RIG|recruit2:Male_normal:RightArm_fk|recruit2:Male_normal:RightArm_shouldernull|recruit2:Male_normal:RightArm_extra|recruit2:Male_normal:RightArm_Shoulder" 
 		"rotateX" " -av"
 		2 "|Recruit2|recruit2:Male_normal:Character|recruit2:Male_normal:Upper_Body|recruit2:Male_normal:JOINTS|recruit2:Male_normal:Spine_JOINTS|recruit2:Male_normal:Spine_joint1|recruit2:Male_normal:Spine_joint2|recruit2:Male_normal:Spine_joint3|recruit2:Male_normal:Spine_joint4|recruit2:Male_normal:Spine_joint5|recruit2:Male_normal:Spine_joint6|recruit2:Male_normal:Spine_joint7|recruit2:Male_normal:RightArm_scalingCompensate|recruit2:Male_normal:RightArm_pivotCompensate|recruit2:Male_normal:RightArm_RIG|recruit2:Male_normal:RightArm_fk|recruit2:Male_normal:RightArm_shouldernull|recruit2:Male_normal:RightArm_extra|recruit2:Male_normal:RightArm_Shoulder|recruit2:Male_normal:RightArm_upperarmcontrolnull|recruit2:Male_normal:RightArm_Upper_Arm" 
-		"rotate" " -type \"double3\" 8.642664 12.755974 -36.889129"
+		"rotate" " -type \"double3\" 33.92953 -72.834409 16.104252"
 		2 "|Recruit2|recruit2:Male_normal:Character|recruit2:Male_normal:Upper_Body|recruit2:Male_normal:JOINTS|recruit2:Male_normal:Spine_JOINTS|recruit2:Male_normal:Spine_joint1|recruit2:Male_normal:Spine_joint2|recruit2:Male_normal:Spine_joint3|recruit2:Male_normal:Spine_joint4|recruit2:Male_normal:Spine_joint5|recruit2:Male_normal:Spine_joint6|recruit2:Male_normal:Spine_joint7|recruit2:Male_normal:RightArm_scalingCompensate|recruit2:Male_normal:RightArm_pivotCompensate|recruit2:Male_normal:RightArm_RIG|recruit2:Male_normal:RightArm_fk|recruit2:Male_normal:RightArm_shouldernull|recruit2:Male_normal:RightArm_extra|recruit2:Male_normal:RightArm_Shoulder|recruit2:Male_normal:RightArm_upperarmcontrolnull|recruit2:Male_normal:RightArm_Upper_Arm" 
 		"rotateY" " -av"
 		2 "|Recruit2|recruit2:Male_normal:Character|recruit2:Male_normal:Upper_Body|recruit2:Male_normal:JOINTS|recruit2:Male_normal:Spine_JOINTS|recruit2:Male_normal:Spine_joint1|recruit2:Male_normal:Spine_joint2|recruit2:Male_normal:Spine_joint3|recruit2:Male_normal:Spine_joint4|recruit2:Male_normal:Spine_joint5|recruit2:Male_normal:Spine_joint6|recruit2:Male_normal:Spine_joint7|recruit2:Male_normal:RightArm_scalingCompensate|recruit2:Male_normal:RightArm_pivotCompensate|recruit2:Male_normal:RightArm_RIG|recruit2:Male_normal:RightArm_fk|recruit2:Male_normal:RightArm_shouldernull|recruit2:Male_normal:RightArm_extra|recruit2:Male_normal:RightArm_Shoulder|recruit2:Male_normal:RightArm_upperarmcontrolnull|recruit2:Male_normal:RightArm_Upper_Arm" 
@@ -3682,7 +3684,7 @@ createNode reference -n "recruit2RN";
 		2 "|Recruit2|recruit2:Male_normal:Character|recruit2:Male_normal:Upper_Body|recruit2:Male_normal:JOINTS|recruit2:Male_normal:Spine_JOINTS|recruit2:Male_normal:Spine_joint1|recruit2:Male_normal:Spine_joint2|recruit2:Male_normal:Spine_joint3|recruit2:Male_normal:Spine_joint4|recruit2:Male_normal:Spine_joint5|recruit2:Male_normal:Spine_joint6|recruit2:Male_normal:Spine_joint7|recruit2:Male_normal:RightArm_scalingCompensate|recruit2:Male_normal:RightArm_pivotCompensate|recruit2:Male_normal:RightArm_RIG|recruit2:Male_normal:RightArm_fk|recruit2:Male_normal:RightArm_shouldernull|recruit2:Male_normal:RightArm_extra|recruit2:Male_normal:RightArm_Shoulder|recruit2:Male_normal:RightArm_upperarmcontrolnull|recruit2:Male_normal:RightArm_Upper_Arm" 
 		"AddToTwist" " -av -k 1 0"
 		2 "|Recruit2|recruit2:Male_normal:Character|recruit2:Male_normal:Upper_Body|recruit2:Male_normal:JOINTS|recruit2:Male_normal:Spine_JOINTS|recruit2:Male_normal:Spine_joint1|recruit2:Male_normal:Spine_joint2|recruit2:Male_normal:Spine_joint3|recruit2:Male_normal:Spine_joint4|recruit2:Male_normal:Spine_joint5|recruit2:Male_normal:Spine_joint6|recruit2:Male_normal:Spine_joint7|recruit2:Male_normal:RightArm_scalingCompensate|recruit2:Male_normal:RightArm_pivotCompensate|recruit2:Male_normal:RightArm_RIG|recruit2:Male_normal:RightArm_fk|recruit2:Male_normal:RightArm_shouldernull|recruit2:Male_normal:RightArm_extra|recruit2:Male_normal:RightArm_Shoulder|recruit2:Male_normal:RightArm_upperarmcontrolnull|recruit2:Male_normal:RightArm_Upper_Arm|recruit2:Male_normal:RightArm_lowerarmcontrolnull|recruit2:Male_normal:RightArm_Lower_Arm" 
-		"rotateY" " -av -36.038929"
+		"rotateY" " -av -27.446346"
 		2 "|Recruit2|recruit2:Male_normal:Character|recruit2:Male_normal:Upper_Body|recruit2:Male_normal:JOINTS|recruit2:Male_normal:Spine_JOINTS|recruit2:Male_normal:Spine_joint1|recruit2:Male_normal:Spine_joint2|recruit2:Male_normal:Spine_joint3|recruit2:Male_normal:Spine_joint4|recruit2:Male_normal:Spine_joint5|recruit2:Male_normal:Spine_joint6|recruit2:Male_normal:Spine_joint7|recruit2:Male_normal:RightArm_scalingCompensate|recruit2:Male_normal:RightArm_pivotCompensate|recruit2:Male_normal:RightArm_RIG|recruit2:Male_normal:RightArm_fk|recruit2:Male_normal:RightArm_shouldernull|recruit2:Male_normal:RightArm_extra|recruit2:Male_normal:RightArm_Shoulder|recruit2:Male_normal:RightArm_upperarmcontrolnull|recruit2:Male_normal:RightArm_Upper_Arm|recruit2:Male_normal:RightArm_lowerarmcontrolnull|recruit2:Male_normal:RightArm_Lower_Arm|recruit2:Male_normal:RightArm_handcontrolnull|recruit2:Male_normal:RightArm_HandTranslate" 
 		"translate" " -type \"double3\" 0 0 0"
 		2 "|Recruit2|recruit2:Male_normal:Character|recruit2:Male_normal:Upper_Body|recruit2:Male_normal:JOINTS|recruit2:Male_normal:Spine_JOINTS|recruit2:Male_normal:Spine_joint1|recruit2:Male_normal:Spine_joint2|recruit2:Male_normal:Spine_joint3|recruit2:Male_normal:Spine_joint4|recruit2:Male_normal:Spine_joint5|recruit2:Male_normal:Spine_joint6|recruit2:Male_normal:Spine_joint7|recruit2:Male_normal:RightArm_scalingCompensate|recruit2:Male_normal:RightArm_pivotCompensate|recruit2:Male_normal:RightArm_RIG|recruit2:Male_normal:RightArm_fk|recruit2:Male_normal:RightArm_shouldernull|recruit2:Male_normal:RightArm_extra|recruit2:Male_normal:RightArm_Shoulder|recruit2:Male_normal:RightArm_upperarmcontrolnull|recruit2:Male_normal:RightArm_Upper_Arm|recruit2:Male_normal:RightArm_lowerarmcontrolnull|recruit2:Male_normal:RightArm_Lower_Arm|recruit2:Male_normal:RightArm_handcontrolnull|recruit2:Male_normal:RightArm_HandTranslate" 
@@ -3692,7 +3694,7 @@ createNode reference -n "recruit2RN";
 		2 "|Recruit2|recruit2:Male_normal:Character|recruit2:Male_normal:Upper_Body|recruit2:Male_normal:JOINTS|recruit2:Male_normal:Spine_JOINTS|recruit2:Male_normal:Spine_joint1|recruit2:Male_normal:Spine_joint2|recruit2:Male_normal:Spine_joint3|recruit2:Male_normal:Spine_joint4|recruit2:Male_normal:Spine_joint5|recruit2:Male_normal:Spine_joint6|recruit2:Male_normal:Spine_joint7|recruit2:Male_normal:RightArm_scalingCompensate|recruit2:Male_normal:RightArm_pivotCompensate|recruit2:Male_normal:RightArm_RIG|recruit2:Male_normal:RightArm_fk|recruit2:Male_normal:RightArm_shouldernull|recruit2:Male_normal:RightArm_extra|recruit2:Male_normal:RightArm_Shoulder|recruit2:Male_normal:RightArm_upperarmcontrolnull|recruit2:Male_normal:RightArm_Upper_Arm|recruit2:Male_normal:RightArm_lowerarmcontrolnull|recruit2:Male_normal:RightArm_Lower_Arm|recruit2:Male_normal:RightArm_handcontrolnull|recruit2:Male_normal:RightArm_HandTranslate" 
 		"translateX" " -av"
 		2 "|Recruit2|recruit2:Male_normal:Character|recruit2:Male_normal:Upper_Body|recruit2:Male_normal:JOINTS|recruit2:Male_normal:Spine_JOINTS|recruit2:Male_normal:Spine_joint1|recruit2:Male_normal:Spine_joint2|recruit2:Male_normal:Spine_joint3|recruit2:Male_normal:Spine_joint4|recruit2:Male_normal:Spine_joint5|recruit2:Male_normal:Spine_joint6|recruit2:Male_normal:Spine_joint7|recruit2:Male_normal:RightArm_scalingCompensate|recruit2:Male_normal:RightArm_pivotCompensate|recruit2:Male_normal:RightArm_RIG|recruit2:Male_normal:RightArm_fk|recruit2:Male_normal:RightArm_shouldernull|recruit2:Male_normal:RightArm_extra|recruit2:Male_normal:RightArm_Shoulder|recruit2:Male_normal:RightArm_upperarmcontrolnull|recruit2:Male_normal:RightArm_Upper_Arm|recruit2:Male_normal:RightArm_lowerarmcontrolnull|recruit2:Male_normal:RightArm_Lower_Arm|recruit2:Male_normal:RightArm_handcontrolnull|recruit2:Male_normal:RightArm_HandTranslate|recruit2:Male_normal:RightArm_Hand" 
-		"rotate" " -type \"double3\" 23.128897 4.480611 -11.458616"
+		"rotate" " -type \"double3\" -2.944482 35.069133 35.445191"
 		2 "|Recruit2|recruit2:Male_normal:Character|recruit2:Male_normal:Upper_Body|recruit2:Male_normal:JOINTS|recruit2:Male_normal:Spine_JOINTS|recruit2:Male_normal:Spine_joint1|recruit2:Male_normal:Spine_joint2|recruit2:Male_normal:Spine_joint3|recruit2:Male_normal:Spine_joint4|recruit2:Male_normal:Spine_joint5|recruit2:Male_normal:Spine_joint6|recruit2:Male_normal:Spine_joint7|recruit2:Male_normal:RightArm_scalingCompensate|recruit2:Male_normal:RightArm_pivotCompensate|recruit2:Male_normal:RightArm_RIG|recruit2:Male_normal:RightArm_fk|recruit2:Male_normal:RightArm_shouldernull|recruit2:Male_normal:RightArm_extra|recruit2:Male_normal:RightArm_Shoulder|recruit2:Male_normal:RightArm_upperarmcontrolnull|recruit2:Male_normal:RightArm_Upper_Arm|recruit2:Male_normal:RightArm_lowerarmcontrolnull|recruit2:Male_normal:RightArm_Lower_Arm|recruit2:Male_normal:RightArm_handcontrolnull|recruit2:Male_normal:RightArm_HandTranslate|recruit2:Male_normal:RightArm_Hand" 
 		"rotateZ" " -av"
 		2 "|Recruit2|recruit2:Male_normal:Character|recruit2:Male_normal:Upper_Body|recruit2:Male_normal:JOINTS|recruit2:Male_normal:Spine_JOINTS|recruit2:Male_normal:Spine_joint1|recruit2:Male_normal:Spine_joint2|recruit2:Male_normal:Spine_joint3|recruit2:Male_normal:Spine_joint4|recruit2:Male_normal:Spine_joint5|recruit2:Male_normal:Spine_joint6|recruit2:Male_normal:Spine_joint7|recruit2:Male_normal:RightArm_scalingCompensate|recruit2:Male_normal:RightArm_pivotCompensate|recruit2:Male_normal:RightArm_RIG|recruit2:Male_normal:RightArm_fk|recruit2:Male_normal:RightArm_shouldernull|recruit2:Male_normal:RightArm_extra|recruit2:Male_normal:RightArm_Shoulder|recruit2:Male_normal:RightArm_upperarmcontrolnull|recruit2:Male_normal:RightArm_Upper_Arm|recruit2:Male_normal:RightArm_lowerarmcontrolnull|recruit2:Male_normal:RightArm_Lower_Arm|recruit2:Male_normal:RightArm_handcontrolnull|recruit2:Male_normal:RightArm_HandTranslate|recruit2:Male_normal:RightArm_Hand" 
@@ -3770,7 +3772,7 @@ createNode reference -n "recruit2RN";
 		2 "|Recruit2|recruit2:Male_normal:Character|recruit2:Male_normal:Upper_Body|recruit2:Male_normal:JOINTS|recruit2:Male_normal:Spine_JOINTS|recruit2:Male_normal:Spine_joint1|recruit2:Male_normal:Spine_joint2|recruit2:Male_normal:Spine_joint3|recruit2:Male_normal:Spine_joint4|recruit2:Male_normal:Spine_joint5|recruit2:Male_normal:Spine_joint6|recruit2:Male_normal:Spine_joint7|recruit2:Male_normal:Head_scalingCompensate|recruit2:Male_normal:Head_pivotCompensate|recruit2:Male_normal:Head_RIG|recruit2:Male_normal:Head_fk|recruit2:Male_normal:Head_setupthing|recruit2:Male_normal:Head_rotationisolated|recruit2:Male_normal:Head_Neck" 
 		"rotateX" " -av"
 		2 "|Recruit2|recruit2:Male_normal:Character|recruit2:Male_normal:Upper_Body|recruit2:Male_normal:JOINTS|recruit2:Male_normal:Spine_JOINTS|recruit2:Male_normal:Spine_joint1|recruit2:Male_normal:Spine_joint2|recruit2:Male_normal:Spine_joint3|recruit2:Male_normal:Spine_joint4|recruit2:Male_normal:Spine_joint5|recruit2:Male_normal:Spine_joint6|recruit2:Male_normal:Spine_joint7|recruit2:Male_normal:Head_scalingCompensate|recruit2:Male_normal:Head_pivotCompensate|recruit2:Male_normal:Head_RIG|recruit2:Male_normal:Head_fk|recruit2:Male_normal:Head_setupthing|recruit2:Male_normal:Head_rotationisolated|recruit2:Male_normal:Head_Neck|recruit2:Male_normal:Head_fknull|recruit2:Male_normal:Head_isolatecalculate" 
-		"rotate" " -type \"double3\" -9.999978 -0.0210148 0.00183856"
+		"rotate" " -type \"double3\" -9.999978 -0.0210148 38.597323"
 		2 "|Recruit2|recruit2:Male_normal:Character|recruit2:Male_normal:Upper_Body|recruit2:Male_normal:JOINTS|recruit2:Male_normal:Spine_JOINTS|recruit2:Male_normal:Spine_joint1|recruit2:Male_normal:Spine_joint2|recruit2:Male_normal:Spine_joint3|recruit2:Male_normal:Spine_joint4|recruit2:Male_normal:Spine_joint5|recruit2:Male_normal:Spine_joint6|recruit2:Male_normal:Spine_joint7|recruit2:Male_normal:Head_scalingCompensate|recruit2:Male_normal:Head_pivotCompensate|recruit2:Male_normal:Head_RIG|recruit2:Male_normal:Head_fk|recruit2:Male_normal:Head_setupthing|recruit2:Male_normal:Head_rotationisolated|recruit2:Male_normal:Head_Neck|recruit2:Male_normal:Head_fknull|recruit2:Male_normal:Head_isolatecalculate" 
 		"rotateZ" " -av"
 		2 "|Recruit2|recruit2:Male_normal:Character|recruit2:Male_normal:Upper_Body|recruit2:Male_normal:JOINTS|recruit2:Male_normal:Spine_JOINTS|recruit2:Male_normal:Spine_joint1|recruit2:Male_normal:Spine_joint2|recruit2:Male_normal:Spine_joint3|recruit2:Male_normal:Spine_joint4|recruit2:Male_normal:Spine_joint5|recruit2:Male_normal:Spine_joint6|recruit2:Male_normal:Spine_joint7|recruit2:Male_normal:Head_scalingCompensate|recruit2:Male_normal:Head_pivotCompensate|recruit2:Male_normal:Head_RIG|recruit2:Male_normal:Head_fk|recruit2:Male_normal:Head_setupthing|recruit2:Male_normal:Head_rotationisolated|recruit2:Male_normal:Head_Neck|recruit2:Male_normal:Head_fknull|recruit2:Male_normal:Head_isolatecalculate" 
@@ -3778,7 +3780,7 @@ createNode reference -n "recruit2RN";
 		2 "|Recruit2|recruit2:Male_normal:Character|recruit2:Male_normal:Upper_Body|recruit2:Male_normal:JOINTS|recruit2:Male_normal:Spine_JOINTS|recruit2:Male_normal:Spine_joint1|recruit2:Male_normal:Spine_joint2|recruit2:Male_normal:Spine_joint3|recruit2:Male_normal:Spine_joint4|recruit2:Male_normal:Spine_joint5|recruit2:Male_normal:Spine_joint6|recruit2:Male_normal:Spine_joint7|recruit2:Male_normal:Head_scalingCompensate|recruit2:Male_normal:Head_pivotCompensate|recruit2:Male_normal:Head_RIG|recruit2:Male_normal:Head_fk|recruit2:Male_normal:Head_setupthing|recruit2:Male_normal:Head_rotationisolated|recruit2:Male_normal:Head_Neck|recruit2:Male_normal:Head_fknull|recruit2:Male_normal:Head_isolatecalculate" 
 		"rotateY" " -av"
 		2 "|Recruit2|recruit2:Male_normal:Character|recruit2:Male_normal:Upper_Body|recruit2:Male_normal:JOINTS|recruit2:Male_normal:Spine_JOINTS|recruit2:Male_normal:Spine_joint1|recruit2:Male_normal:Spine_joint2|recruit2:Male_normal:Spine_joint3|recruit2:Male_normal:Spine_joint4|recruit2:Male_normal:Spine_joint5|recruit2:Male_normal:Spine_joint6|recruit2:Male_normal:Spine_joint7|recruit2:Male_normal:Head_scalingCompensate|recruit2:Male_normal:Head_pivotCompensate|recruit2:Male_normal:Head_RIG|recruit2:Male_normal:Head_fk|recruit2:Male_normal:Head_setupthing|recruit2:Male_normal:Head_rotationisolated|recruit2:Male_normal:Head_Neck|recruit2:Male_normal:Head_fknull|recruit2:Male_normal:Head_isolatecalculate|recruit2:Male_normal:Head_FK" 
-		"rotate" " -type \"double3\" -0.256904 -7.583018 -5.114409"
+		"rotate" " -type \"double3\" -23.68301 -2.883587 -89.155941"
 		2 "|Recruit2|recruit2:Male_normal:Character|recruit2:Male_normal:Upper_Body|recruit2:Male_normal:JOINTS|recruit2:Male_normal:Spine_JOINTS|recruit2:Male_normal:Spine_joint1|recruit2:Male_normal:Spine_joint2|recruit2:Male_normal:Spine_joint3|recruit2:Male_normal:Spine_joint4|recruit2:Male_normal:Spine_joint5|recruit2:Male_normal:Spine_joint6|recruit2:Male_normal:Spine_joint7|recruit2:Male_normal:Head_scalingCompensate|recruit2:Male_normal:Head_pivotCompensate|recruit2:Male_normal:Head_RIG|recruit2:Male_normal:Head_fk|recruit2:Male_normal:Head_setupthing|recruit2:Male_normal:Head_rotationisolated|recruit2:Male_normal:Head_Neck|recruit2:Male_normal:Head_fknull|recruit2:Male_normal:Head_isolatecalculate|recruit2:Male_normal:Head_FK" 
 		"rotateZ" " -av"
 		2 "|Recruit2|recruit2:Male_normal:Character|recruit2:Male_normal:Upper_Body|recruit2:Male_normal:JOINTS|recruit2:Male_normal:Spine_JOINTS|recruit2:Male_normal:Spine_joint1|recruit2:Male_normal:Spine_joint2|recruit2:Male_normal:Spine_joint3|recruit2:Male_normal:Spine_joint4|recruit2:Male_normal:Spine_joint5|recruit2:Male_normal:Spine_joint6|recruit2:Male_normal:Spine_joint7|recruit2:Male_normal:Head_scalingCompensate|recruit2:Male_normal:Head_pivotCompensate|recruit2:Male_normal:Head_RIG|recruit2:Male_normal:Head_fk|recruit2:Male_normal:Head_setupthing|recruit2:Male_normal:Head_rotationisolated|recruit2:Male_normal:Head_Neck|recruit2:Male_normal:Head_fknull|recruit2:Male_normal:Head_isolatecalculate|recruit2:Male_normal:Head_FK" 
@@ -3884,7 +3886,7 @@ createNode reference -n "recruit2RN";
 		2 "|Recruit2|recruit2:Male_normal:Character|recruit2:Male_normal:Upper_Body|recruit2:Male_normal:JOINTS|recruit2:Male_normal:Spine_JOINTS|recruit2:Male_normal:Spine_joint1|recruit2:Male_normal:RightLeg_scalingCompensate|recruit2:Male_normal:RightLeg_pivotCompensate|recruit2:Male_normal:RightLeg_RIG|recruit2:Male_normal:RightLeg_fk|recruit2:Male_normal:RightLeg_upperlegnull|recruit2:Male_normal:RightLeg_isolater" 
 		"translateX" " -av"
 		2 "|Recruit2|recruit2:Male_normal:Character|recruit2:Male_normal:Upper_Body|recruit2:Male_normal:JOINTS|recruit2:Male_normal:Spine_JOINTS|recruit2:Male_normal:Spine_joint1|recruit2:Male_normal:RightLeg_scalingCompensate|recruit2:Male_normal:RightLeg_pivotCompensate|recruit2:Male_normal:RightLeg_RIG|recruit2:Male_normal:RightLeg_fk|recruit2:Male_normal:RightLeg_upperlegnull|recruit2:Male_normal:RightLeg_isolater" 
-		"rotate" " -type \"double3\" 0.00418163 -0.0114447 -0.0954174"
+		"rotate" " -type \"double3\" -3.838994 2.749357 13.560636"
 		2 "|Recruit2|recruit2:Male_normal:Character|recruit2:Male_normal:Upper_Body|recruit2:Male_normal:JOINTS|recruit2:Male_normal:Spine_JOINTS|recruit2:Male_normal:Spine_joint1|recruit2:Male_normal:RightLeg_scalingCompensate|recruit2:Male_normal:RightLeg_pivotCompensate|recruit2:Male_normal:RightLeg_RIG|recruit2:Male_normal:RightLeg_fk|recruit2:Male_normal:RightLeg_upperlegnull|recruit2:Male_normal:RightLeg_isolater" 
 		"rotateX" " -av"
 		2 "|Recruit2|recruit2:Male_normal:Character|recruit2:Male_normal:Upper_Body|recruit2:Male_normal:JOINTS|recruit2:Male_normal:Spine_JOINTS|recruit2:Male_normal:Spine_joint1|recruit2:Male_normal:RightLeg_scalingCompensate|recruit2:Male_normal:RightLeg_pivotCompensate|recruit2:Male_normal:RightLeg_RIG|recruit2:Male_normal:RightLeg_fk|recruit2:Male_normal:RightLeg_upperlegnull|recruit2:Male_normal:RightLeg_isolater" 
@@ -3948,7 +3950,7 @@ createNode reference -n "recruit2RN";
 		2 "|Recruit2|recruit2:Male_normal:Character|recruit2:Male_normal:Upper_Body|recruit2:Male_normal:JOINTS|recruit2:Male_normal:Spine_JOINTS|recruit2:Male_normal:Spine_joint1|recruit2:Male_normal:RightLeg_scalingCompensate|recruit2:Male_normal:RightLeg_pivotCompensate|recruit2:Male_normal:RightLeg_RIG|recruit2:Male_normal:RightLeg_fk|recruit2:Male_normal:RightLeg_upperlegnull|recruit2:Male_normal:RightLeg_isolater|recruit2:Male_normal:RightLeg_Upper_Leg|recruit2:Male_normal:RightLeg_lowerlegnull|recruit2:Male_normal:RightLeg_Lower_Leg|recruit2:Male_normal:RightLeg_footnull|recruit2:Male_normal:RightLeg_FootTranslate|recruit2:Male_normal:RightLeg_Foot|recruit2:Male_normal:RightLeg_toenull|recruit2:Male_normal:RightLeg_Toe" 
 		"rotateX" " -av"
 		2 "|Recruit2|recruit2:Male_normal:Character|recruit2:Male_normal:Upper_Body|recruit2:Male_normal:JOINTS|recruit2:Male_normal:Spine_JOINTS|recruit2:Male_normal:Spine_joint1|recruit2:Male_normal:LeftLeg_scalingCompensate|recruit2:Male_normal:LeftLeg_JOINTS|recruit2:Male_normal:LeftLeg_joint1|recruit2:Male_normal:LeftLeg_joint2|recruit2:Male_normal:LeftLeg_joint3|recruit2:Male_normal:LeftLeg_kneescalecompensate|recruit2:Male_normal:LeftLeg_joint4|recruit2:Male_normal:LeftLeg_joint5|recruit2:Male_normal:LeftLeg_lowerarmscalecompensate|recruit2:Male_normal:LeftLeg_joint6" 
-		"rotate" " -type \"double3\" 0.0173304 -0.995794 -0.997008"
+		"rotate" " -type \"double3\" 0.0173304 -0.995794 -0.997005"
 		2 "|Recruit2|recruit2:Male_normal:Character|recruit2:Male_normal:Upper_Body|recruit2:Male_normal:JOINTS|recruit2:Male_normal:Spine_JOINTS|recruit2:Male_normal:Spine_joint1|recruit2:Male_normal:LeftLeg_scalingCompensate|recruit2:Male_normal:LeftLeg_JOINTS|recruit2:Male_normal:LeftLeg_joint1|recruit2:Male_normal:LeftLeg_joint2|recruit2:Male_normal:LeftLeg_joint3|recruit2:Male_normal:LeftLeg_kneescalecompensate|recruit2:Male_normal:LeftLeg_joint4|recruit2:Male_normal:LeftLeg_joint5|recruit2:Male_normal:LeftLeg_lowerarmscalecompensate|recruit2:Male_normal:LeftLeg_joint6" 
 		"rotateZ" " -av"
 		2 "|Recruit2|recruit2:Male_normal:Character|recruit2:Male_normal:Upper_Body|recruit2:Male_normal:JOINTS|recruit2:Male_normal:Spine_JOINTS|recruit2:Male_normal:Spine_joint1|recruit2:Male_normal:LeftLeg_scalingCompensate|recruit2:Male_normal:LeftLeg_JOINTS|recruit2:Male_normal:LeftLeg_joint1|recruit2:Male_normal:LeftLeg_joint2|recruit2:Male_normal:LeftLeg_joint3|recruit2:Male_normal:LeftLeg_kneescalecompensate|recruit2:Male_normal:LeftLeg_joint4|recruit2:Male_normal:LeftLeg_joint5|recruit2:Male_normal:LeftLeg_lowerarmscalecompensate|recruit2:Male_normal:LeftLeg_joint6" 
@@ -3966,7 +3968,7 @@ createNode reference -n "recruit2RN";
 		2 "|Recruit2|recruit2:Male_normal:Character|recruit2:Male_normal:Upper_Body|recruit2:Male_normal:JOINTS|recruit2:Male_normal:Spine_JOINTS|recruit2:Male_normal:Spine_joint1|recruit2:Male_normal:LeftLeg_scalingCompensate|recruit2:Male_normal:LeftLeg_pivotCompensate|recruit2:Male_normal:LeftLeg_RIG|recruit2:Male_normal:LeftLeg_fk|recruit2:Male_normal:LeftLeg_polevectorfirstposition|recruit2:Male_normal:LeftLeg_polevectoraimer|recruit2:Male_normal:LeftLeg_polevectorextraaim|recruit2:Male_normal:LeftLeg_polevectorgroup|recruit2:Male_normal:LeftLeg_Leg_Pole_Vector" 
 		"translateX" " -av"
 		2 "|Recruit2|recruit2:Male_normal:Character|recruit2:Male_normal:Upper_Body|recruit2:Male_normal:JOINTS|recruit2:Male_normal:Spine_JOINTS|recruit2:Male_normal:Spine_joint1|recruit2:Male_normal:LeftLeg_scalingCompensate|recruit2:Male_normal:LeftLeg_pivotCompensate|recruit2:Male_normal:LeftLeg_RIG|recruit2:Male_normal:LeftLeg_fk|recruit2:Male_normal:LeftLeg_polevectorfirstposition|recruit2:Male_normal:LeftLeg_polevectoraimer|recruit2:Male_normal:LeftLeg_polevectorextraaim|recruit2:Male_normal:LeftLeg_polevectorgroup|recruit2:Male_normal:LeftLeg_Leg_Pole_Vector" 
-		"rotate" " -type \"double3\" 0 0 0"
+		"rotate" " -type \"double3\" 26.279039 -12.521237 -9.239491"
 		2 "|Recruit2|recruit2:Male_normal:Character|recruit2:Male_normal:Upper_Body|recruit2:Male_normal:JOINTS|recruit2:Male_normal:Spine_JOINTS|recruit2:Male_normal:Spine_joint1|recruit2:Male_normal:LeftLeg_scalingCompensate|recruit2:Male_normal:LeftLeg_pivotCompensate|recruit2:Male_normal:LeftLeg_RIG|recruit2:Male_normal:LeftLeg_fk|recruit2:Male_normal:LeftLeg_polevectorfirstposition|recruit2:Male_normal:LeftLeg_polevectoraimer|recruit2:Male_normal:LeftLeg_polevectorextraaim|recruit2:Male_normal:LeftLeg_polevectorgroup|recruit2:Male_normal:LeftLeg_Leg_Pole_Vector" 
 		"rotateZ" " -av"
 		2 "|Recruit2|recruit2:Male_normal:Character|recruit2:Male_normal:Upper_Body|recruit2:Male_normal:JOINTS|recruit2:Male_normal:Spine_JOINTS|recruit2:Male_normal:Spine_joint1|recruit2:Male_normal:LeftLeg_scalingCompensate|recruit2:Male_normal:LeftLeg_pivotCompensate|recruit2:Male_normal:LeftLeg_RIG|recruit2:Male_normal:LeftLeg_fk|recruit2:Male_normal:LeftLeg_polevectorfirstposition|recruit2:Male_normal:LeftLeg_polevectoraimer|recruit2:Male_normal:LeftLeg_polevectorextraaim|recruit2:Male_normal:LeftLeg_polevectorgroup|recruit2:Male_normal:LeftLeg_Leg_Pole_Vector" 
@@ -4022,7 +4024,7 @@ createNode reference -n "recruit2RN";
 		2 "|Recruit2|recruit2:Male_normal:Character|recruit2:Male_normal:Upper_Body|recruit2:Male_normal:JOINTS|recruit2:Male_normal:Spine_JOINTS|recruit2:Male_normal:Spine_joint1|recruit2:Male_normal:LeftLeg_scalingCompensate|recruit2:Male_normal:LeftLeg_pivotCompensate|recruit2:Male_normal:LeftLeg_RIG|recruit2:Male_normal:LeftLeg_fk|recruit2:Male_normal:LeftLeg_upperlegnull|recruit2:Male_normal:LeftLeg_isolater" 
 		"translateX" " -av"
 		2 "|Recruit2|recruit2:Male_normal:Character|recruit2:Male_normal:Upper_Body|recruit2:Male_normal:JOINTS|recruit2:Male_normal:Spine_JOINTS|recruit2:Male_normal:Spine_joint1|recruit2:Male_normal:LeftLeg_scalingCompensate|recruit2:Male_normal:LeftLeg_pivotCompensate|recruit2:Male_normal:LeftLeg_RIG|recruit2:Male_normal:LeftLeg_fk|recruit2:Male_normal:LeftLeg_upperlegnull|recruit2:Male_normal:LeftLeg_isolater" 
-		"rotate" " -type \"double3\" -0.00449549 -0.000973766 -0.0960818"
+		"rotate" " -type \"double3\" -2.766631 1.106171 14.106473"
 		2 "|Recruit2|recruit2:Male_normal:Character|recruit2:Male_normal:Upper_Body|recruit2:Male_normal:JOINTS|recruit2:Male_normal:Spine_JOINTS|recruit2:Male_normal:Spine_joint1|recruit2:Male_normal:LeftLeg_scalingCompensate|recruit2:Male_normal:LeftLeg_pivotCompensate|recruit2:Male_normal:LeftLeg_RIG|recruit2:Male_normal:LeftLeg_fk|recruit2:Male_normal:LeftLeg_upperlegnull|recruit2:Male_normal:LeftLeg_isolater" 
 		"rotateX" " -av"
 		2 "|Recruit2|recruit2:Male_normal:Character|recruit2:Male_normal:Upper_Body|recruit2:Male_normal:JOINTS|recruit2:Male_normal:Spine_JOINTS|recruit2:Male_normal:Spine_joint1|recruit2:Male_normal:LeftLeg_scalingCompensate|recruit2:Male_normal:LeftLeg_pivotCompensate|recruit2:Male_normal:LeftLeg_RIG|recruit2:Male_normal:LeftLeg_fk|recruit2:Male_normal:LeftLeg_upperlegnull|recruit2:Male_normal:LeftLeg_isolater" 
@@ -4192,7 +4194,7 @@ createNode reference -n "recruit2RN";
 		2 "|Recruit2|recruit2:Male_normal:Character|recruit2:Male_normal:Upper_Body|recruit2:Male_normal:RIG|recruit2:Male_normal:Spine_RIG|recruit2:Male_normal:Spine_rig|recruit2:Male_normal:Spine_torsonullIK|recruit2:Male_normal:Spine_Torso_IK" 
 		"translateX" " -av"
 		2 "|Recruit2|recruit2:Male_normal:Character|recruit2:Male_normal:Upper_Body|recruit2:Male_normal:RIG|recruit2:Male_normal:Spine_RIG|recruit2:Male_normal:Spine_rig|recruit2:Male_normal:Spine_torsonullIK|recruit2:Male_normal:Spine_Torso_IK" 
-		"rotate" " -type \"double3\" 0 10 0"
+		"rotate" " -type \"double3\" 37.904038 12.71344 -7.890873"
 		2 "|Recruit2|recruit2:Male_normal:Character|recruit2:Male_normal:Upper_Body|recruit2:Male_normal:RIG|recruit2:Male_normal:Spine_RIG|recruit2:Male_normal:Spine_rig|recruit2:Male_normal:Spine_torsonullIK|recruit2:Male_normal:Spine_Torso_IK" 
 		"rotateZ" " -av"
 		2 "|Recruit2|recruit2:Male_normal:Character|recruit2:Male_normal:Upper_Body|recruit2:Male_normal:RIG|recruit2:Male_normal:Spine_RIG|recruit2:Male_normal:Spine_rig|recruit2:Male_normal:Spine_torsonullIK|recruit2:Male_normal:Spine_Torso_IK" 
@@ -4248,7 +4250,7 @@ createNode reference -n "recruit2RN";
 		2 "|Recruit2|recruit2:Male_normal:Character|recruit2:Male_normal:Upper_Body|recruit2:Male_normal:RIG|recruit2:Male_normal:Spine_RIG|recruit2:Male_normal:Spine_rig|recruit2:Male_normal:Spine_pelvisnullIK|recruit2:Male_normal:Spine_Pelvis_IK" 
 		"translateX" " -av"
 		2 "|Recruit2|recruit2:Male_normal:Character|recruit2:Male_normal:Upper_Body|recruit2:Male_normal:RIG|recruit2:Male_normal:Spine_RIG|recruit2:Male_normal:Spine_rig|recruit2:Male_normal:Spine_pelvisnullIK|recruit2:Male_normal:Spine_Pelvis_IK" 
-		"rotate" " -type \"double3\" 0 0 0"
+		"rotate" " -type \"double3\" 14.697941 -3.314882 -1.53375"
 		2 "|Recruit2|recruit2:Male_normal:Character|recruit2:Male_normal:Upper_Body|recruit2:Male_normal:RIG|recruit2:Male_normal:Spine_RIG|recruit2:Male_normal:Spine_rig|recruit2:Male_normal:Spine_pelvisnullIK|recruit2:Male_normal:Spine_Pelvis_IK" 
 		"rotateZ" " -av"
 		2 "|Recruit2|recruit2:Male_normal:Character|recruit2:Male_normal:Upper_Body|recruit2:Male_normal:RIG|recruit2:Male_normal:Spine_RIG|recruit2:Male_normal:Spine_rig|recruit2:Male_normal:Spine_pelvisnullIK|recruit2:Male_normal:Spine_Pelvis_IK" 
@@ -4272,9 +4274,9 @@ createNode reference -n "recruit2RN";
 		2 "|Recruit2|recruit2:Male_normal:Character|recruit2:Male_normal:Upper_Body|recruit2:Male_normal:RIG|recruit2:Male_normal:Spine_RIG|recruit2:Male_normal:Spine_rig|recruit2:Male_normal:Spine_pelvisnullIK|recruit2:Male_normal:Spine_Pelvis_IK" 
 		"rotateAxisZ" " -av -k 1"
 		2 "|Recruit2|recruit2:Male_normal:Character|recruit2:Male_normal:Upper_Body|recruit2:Male_normal:RIG|recruit2:Male_normal:Spine_RIG|recruit2:Male_normal:Spine_rig|recruit2:Male_normal:Spine_splineIKhandle" 
-		"translate" " -type \"double3\" 0.0252697 5.719552 2.232859"
+		"translate" " -type \"double3\" 0.124597 5.426945 2.796173"
 		2 "|Recruit2|recruit2:Male_normal:Character|recruit2:Male_normal:Upper_Body|recruit2:Male_normal:RIG|recruit2:Male_normal:Spine_RIG|recruit2:Male_normal:Spine_rig|recruit2:Male_normal:Spine_splineIKhandle" 
-		"rotate" " -type \"double3\" 10.000079 -0.209208 89.96"
+		"rotate" " -type \"double3\" 12.483871 -36.538493 82.488557"
 		2 "|Recruit2|recruit2:Male_normal:Character|recruit2:Male_normal:Upper_Body|recruit2:Male_normal:weaponNull|recruit2:Male_normal:weapon" 
 		"translate" " -type \"double3\" 0 0.359832 0"
 		2 "|Recruit2|recruit2:Male_normal:Character|recruit2:Male_normal:Upper_Body|recruit2:Male_normal:weaponNull|recruit2:Male_normal:weapon" 
@@ -4318,7 +4320,7 @@ createNode reference -n "recruit2RN";
 		2 "|Recruit2|recruit2:Male_normal:Character|recruit2:Male_normal:Upper_Body|recruit2:Male_normal:weaponNull|recruit2:Male_normal:weapon|recruit2:Male_normal:LeftHand_Pad" 
 		"scaleX" " -av"
 		2 "|Recruit2|recruit2:Male_normal:Character|recruit2:Male_normal:IK|recruit2:Male_normal:LeftArm_IK" 
-		"translate" " -type \"double3\" -1.768717 20.286696 -5.743385"
+		"translate" " -type \"double3\" 3.913816 2.87277 1.44776"
 		2 "|Recruit2|recruit2:Male_normal:Character|recruit2:Male_normal:IK|recruit2:Male_normal:LeftArm_IK" 
 		"translateX" " -av"
 		2 "|Recruit2|recruit2:Male_normal:Character|recruit2:Male_normal:IK|recruit2:Male_normal:LeftArm_IK" 
@@ -4847,12 +4849,12 @@ createNode reference -n "recruit2RN";
 		0 "|recruit2:Male_normal:mesh_:char_SRO_male_heavy" "|Recruit2" "-s -r "
 		0 "|recruit2:Male_normal:mesh_:char_SRO_male_heavy_gear" "|Recruit2" "-s -r "
 		
-		2 "|Recruit2|recruit2:Male_normal:mesh_:BackRoot" "translate" " -type \"double3\" 11.996614 10.581089 -0.549311"
+		2 "|Recruit2|recruit2:Male_normal:mesh_:BackRoot" "translate" " -type \"double3\" 7.769125 5.41838 4.117057"
 		
 		2 "|Recruit2|recruit2:Male_normal:mesh_:BackRoot" "translateX" " -av"
 		2 "|Recruit2|recruit2:Male_normal:mesh_:BackRoot" "translateY" " -av"
 		2 "|Recruit2|recruit2:Male_normal:mesh_:BackRoot" "translateZ" " -av"
-		2 "|Recruit2|recruit2:Male_normal:mesh_:BackRoot" "rotate" " -type \"double3\" 3.030951 2.118877 -1.542175"
+		2 "|Recruit2|recruit2:Male_normal:mesh_:BackRoot" "rotate" " -type \"double3\" 5.601476 -3.631905 74.791157"
 		
 		2 "|Recruit2|recruit2:Male_normal:mesh_:BackRoot" "rotateX" " -av"
 		2 "|Recruit2|recruit2:Male_normal:mesh_:BackRoot" "rotateY" " -av"
@@ -4874,14 +4876,14 @@ createNode reference -n "recruit2RN";
 		2 "|Recruit2|recruit2:Male_normal:mesh_:BackRoot|recruit2:Male_normal:mesh_:Back2|recruit2:Male_normal:mesh_:Back3|recruit2:Male_normal:mesh_:Back4|recruit2:Male_normal:mesh_:Back5|recruit2:Male_normal:mesh_:Neck" 
 		"rotateZ" " -av"
 		2 "|Recruit2|recruit2:Male_normal:mesh_:BackRoot|recruit2:Male_normal:mesh_:Back2|recruit2:Male_normal:mesh_:Back3|recruit2:Male_normal:mesh_:Back4|recruit2:Male_normal:mesh_:Back5|recruit2:Male_normal:mesh_:Neck|recruit2:Male_normal:mesh_:Head" 
-		"rotate" " -type \"double3\" -7.686393 10.843785 3.750979"
+		"rotate" " -type \"double3\" -19.666126 18.721188 50.007002"
 		2 "|Recruit2|recruit2:Male_normal:mesh_:BackRoot|recruit2:Male_normal:mesh_:Back2|recruit2:Male_normal:mesh_:Back3|recruit2:Male_normal:mesh_:Back4|recruit2:Male_normal:mesh_:Back5|recruit2:Male_normal:mesh_:Neck|recruit2:Male_normal:mesh_:Head" 
 		"rotateX" " -av"
 		2 "|Recruit2|recruit2:Male_normal:mesh_:BackRoot|recruit2:Male_normal:mesh_:Back2|recruit2:Male_normal:mesh_:Back3|recruit2:Male_normal:mesh_:Back4|recruit2:Male_normal:mesh_:Back5|recruit2:Male_normal:mesh_:Neck|recruit2:Male_normal:mesh_:Head" 
 		"rotateY" " -av"
 		2 "|Recruit2|recruit2:Male_normal:mesh_:BackRoot|recruit2:Male_normal:mesh_:Back2|recruit2:Male_normal:mesh_:Back3|recruit2:Male_normal:mesh_:Back4|recruit2:Male_normal:mesh_:Back5|recruit2:Male_normal:mesh_:Neck|recruit2:Male_normal:mesh_:Head" 
 		"rotateZ" " -av"
-		2 "|Recruit2|recruit2:Male_normal:mesh_:G_meshes_arms" "translate" " -type \"double3\" 19.6726 5.977872 -6.137911"
+		2 "|Recruit2|recruit2:Male_normal:mesh_:G_meshes_arms" "translate" " -type \"double3\" 9.809299 -10.554847 11.96814"
 		
 		2 "|Recruit2|recruit2:Male_normal:mesh_:G_meshes_arms" "translateX" " -av"
 		
@@ -4889,7 +4891,7 @@ createNode reference -n "recruit2RN";
 		
 		2 "|Recruit2|recruit2:Male_normal:mesh_:G_meshes_arms" "translateZ" " -av"
 		
-		2 "|Recruit2|recruit2:Male_normal:mesh_:G_meshes_arms" "rotate" " -type \"double3\" 20.789214 32.145718 53.821535"
+		2 "|Recruit2|recruit2:Male_normal:mesh_:G_meshes_arms" "rotate" " -type \"double3\" -28.380693 43.101519 -21.755975"
 		
 		2 "|Recruit2|recruit2:Male_normal:mesh_:G_meshes_arms" "rotateX" " -av"
 		2 "|Recruit2|recruit2:Male_normal:mesh_:G_meshes_arms" "rotateZ" " -av"
@@ -4973,12 +4975,12 @@ lockNode -l 1 ;
 createNode reference -n "recruit3RN";
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"recruit3RN"
-		"recruit3:Male_normal:mesh_RN" 0
 		"recruit3:V005_RN" 0
+		"recruit3:Male_normal:mesh_RN" 0
 		"recruit3RN" 0
 		"recruit3:V005_RN" 589
 		0 "|recruit3:Male_normal:Character" "|Recruit3" "-s -r "
-		2 "|Recruit3|recruit3:Male_normal:Character" "translate" " -type \"double3\" 19.199659 0 0"
+		2 "|Recruit3|recruit3:Male_normal:Character" "translate" " -type \"double3\" 16.052113 0 0"
 		
 		2 "|Recruit3|recruit3:Male_normal:Character" "translateZ" " -av"
 		2 "|Recruit3|recruit3:Male_normal:Character" "translateY" " -av"
@@ -6334,7 +6336,7 @@ createNode reference -n "recruit3RN";
 		0 "|recruit3:Male_normal:mesh_:char_SRO_male_heavy" "|Recruit3" "-s -r "
 		0 "|recruit3:Male_normal:mesh_:char_SRO_male_heavy_gear" "|Recruit3" "-s -r "
 		
-		2 "|Recruit3|recruit3:Male_normal:mesh_:BackRoot" "translate" " -type \"double3\" 19.17022 10.636545 -0.498623"
+		2 "|Recruit3|recruit3:Male_normal:mesh_:BackRoot" "translate" " -type \"double3\" 16.022674 10.636545 -0.498623"
 		
 		2 "|Recruit3|recruit3:Male_normal:mesh_:BackRoot" "translateX" " -av"
 		2 "|Recruit3|recruit3:Male_normal:mesh_:BackRoot" "translateY" " -av"
@@ -6368,7 +6370,7 @@ createNode reference -n "recruit3RN";
 		"rotateY" " -av"
 		2 "|Recruit3|recruit3:Male_normal:mesh_:BackRoot|recruit3:Male_normal:mesh_:Back2|recruit3:Male_normal:mesh_:Back3|recruit3:Male_normal:mesh_:Back4|recruit3:Male_normal:mesh_:Back5|recruit3:Male_normal:mesh_:Neck|recruit3:Male_normal:mesh_:Head" 
 		"rotateZ" " -av"
-		2 "|Recruit3|recruit3:Male_normal:mesh_:G_meshes_arms" "translate" " -type \"double3\" 30.613776 16.880863 2.825733"
+		2 "|Recruit3|recruit3:Male_normal:mesh_:G_meshes_arms" "translate" " -type \"double3\" 27.46623 16.880863 2.825733"
 		
 		2 "|Recruit3|recruit3:Male_normal:mesh_:G_meshes_arms" "translateX" " -av"
 		
@@ -6477,8 +6479,8 @@ lockNode -l 1 ;
 createNode reference -n "recruit4RN";
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"recruit4RN"
-		"recruit4:V005_RN" 0
 		"recruit4RN" 0
+		"recruit4:V005_RN" 0
 		"recruit4:Male_normal:mesh_RN" 0
 		"recruit4RN" 15
 		0 "|recruit4:persp1" "|Recruit4" "-s -r "
@@ -6499,7 +6501,7 @@ createNode reference -n "recruit4RN";
 		""
 		"recruit4:V005_RN" 589
 		0 "|recruit4:Male_normal:Character" "|Recruit4" "-s -r "
-		2 "|Recruit4|recruit4:Male_normal:Character" "translate" " -type \"double3\" 26.812557 0 0"
+		2 "|Recruit4|recruit4:Male_normal:Character" "translate" " -type \"double3\" 25.50826 0 0"
 		
 		2 "|Recruit4|recruit4:Male_normal:Character" "translateZ" " -av"
 		2 "|Recruit4|recruit4:Male_normal:Character" "translateY" " -av"
@@ -6523,7 +6525,7 @@ createNode reference -n "recruit4RN";
 		2 "|Recruit4|recruit4:Male_normal:Character|recruit4:Male_normal:Upper_Body" 
 		"translateX" " -av"
 		2 "|Recruit4|recruit4:Male_normal:Character|recruit4:Male_normal:Upper_Body" 
-		"rotate" " -type \"double3\" 33.328481 -26.794917 -9.929412"
+		"rotate" " -type \"double3\" 33.642799 -26.53803 -10.32002"
 		2 "|Recruit4|recruit4:Male_normal:Character|recruit4:Male_normal:Upper_Body" 
 		"rotateZ" " -av"
 		2 "|Recruit4|recruit4:Male_normal:Character|recruit4:Male_normal:Upper_Body" 
@@ -6599,7 +6601,7 @@ createNode reference -n "recruit4RN";
 		2 "|Recruit4|recruit4:Male_normal:Character|recruit4:Male_normal:Upper_Body|recruit4:Male_normal:JOINTS|recruit4:Male_normal:Spine_JOINTS|recruit4:Male_normal:Spine_joint1|recruit4:Male_normal:Spine_joint2|recruit4:Male_normal:Spine_joint3|recruit4:Male_normal:Spine_joint4|recruit4:Male_normal:Spine_joint5|recruit4:Male_normal:Spine_joint6|recruit4:Male_normal:Spine_joint7|recruit4:Male_normal:LeftArm_scalingCompensate|recruit4:Male_normal:LeftArm_pivotCompensate|recruit4:Male_normal:LeftArm_RIG|recruit4:Male_normal:LeftArm_fk|recruit4:Male_normal:LeftArm_shouldernull|recruit4:Male_normal:LeftArm_Shoulder|recruit4:Male_normal:LeftArm_upperarmcontrolnull|recruit4:Male_normal:LeftArm_Upper_Arm" 
 		"AddToTwist" " -av -k 1 0"
 		2 "|Recruit4|recruit4:Male_normal:Character|recruit4:Male_normal:Upper_Body|recruit4:Male_normal:JOINTS|recruit4:Male_normal:Spine_JOINTS|recruit4:Male_normal:Spine_joint1|recruit4:Male_normal:Spine_joint2|recruit4:Male_normal:Spine_joint3|recruit4:Male_normal:Spine_joint4|recruit4:Male_normal:Spine_joint5|recruit4:Male_normal:Spine_joint6|recruit4:Male_normal:Spine_joint7|recruit4:Male_normal:LeftArm_scalingCompensate|recruit4:Male_normal:LeftArm_pivotCompensate|recruit4:Male_normal:LeftArm_RIG|recruit4:Male_normal:LeftArm_fk|recruit4:Male_normal:LeftArm_shouldernull|recruit4:Male_normal:LeftArm_Shoulder|recruit4:Male_normal:LeftArm_upperarmcontrolnull|recruit4:Male_normal:LeftArm_Upper_Arm|recruit4:Male_normal:LeftArm_lowerarmcontrolnull|recruit4:Male_normal:LeftArm_Lower_Arm" 
-		"rotateY" " -av -21.986606"
+		"rotateY" " -av -21.198251"
 		2 "|Recruit4|recruit4:Male_normal:Character|recruit4:Male_normal:Upper_Body|recruit4:Male_normal:JOINTS|recruit4:Male_normal:Spine_JOINTS|recruit4:Male_normal:Spine_joint1|recruit4:Male_normal:Spine_joint2|recruit4:Male_normal:Spine_joint3|recruit4:Male_normal:Spine_joint4|recruit4:Male_normal:Spine_joint5|recruit4:Male_normal:Spine_joint6|recruit4:Male_normal:Spine_joint7|recruit4:Male_normal:LeftArm_scalingCompensate|recruit4:Male_normal:LeftArm_pivotCompensate|recruit4:Male_normal:LeftArm_RIG|recruit4:Male_normal:LeftArm_fk|recruit4:Male_normal:LeftArm_shouldernull|recruit4:Male_normal:LeftArm_Shoulder|recruit4:Male_normal:LeftArm_upperarmcontrolnull|recruit4:Male_normal:LeftArm_Upper_Arm|recruit4:Male_normal:LeftArm_lowerarmcontrolnull|recruit4:Male_normal:LeftArm_Lower_Arm|recruit4:Male_normal:LeftArm_handcontrolnull|recruit4:Male_normal:LeftArm_HandTranslate" 
 		"translate" " -type \"double3\" 0 0 0"
 		2 "|Recruit4|recruit4:Male_normal:Character|recruit4:Male_normal:Upper_Body|recruit4:Male_normal:JOINTS|recruit4:Male_normal:Spine_JOINTS|recruit4:Male_normal:Spine_joint1|recruit4:Male_normal:Spine_joint2|recruit4:Male_normal:Spine_joint3|recruit4:Male_normal:Spine_joint4|recruit4:Male_normal:Spine_joint5|recruit4:Male_normal:Spine_joint6|recruit4:Male_normal:Spine_joint7|recruit4:Male_normal:LeftArm_scalingCompensate|recruit4:Male_normal:LeftArm_pivotCompensate|recruit4:Male_normal:LeftArm_RIG|recruit4:Male_normal:LeftArm_fk|recruit4:Male_normal:LeftArm_shouldernull|recruit4:Male_normal:LeftArm_Shoulder|recruit4:Male_normal:LeftArm_upperarmcontrolnull|recruit4:Male_normal:LeftArm_Upper_Arm|recruit4:Male_normal:LeftArm_lowerarmcontrolnull|recruit4:Male_normal:LeftArm_Lower_Arm|recruit4:Male_normal:LeftArm_handcontrolnull|recruit4:Male_normal:LeftArm_HandTranslate" 
@@ -6707,7 +6709,7 @@ createNode reference -n "recruit4RN";
 		2 "|Recruit4|recruit4:Male_normal:Character|recruit4:Male_normal:Upper_Body|recruit4:Male_normal:JOINTS|recruit4:Male_normal:Spine_JOINTS|recruit4:Male_normal:Spine_joint1|recruit4:Male_normal:Spine_joint2|recruit4:Male_normal:Spine_joint3|recruit4:Male_normal:Spine_joint4|recruit4:Male_normal:Spine_joint5|recruit4:Male_normal:Spine_joint6|recruit4:Male_normal:Spine_joint7|recruit4:Male_normal:RightArm_scalingCompensate|recruit4:Male_normal:RightArm_pivotCompensate|recruit4:Male_normal:RightArm_RIG|recruit4:Male_normal:RightArm_fk|recruit4:Male_normal:RightArm_shouldernull|recruit4:Male_normal:RightArm_extra|recruit4:Male_normal:RightArm_Shoulder|recruit4:Male_normal:RightArm_upperarmcontrolnull|recruit4:Male_normal:RightArm_Upper_Arm" 
 		"AddToTwist" " -av -k 1 0"
 		2 "|Recruit4|recruit4:Male_normal:Character|recruit4:Male_normal:Upper_Body|recruit4:Male_normal:JOINTS|recruit4:Male_normal:Spine_JOINTS|recruit4:Male_normal:Spine_joint1|recruit4:Male_normal:Spine_joint2|recruit4:Male_normal:Spine_joint3|recruit4:Male_normal:Spine_joint4|recruit4:Male_normal:Spine_joint5|recruit4:Male_normal:Spine_joint6|recruit4:Male_normal:Spine_joint7|recruit4:Male_normal:RightArm_scalingCompensate|recruit4:Male_normal:RightArm_pivotCompensate|recruit4:Male_normal:RightArm_RIG|recruit4:Male_normal:RightArm_fk|recruit4:Male_normal:RightArm_shouldernull|recruit4:Male_normal:RightArm_extra|recruit4:Male_normal:RightArm_Shoulder|recruit4:Male_normal:RightArm_upperarmcontrolnull|recruit4:Male_normal:RightArm_Upper_Arm|recruit4:Male_normal:RightArm_lowerarmcontrolnull|recruit4:Male_normal:RightArm_Lower_Arm" 
-		"rotateY" " -av -16.832561"
+		"rotateY" " -av -14.190781"
 		2 "|Recruit4|recruit4:Male_normal:Character|recruit4:Male_normal:Upper_Body|recruit4:Male_normal:JOINTS|recruit4:Male_normal:Spine_JOINTS|recruit4:Male_normal:Spine_joint1|recruit4:Male_normal:Spine_joint2|recruit4:Male_normal:Spine_joint3|recruit4:Male_normal:Spine_joint4|recruit4:Male_normal:Spine_joint5|recruit4:Male_normal:Spine_joint6|recruit4:Male_normal:Spine_joint7|recruit4:Male_normal:RightArm_scalingCompensate|recruit4:Male_normal:RightArm_pivotCompensate|recruit4:Male_normal:RightArm_RIG|recruit4:Male_normal:RightArm_fk|recruit4:Male_normal:RightArm_shouldernull|recruit4:Male_normal:RightArm_extra|recruit4:Male_normal:RightArm_Shoulder|recruit4:Male_normal:RightArm_upperarmcontrolnull|recruit4:Male_normal:RightArm_Upper_Arm|recruit4:Male_normal:RightArm_lowerarmcontrolnull|recruit4:Male_normal:RightArm_Lower_Arm|recruit4:Male_normal:RightArm_handcontrolnull|recruit4:Male_normal:RightArm_HandTranslate" 
 		"translate" " -type \"double3\" 0 0 0"
 		2 "|Recruit4|recruit4:Male_normal:Character|recruit4:Male_normal:Upper_Body|recruit4:Male_normal:JOINTS|recruit4:Male_normal:Spine_JOINTS|recruit4:Male_normal:Spine_joint1|recruit4:Male_normal:Spine_joint2|recruit4:Male_normal:Spine_joint3|recruit4:Male_normal:Spine_joint4|recruit4:Male_normal:Spine_joint5|recruit4:Male_normal:Spine_joint6|recruit4:Male_normal:Spine_joint7|recruit4:Male_normal:RightArm_scalingCompensate|recruit4:Male_normal:RightArm_pivotCompensate|recruit4:Male_normal:RightArm_RIG|recruit4:Male_normal:RightArm_fk|recruit4:Male_normal:RightArm_shouldernull|recruit4:Male_normal:RightArm_extra|recruit4:Male_normal:RightArm_Shoulder|recruit4:Male_normal:RightArm_upperarmcontrolnull|recruit4:Male_normal:RightArm_Upper_Arm|recruit4:Male_normal:RightArm_lowerarmcontrolnull|recruit4:Male_normal:RightArm_Lower_Arm|recruit4:Male_normal:RightArm_handcontrolnull|recruit4:Male_normal:RightArm_HandTranslate" 
@@ -6973,7 +6975,7 @@ createNode reference -n "recruit4RN";
 		2 "|Recruit4|recruit4:Male_normal:Character|recruit4:Male_normal:Upper_Body|recruit4:Male_normal:JOINTS|recruit4:Male_normal:Spine_JOINTS|recruit4:Male_normal:Spine_joint1|recruit4:Male_normal:RightLeg_scalingCompensate|recruit4:Male_normal:RightLeg_pivotCompensate|recruit4:Male_normal:RightLeg_RIG|recruit4:Male_normal:RightLeg_fk|recruit4:Male_normal:RightLeg_upperlegnull|recruit4:Male_normal:RightLeg_isolater|recruit4:Male_normal:RightLeg_Upper_Leg|recruit4:Male_normal:RightLeg_lowerlegnull|recruit4:Male_normal:RightLeg_Lower_Leg|recruit4:Male_normal:RightLeg_footnull|recruit4:Male_normal:RightLeg_FootTranslate|recruit4:Male_normal:RightLeg_Foot|recruit4:Male_normal:RightLeg_toenull|recruit4:Male_normal:RightLeg_Toe" 
 		"rotateX" " -av"
 		2 "|Recruit4|recruit4:Male_normal:Character|recruit4:Male_normal:Upper_Body|recruit4:Male_normal:JOINTS|recruit4:Male_normal:Spine_JOINTS|recruit4:Male_normal:Spine_joint1|recruit4:Male_normal:LeftLeg_scalingCompensate|recruit4:Male_normal:LeftLeg_JOINTS|recruit4:Male_normal:LeftLeg_joint1|recruit4:Male_normal:LeftLeg_joint2|recruit4:Male_normal:LeftLeg_joint3|recruit4:Male_normal:LeftLeg_kneescalecompensate|recruit4:Male_normal:LeftLeg_joint4|recruit4:Male_normal:LeftLeg_joint5|recruit4:Male_normal:LeftLeg_lowerarmscalecompensate|recruit4:Male_normal:LeftLeg_joint6" 
-		"rotate" " -type \"double3\" 0.0173304 -0.972725 -0.973913"
+		"rotate" " -type \"double3\" 0.0173304 -0.973551 -0.974737"
 		2 "|Recruit4|recruit4:Male_normal:Character|recruit4:Male_normal:Upper_Body|recruit4:Male_normal:JOINTS|recruit4:Male_normal:Spine_JOINTS|recruit4:Male_normal:Spine_joint1|recruit4:Male_normal:LeftLeg_scalingCompensate|recruit4:Male_normal:LeftLeg_JOINTS|recruit4:Male_normal:LeftLeg_joint1|recruit4:Male_normal:LeftLeg_joint2|recruit4:Male_normal:LeftLeg_joint3|recruit4:Male_normal:LeftLeg_kneescalecompensate|recruit4:Male_normal:LeftLeg_joint4|recruit4:Male_normal:LeftLeg_joint5|recruit4:Male_normal:LeftLeg_lowerarmscalecompensate|recruit4:Male_normal:LeftLeg_joint6" 
 		"rotateZ" " -av"
 		2 "|Recruit4|recruit4:Male_normal:Character|recruit4:Male_normal:Upper_Body|recruit4:Male_normal:JOINTS|recruit4:Male_normal:Spine_JOINTS|recruit4:Male_normal:Spine_joint1|recruit4:Male_normal:LeftLeg_scalingCompensate|recruit4:Male_normal:LeftLeg_JOINTS|recruit4:Male_normal:LeftLeg_joint1|recruit4:Male_normal:LeftLeg_joint2|recruit4:Male_normal:LeftLeg_joint3|recruit4:Male_normal:LeftLeg_kneescalecompensate|recruit4:Male_normal:LeftLeg_joint4|recruit4:Male_normal:LeftLeg_joint5|recruit4:Male_normal:LeftLeg_lowerarmscalecompensate|recruit4:Male_normal:LeftLeg_joint6" 
@@ -7343,7 +7345,7 @@ createNode reference -n "recruit4RN";
 		2 "|Recruit4|recruit4:Male_normal:Character|recruit4:Male_normal:Upper_Body|recruit4:Male_normal:weaponNull|recruit4:Male_normal:weapon|recruit4:Male_normal:LeftHand_Pad" 
 		"scaleX" " -av"
 		2 "|Recruit4|recruit4:Male_normal:Character|recruit4:Male_normal:IK|recruit4:Male_normal:LeftArm_IK" 
-		"translate" " -type \"double3\" 4.200178 18.609566 2.180582"
+		"translate" " -type \"double3\" 4.207588 18.576052 2.670554"
 		2 "|Recruit4|recruit4:Male_normal:Character|recruit4:Male_normal:IK|recruit4:Male_normal:LeftArm_IK" 
 		"translateX" " -av"
 		2 "|Recruit4|recruit4:Male_normal:Character|recruit4:Male_normal:IK|recruit4:Male_normal:LeftArm_IK" 
@@ -7855,12 +7857,12 @@ createNode reference -n "recruit4RN";
 		0 "|recruit4:Male_normal:mesh_:char_SRO_male_heavy" "|Recruit4" "-s -r "
 		0 "|recruit4:Male_normal:mesh_:char_SRO_male_heavy_gear" "|Recruit4" "-s -r "
 		
-		2 "|Recruit4|recruit4:Male_normal:mesh_:BackRoot" "translate" " -type \"double3\" 26.908239 10.69739 -0.346302"
+		2 "|Recruit4|recruit4:Male_normal:mesh_:BackRoot" "translate" " -type \"double3\" 25.604874 10.69755 -0.344146"
 		
 		2 "|Recruit4|recruit4:Male_normal:mesh_:BackRoot" "translateX" " -av"
 		2 "|Recruit4|recruit4:Male_normal:mesh_:BackRoot" "translateY" " -av"
 		2 "|Recruit4|recruit4:Male_normal:mesh_:BackRoot" "translateZ" " -av"
-		2 "|Recruit4|recruit4:Male_normal:mesh_:BackRoot" "rotate" " -type \"double3\" 26.335823 10.106699 38.80849"
+		2 "|Recruit4|recruit4:Male_normal:mesh_:BackRoot" "rotate" " -type \"double3\" 26.138134 10.323454 39.225246"
 		
 		2 "|Recruit4|recruit4:Male_normal:mesh_:BackRoot" "rotateX" " -av"
 		2 "|Recruit4|recruit4:Male_normal:mesh_:BackRoot" "rotateY" " -av"
@@ -7889,7 +7891,7 @@ createNode reference -n "recruit4RN";
 		"rotateY" " -av"
 		2 "|Recruit4|recruit4:Male_normal:mesh_:BackRoot|recruit4:Male_normal:mesh_:Back2|recruit4:Male_normal:mesh_:Back3|recruit4:Male_normal:mesh_:Back4|recruit4:Male_normal:mesh_:Back5|recruit4:Male_normal:mesh_:Neck|recruit4:Male_normal:mesh_:Head" 
 		"rotateZ" " -av"
-		2 "|Recruit4|recruit4:Male_normal:mesh_:G_meshes_arms" "translate" " -type \"double3\" 27.691971 7.956321 15.220336"
+		2 "|Recruit4|recruit4:Male_normal:mesh_:G_meshes_arms" "translate" " -type \"double3\" 26.131765 7.321333 15.122058"
 		
 		2 "|Recruit4|recruit4:Male_normal:mesh_:G_meshes_arms" "translateX" " -av"
 		
@@ -7897,7 +7899,7 @@ createNode reference -n "recruit4RN";
 		
 		2 "|Recruit4|recruit4:Male_normal:mesh_:G_meshes_arms" "translateZ" " -av"
 		
-		2 "|Recruit4|recruit4:Male_normal:mesh_:G_meshes_arms" "rotate" " -type \"double3\" -61.250429 -18.957387 41.970241"
+		2 "|Recruit4|recruit4:Male_normal:mesh_:G_meshes_arms" "rotate" " -type \"double3\" -59.910575 -21.623912 41.470946"
 		
 		2 "|Recruit4|recruit4:Male_normal:mesh_:G_meshes_arms" "rotateX" " -av"
 		2 "|Recruit4|recruit4:Male_normal:mesh_:G_meshes_arms" "rotateZ" " -av"
@@ -7983,14 +7985,14 @@ select -ne :time1;
 	setAttr -cb on ".ihi";
 	setAttr -k on ".nds";
 	setAttr -cb on ".bnm";
-	setAttr -k on ".o" 745;
-	setAttr ".unw" 745;
+	setAttr -k on ".o" 750;
+	setAttr ".unw" 750;
 select -ne :renderPartition;
 	setAttr -k on ".cch";
 	setAttr -cb on ".ihi";
 	setAttr -k on ".nds";
 	setAttr -cb on ".bnm";
-	setAttr -s 462 ".st";
+	setAttr -s 463 ".st";
 	setAttr -cb on ".an";
 	setAttr -cb on ".pt";
 select -ne :initialShadingGroup;
@@ -8044,12 +8046,12 @@ select -ne :defaultShaderList1;
 	setAttr -cb on ".ihi";
 	setAttr -k on ".nds";
 	setAttr -cb on ".bnm";
-	setAttr -s 462 ".s";
+	setAttr -s 463 ".s";
 select -ne :defaultTextureList1;
 	setAttr -k on ".cch";
 	setAttr -k on ".nds";
 	setAttr -cb on ".bnm";
-	setAttr -s 405 ".tx";
+	setAttr -s 406 ".tx";
 select -ne :lightList1;
 	setAttr -s 5 ".l";
 select -ne :postProcessList1;
@@ -8061,16 +8063,14 @@ select -ne :postProcessList1;
 select -ne :defaultRenderUtilityList1;
 	setAttr -k on ".cch";
 	setAttr -k on ".nds";
-	setAttr -s 4720 ".u";
+	setAttr -s 4721 ".u";
 select -ne :defaultRenderingList1;
-	setAttr -s 16 ".r";
+	setAttr -s 17 ".r";
 select -ne :renderGlobalsList1;
 	setAttr -k on ".cch";
 	setAttr -cb on ".ihi";
 	setAttr -k on ".nds";
 	setAttr -cb on ".bnm";
-select -ne :defaultResolution;
-	setAttr ".pa" 1;
 select -ne :defaultLightSet;
 	setAttr -k on ".cch";
 	setAttr -k on ".ihi";
@@ -8159,7 +8159,7 @@ select -ne :defaultHardwareRenderGlobals;
 select -ne :characterPartition;
 	setAttr -s 5 ".st";
 select -ne :ikSystem;
-	setAttr -s 30 ".sol";
+	setAttr -s 32 ".sol";
 select -ne :hyperGraphLayout;
 	setAttr -s 32 ".hyp";
 relationship "link" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
