@@ -1,4 +1,4 @@
-Modeling:
+﻿Modeling:
 
 Elisabeth Broneder: Gitarre
 Marko Mlinaric: Wachturm
@@ -12,3 +12,7 @@ Daniel C.: Gitarre, Wachturm
 Alexandra M.: Laterne, Glas
 Marlis S.
 Lajos-Zolta Z.
+
+Animation:
+
+Kasper Nowak: Frame 0 - Frame 120
