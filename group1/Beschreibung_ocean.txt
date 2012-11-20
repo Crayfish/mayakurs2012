@@ -1,0 +1,7 @@
+Für Meer und Fluss habe ich mehrere UV-Channels angelegt. 
+Einen um die Bump Map draufzulegen, einen um die transparenz festzulegen und einen um die Farbe des Wassers festzulegen.
+Da ich den Leuten die bereits ein UV-Mapping fürs Land angelegt haben nicht dazwischenpfuschen wollte habe ich für den Meeresboden noch eine weitere Ebene angelegt.
+
+screenshot_ocean.jpg zeigt, wie das Meer aussehen sollte. Damits so aussieht muss der Viewport 2.0 Renderer verwendet werden.
+
+bei Fragen: markus_schuetz@gmx.at
