@@ -9,3 +9,6 @@ Christoph Kukovic (christoph.kukovic@gmx.at)
 Lukas Pezenka (e0625948@student.tuwien.ac.at)
 Matthias Boindl (e0727922@student.tuwien.ac.at)
 Robin Müller (robin.m@gmx.at)
+
+Uebung 3 (Animation)
+Matthias Adorjan (matthias.adorjan@student.tuwien.ac.at) - Animation/jao_students_macarena.ma
