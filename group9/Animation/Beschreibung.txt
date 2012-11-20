@@ -2,3 +2,5 @@ Herbert Moldan: hab mal gaaaaaaanz grob die animation erstellt.
 einer sollte noch bei der animation mitmachen, die beiden anderen sollten den typen der am boden liegt erstellen...
 animationsdauer ca. 7sekunden.
 _________________________________________________________________
+Herbert Moldan: Animation verfeinert. Mal als Referenzen in den Lift reingeklatscht.
+_________________________________________________________________
