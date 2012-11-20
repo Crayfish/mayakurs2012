@@ -1,4 +1,4 @@
-﻿Modeling:
+ Modeling:
 
 Elisabeth Broneder: Gitarre
 Marko Mlinaric: Wachturm
@@ -16,3 +16,4 @@ Lajos-Zolta Z.
 Animation:
 
 Kasper Nowak: Frame 0 - Frame 120
+Michal Londo: Frame 121 - 240
