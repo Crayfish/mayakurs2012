@@ -19,6 +19,9 @@ Wir animieren die Szene aus Matrix wo "Neo" den Kugeln ausweicht:
 http://www.youtube.com/watch?v=KNrSNcaYiZg
 Startzeit: 02:00, Endzeit: 02:24
 
+Abgabefile mit beiden Charakteren:
+Matrix_Animation.ma
+
 Mitglieder der Gruppe 8 der dritten Runde:
 Felix Kreuzer			e0827433@student.tuwien.ac.at
 Matthias Boindl			e0727922@student.tuwien.ac.at
