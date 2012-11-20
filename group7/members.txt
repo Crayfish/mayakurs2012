@@ -4,11 +4,14 @@ thomas.adelbauer@gmail.com
 mike_prae@gmx.at
 evc.bsc@gmail.com
 
+
 Uebung 2 (UV-Layout, Texturing)
 Christoph Kukovic (christoph.kukovic@gmx.at)
 Lukas Pezenka (e0625948@student.tuwien.ac.at)
 Matthias Boindl (e0727922@student.tuwien.ac.at)
 Robin Müller (robin.m@gmx.at)
 
+
 Uebung 3 (Animation)
 Matthias Adorjan (matthias.adorjan@student.tuwien.ac.at) - Animation/jao_students_macarena.ma
+Markus Schütz: Animation/moveIt.ma
