@@ -1,4 +1,4 @@
-Übung 1 - Gruppe (Modelling)
+﻿Übung 1 - Gruppe (Modelling)
 Daniel C. - e0726194@student.tuwien.ac.at (banana, park bench)
 Lukas P. - e0625948@student.tuwien.ac.at (street lamp, street signs)
 Andreas W. - e0926780@student.tuwien.ac.at (hammer, tent)
@@ -12,7 +12,7 @@ Fabrizia Bechtold - e0827420@student.tuwien.ac.at (wastebin)
 
 Übung 3 - Gruppe (Animation)
 Marlis Streicher - e0825454@student.tuwien.ac.at
-Markus Töpfer - e0525762@student.tuwien.ac.at
+Markus Töpfer - e0525762@student.tuwien.ac.at (Gremlin)
 Lukas Pezenka - e0625948@student.tuwien.ac.at
 Thomas Adelbauer - thomas.adelbauer@gmail.com
 
