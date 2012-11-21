@@ -9,3 +9,15 @@ Matthias Adorjan - matthias.adorjan@student.tuwien.ac.at (street lamp, street si
 Jakob Michael Blattner - jakoblattner@gmail.com (hammer)
 Thomas Adelbauer - thomas.adelbauer@gmail.com (tent, banana)
 Fabrizia Bechtold - e0827420@student.tuwien.ac.at (wastebin)
+
+Übung 3 - Gruppe (Animation)
+Marlis Streicher - e0825454@student.tuwien.ac.at
+Markus Töpfer - e0525762@student.tuwien.ac.at
+Lukas Pezenka - e0625948@student.tuwien.ac.at
+Thomas Adelbauer - thomas.adelbauer@gmail.com
+
+Übung 4 - Gruppe (Kamera/Szene)
+Bernhard Steiner - bsteiner@cg.tuwien.ac.at
+Matthias Boindl - e0727922@student.tuwien.ac.at
+Christoph Schindler	- christophschindler@gmx.at
+Andreas Walch - walch.andreas89@gmail.com
