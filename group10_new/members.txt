@@ -21,3 +21,6 @@ Blattner Jakob
 Müller Robin
 
 Robin: Fixed various UVs, fixed Cauldron model
+Barbara: fixed Legoman + mehr modelle eingefügt
+Bernhard: Gras u Boden
+Jakob: Baumgruppe + mehr modelle eingefügt
