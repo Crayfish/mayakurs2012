@@ -3,6 +3,7 @@
 Schindler Christoph
 Schwankl Barbara
 Zanella Loris
+Müller Robin
 
 
 Aufgabenverteilung:
@@ -10,3 +11,4 @@ Aufgabenverteilung:
 Alle: Recherche how to set environment variables bzw. wie können wir das referenzieren machen, ohne händisch jedes file suchen zu müssen
 
 Barbara: Zeltplatz, Readme_Howto... für alle
+Robin: Fixed various UVs, fixed Cauldron model
