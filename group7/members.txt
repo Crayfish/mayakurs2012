@@ -1,4 +1,4 @@
-﻿Uebung 1 (Modelling)
+ Uebung 1 (Modelling)
 happy.moldan@gmail.com
 thomas.adelbauer@gmail.com
 mike_prae@gmx.at
@@ -15,4 +15,4 @@ Robin Müller (robin.m@gmx.at)
 Uebung 3 (Animation)
 Matthias Adorjan (matthias.adorjan@student.tuwien.ac.at) - Animation (macarena) in Gruppe 10 Ordner (wie ausgemacht)
 Markus Schütz: Animation/moveIt.ma
-Lajos-Zoltan Zsombori - Environment
+Lajos-Zoltan Zsombori - Environment clouds_with_skydome_and_day_night_lightcycle_animation_zsombori.ma
