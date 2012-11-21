@@ -1,0 +1,73 @@
+<?xml version="1.0" standalone="no" ?>
+<!DOCTYPE project PUBLIC "-//audacityproject-1.3.0//DTD//EN" "http://audacity.sourceforge.net/xml/audacityproject-1.3.0.dtd" >
+<project xmlns="http://audacity.sourceforge.net/xml/" projname="01_Mosquito_Song_data" version="1.3.0" audacityversion="2.0.2" sel0="56.0947156463" sel1="56.0947156463" vpos="0" h="0.0000000000" zoom="7.0951424820" rate="44100.0">
+	<tags>
+		<tag name="GENRE" value="Rock"/>
+		<tag name="ARTIST" value="Queens Of The Stone Age"/>
+		<tag name="TRACKNUMBER" value="01"/>
+		<tag name="TITLE" value="Mosquito Song"/>
+		<tag name="YEAR" value="2002"/>
+		<tag name="Band" value="Queens Of The Stone Age"/>
+		<tag name="ALBUM" value="Songs For The Deaf"/>
+	</tags>
+	<wavetrack name="01_Mosquito_Song" channel="0" linked="1" mute="0" solo="0" height="150" minimized="0" isSelected="1" rate="44100" gain="1.0" pan="0.0">
+		<waveclip offset="0.00000000">
+			<sequence maxsamples="262144" sampleformat="262159" numsamples="1303317">
+				<waveblock start="0">
+					<simpleblockfile filename="e00002ff.au" len="262144" min="-0.604313" max="0.577612" rms="0.091309"/>
+				</waveblock>
+				<waveblock start="262144">
+					<simpleblockfile filename="e000073b.au" len="262144" min="-0.728682" max="0.834764" rms="0.121897"/>
+				</waveblock>
+				<waveblock start="524288">
+					<simpleblockfile filename="e0000b43.au" len="262144" min="-0.674798" max="0.749916" rms="0.12995"/>
+				</waveblock>
+				<waveblock start="786432">
+					<simpleblockfile filename="e00004fa.au" len="262144" min="-0.71797" max="0.879271" rms="0.17674"/>
+				</waveblock>
+				<waveblock start="1048576">
+					<simpleblockfile filename="e0000d97.au" len="254741" min="-0.671873" max="0.857801" rms="0.130364"/>
+				</waveblock>
+			</sequence>
+			<envelope numpoints="0"/>
+		</waveclip>
+		<waveclip offset="29.55367347">
+			<sequence maxsamples="262144" sampleformat="262159" numsamples="8935">
+				<waveblock start="0">
+					<simpleblockfile filename="e000003e.au" len="8935" min="-0.45002" max="0.384247" rms="0.050792"/>
+				</waveblock>
+			</sequence>
+			<envelope numpoints="0"/>
+		</waveclip>
+	</wavetrack>
+	<wavetrack name="01_Mosquito_Song" channel="1" linked="0" mute="0" solo="0" height="150" minimized="0" isSelected="1" rate="44100" gain="1.0" pan="0.0">
+		<waveclip offset="0.00000000">
+			<sequence maxsamples="262144" sampleformat="262159" numsamples="1303317">
+				<waveblock start="0">
+					<simpleblockfile filename="e0000d62.au" len="262144" min="-0.571515" max="0.592037" rms="0.112115"/>
+				</waveblock>
+				<waveblock start="262144">
+					<simpleblockfile filename="e000016e.au" len="262144" min="-0.76646" max="0.844955" rms="0.131999"/>
+				</waveblock>
+				<waveblock start="524288">
+					<simpleblockfile filename="e0000d73.au" len="262144" min="-0.634466" max="0.70193" rms="0.145996"/>
+				</waveblock>
+				<waveblock start="786432">
+					<simpleblockfile filename="e00004c4.au" len="262144" min="-0.787798" max="0.840036" rms="0.187256"/>
+				</waveblock>
+				<waveblock start="1048576">
+					<simpleblockfile filename="e0000229.au" len="254741" min="-0.757745" max="0.856738" rms="0.142363"/>
+				</waveblock>
+			</sequence>
+			<envelope numpoints="0"/>
+		</waveclip>
+		<waveclip offset="29.55367347">
+			<sequence maxsamples="262144" sampleformat="262159" numsamples="8935">
+				<waveblock start="0">
+					<simpleblockfile filename="e000009f.au" len="8935" min="-0.371512" max="0.46396" rms="0.063949"/>
+				</waveblock>
+			</sequence>
+			<envelope numpoints="0"/>
+		</waveclip>
+	</wavetrack>
+</project>
