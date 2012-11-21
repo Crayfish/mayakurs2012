@@ -9,9 +9,10 @@ Uebung 2 (UV-Layout, Texturing)
 Christoph Kukovic (christoph.kukovic@gmx.at)
 Lukas Pezenka (e0625948@student.tuwien.ac.at)
 Matthias Boindl (e0727922@student.tuwien.ac.at)
-Robin Müller (robin.m@gmx.at)
+Robin MÃ¼ller (robin.m@gmx.at)
 
 
 Uebung 3 (Animation)
 Matthias Adorjan (matthias.adorjan@student.tuwien.ac.at) - Animation/jao_students_macarena.ma
-Markus Schütz: Animation/moveIt.ma
+Markus SchÃ¼tz: Animation/moveIt.ma
+Lajos-Zoltan Zsombori - Environment
