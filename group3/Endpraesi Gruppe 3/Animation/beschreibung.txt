@@ -1,0 +1,10 @@
+Beschreibung:
+
+Unsere Animation basiert auf einem Monty-Python Sketch. 
+Den Sketch kann man sich hier anschauen:
+	-http://www.youtube.com/watch?v=1AeN_inSgpg&feature=youtu.be&t=2m19s
+
+Die Hauptdatei ist die "selfdefense.ma".
+
+Bei weiteren Fragen:
+	johann_houszka@gmx.at

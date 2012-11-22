@@ -1,0 +1,1 @@
+- Cauldron UVs should be fixed, it still looks weird in the viewport for some reason but will render fine
