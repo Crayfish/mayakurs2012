@@ -19,3 +19,10 @@ Markus Toepfer:
 - Tisch
 
 Lajos-Zoltan Zsombori: Texturierung Baum (tree_texturiert)
+
+Animation:
+
+Thomas Mayr
+Kasper Nowak
+Andreas Jurdak
+Michal Londo
