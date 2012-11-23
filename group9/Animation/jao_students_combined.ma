@@ -1,29 +1,29 @@
 //Maya ASCII 2013 scene
 //Name: jao_students_combined.ma
-//Last modified: Mon, Nov 19, 2012 09:54:56 PM
+//Last modified: Fri, Nov 23, 2012 04:31:49 PM
 //Codeset: 1252
-file -rdi 1 -ns "jao_students_clean" -rfn "jao_students_cleanRN" "E:/01 TU Wien/10. Semester/Maya Kurs/Git/mayakurs2012/group9/Animation//jao_students_clean.ma";
+file -rdi 1 -ns "jao_students_clean" -rfn "jao_students_cleanRN" "$MAYAKURS2012/group9/Animation/jao_students_clean.ma";
 file -rdi 2 -ns "Male_normal" -rfn "jao_students_clean:V005_RN" "../characters/male_standard/male_standard_rig_animation.ma";
 file -rdi 3 -ns "mesh_" -rfn "jao_students_clean:Male_normal:mesh_RN" "../characters/male_standard/male_standard_rig_export.ma";
-file -rdi 1 -ns "jao_students_psy" -rfn "jao_students_psyRN" "E:/01 TU Wien/10. Semester/Maya Kurs/Git/mayakurs2012/group9/Animation//jao_students_psy.ma";
+file -rdi 1 -ns "jao_students_psy" -rfn "jao_students_psyRN" "$MAYAKURS2012/group9/Animation/jao_students_psy.ma";
 file -rdi 2 -ns "Male_normal" -rfn "jao_students_psy:V005_RN" "../characters/male_standard/male_standard_rig_animation.ma";
 file -rdi 3 -ns "mesh_" -rfn "jao_students_psy:Male_normal:mesh_RN" "../characters/male_standard/male_standard_rig_export.ma";
-file -r -ns "jao_students_clean" -dr 1 -rfn "jao_students_cleanRN" "E:/01 TU Wien/10. Semester/Maya Kurs/Git/mayakurs2012/group9/Animation//jao_students_clean.ma";
-file -r -ns "jao_students_psy" -dr 1 -rfn "jao_students_psyRN" "E:/01 TU Wien/10. Semester/Maya Kurs/Git/mayakurs2012/group9/Animation//jao_students_psy.ma";
+file -r -ns "jao_students_clean" -dr 1 -rfn "jao_students_cleanRN" "$MAYAKURS2012/group9/Animation/jao_students_clean.ma";
+file -r -ns "jao_students_psy" -dr 1 -rfn "jao_students_psyRN" "$MAYAKURS2012/group9/Animation/jao_students_psy.ma";
 requires maya "2013";
-requires "Fur" "2013";
+requires "Fur" "2013 x64";
 requires "Mayatomr" "2013.0 - 3.10.1.4 ";
 requires "stereoCamera" "10.0";
 currentUnit -l centimeter -a degree -t film;
 fileInfo "application" "maya";
 fileInfo "product" "Maya 2013";
-fileInfo "version" "2013";
-fileInfo "cutIdentifier" "201202220747-825128";
-fileInfo "osv" "Microsoft Windows 7 Business Edition, 32-bit Windows 7 Service Pack 1 (Build 7601)\n";
+fileInfo "version" "2013 x64";
+fileInfo "cutIdentifier" "201202220241-825136";
+fileInfo "osv" "Microsoft Windows 7 Business Edition, 64-bit Windows 7 Service Pack 1 (Build 7601)\n";
 fileInfo "license" "student";
 createNode transform -s -n "persp";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -2.2562689545371466 13.932618883345869 61.269255946470636 ;
+	setAttr ".t" -type "double3" -2.2562689545371466 13.932618883345867 61.269255946470643 ;
 	setAttr ".r" -type "double3" -4.5383527296303363 -0.19999999999875021 -4.6590440311656793e-018 ;
 createNode camera -s -n "perspShape" -p "persp";
 	setAttr -k off ".v" no;
@@ -107,21 +107,21 @@ createNode nurbsSurface -n "bottomnurbsCubeShape1" -p "|nurbsCube2|bottomnurbsCu
 		6 0 0 0 1 1 1
 		
 		16
-		-5.7435843615528368 -10.46011953866538 0.38388583797481179
-		-1.9145281205176121 -10.46011953866538 0.38388583797481179
-		1.9145281205176126 -10.46011953866538 0.38388583797481179
-		5.7435843615528368 -10.46011953866538 0.38388583797481179
+		-5.7435843615528368 -10.46011953866538 0.38388583797481174
+		-1.9145281205176119 -10.46011953866538 0.38388583797481174
+		1.9145281205176128 -10.46011953866538 0.38388583797481174
+		5.7435843615528368 -10.46011953866538 0.38388583797481174
 		-5.7435843615528368 -10.46011953866538 0.12796194599160352
-		-1.9145281205176121 -10.46011953866538 0.12796194599160352
-		1.9145281205176126 -10.46011953866538 0.12796194599160352
+		-1.9145281205176119 -10.46011953866538 0.12796194599160352
+		1.9145281205176128 -10.46011953866538 0.12796194599160352
 		5.7435843615528368 -10.46011953866538 0.12796194599160352
 		-5.7435843615528368 -10.46011953866538 -0.12796194599160479
-		-1.9145281205176121 -10.46011953866538 -0.12796194599160479
-		1.9145281205176126 -10.46011953866538 -0.12796194599160479
+		-1.9145281205176119 -10.46011953866538 -0.12796194599160479
+		1.9145281205176128 -10.46011953866538 -0.12796194599160479
 		5.7435843615528368 -10.46011953866538 -0.12796194599160479
 		-5.7435843615528368 -10.46011953866538 -0.38388583797481313
-		-1.9145281205176121 -10.46011953866538 -0.38388583797481313
-		1.9145281205176126 -10.46011953866538 -0.38388583797481313
+		-1.9145281205176119 -10.46011953866538 -0.38388583797481313
+		1.9145281205176128 -10.46011953866538 -0.38388583797481313
 		5.7435843615528368 -10.46011953866538 -0.38388583797481313
 		
 		;
@@ -199,7 +199,7 @@ createNode nurbsSurface -n "backnurbsCubeShape1" -p "backnurbsCube1";
 	setAttr ".cpr" 4;
 	setAttr ".cps" 4;
 createNode transform -n "Elevator_left";
-	setAttr ".t" -type "double3" -9.055222761892205 10.073469120792106 11.554617513142425 ;
+	setAttr ".t" -type "double3" -9.055222761892205 10.073469120792106 11.554617513142423 ;
 createNode transform -n "topnurbsCube2" -p "Elevator_left";
 createNode nurbsSurface -n "topnurbsCubeShape2" -p "|Elevator_left|topnurbsCube2";
 	setAttr -k off ".v";
@@ -273,7 +273,7 @@ createNode nurbsSurface -n "backnurbsCubeShape2" -p "|Elevator_left|backnurbsCub
 	setAttr ".cpr" 4;
 	setAttr ".cps" 4;
 createNode transform -n "Elevator_right";
-	setAttr ".t" -type "double3" 9.0340650022700935 10.073469120792106 11.554617513142425 ;
+	setAttr ".t" -type "double3" 9.0340650022700935 10.073469120792106 11.554617513142423 ;
 createNode transform -n "topnurbsCube2" -p "Elevator_right";
 createNode nurbsSurface -n "topnurbsCubeShape2" -p "|Elevator_right|topnurbsCube2";
 	setAttr -k off ".v";
@@ -291,19 +291,19 @@ createNode nurbsSurface -n "topnurbsCubeShape2" -p "|Elevator_right|topnurbsCube
 		6 0 0 0 1 1 1
 		
 		16
-		-5.9947534533821463 10.073469120792106 0.41382827998388261
+		-5.9947534533821463 10.073469120792106 0.41382827998388266
 		-5.9947534533821463 10.073469120792106 0.13794275999462796
 		-5.9947534533821463 10.073469120792106 -0.13794275999462668
 		-5.9947534533821463 10.073469120792106 -0.41382827998388128
-		-1.9982511511273819 10.073469120792106 0.41382827998388261
+		-1.9982511511273819 10.073469120792106 0.41382827998388266
 		-1.9982511511273819 10.073469120792106 0.13794275999462796
 		-1.9982511511273819 10.073469120792106 -0.13794275999462668
 		-1.9982511511273819 10.073469120792106 -0.41382827998388128
-		1.9982511511273824 10.073469120792106 0.41382827998388261
+		1.9982511511273824 10.073469120792106 0.41382827998388266
 		1.9982511511273824 10.073469120792106 0.13794275999462796
 		1.9982511511273824 10.073469120792106 -0.13794275999462668
 		1.9982511511273824 10.073469120792106 -0.41382827998388128
-		5.9947534533821463 10.073469120792106 0.41382827998388261
+		5.9947534533821463 10.073469120792106 0.41382827998388266
 		5.9947534533821463 10.073469120792106 0.13794275999462796
 		5.9947534533821463 10.073469120792106 -0.13794275999462668
 		5.9947534533821463 10.073469120792106 -0.41382827998388128
@@ -334,10 +334,10 @@ createNode nurbsSurface -n "bottomnurbsCubeShape3" -p "|Elevator_right|bottomnur
 		-1.9982511511273819 -10.073469120792106 0.13794275999462674
 		1.9982511511273824 -10.073469120792106 0.13794275999462674
 		5.9947534533821463 -10.073469120792106 0.13794275999462674
-		-5.9947534533821463 -10.073469120792106 -0.13794275999462791
-		-1.9982511511273819 -10.073469120792106 -0.13794275999462791
-		1.9982511511273824 -10.073469120792106 -0.13794275999462791
-		5.9947534533821463 -10.073469120792106 -0.13794275999462791
+		-5.9947534533821463 -10.073469120792106 -0.13794275999462793
+		-1.9982511511273819 -10.073469120792106 -0.13794275999462793
+		1.9982511511273824 -10.073469120792106 -0.13794275999462793
+		5.9947534533821463 -10.073469120792106 -0.13794275999462793
 		-5.9947534533821463 -10.073469120792106 -0.4138282799838825
 		-1.9982511511273819 -10.073469120792106 -0.4138282799838825
 		1.9982511511273824 -10.073469120792106 -0.4138282799838825
@@ -362,21 +362,21 @@ createNode nurbsSurface -n "leftnurbsCubeShape2" -p "|Elevator_right|leftnurbsCu
 		
 		16
 		-5.9947534533821463 -10.073469120792106 0.41382827998388139
-		-5.9947534533821463 -3.3578230402640354 0.41382827998388177
-		-5.9947534533821463 3.3578230402640354 0.41382827998388222
-		-5.9947534533821463 10.073469120792106 0.41382827998388261
+		-5.9947534533821463 -3.357823040264035 0.41382827998388177
+		-5.9947534533821463 3.357823040264035 0.41382827998388222
+		-5.9947534533821463 10.073469120792106 0.41382827998388266
 		-1.9982511511273819 -10.073469120792106 0.41382827998388139
-		-1.9982511511273819 -3.3578230402640354 0.41382827998388177
-		-1.9982511511273819 3.3578230402640354 0.41382827998388222
-		-1.9982511511273819 10.073469120792106 0.41382827998388261
+		-1.9982511511273819 -3.357823040264035 0.41382827998388177
+		-1.9982511511273819 3.357823040264035 0.41382827998388222
+		-1.9982511511273819 10.073469120792106 0.41382827998388266
 		1.9982511511273824 -10.073469120792106 0.41382827998388139
-		1.9982511511273824 -3.3578230402640354 0.41382827998388177
-		1.9982511511273824 3.3578230402640354 0.41382827998388222
-		1.9982511511273824 10.073469120792106 0.41382827998388261
+		1.9982511511273824 -3.357823040264035 0.41382827998388177
+		1.9982511511273824 3.357823040264035 0.41382827998388222
+		1.9982511511273824 10.073469120792106 0.41382827998388266
 		5.9947534533821463 -10.073469120792106 0.41382827998388139
-		5.9947534533821463 -3.3578230402640354 0.41382827998388177
-		5.9947534533821463 3.3578230402640354 0.41382827998388222
-		5.9947534533821463 10.073469120792106 0.41382827998388261
+		5.9947534533821463 -3.357823040264035 0.41382827998388177
+		5.9947534533821463 3.357823040264035 0.41382827998388222
+		5.9947534533821463 10.073469120792106 0.41382827998388266
 		
 		;
 createNode transform -n "rightnurbsCube2" -p "Elevator_right";
@@ -396,18 +396,18 @@ createNode nurbsSurface -n "rightnurbsCubeShape2" -p "|Elevator_right|rightnurbs
 		6 0 0 0 1 1 1
 		
 		16
-		-5.9947534533821463 -10.073469120792106 -0.41382827998388261
-		-1.9982511511273819 -10.073469120792106 -0.41382827998388261
-		1.9982511511273824 -10.073469120792106 -0.41382827998388261
-		5.9947534533821463 -10.073469120792106 -0.41382827998388261
-		-5.9947534533821463 -3.3578230402640354 -0.41382827998388222
-		-1.9982511511273819 -3.3578230402640354 -0.41382827998388222
-		1.9982511511273824 -3.3578230402640354 -0.41382827998388222
-		5.9947534533821463 -3.3578230402640354 -0.41382827998388222
-		-5.9947534533821463 3.3578230402640354 -0.41382827998388177
-		-1.9982511511273819 3.3578230402640354 -0.41382827998388177
-		1.9982511511273824 3.3578230402640354 -0.41382827998388177
-		5.9947534533821463 3.3578230402640354 -0.41382827998388177
+		-5.9947534533821463 -10.073469120792106 -0.41382827998388266
+		-1.9982511511273819 -10.073469120792106 -0.41382827998388266
+		1.9982511511273824 -10.073469120792106 -0.41382827998388266
+		5.9947534533821463 -10.073469120792106 -0.41382827998388266
+		-5.9947534533821463 -3.357823040264035 -0.41382827998388222
+		-1.9982511511273819 -3.357823040264035 -0.41382827998388222
+		1.9982511511273824 -3.357823040264035 -0.41382827998388222
+		5.9947534533821463 -3.357823040264035 -0.41382827998388222
+		-5.9947534533821463 3.357823040264035 -0.41382827998388177
+		-1.9982511511273819 3.357823040264035 -0.41382827998388177
+		1.9982511511273824 3.357823040264035 -0.41382827998388177
+		5.9947534533821463 3.357823040264035 -0.41382827998388177
 		-5.9947534533821463 10.073469120792106 -0.41382827998388139
 		-1.9982511511273819 10.073469120792106 -0.41382827998388139
 		1.9982511511273824 10.073469120792106 -0.41382827998388139
@@ -432,20 +432,20 @@ createNode nurbsSurface -n "frontnurbsCubeShape2" -p "|Elevator_right|frontnurbs
 		
 		16
 		5.9947534533821463 -10.073469120792106 0.41382827998388139
-		5.9947534533821463 -3.3578230402640354 0.41382827998388177
-		5.9947534533821463 3.3578230402640354 0.41382827998388222
-		5.9947534533821463 10.073469120792106 0.41382827998388261
+		5.9947534533821463 -3.357823040264035 0.41382827998388177
+		5.9947534533821463 3.357823040264035 0.41382827998388222
+		5.9947534533821463 10.073469120792106 0.41382827998388266
 		5.9947534533821463 -10.073469120792106 0.13794275999462674
-		5.9947534533821463 -3.3578230402640354 0.13794275999462716
-		5.9947534533821463 3.3578230402640354 0.13794275999462755
+		5.9947534533821463 -3.357823040264035 0.13794275999462716
+		5.9947534533821463 3.357823040264035 0.13794275999462757
 		5.9947534533821463 10.073469120792106 0.13794275999462796
-		5.9947534533821463 -10.073469120792106 -0.13794275999462791
-		5.9947534533821463 -3.3578230402640354 -0.13794275999462749
-		5.9947534533821463 3.3578230402640354 -0.1379427599946271
+		5.9947534533821463 -10.073469120792106 -0.13794275999462793
+		5.9947534533821463 -3.357823040264035 -0.13794275999462749
+		5.9947534533821463 3.357823040264035 -0.1379427599946271
 		5.9947534533821463 10.073469120792106 -0.13794275999462668
 		5.9947534533821463 -10.073469120792106 -0.4138282799838825
-		5.9947534533821463 -3.3578230402640354 -0.41382827998388211
-		5.9947534533821463 3.3578230402640354 -0.41382827998388166
+		5.9947534533821463 -3.357823040264035 -0.41382827998388205
+		5.9947534533821463 3.357823040264035 -0.41382827998388166
 		5.9947534533821463 10.073469120792106 -0.41382827998388128
 		
 		;
@@ -468,31 +468,32 @@ createNode nurbsSurface -n "backnurbsCubeShape2" -p "|Elevator_right|backnurbsCu
 		16
 		-5.9947534533821463 -10.073469120792106 0.41382827998388139
 		-5.9947534533821463 -10.073469120792106 0.13794275999462674
-		-5.9947534533821463 -10.073469120792106 -0.13794275999462791
+		-5.9947534533821463 -10.073469120792106 -0.13794275999462793
 		-5.9947534533821463 -10.073469120792106 -0.4138282799838825
-		-5.9947534533821463 -3.3578230402640354 0.41382827998388177
-		-5.9947534533821463 -3.3578230402640354 0.13794275999462716
-		-5.9947534533821463 -3.3578230402640354 -0.13794275999462749
-		-5.9947534533821463 -3.3578230402640354 -0.41382827998388211
-		-5.9947534533821463 3.3578230402640354 0.41382827998388222
-		-5.9947534533821463 3.3578230402640354 0.13794275999462755
-		-5.9947534533821463 3.3578230402640354 -0.1379427599946271
-		-5.9947534533821463 3.3578230402640354 -0.41382827998388166
-		-5.9947534533821463 10.073469120792106 0.41382827998388261
+		-5.9947534533821463 -3.357823040264035 0.41382827998388177
+		-5.9947534533821463 -3.357823040264035 0.13794275999462716
+		-5.9947534533821463 -3.357823040264035 -0.13794275999462749
+		-5.9947534533821463 -3.357823040264035 -0.41382827998388205
+		-5.9947534533821463 3.357823040264035 0.41382827998388222
+		-5.9947534533821463 3.357823040264035 0.13794275999462757
+		-5.9947534533821463 3.357823040264035 -0.1379427599946271
+		-5.9947534533821463 3.357823040264035 -0.41382827998388166
+		-5.9947534533821463 10.073469120792106 0.41382827998388266
 		-5.9947534533821463 10.073469120792106 0.13794275999462796
 		-5.9947534533821463 10.073469120792106 -0.13794275999462668
 		-5.9947534533821463 10.073469120792106 -0.41382827998388128
 		
 		;
 createNode lightLinker -s -n "lightLinker1";
-	setAttr -s 186 ".lnk";
-	setAttr -s 164 ".slnk";
+	setAttr -s 554 ".lnk";
+	setAttr -s 488 ".slnk";
 createNode displayLayerManager -n "layerManager";
 createNode displayLayer -n "defaultLayer";
 createNode renderLayerManager -n "renderLayerManager";
 createNode renderLayer -n "defaultRenderLayer";
 	setAttr ".g" yes;
 createNode reference -n "jao_students_cleanRN";
+	setAttr ".fn[0]" -type "string" "D:/Uni/MayaKurs/mayakurs2012/group9/Animation/jao_students_clean.ma";
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"jao_students_cleanRN"
 		"jao_students_cleanRN" 0
@@ -502,11 +503,11 @@ createNode reference -n "jao_students_cleanRN";
 		2 "jao_students_clean:GANGNAM_STYLE" "offset" " 0"
 		2 "jao_students_clean:GANGNAM_STYLE" "endFrame" " 174.652"
 		2 "jao_students_clean:GANGNAM_STYLE" "sourceEnd" " 174.652"
-		2 "jao_students_clean:GANGNAM_STYLE" "filename" " -type \"string\" \"E:/01 TU Wien/10. Semester/Maya Kurs/Git/mayakurs2012/group9/Animation//GANGNAM STYLE.wav\""
+		2 "jao_students_clean:GANGNAM_STYLE" "filename" " -type \"string\" \"D:/Uni/MayaKurs/mayakurs2012/group9/Animation/GANGNAM STYLE.wav\""
 		
 		3 ":defaultRenderGlobals.rendercallback" "jao_students_clean:defaultFurGlobals.callback" 
 		""
-		"jao_students_clean:V005_RN" 589
+		"jao_students_clean:V005_RN" 585
 		2 "|jao_students_clean:Male_normal:Character" "visibility" " -av 1"
 		2 "|jao_students_clean:Male_normal:Character" "translate" " -type \"double3\" 0 0 0"
 		
@@ -571,8 +572,6 @@ createNode reference -n "jao_students_cleanRN";
 		"LeftLeg_FKIK" " -av -k 1 1"
 		2 "|jao_students_clean:Male_normal:Character|jao_students_clean:Male_normal:Upper_Body" 
 		"LeftLeg_Isolation" " -av -k 1 1"
-		2 "|jao_students_clean:Male_normal:Character|jao_students_clean:Male_normal:Upper_Body|jao_students_clean:Male_normal:JOINTS|jao_students_clean:Male_normal:Spine_JOINTS|jao_students_clean:Male_normal:Spine_joint1|jao_students_clean:Male_normal:Spine_joint2|jao_students_clean:Male_normal:Spine_joint3|jao_students_clean:Male_normal:Spine_joint4|jao_students_clean:Male_normal:Spine_joint5|jao_students_clean:Male_normal:Spine_joint6|jao_students_clean:Male_normal:Spine_joint7|jao_students_clean:Male_normal:LeftArm_scalingCompensate|jao_students_clean:Male_normal:LeftArm_pivotCompensate|jao_students_clean:Male_normal:LeftArm_RIG|jao_students_clean:Male_normal:LeftArm_fk|jao_students_clean:Male_normal:LeftArm_rig_clavical|jao_students_clean:Male_normal:LeftArm_rig_shoulder|jao_students_clean:Male_normal:LeftArm_rig_elbow" 
-		"jointOrientY" " -av -15.23"
 		2 "|jao_students_clean:Male_normal:Character|jao_students_clean:Male_normal:Upper_Body|jao_students_clean:Male_normal:JOINTS|jao_students_clean:Male_normal:Spine_JOINTS|jao_students_clean:Male_normal:Spine_joint1|jao_students_clean:Male_normal:Spine_joint2|jao_students_clean:Male_normal:Spine_joint3|jao_students_clean:Male_normal:Spine_joint4|jao_students_clean:Male_normal:Spine_joint5|jao_students_clean:Male_normal:Spine_joint6|jao_students_clean:Male_normal:Spine_joint7|jao_students_clean:Male_normal:LeftArm_scalingCompensate|jao_students_clean:Male_normal:LeftArm_pivotCompensate|jao_students_clean:Male_normal:LeftArm_RIG|jao_students_clean:Male_normal:LeftArm_fk|jao_students_clean:Male_normal:LeftArm_shouldernull|jao_students_clean:Male_normal:LeftArm_Shoulder" 
 		"rotate" " -type \"double3\" 14.84082 -19.983906 -4.27305"
 		2 "|jao_students_clean:Male_normal:Character|jao_students_clean:Male_normal:Upper_Body|jao_students_clean:Male_normal:JOINTS|jao_students_clean:Male_normal:Spine_JOINTS|jao_students_clean:Male_normal:Spine_joint1|jao_students_clean:Male_normal:Spine_joint2|jao_students_clean:Male_normal:Spine_joint3|jao_students_clean:Male_normal:Spine_joint4|jao_students_clean:Male_normal:Spine_joint5|jao_students_clean:Male_normal:Spine_joint6|jao_students_clean:Male_normal:Spine_joint7|jao_students_clean:Male_normal:LeftArm_scalingCompensate|jao_students_clean:Male_normal:LeftArm_pivotCompensate|jao_students_clean:Male_normal:LeftArm_RIG|jao_students_clean:Male_normal:LeftArm_fk|jao_students_clean:Male_normal:LeftArm_shouldernull|jao_students_clean:Male_normal:LeftArm_Shoulder" 
@@ -679,8 +678,6 @@ createNode reference -n "jao_students_cleanRN";
 		"NullifyTwist" " -av -k 1 0"
 		2 "|jao_students_clean:Male_normal:Character|jao_students_clean:Male_normal:Upper_Body|jao_students_clean:Male_normal:JOINTS|jao_students_clean:Male_normal:Spine_JOINTS|jao_students_clean:Male_normal:Spine_joint1|jao_students_clean:Male_normal:Spine_joint2|jao_students_clean:Male_normal:Spine_joint3|jao_students_clean:Male_normal:Spine_joint4|jao_students_clean:Male_normal:Spine_joint5|jao_students_clean:Male_normal:Spine_joint6|jao_students_clean:Male_normal:Spine_joint7|jao_students_clean:Male_normal:LeftArm_scalingCompensate|jao_students_clean:Male_normal:LeftArm_pivotCompensate|jao_students_clean:Male_normal:LeftArm_RIG|jao_students_clean:Male_normal:LeftArm_fk|jao_students_clean:Male_normal:LeftArm_shouldernull|jao_students_clean:Male_normal:LeftArm_Shoulder|jao_students_clean:Male_normal:LeftArm_upperarmcontrolnull|jao_students_clean:Male_normal:LeftArm_Arm_Pole_Vector" 
 		"AddToTwist" " -av -k 1 0"
-		2 "|jao_students_clean:Male_normal:Character|jao_students_clean:Male_normal:Upper_Body|jao_students_clean:Male_normal:JOINTS|jao_students_clean:Male_normal:Spine_JOINTS|jao_students_clean:Male_normal:Spine_joint1|jao_students_clean:Male_normal:Spine_joint2|jao_students_clean:Male_normal:Spine_joint3|jao_students_clean:Male_normal:Spine_joint4|jao_students_clean:Male_normal:Spine_joint5|jao_students_clean:Male_normal:Spine_joint6|jao_students_clean:Male_normal:Spine_joint7|jao_students_clean:Male_normal:RightArm_scalingCompensate|jao_students_clean:Male_normal:RightArm_pivotCompensate|jao_students_clean:Male_normal:RightArm_RIG|jao_students_clean:Male_normal:RightArm_fk|jao_students_clean:Male_normal:RightArm_rig_clavical|jao_students_clean:Male_normal:RightArm_rig_shoulder|jao_students_clean:Male_normal:RightArm_rig_elbow" 
-		"jointOrientY" " -av -15.23"
 		2 "|jao_students_clean:Male_normal:Character|jao_students_clean:Male_normal:Upper_Body|jao_students_clean:Male_normal:JOINTS|jao_students_clean:Male_normal:Spine_JOINTS|jao_students_clean:Male_normal:Spine_joint1|jao_students_clean:Male_normal:Spine_joint2|jao_students_clean:Male_normal:Spine_joint3|jao_students_clean:Male_normal:Spine_joint4|jao_students_clean:Male_normal:Spine_joint5|jao_students_clean:Male_normal:Spine_joint6|jao_students_clean:Male_normal:Spine_joint7|jao_students_clean:Male_normal:RightArm_scalingCompensate|jao_students_clean:Male_normal:RightArm_pivotCompensate|jao_students_clean:Male_normal:RightArm_RIG|jao_students_clean:Male_normal:RightArm_fk|jao_students_clean:Male_normal:RightArm_shouldernull|jao_students_clean:Male_normal:RightArm_extra|jao_students_clean:Male_normal:RightArm_Shoulder" 
 		"rotate" " -type \"double3\" 4.7885 -13.767038 -1.142051"
 		2 "|jao_students_clean:Male_normal:Character|jao_students_clean:Male_normal:Upper_Body|jao_students_clean:Male_normal:JOINTS|jao_students_clean:Male_normal:Spine_JOINTS|jao_students_clean:Male_normal:Spine_joint1|jao_students_clean:Male_normal:Spine_joint2|jao_students_clean:Male_normal:Spine_joint3|jao_students_clean:Male_normal:Spine_joint4|jao_students_clean:Male_normal:Spine_joint5|jao_students_clean:Male_normal:Spine_joint6|jao_students_clean:Male_normal:Spine_joint7|jao_students_clean:Male_normal:RightArm_scalingCompensate|jao_students_clean:Male_normal:RightArm_pivotCompensate|jao_students_clean:Male_normal:RightArm_RIG|jao_students_clean:Male_normal:RightArm_fk|jao_students_clean:Male_normal:RightArm_shouldernull|jao_students_clean:Male_normal:RightArm_extra|jao_students_clean:Male_normal:RightArm_Shoulder" 
@@ -843,8 +840,6 @@ createNode reference -n "jao_students_cleanRN";
 		"rotateY" " -av"
 		2 "|jao_students_clean:Male_normal:Character|jao_students_clean:Male_normal:Upper_Body|jao_students_clean:Male_normal:JOINTS|jao_students_clean:Male_normal:Spine_JOINTS|jao_students_clean:Male_normal:Spine_joint1|jao_students_clean:Male_normal:RightLeg_scalingCompensate|jao_students_clean:Male_normal:RightLeg_JOINTS|jao_students_clean:Male_normal:RightLeg_joint1|jao_students_clean:Male_normal:RightLeg_joint2|jao_students_clean:Male_normal:RightLeg_joint3|jao_students_clean:Male_normal:RightLeg_kneescalecompensate|jao_students_clean:Male_normal:RightLeg_joint4|jao_students_clean:Male_normal:RightLeg_joint5|jao_students_clean:Male_normal:RightLeg_lowerarmscalecompensate|jao_students_clean:Male_normal:RightLeg_joint6" 
 		"rotateX" " -av"
-		2 "|jao_students_clean:Male_normal:Character|jao_students_clean:Male_normal:Upper_Body|jao_students_clean:Male_normal:JOINTS|jao_students_clean:Male_normal:Spine_JOINTS|jao_students_clean:Male_normal:Spine_joint1|jao_students_clean:Male_normal:RightLeg_scalingCompensate|jao_students_clean:Male_normal:RightLeg_pivotCompensate|jao_students_clean:Male_normal:RightLeg_RIG|jao_students_clean:Male_normal:RightLeg_fk|jao_students_clean:Male_normal:RightLeg_rig_joint1|jao_students_clean:Male_normal:RightLeg_rig_joint2" 
-		"jointOrientZ" " -av 1"
 		2 "|jao_students_clean:Male_normal:Character|jao_students_clean:Male_normal:Upper_Body|jao_students_clean:Male_normal:JOINTS|jao_students_clean:Male_normal:Spine_JOINTS|jao_students_clean:Male_normal:Spine_joint1|jao_students_clean:Male_normal:RightLeg_scalingCompensate|jao_students_clean:Male_normal:RightLeg_pivotCompensate|jao_students_clean:Male_normal:RightLeg_RIG|jao_students_clean:Male_normal:RightLeg_fk|jao_students_clean:Male_normal:RightLeg_polevectorfirstposition|jao_students_clean:Male_normal:RightLeg_polevectoraimer|jao_students_clean:Male_normal:RightLeg_polevectorextraaim|jao_students_clean:Male_normal:RightLeg_polevectorgroup|jao_students_clean:Male_normal:RightLeg_Leg_Pole_Vector" 
 		"translate" " -type \"double3\" 0 0 0"
 		2 "|jao_students_clean:Male_normal:Character|jao_students_clean:Male_normal:Upper_Body|jao_students_clean:Male_normal:JOINTS|jao_students_clean:Male_normal:Spine_JOINTS|jao_students_clean:Male_normal:Spine_joint1|jao_students_clean:Male_normal:RightLeg_scalingCompensate|jao_students_clean:Male_normal:RightLeg_pivotCompensate|jao_students_clean:Male_normal:RightLeg_RIG|jao_students_clean:Male_normal:RightLeg_fk|jao_students_clean:Male_normal:RightLeg_polevectorfirstposition|jao_students_clean:Male_normal:RightLeg_polevectoraimer|jao_students_clean:Male_normal:RightLeg_polevectorextraaim|jao_students_clean:Male_normal:RightLeg_polevectorgroup|jao_students_clean:Male_normal:RightLeg_Leg_Pole_Vector" 
@@ -918,7 +913,7 @@ createNode reference -n "jao_students_cleanRN";
 		2 "|jao_students_clean:Male_normal:Character|jao_students_clean:Male_normal:Upper_Body|jao_students_clean:Male_normal:JOINTS|jao_students_clean:Male_normal:Spine_JOINTS|jao_students_clean:Male_normal:Spine_joint1|jao_students_clean:Male_normal:RightLeg_scalingCompensate|jao_students_clean:Male_normal:RightLeg_pivotCompensate|jao_students_clean:Male_normal:RightLeg_RIG|jao_students_clean:Male_normal:RightLeg_fk|jao_students_clean:Male_normal:RightLeg_upperlegnull|jao_students_clean:Male_normal:RightLeg_isolater" 
 		"translateX" " -av"
 		2 "|jao_students_clean:Male_normal:Character|jao_students_clean:Male_normal:Upper_Body|jao_students_clean:Male_normal:JOINTS|jao_students_clean:Male_normal:Spine_JOINTS|jao_students_clean:Male_normal:Spine_joint1|jao_students_clean:Male_normal:RightLeg_scalingCompensate|jao_students_clean:Male_normal:RightLeg_pivotCompensate|jao_students_clean:Male_normal:RightLeg_RIG|jao_students_clean:Male_normal:RightLeg_fk|jao_students_clean:Male_normal:RightLeg_upperlegnull|jao_students_clean:Male_normal:RightLeg_isolater" 
-		"rotate" " -type \"double3\" 0.00626698 -0.0120811 -0.149943"
+		"rotate" " -type \"double3\" 0.00626699 -0.0120811 -0.149943"
 		2 "|jao_students_clean:Male_normal:Character|jao_students_clean:Male_normal:Upper_Body|jao_students_clean:Male_normal:JOINTS|jao_students_clean:Male_normal:Spine_JOINTS|jao_students_clean:Male_normal:Spine_joint1|jao_students_clean:Male_normal:RightLeg_scalingCompensate|jao_students_clean:Male_normal:RightLeg_pivotCompensate|jao_students_clean:Male_normal:RightLeg_RIG|jao_students_clean:Male_normal:RightLeg_fk|jao_students_clean:Male_normal:RightLeg_upperlegnull|jao_students_clean:Male_normal:RightLeg_isolater" 
 		"rotateX" " -av"
 		2 "|jao_students_clean:Male_normal:Character|jao_students_clean:Male_normal:Upper_Body|jao_students_clean:Male_normal:JOINTS|jao_students_clean:Male_normal:Spine_JOINTS|jao_students_clean:Male_normal:Spine_joint1|jao_students_clean:Male_normal:RightLeg_scalingCompensate|jao_students_clean:Male_normal:RightLeg_pivotCompensate|jao_students_clean:Male_normal:RightLeg_RIG|jao_students_clean:Male_normal:RightLeg_fk|jao_students_clean:Male_normal:RightLeg_upperlegnull|jao_students_clean:Male_normal:RightLeg_isolater" 
@@ -982,15 +977,13 @@ createNode reference -n "jao_students_cleanRN";
 		2 "|jao_students_clean:Male_normal:Character|jao_students_clean:Male_normal:Upper_Body|jao_students_clean:Male_normal:JOINTS|jao_students_clean:Male_normal:Spine_JOINTS|jao_students_clean:Male_normal:Spine_joint1|jao_students_clean:Male_normal:RightLeg_scalingCompensate|jao_students_clean:Male_normal:RightLeg_pivotCompensate|jao_students_clean:Male_normal:RightLeg_RIG|jao_students_clean:Male_normal:RightLeg_fk|jao_students_clean:Male_normal:RightLeg_upperlegnull|jao_students_clean:Male_normal:RightLeg_isolater|jao_students_clean:Male_normal:RightLeg_Upper_Leg|jao_students_clean:Male_normal:RightLeg_lowerlegnull|jao_students_clean:Male_normal:RightLeg_Lower_Leg|jao_students_clean:Male_normal:RightLeg_footnull|jao_students_clean:Male_normal:RightLeg_FootTranslate|jao_students_clean:Male_normal:RightLeg_Foot|jao_students_clean:Male_normal:RightLeg_toenull|jao_students_clean:Male_normal:RightLeg_Toe" 
 		"rotateX" " -av"
 		2 "|jao_students_clean:Male_normal:Character|jao_students_clean:Male_normal:Upper_Body|jao_students_clean:Male_normal:JOINTS|jao_students_clean:Male_normal:Spine_JOINTS|jao_students_clean:Male_normal:Spine_joint1|jao_students_clean:Male_normal:LeftLeg_scalingCompensate|jao_students_clean:Male_normal:LeftLeg_JOINTS|jao_students_clean:Male_normal:LeftLeg_joint1|jao_students_clean:Male_normal:LeftLeg_joint2|jao_students_clean:Male_normal:LeftLeg_joint3|jao_students_clean:Male_normal:LeftLeg_kneescalecompensate|jao_students_clean:Male_normal:LeftLeg_joint4|jao_students_clean:Male_normal:LeftLeg_joint5|jao_students_clean:Male_normal:LeftLeg_lowerarmscalecompensate|jao_students_clean:Male_normal:LeftLeg_joint6" 
-		"rotate" " -type \"double3\" 0.0173304 -0.995795 -0.997023"
+		"rotate" " -type \"double3\" 0.0173304 -0.995792 -0.997021"
 		2 "|jao_students_clean:Male_normal:Character|jao_students_clean:Male_normal:Upper_Body|jao_students_clean:Male_normal:JOINTS|jao_students_clean:Male_normal:Spine_JOINTS|jao_students_clean:Male_normal:Spine_joint1|jao_students_clean:Male_normal:LeftLeg_scalingCompensate|jao_students_clean:Male_normal:LeftLeg_JOINTS|jao_students_clean:Male_normal:LeftLeg_joint1|jao_students_clean:Male_normal:LeftLeg_joint2|jao_students_clean:Male_normal:LeftLeg_joint3|jao_students_clean:Male_normal:LeftLeg_kneescalecompensate|jao_students_clean:Male_normal:LeftLeg_joint4|jao_students_clean:Male_normal:LeftLeg_joint5|jao_students_clean:Male_normal:LeftLeg_lowerarmscalecompensate|jao_students_clean:Male_normal:LeftLeg_joint6" 
 		"rotateZ" " -av"
 		2 "|jao_students_clean:Male_normal:Character|jao_students_clean:Male_normal:Upper_Body|jao_students_clean:Male_normal:JOINTS|jao_students_clean:Male_normal:Spine_JOINTS|jao_students_clean:Male_normal:Spine_joint1|jao_students_clean:Male_normal:LeftLeg_scalingCompensate|jao_students_clean:Male_normal:LeftLeg_JOINTS|jao_students_clean:Male_normal:LeftLeg_joint1|jao_students_clean:Male_normal:LeftLeg_joint2|jao_students_clean:Male_normal:LeftLeg_joint3|jao_students_clean:Male_normal:LeftLeg_kneescalecompensate|jao_students_clean:Male_normal:LeftLeg_joint4|jao_students_clean:Male_normal:LeftLeg_joint5|jao_students_clean:Male_normal:LeftLeg_lowerarmscalecompensate|jao_students_clean:Male_normal:LeftLeg_joint6" 
 		"rotateY" " -av"
 		2 "|jao_students_clean:Male_normal:Character|jao_students_clean:Male_normal:Upper_Body|jao_students_clean:Male_normal:JOINTS|jao_students_clean:Male_normal:Spine_JOINTS|jao_students_clean:Male_normal:Spine_joint1|jao_students_clean:Male_normal:LeftLeg_scalingCompensate|jao_students_clean:Male_normal:LeftLeg_JOINTS|jao_students_clean:Male_normal:LeftLeg_joint1|jao_students_clean:Male_normal:LeftLeg_joint2|jao_students_clean:Male_normal:LeftLeg_joint3|jao_students_clean:Male_normal:LeftLeg_kneescalecompensate|jao_students_clean:Male_normal:LeftLeg_joint4|jao_students_clean:Male_normal:LeftLeg_joint5|jao_students_clean:Male_normal:LeftLeg_lowerarmscalecompensate|jao_students_clean:Male_normal:LeftLeg_joint6" 
 		"rotateX" " -av"
-		2 "|jao_students_clean:Male_normal:Character|jao_students_clean:Male_normal:Upper_Body|jao_students_clean:Male_normal:JOINTS|jao_students_clean:Male_normal:Spine_JOINTS|jao_students_clean:Male_normal:Spine_joint1|jao_students_clean:Male_normal:LeftLeg_scalingCompensate|jao_students_clean:Male_normal:LeftLeg_pivotCompensate|jao_students_clean:Male_normal:LeftLeg_RIG|jao_students_clean:Male_normal:LeftLeg_fk|jao_students_clean:Male_normal:LeftLeg_rig_joint1|jao_students_clean:Male_normal:LeftLeg_rig_joint2" 
-		"jointOrientZ" " -av 1"
 		2 "|jao_students_clean:Male_normal:Character|jao_students_clean:Male_normal:Upper_Body|jao_students_clean:Male_normal:JOINTS|jao_students_clean:Male_normal:Spine_JOINTS|jao_students_clean:Male_normal:Spine_joint1|jao_students_clean:Male_normal:LeftLeg_scalingCompensate|jao_students_clean:Male_normal:LeftLeg_pivotCompensate|jao_students_clean:Male_normal:LeftLeg_RIG|jao_students_clean:Male_normal:LeftLeg_fk|jao_students_clean:Male_normal:LeftLeg_polevectorfirstposition|jao_students_clean:Male_normal:LeftLeg_polevectoraimer|jao_students_clean:Male_normal:LeftLeg_polevectorextraaim|jao_students_clean:Male_normal:LeftLeg_polevectorgroup|jao_students_clean:Male_normal:LeftLeg_Leg_Pole_Vector" 
 		"translate" " -type \"double3\" 0 0 0"
 		2 "|jao_students_clean:Male_normal:Character|jao_students_clean:Male_normal:Upper_Body|jao_students_clean:Male_normal:JOINTS|jao_students_clean:Male_normal:Spine_JOINTS|jao_students_clean:Male_normal:Spine_joint1|jao_students_clean:Male_normal:LeftLeg_scalingCompensate|jao_students_clean:Male_normal:LeftLeg_pivotCompensate|jao_students_clean:Male_normal:LeftLeg_RIG|jao_students_clean:Male_normal:LeftLeg_fk|jao_students_clean:Male_normal:LeftLeg_polevectorfirstposition|jao_students_clean:Male_normal:LeftLeg_polevectoraimer|jao_students_clean:Male_normal:LeftLeg_polevectorextraaim|jao_students_clean:Male_normal:LeftLeg_polevectorgroup|jao_students_clean:Male_normal:LeftLeg_Leg_Pole_Vector" 
@@ -1352,7 +1345,7 @@ createNode reference -n "jao_students_cleanRN";
 		2 "|jao_students_clean:Male_normal:Character|jao_students_clean:Male_normal:Upper_Body|jao_students_clean:Male_normal:weaponNull|jao_students_clean:Male_normal:weapon|jao_students_clean:Male_normal:LeftHand_Pad" 
 		"scaleX" " -av"
 		2 "|jao_students_clean:Male_normal:Character|jao_students_clean:Male_normal:IK|jao_students_clean:Male_normal:LeftArm_IK" 
-		"translate" " -type \"double3\" 3.132686 5.855059 -10.164674"
+		"translate" " -type \"double3\" 3.132685 5.855059 -10.164674"
 		2 "|jao_students_clean:Male_normal:Character|jao_students_clean:Male_normal:IK|jao_students_clean:Male_normal:LeftArm_IK" 
 		"translateX" " -av"
 		2 "|jao_students_clean:Male_normal:Character|jao_students_clean:Male_normal:IK|jao_students_clean:Male_normal:LeftArm_IK" 
@@ -1720,7 +1713,7 @@ createNode reference -n "jao_students_cleanRN";
 		2 "|jao_students_clean:Male_normal:mesh_:BackRoot|jao_students_clean:Male_normal:mesh_:Back2|jao_students_clean:Male_normal:mesh_:Back3|jao_students_clean:Male_normal:mesh_:Back4|jao_students_clean:Male_normal:mesh_:Back5|jao_students_clean:Male_normal:mesh_:Neck" 
 		"rotateZ" " -av"
 		2 "|jao_students_clean:Male_normal:mesh_:BackRoot|jao_students_clean:Male_normal:mesh_:Back2|jao_students_clean:Male_normal:mesh_:Back3|jao_students_clean:Male_normal:mesh_:Back4|jao_students_clean:Male_normal:mesh_:Back5|jao_students_clean:Male_normal:mesh_:Neck|jao_students_clean:Male_normal:mesh_:Head" 
-		"rotate" " -type \"double3\" -9.779769 2.042519 9.164146"
+		"rotate" " -type \"double3\" -9.779769 2.042518 9.164146"
 		2 "|jao_students_clean:Male_normal:mesh_:BackRoot|jao_students_clean:Male_normal:mesh_:Back2|jao_students_clean:Male_normal:mesh_:Back3|jao_students_clean:Male_normal:mesh_:Back4|jao_students_clean:Male_normal:mesh_:Back5|jao_students_clean:Male_normal:mesh_:Neck|jao_students_clean:Male_normal:mesh_:Head" 
 		"rotateX" " -av"
 		2 "|jao_students_clean:Male_normal:mesh_:BackRoot|jao_students_clean:Male_normal:mesh_:Back2|jao_students_clean:Male_normal:mesh_:Back3|jao_students_clean:Male_normal:mesh_:Back4|jao_students_clean:Male_normal:mesh_:Back5|jao_students_clean:Male_normal:mesh_:Neck|jao_students_clean:Male_normal:mesh_:Head" 
@@ -1894,19 +1887,20 @@ createNode mentalrayOptions -s -n "ProductionRapidHair";
 createNode FurGlobals -n "defaultFurGlobals";
 	addAttr -ci true -sn "cb" -ln "callback" -at "message";
 	setAttr ".av" 2;
-	setAttr ".pjl" -type "string" "E:/01 TU Wien/10. Semester/Maya Kurs/Git/mayakurs2012/group9/Animation";
+	setAttr ".pjl" -type "string" "D:/Uni/MayaKurs/lesson2";
 createNode reference -n "jao_students_psyRN";
+	setAttr ".fn[0]" -type "string" "D:/Uni/MayaKurs/mayakurs2012/group9/Animation/jao_students_psy.ma";
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"jao_students_psyRN"
-		"jao_students_psyRN" 0
 		"jao_students_psy:Male_normal:mesh_RN" 0
+		"jao_students_psyRN" 0
 		"jao_students_psy:V005_RN" 0
 		"jao_students_psyRN" 3
 		2 "jao_students_psy:GANGNAM_STYLE" "endFrame" " 174.652"
 		2 "jao_students_psy:GANGNAM_STYLE" "sourceEnd" " 174.652"
 		3 ":defaultRenderGlobals.rendercallback" "jao_students_psy:defaultFurGlobals.callback" 
 		""
-		"jao_students_psy:Male_normal:mesh_RN" 49
+		"jao_students_psy:Male_normal:mesh_RN" 13
 		2 "|jao_students_psy:Male_normal:mesh_:BackRoot|jao_students_psy:Male_normal:mesh_:Hip" 
 		"rotate" " -type \"double3\" 0 0 0"
 		2 "|jao_students_psy:Male_normal:mesh_:BackRoot|jao_students_psy:Male_normal:mesh_:Hip" 
@@ -1924,7 +1918,7 @@ createNode reference -n "jao_students_psyRN";
 		2 "|jao_students_psy:Male_normal:mesh_:BackRoot|jao_students_psy:Male_normal:mesh_:Back2|jao_students_psy:Male_normal:mesh_:Back3|jao_students_psy:Male_normal:mesh_:Back4|jao_students_psy:Male_normal:mesh_:Back5|jao_students_psy:Male_normal:mesh_:Neck" 
 		"rotateZ" " -av"
 		2 "|jao_students_psy:Male_normal:mesh_:BackRoot|jao_students_psy:Male_normal:mesh_:Back2|jao_students_psy:Male_normal:mesh_:Back3|jao_students_psy:Male_normal:mesh_:Back4|jao_students_psy:Male_normal:mesh_:Back5|jao_students_psy:Male_normal:mesh_:Neck|jao_students_psy:Male_normal:mesh_:Head" 
-		"rotate" " -type \"double3\" -9.036038 -7.565234 21.786201"
+		"rotate" " -type \"double3\" -9.036037 -7.565234 21.786202"
 		2 "|jao_students_psy:Male_normal:mesh_:BackRoot|jao_students_psy:Male_normal:mesh_:Back2|jao_students_psy:Male_normal:mesh_:Back3|jao_students_psy:Male_normal:mesh_:Back4|jao_students_psy:Male_normal:mesh_:Back5|jao_students_psy:Male_normal:mesh_:Neck|jao_students_psy:Male_normal:mesh_:Head" 
 		"rotateX" " -av"
 		2 "|jao_students_psy:Male_normal:mesh_:BackRoot|jao_students_psy:Male_normal:mesh_:Back2|jao_students_psy:Male_normal:mesh_:Back3|jao_students_psy:Male_normal:mesh_:Back4|jao_students_psy:Male_normal:mesh_:Back5|jao_students_psy:Male_normal:mesh_:Neck|jao_students_psy:Male_normal:mesh_:Head" 
@@ -1933,79 +1927,7 @@ createNode reference -n "jao_students_psyRN";
 		"rotateZ" " -av"
 		2 "|jao_students_psy:Male_normal:mesh_:G_meshes_arms|jao_students_psy:Male_normal:mesh_:arm08_Pad" 
 		"visibility" " -av 1"
-		2 "|jao_students_psy:Male_normal:mesh_:gear_body_standard|jao_students_psy:Male_normal:mesh_:body_bombsuit_01|jao_students_psy:Male_normal:mesh_:body_bombsuit_0Shape1" 
-		"instObjGroups.objectGroups" " -s 6"
-		2 "|jao_students_psy:Male_normal:mesh_:gear_body_standard|jao_students_psy:Male_normal:mesh_:body_bombsuit_01|jao_students_psy:Male_normal:mesh_:body_bombsuit_0Shape1" 
-		"instObjGroups.objectGroups[0].objectGroupId" " -av"
-		2 "|jao_students_psy:Male_normal:mesh_:gear_body_standard|jao_students_psy:Male_normal:mesh_:body_bombsuit_01|jao_students_psy:Male_normal:mesh_:body_bombsuit_0Shape1" 
-		"instObjGroups.objectGroups[1].objectGroupId" " -av"
-		2 "|jao_students_psy:Male_normal:mesh_:gear_body_standard|jao_students_psy:Male_normal:mesh_:body_bombsuit_01|jao_students_psy:Male_normal:mesh_:body_bombsuit_0Shape1" 
-		"instObjGroups.objectGroups[2].objectGroupId" " -av"
-		2 "|jao_students_psy:Male_normal:mesh_:gear_body_standard|jao_students_psy:Male_normal:mesh_:body_tac_vest_03|jao_students_psy:Male_normal:mesh_:body_tac_vest_0Shape3" 
-		"instObjGroups.objectGroups" " -s 6"
-		2 "|jao_students_psy:Male_normal:mesh_:gear_body_standard|jao_students_psy:Male_normal:mesh_:body_tac_vest_03|jao_students_psy:Male_normal:mesh_:body_tac_vest_0Shape3" 
-		"instObjGroups.objectGroups[0].objectGroupId" " -av"
-		2 "|jao_students_psy:Male_normal:mesh_:gear_body_standard|jao_students_psy:Male_normal:mesh_:body_tac_vest_03|jao_students_psy:Male_normal:mesh_:body_tac_vest_0Shape3" 
-		"instObjGroups.objectGroups[1].objectGroupId" " -av"
-		2 "|jao_students_psy:Male_normal:mesh_:gear_body_standard|jao_students_psy:Male_normal:mesh_:body_tac_vest_03|jao_students_psy:Male_normal:mesh_:body_tac_vest_0Shape3" 
-		"instObjGroups.objectGroups[2].objectGroupId" " -av"
-		2 "|jao_students_psy:Male_normal:mesh_:gear_body_standard|jao_students_psy:Male_normal:mesh_:body_light_vest_03|jao_students_psy:Male_normal:mesh_:body_light_vest_0Shape3" 
-		"instObjGroups.objectGroups" " -s 6"
-		2 "|jao_students_psy:Male_normal:mesh_:gear_body_standard|jao_students_psy:Male_normal:mesh_:body_light_vest_03|jao_students_psy:Male_normal:mesh_:body_light_vest_0Shape3" 
-		"instObjGroups.objectGroups[0].objectGroupId" " -av"
-		2 "|jao_students_psy:Male_normal:mesh_:gear_body_standard|jao_students_psy:Male_normal:mesh_:body_light_vest_03|jao_students_psy:Male_normal:mesh_:body_light_vest_0Shape3" 
-		"instObjGroups.objectGroups[1].objectGroupId" " -av"
-		2 "|jao_students_psy:Male_normal:mesh_:gear_body_standard|jao_students_psy:Male_normal:mesh_:body_light_vest_03|jao_students_psy:Male_normal:mesh_:body_light_vest_0Shape3" 
-		"instObjGroups.objectGroups[2].objectGroupId" " -av"
-		2 "|jao_students_psy:Male_normal:mesh_:gear_body_standard|jao_students_psy:Male_normal:mesh_:body_swat_vest_03|jao_students_psy:Male_normal:mesh_:body_swat_vest_03Shape" 
-		"instObjGroups.objectGroups" " -s 6"
-		2 "|jao_students_psy:Male_normal:mesh_:gear_body_standard|jao_students_psy:Male_normal:mesh_:body_swat_vest_03|jao_students_psy:Male_normal:mesh_:body_swat_vest_03Shape" 
-		"instObjGroups.objectGroups[0].objectGroupId" " -av"
-		2 "|jao_students_psy:Male_normal:mesh_:gear_body_standard|jao_students_psy:Male_normal:mesh_:body_swat_vest_03|jao_students_psy:Male_normal:mesh_:body_swat_vest_03Shape" 
-		"instObjGroups.objectGroups[1].objectGroupId" " -av"
-		2 "|jao_students_psy:Male_normal:mesh_:gear_body_standard|jao_students_psy:Male_normal:mesh_:body_swat_vest_03|jao_students_psy:Male_normal:mesh_:body_swat_vest_03Shape" 
-		"instObjGroups.objectGroups[2].objectGroupId" " -av"
-		2 "|jao_students_psy:Male_normal:mesh_:gear_body_standard|jao_students_psy:Male_normal:mesh_:body_heavy_armor_03|jao_students_psy:Male_normal:mesh_:body_heavy_armor_0Shape3" 
-		"instObjGroups.objectGroups" " -s 6"
-		2 "|jao_students_psy:Male_normal:mesh_:gear_body_standard|jao_students_psy:Male_normal:mesh_:body_heavy_armor_03|jao_students_psy:Male_normal:mesh_:body_heavy_armor_0Shape3" 
-		"instObjGroups.objectGroups[0].objectGroupId" " -av"
-		2 "|jao_students_psy:Male_normal:mesh_:gear_body_standard|jao_students_psy:Male_normal:mesh_:body_heavy_armor_03|jao_students_psy:Male_normal:mesh_:body_heavy_armor_0Shape3" 
-		"instObjGroups.objectGroups[1].objectGroupId" " -av"
-		2 "|jao_students_psy:Male_normal:mesh_:gear_body_standard|jao_students_psy:Male_normal:mesh_:body_heavy_armor_03|jao_students_psy:Male_normal:mesh_:body_heavy_armor_0Shape3" 
-		"instObjGroups.objectGroups[2].objectGroupId" " -av"
-		2 "|jao_students_psy:Male_normal:mesh_:gear_body_standard|jao_students_psy:Male_normal:mesh_:body_tac_armor_03|jao_students_psy:Male_normal:mesh_:body_tac_armor_0Shape3" 
-		"instObjGroups.objectGroups" " -s 6"
-		2 "|jao_students_psy:Male_normal:mesh_:gear_body_standard|jao_students_psy:Male_normal:mesh_:body_tac_armor_03|jao_students_psy:Male_normal:mesh_:body_tac_armor_0Shape3" 
-		"instObjGroups.objectGroups[0].objectGroupId" " -av"
-		2 "|jao_students_psy:Male_normal:mesh_:gear_body_standard|jao_students_psy:Male_normal:mesh_:body_tac_armor_03|jao_students_psy:Male_normal:mesh_:body_tac_armor_0Shape3" 
-		"instObjGroups.objectGroups[1].objectGroupId" " -av"
-		2 "|jao_students_psy:Male_normal:mesh_:gear_body_standard|jao_students_psy:Male_normal:mesh_:body_tac_armor_03|jao_students_psy:Male_normal:mesh_:body_tac_armor_0Shape3" 
-		"instObjGroups.objectGroups[2].objectGroupId" " -av"
-		2 "|jao_students_psy:Male_normal:mesh_:gear_head_standard|jao_students_psy:Male_normal:mesh_:head_dress_cap_03|jao_students_psy:Male_normal:mesh_:head_dress_cap_0Shape3" 
-		"instObjGroups.objectGroups" " -s 6"
-		2 "|jao_students_psy:Male_normal:mesh_:gear_head_standard|jao_students_psy:Male_normal:mesh_:head_dress_cap_03|jao_students_psy:Male_normal:mesh_:head_dress_cap_0Shape3" 
-		"instObjGroups.objectGroups[0].objectGroupId" " -av"
-		2 "|jao_students_psy:Male_normal:mesh_:gear_head_standard|jao_students_psy:Male_normal:mesh_:head_dress_cap_03|jao_students_psy:Male_normal:mesh_:head_dress_cap_0Shape3" 
-		"instObjGroups.objectGroups[1].objectGroupId" " -av"
-		2 "|jao_students_psy:Male_normal:mesh_:gear_head_standard|jao_students_psy:Male_normal:mesh_:head_dress_cap_03|jao_students_psy:Male_normal:mesh_:head_dress_cap_0Shape3" 
-		"instObjGroups.objectGroups[2].objectGroupId" " -av"
-		2 "|jao_students_psy:Male_normal:mesh_:head_side_cap_02|jao_students_psy:Male_normal:mesh_:head_side_cap_0Shape2" 
-		"instObjGroups.objectGroups" " -s 6"
-		2 "|jao_students_psy:Male_normal:mesh_:head_side_cap_02|jao_students_psy:Male_normal:mesh_:head_side_cap_0Shape2" 
-		"instObjGroups.objectGroups[0].objectGroupId" " -av"
-		2 "|jao_students_psy:Male_normal:mesh_:head_side_cap_02|jao_students_psy:Male_normal:mesh_:head_side_cap_0Shape2" 
-		"instObjGroups.objectGroups[1].objectGroupId" " -av"
-		2 "|jao_students_psy:Male_normal:mesh_:head_side_cap_02|jao_students_psy:Male_normal:mesh_:head_side_cap_0Shape2" 
-		"instObjGroups.objectGroups[2].objectGroupId" " -av"
-		2 "|jao_students_psy:Male_normal:mesh_:head_cowboy_hat_03|jao_students_psy:Male_normal:mesh_:head_cowboy_hat_0Shape3" 
-		"instObjGroups.objectGroups" " -s 6"
-		2 "|jao_students_psy:Male_normal:mesh_:head_cowboy_hat_03|jao_students_psy:Male_normal:mesh_:head_cowboy_hat_0Shape3" 
-		"instObjGroups.objectGroups[0].objectGroupId" " -av"
-		2 "|jao_students_psy:Male_normal:mesh_:head_cowboy_hat_03|jao_students_psy:Male_normal:mesh_:head_cowboy_hat_0Shape3" 
-		"instObjGroups.objectGroups[1].objectGroupId" " -av"
-		2 "|jao_students_psy:Male_normal:mesh_:head_cowboy_hat_03|jao_students_psy:Male_normal:mesh_:head_cowboy_hat_0Shape3" 
-		"instObjGroups.objectGroups[2].objectGroupId" " -av"
-		"jao_students_psy:V005_RN" 589
+		"jao_students_psy:V005_RN" 585
 		2 "|jao_students_psy:Male_normal:Character" "visibility" " -av 1"
 		2 "|jao_students_psy:Male_normal:Character" "translate" " -type \"double3\" 0 0.356878 -8.445497"
 		
@@ -2070,8 +1992,6 @@ createNode reference -n "jao_students_psyRN";
 		"LeftLeg_FKIK" " -av -k 1 1"
 		2 "|jao_students_psy:Male_normal:Character|jao_students_psy:Male_normal:Upper_Body" 
 		"LeftLeg_Isolation" " -av -k 1 1"
-		2 "|jao_students_psy:Male_normal:Character|jao_students_psy:Male_normal:Upper_Body|jao_students_psy:Male_normal:JOINTS|jao_students_psy:Male_normal:Spine_JOINTS|jao_students_psy:Male_normal:Spine_joint1|jao_students_psy:Male_normal:Spine_joint2|jao_students_psy:Male_normal:Spine_joint3|jao_students_psy:Male_normal:Spine_joint4|jao_students_psy:Male_normal:Spine_joint5|jao_students_psy:Male_normal:Spine_joint6|jao_students_psy:Male_normal:Spine_joint7|jao_students_psy:Male_normal:LeftArm_scalingCompensate|jao_students_psy:Male_normal:LeftArm_pivotCompensate|jao_students_psy:Male_normal:LeftArm_RIG|jao_students_psy:Male_normal:LeftArm_fk|jao_students_psy:Male_normal:LeftArm_rig_clavical|jao_students_psy:Male_normal:LeftArm_rig_shoulder|jao_students_psy:Male_normal:LeftArm_rig_elbow" 
-		"jointOrientY" " -av -15.23"
 		2 "|jao_students_psy:Male_normal:Character|jao_students_psy:Male_normal:Upper_Body|jao_students_psy:Male_normal:JOINTS|jao_students_psy:Male_normal:Spine_JOINTS|jao_students_psy:Male_normal:Spine_joint1|jao_students_psy:Male_normal:Spine_joint2|jao_students_psy:Male_normal:Spine_joint3|jao_students_psy:Male_normal:Spine_joint4|jao_students_psy:Male_normal:Spine_joint5|jao_students_psy:Male_normal:Spine_joint6|jao_students_psy:Male_normal:Spine_joint7|jao_students_psy:Male_normal:LeftArm_scalingCompensate|jao_students_psy:Male_normal:LeftArm_pivotCompensate|jao_students_psy:Male_normal:LeftArm_RIG|jao_students_psy:Male_normal:LeftArm_fk|jao_students_psy:Male_normal:LeftArm_shouldernull|jao_students_psy:Male_normal:LeftArm_Shoulder" 
 		"rotate" " -type \"double3\" 0 0 0"
 		2 "|jao_students_psy:Male_normal:Character|jao_students_psy:Male_normal:Upper_Body|jao_students_psy:Male_normal:JOINTS|jao_students_psy:Male_normal:Spine_JOINTS|jao_students_psy:Male_normal:Spine_joint1|jao_students_psy:Male_normal:Spine_joint2|jao_students_psy:Male_normal:Spine_joint3|jao_students_psy:Male_normal:Spine_joint4|jao_students_psy:Male_normal:Spine_joint5|jao_students_psy:Male_normal:Spine_joint6|jao_students_psy:Male_normal:Spine_joint7|jao_students_psy:Male_normal:LeftArm_scalingCompensate|jao_students_psy:Male_normal:LeftArm_pivotCompensate|jao_students_psy:Male_normal:LeftArm_RIG|jao_students_psy:Male_normal:LeftArm_fk|jao_students_psy:Male_normal:LeftArm_shouldernull|jao_students_psy:Male_normal:LeftArm_Shoulder" 
@@ -2178,8 +2098,6 @@ createNode reference -n "jao_students_psyRN";
 		"NullifyTwist" " -av -k 1 0"
 		2 "|jao_students_psy:Male_normal:Character|jao_students_psy:Male_normal:Upper_Body|jao_students_psy:Male_normal:JOINTS|jao_students_psy:Male_normal:Spine_JOINTS|jao_students_psy:Male_normal:Spine_joint1|jao_students_psy:Male_normal:Spine_joint2|jao_students_psy:Male_normal:Spine_joint3|jao_students_psy:Male_normal:Spine_joint4|jao_students_psy:Male_normal:Spine_joint5|jao_students_psy:Male_normal:Spine_joint6|jao_students_psy:Male_normal:Spine_joint7|jao_students_psy:Male_normal:LeftArm_scalingCompensate|jao_students_psy:Male_normal:LeftArm_pivotCompensate|jao_students_psy:Male_normal:LeftArm_RIG|jao_students_psy:Male_normal:LeftArm_fk|jao_students_psy:Male_normal:LeftArm_shouldernull|jao_students_psy:Male_normal:LeftArm_Shoulder|jao_students_psy:Male_normal:LeftArm_upperarmcontrolnull|jao_students_psy:Male_normal:LeftArm_Arm_Pole_Vector" 
 		"AddToTwist" " -av -k 1 0"
-		2 "|jao_students_psy:Male_normal:Character|jao_students_psy:Male_normal:Upper_Body|jao_students_psy:Male_normal:JOINTS|jao_students_psy:Male_normal:Spine_JOINTS|jao_students_psy:Male_normal:Spine_joint1|jao_students_psy:Male_normal:Spine_joint2|jao_students_psy:Male_normal:Spine_joint3|jao_students_psy:Male_normal:Spine_joint4|jao_students_psy:Male_normal:Spine_joint5|jao_students_psy:Male_normal:Spine_joint6|jao_students_psy:Male_normal:Spine_joint7|jao_students_psy:Male_normal:RightArm_scalingCompensate|jao_students_psy:Male_normal:RightArm_pivotCompensate|jao_students_psy:Male_normal:RightArm_RIG|jao_students_psy:Male_normal:RightArm_fk|jao_students_psy:Male_normal:RightArm_rig_clavical|jao_students_psy:Male_normal:RightArm_rig_shoulder|jao_students_psy:Male_normal:RightArm_rig_elbow" 
-		"jointOrientY" " -av -15.23"
 		2 "|jao_students_psy:Male_normal:Character|jao_students_psy:Male_normal:Upper_Body|jao_students_psy:Male_normal:JOINTS|jao_students_psy:Male_normal:Spine_JOINTS|jao_students_psy:Male_normal:Spine_joint1|jao_students_psy:Male_normal:Spine_joint2|jao_students_psy:Male_normal:Spine_joint3|jao_students_psy:Male_normal:Spine_joint4|jao_students_psy:Male_normal:Spine_joint5|jao_students_psy:Male_normal:Spine_joint6|jao_students_psy:Male_normal:Spine_joint7|jao_students_psy:Male_normal:RightArm_scalingCompensate|jao_students_psy:Male_normal:RightArm_pivotCompensate|jao_students_psy:Male_normal:RightArm_RIG|jao_students_psy:Male_normal:RightArm_fk|jao_students_psy:Male_normal:RightArm_shouldernull|jao_students_psy:Male_normal:RightArm_extra|jao_students_psy:Male_normal:RightArm_Shoulder" 
 		"rotate" " -type \"double3\" 0 0 0"
 		2 "|jao_students_psy:Male_normal:Character|jao_students_psy:Male_normal:Upper_Body|jao_students_psy:Male_normal:JOINTS|jao_students_psy:Male_normal:Spine_JOINTS|jao_students_psy:Male_normal:Spine_joint1|jao_students_psy:Male_normal:Spine_joint2|jao_students_psy:Male_normal:Spine_joint3|jao_students_psy:Male_normal:Spine_joint4|jao_students_psy:Male_normal:Spine_joint5|jao_students_psy:Male_normal:Spine_joint6|jao_students_psy:Male_normal:Spine_joint7|jao_students_psy:Male_normal:RightArm_scalingCompensate|jao_students_psy:Male_normal:RightArm_pivotCompensate|jao_students_psy:Male_normal:RightArm_RIG|jao_students_psy:Male_normal:RightArm_fk|jao_students_psy:Male_normal:RightArm_shouldernull|jao_students_psy:Male_normal:RightArm_extra|jao_students_psy:Male_normal:RightArm_Shoulder" 
@@ -2303,7 +2221,7 @@ createNode reference -n "jao_students_psyRN";
 		2 "|jao_students_psy:Male_normal:Character|jao_students_psy:Male_normal:Upper_Body|jao_students_psy:Male_normal:JOINTS|jao_students_psy:Male_normal:Spine_JOINTS|jao_students_psy:Male_normal:Spine_joint1|jao_students_psy:Male_normal:Spine_joint2|jao_students_psy:Male_normal:Spine_joint3|jao_students_psy:Male_normal:Spine_joint4|jao_students_psy:Male_normal:Spine_joint5|jao_students_psy:Male_normal:Spine_joint6|jao_students_psy:Male_normal:Spine_joint7|jao_students_psy:Male_normal:Head_scalingCompensate|jao_students_psy:Male_normal:Head_pivotCompensate|jao_students_psy:Male_normal:Head_RIG|jao_students_psy:Male_normal:Head_fk|jao_students_psy:Male_normal:Head_setupthing|jao_students_psy:Male_normal:Head_rotationisolated|jao_students_psy:Male_normal:Head_Neck" 
 		"rotateX" " -av"
 		2 "|jao_students_psy:Male_normal:Character|jao_students_psy:Male_normal:Upper_Body|jao_students_psy:Male_normal:JOINTS|jao_students_psy:Male_normal:Spine_JOINTS|jao_students_psy:Male_normal:Spine_joint1|jao_students_psy:Male_normal:Spine_joint2|jao_students_psy:Male_normal:Spine_joint3|jao_students_psy:Male_normal:Spine_joint4|jao_students_psy:Male_normal:Spine_joint5|jao_students_psy:Male_normal:Spine_joint6|jao_students_psy:Male_normal:Spine_joint7|jao_students_psy:Male_normal:Head_scalingCompensate|jao_students_psy:Male_normal:Head_pivotCompensate|jao_students_psy:Male_normal:Head_RIG|jao_students_psy:Male_normal:Head_fk|jao_students_psy:Male_normal:Head_setupthing|jao_students_psy:Male_normal:Head_rotationisolated|jao_students_psy:Male_normal:Head_Neck|jao_students_psy:Male_normal:Head_fknull|jao_students_psy:Male_normal:Head_isolatecalculate" 
-		"rotate" " -type \"double3\" 1.971924 -1.382333 26.20984"
+		"rotate" " -type \"double3\" 1.971924 -1.382333 26.209839"
 		2 "|jao_students_psy:Male_normal:Character|jao_students_psy:Male_normal:Upper_Body|jao_students_psy:Male_normal:JOINTS|jao_students_psy:Male_normal:Spine_JOINTS|jao_students_psy:Male_normal:Spine_joint1|jao_students_psy:Male_normal:Spine_joint2|jao_students_psy:Male_normal:Spine_joint3|jao_students_psy:Male_normal:Spine_joint4|jao_students_psy:Male_normal:Spine_joint5|jao_students_psy:Male_normal:Spine_joint6|jao_students_psy:Male_normal:Spine_joint7|jao_students_psy:Male_normal:Head_scalingCompensate|jao_students_psy:Male_normal:Head_pivotCompensate|jao_students_psy:Male_normal:Head_RIG|jao_students_psy:Male_normal:Head_fk|jao_students_psy:Male_normal:Head_setupthing|jao_students_psy:Male_normal:Head_rotationisolated|jao_students_psy:Male_normal:Head_Neck|jao_students_psy:Male_normal:Head_fknull|jao_students_psy:Male_normal:Head_isolatecalculate" 
 		"rotateZ" " -av"
 		2 "|jao_students_psy:Male_normal:Character|jao_students_psy:Male_normal:Upper_Body|jao_students_psy:Male_normal:JOINTS|jao_students_psy:Male_normal:Spine_JOINTS|jao_students_psy:Male_normal:Spine_joint1|jao_students_psy:Male_normal:Spine_joint2|jao_students_psy:Male_normal:Spine_joint3|jao_students_psy:Male_normal:Spine_joint4|jao_students_psy:Male_normal:Spine_joint5|jao_students_psy:Male_normal:Spine_joint6|jao_students_psy:Male_normal:Spine_joint7|jao_students_psy:Male_normal:Head_scalingCompensate|jao_students_psy:Male_normal:Head_pivotCompensate|jao_students_psy:Male_normal:Head_RIG|jao_students_psy:Male_normal:Head_fk|jao_students_psy:Male_normal:Head_setupthing|jao_students_psy:Male_normal:Head_rotationisolated|jao_students_psy:Male_normal:Head_Neck|jao_students_psy:Male_normal:Head_fknull|jao_students_psy:Male_normal:Head_isolatecalculate" 
@@ -2342,8 +2260,6 @@ createNode reference -n "jao_students_psyRN";
 		"rotateY" " -av"
 		2 "|jao_students_psy:Male_normal:Character|jao_students_psy:Male_normal:Upper_Body|jao_students_psy:Male_normal:JOINTS|jao_students_psy:Male_normal:Spine_JOINTS|jao_students_psy:Male_normal:Spine_joint1|jao_students_psy:Male_normal:RightLeg_scalingCompensate|jao_students_psy:Male_normal:RightLeg_JOINTS|jao_students_psy:Male_normal:RightLeg_joint1|jao_students_psy:Male_normal:RightLeg_joint2|jao_students_psy:Male_normal:RightLeg_joint3|jao_students_psy:Male_normal:RightLeg_kneescalecompensate|jao_students_psy:Male_normal:RightLeg_joint4|jao_students_psy:Male_normal:RightLeg_joint5|jao_students_psy:Male_normal:RightLeg_lowerarmscalecompensate|jao_students_psy:Male_normal:RightLeg_joint6" 
 		"rotateX" " -av"
-		2 "|jao_students_psy:Male_normal:Character|jao_students_psy:Male_normal:Upper_Body|jao_students_psy:Male_normal:JOINTS|jao_students_psy:Male_normal:Spine_JOINTS|jao_students_psy:Male_normal:Spine_joint1|jao_students_psy:Male_normal:RightLeg_scalingCompensate|jao_students_psy:Male_normal:RightLeg_pivotCompensate|jao_students_psy:Male_normal:RightLeg_RIG|jao_students_psy:Male_normal:RightLeg_fk|jao_students_psy:Male_normal:RightLeg_rig_joint1|jao_students_psy:Male_normal:RightLeg_rig_joint2" 
-		"jointOrientZ" " -av 1"
 		2 "|jao_students_psy:Male_normal:Character|jao_students_psy:Male_normal:Upper_Body|jao_students_psy:Male_normal:JOINTS|jao_students_psy:Male_normal:Spine_JOINTS|jao_students_psy:Male_normal:Spine_joint1|jao_students_psy:Male_normal:RightLeg_scalingCompensate|jao_students_psy:Male_normal:RightLeg_pivotCompensate|jao_students_psy:Male_normal:RightLeg_RIG|jao_students_psy:Male_normal:RightLeg_fk|jao_students_psy:Male_normal:RightLeg_polevectorfirstposition|jao_students_psy:Male_normal:RightLeg_polevectoraimer|jao_students_psy:Male_normal:RightLeg_polevectorextraaim|jao_students_psy:Male_normal:RightLeg_polevectorgroup|jao_students_psy:Male_normal:RightLeg_Leg_Pole_Vector" 
 		"translate" " -type \"double3\" 0 0 0"
 		2 "|jao_students_psy:Male_normal:Character|jao_students_psy:Male_normal:Upper_Body|jao_students_psy:Male_normal:JOINTS|jao_students_psy:Male_normal:Spine_JOINTS|jao_students_psy:Male_normal:Spine_joint1|jao_students_psy:Male_normal:RightLeg_scalingCompensate|jao_students_psy:Male_normal:RightLeg_pivotCompensate|jao_students_psy:Male_normal:RightLeg_RIG|jao_students_psy:Male_normal:RightLeg_fk|jao_students_psy:Male_normal:RightLeg_polevectorfirstposition|jao_students_psy:Male_normal:RightLeg_polevectoraimer|jao_students_psy:Male_normal:RightLeg_polevectorextraaim|jao_students_psy:Male_normal:RightLeg_polevectorgroup|jao_students_psy:Male_normal:RightLeg_Leg_Pole_Vector" 
@@ -2481,15 +2397,13 @@ createNode reference -n "jao_students_psyRN";
 		2 "|jao_students_psy:Male_normal:Character|jao_students_psy:Male_normal:Upper_Body|jao_students_psy:Male_normal:JOINTS|jao_students_psy:Male_normal:Spine_JOINTS|jao_students_psy:Male_normal:Spine_joint1|jao_students_psy:Male_normal:RightLeg_scalingCompensate|jao_students_psy:Male_normal:RightLeg_pivotCompensate|jao_students_psy:Male_normal:RightLeg_RIG|jao_students_psy:Male_normal:RightLeg_fk|jao_students_psy:Male_normal:RightLeg_upperlegnull|jao_students_psy:Male_normal:RightLeg_isolater|jao_students_psy:Male_normal:RightLeg_Upper_Leg|jao_students_psy:Male_normal:RightLeg_lowerlegnull|jao_students_psy:Male_normal:RightLeg_Lower_Leg|jao_students_psy:Male_normal:RightLeg_footnull|jao_students_psy:Male_normal:RightLeg_FootTranslate|jao_students_psy:Male_normal:RightLeg_Foot|jao_students_psy:Male_normal:RightLeg_toenull|jao_students_psy:Male_normal:RightLeg_Toe" 
 		"rotateX" " -av"
 		2 "|jao_students_psy:Male_normal:Character|jao_students_psy:Male_normal:Upper_Body|jao_students_psy:Male_normal:JOINTS|jao_students_psy:Male_normal:Spine_JOINTS|jao_students_psy:Male_normal:Spine_joint1|jao_students_psy:Male_normal:LeftLeg_scalingCompensate|jao_students_psy:Male_normal:LeftLeg_JOINTS|jao_students_psy:Male_normal:LeftLeg_joint1|jao_students_psy:Male_normal:LeftLeg_joint2|jao_students_psy:Male_normal:LeftLeg_joint3|jao_students_psy:Male_normal:LeftLeg_kneescalecompensate|jao_students_psy:Male_normal:LeftLeg_joint4|jao_students_psy:Male_normal:LeftLeg_joint5|jao_students_psy:Male_normal:LeftLeg_lowerarmscalecompensate|jao_students_psy:Male_normal:LeftLeg_joint6" 
-		"rotate" " -type \"double3\" 0.0173304 -0.995784 -0.99709"
+		"rotate" " -type \"double3\" 0.0173304 -0.995783 -0.99709"
 		2 "|jao_students_psy:Male_normal:Character|jao_students_psy:Male_normal:Upper_Body|jao_students_psy:Male_normal:JOINTS|jao_students_psy:Male_normal:Spine_JOINTS|jao_students_psy:Male_normal:Spine_joint1|jao_students_psy:Male_normal:LeftLeg_scalingCompensate|jao_students_psy:Male_normal:LeftLeg_JOINTS|jao_students_psy:Male_normal:LeftLeg_joint1|jao_students_psy:Male_normal:LeftLeg_joint2|jao_students_psy:Male_normal:LeftLeg_joint3|jao_students_psy:Male_normal:LeftLeg_kneescalecompensate|jao_students_psy:Male_normal:LeftLeg_joint4|jao_students_psy:Male_normal:LeftLeg_joint5|jao_students_psy:Male_normal:LeftLeg_lowerarmscalecompensate|jao_students_psy:Male_normal:LeftLeg_joint6" 
 		"rotateZ" " -av"
 		2 "|jao_students_psy:Male_normal:Character|jao_students_psy:Male_normal:Upper_Body|jao_students_psy:Male_normal:JOINTS|jao_students_psy:Male_normal:Spine_JOINTS|jao_students_psy:Male_normal:Spine_joint1|jao_students_psy:Male_normal:LeftLeg_scalingCompensate|jao_students_psy:Male_normal:LeftLeg_JOINTS|jao_students_psy:Male_normal:LeftLeg_joint1|jao_students_psy:Male_normal:LeftLeg_joint2|jao_students_psy:Male_normal:LeftLeg_joint3|jao_students_psy:Male_normal:LeftLeg_kneescalecompensate|jao_students_psy:Male_normal:LeftLeg_joint4|jao_students_psy:Male_normal:LeftLeg_joint5|jao_students_psy:Male_normal:LeftLeg_lowerarmscalecompensate|jao_students_psy:Male_normal:LeftLeg_joint6" 
 		"rotateY" " -av"
 		2 "|jao_students_psy:Male_normal:Character|jao_students_psy:Male_normal:Upper_Body|jao_students_psy:Male_normal:JOINTS|jao_students_psy:Male_normal:Spine_JOINTS|jao_students_psy:Male_normal:Spine_joint1|jao_students_psy:Male_normal:LeftLeg_scalingCompensate|jao_students_psy:Male_normal:LeftLeg_JOINTS|jao_students_psy:Male_normal:LeftLeg_joint1|jao_students_psy:Male_normal:LeftLeg_joint2|jao_students_psy:Male_normal:LeftLeg_joint3|jao_students_psy:Male_normal:LeftLeg_kneescalecompensate|jao_students_psy:Male_normal:LeftLeg_joint4|jao_students_psy:Male_normal:LeftLeg_joint5|jao_students_psy:Male_normal:LeftLeg_lowerarmscalecompensate|jao_students_psy:Male_normal:LeftLeg_joint6" 
 		"rotateX" " -av"
-		2 "|jao_students_psy:Male_normal:Character|jao_students_psy:Male_normal:Upper_Body|jao_students_psy:Male_normal:JOINTS|jao_students_psy:Male_normal:Spine_JOINTS|jao_students_psy:Male_normal:Spine_joint1|jao_students_psy:Male_normal:LeftLeg_scalingCompensate|jao_students_psy:Male_normal:LeftLeg_pivotCompensate|jao_students_psy:Male_normal:LeftLeg_RIG|jao_students_psy:Male_normal:LeftLeg_fk|jao_students_psy:Male_normal:LeftLeg_rig_joint1|jao_students_psy:Male_normal:LeftLeg_rig_joint2" 
-		"jointOrientZ" " -av 1"
 		2 "|jao_students_psy:Male_normal:Character|jao_students_psy:Male_normal:Upper_Body|jao_students_psy:Male_normal:JOINTS|jao_students_psy:Male_normal:Spine_JOINTS|jao_students_psy:Male_normal:Spine_joint1|jao_students_psy:Male_normal:LeftLeg_scalingCompensate|jao_students_psy:Male_normal:LeftLeg_pivotCompensate|jao_students_psy:Male_normal:LeftLeg_RIG|jao_students_psy:Male_normal:LeftLeg_fk|jao_students_psy:Male_normal:LeftLeg_polevectorfirstposition|jao_students_psy:Male_normal:LeftLeg_polevectoraimer|jao_students_psy:Male_normal:LeftLeg_polevectorextraaim|jao_students_psy:Male_normal:LeftLeg_polevectorgroup|jao_students_psy:Male_normal:LeftLeg_Leg_Pole_Vector" 
 		"translate" " -type \"double3\" 0 0 0"
 		2 "|jao_students_psy:Male_normal:Character|jao_students_psy:Male_normal:Upper_Body|jao_students_psy:Male_normal:JOINTS|jao_students_psy:Male_normal:Spine_JOINTS|jao_students_psy:Male_normal:Spine_joint1|jao_students_psy:Male_normal:LeftLeg_scalingCompensate|jao_students_psy:Male_normal:LeftLeg_pivotCompensate|jao_students_psy:Male_normal:LeftLeg_RIG|jao_students_psy:Male_normal:LeftLeg_fk|jao_students_psy:Male_normal:LeftLeg_polevectorfirstposition|jao_students_psy:Male_normal:LeftLeg_polevectoraimer|jao_students_psy:Male_normal:LeftLeg_polevectorextraaim|jao_students_psy:Male_normal:LeftLeg_polevectorgroup|jao_students_psy:Male_normal:LeftLeg_Leg_Pole_Vector" 
@@ -2851,7 +2765,7 @@ createNode reference -n "jao_students_psyRN";
 		2 "|jao_students_psy:Male_normal:Character|jao_students_psy:Male_normal:Upper_Body|jao_students_psy:Male_normal:weaponNull|jao_students_psy:Male_normal:weapon|jao_students_psy:Male_normal:LeftHand_Pad" 
 		"scaleX" " -av"
 		2 "|jao_students_psy:Male_normal:Character|jao_students_psy:Male_normal:IK|jao_students_psy:Male_normal:LeftArm_IK" 
-		"translate" " -type \"double3\" -9.233246 8.015188 0.637009"
+		"translate" " -type \"double3\" -9.233246 8.015189 0.637009"
 		2 "|jao_students_psy:Male_normal:Character|jao_students_psy:Male_normal:IK|jao_students_psy:Male_normal:LeftArm_IK" 
 		"translateX" " -av"
 		2 "|jao_students_psy:Male_normal:Character|jao_students_psy:Male_normal:IK|jao_students_psy:Male_normal:LeftArm_IK" 
@@ -3206,12 +3120,12 @@ createNode makeNurbCube -n "makeNurbCube1";
 	setAttr ".ax" -type "double3" 0 1 0 ;
 	setAttr ".w" 11.487168723105674;
 	setAttr ".lr" 0.066837329063105286;
-	setAttr ".hr" 1.8211832333628994;
+	setAttr ".hr" 1.8211832333628992;
 createNode animCurveTL -n "nurbsCube2_translateX";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  1 5.7691640041570063 20 10.971037230603773
-		 155 10.971037230603773 175 5.7691640041570063;
+	setAttr -s 4 ".ktv[0:3]"  1 5.7691640041570063 20 10.971037230603772
+		 155 10.971037230603772 175 5.7691640041570063;
 createNode animCurveTL -n "nurbsCube2_translateY";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
@@ -3251,12 +3165,12 @@ createNode makeNurbCube -n "makeNurbCube3";
 	setAttr ".ax" -type "double3" 0 1 0 ;
 	setAttr ".w" 11.989506906764293;
 	setAttr ".lr" 0.06903174304030911;
-	setAttr ".hr" 1.6803808862412535;
+	setAttr ".hr" 1.6803808862412537;
 createNode animCurveTL -n "Elevator_right_translateX";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  1 5.9157826633923252 30 10.215165915717465
-		 145 10.215165915717465 175 5.9157826633923252;
+	setAttr -s 4 ".ktv[0:3]"  1 5.9157826633923252 30 10.215165915717463
+		 145 10.215165915717463 175 5.9157826633923252;
 createNode animCurveTU -n "Elevator_right_scaleX";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
@@ -3329,16 +3243,19 @@ createNode script -n "uiConfigurationScriptNode";
 		+ "                -island 0\n                -showShapes 1\n                -showSGShapes 0\n                -showTransforms 1\n                -syncedSelection 1\n                -extendToShapes 1\n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"createNodePanel\" (localizedPanelLabel(\"Create Node\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"createNodePanel\" -l (localizedPanelLabel(\"Create Node\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Create Node\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"polyTexturePlacementPanel\" (localizedPanelLabel(\"UV Texture Editor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"polyTexturePlacementPanel\" -l (localizedPanelLabel(\"UV Texture Editor\")) -mbv $menusOkayInPanels `;\n"
 		+ "\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"UV Texture Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"renderWindowPanel\" (localizedPanelLabel(\"Render View\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"renderWindowPanel\" -l (localizedPanelLabel(\"Render View\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Render View\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"blendShapePanel\" (localizedPanelLabel(\"Blend Shape\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\tblendShapePanel -unParent -l (localizedPanelLabel(\"Blend Shape\")) -mbv $menusOkayInPanels ;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n"
 		+ "\t\tblendShapePanel -edit -l (localizedPanelLabel(\"Blend Shape\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dynRelEdPanel\" (localizedPanelLabel(\"Dynamic Relationships\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"dynRelEdPanel\" -l (localizedPanelLabel(\"Dynamic Relationships\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Dynamic Relationships\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"relationshipPanel\" (localizedPanelLabel(\"Relationship Editor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"relationshipPanel\" -l (localizedPanelLabel(\"Relationship Editor\")) -mbv $menusOkayInPanels `;\n"
-		+ "\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Relationship Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"referenceEditorPanel\" (localizedPanelLabel(\"Reference Editor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"referenceEditorPanel\" -l (localizedPanelLabel(\"Reference Editor\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Reference Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"componentEditorPanel\" (localizedPanelLabel(\"Component Editor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"componentEditorPanel\" -l (localizedPanelLabel(\"Component Editor\")) -mbv $menusOkayInPanels `;\n"
+		+ "\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Relationship Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"referenceEditorPanel\" (localizedPanelLabel(\"Reference Editor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"referenceEditorPanel\" -l (localizedPanelLabel(\"Reference Editor\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Reference Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\tif ($useSceneConfig) {\n\t\tscriptedPanel -e -to $panelName;\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"componentEditorPanel\" (localizedPanelLabel(\"Component Editor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"componentEditorPanel\" -l (localizedPanelLabel(\"Component Editor\")) -mbv $menusOkayInPanels `;\n"
 		+ "\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Component Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dynPaintScriptedPanelType\" (localizedPanelLabel(\"Paint Effects\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"dynPaintScriptedPanelType\" -l (localizedPanelLabel(\"Paint Effects\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Paint Effects\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"scriptEditorPanel\" (localizedPanelLabel(\"Script Editor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"scriptEditorPanel\" -l (localizedPanelLabel(\"Script Editor\")) -mbv $menusOkayInPanels `;\n"
 		+ "\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Script Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\tif ($useSceneConfig) {\n        string $configName = `getPanel -cwl (localizedPanelLabel(\"Current Layout\"))`;\n        if (\"\" != $configName) {\n\t\t\tpanelConfiguration -edit -label (localizedPanelLabel(\"Current Layout\")) \n\t\t\t\t-defaultImage \"\"\n\t\t\t\t-image \"\"\n\t\t\t\t-sc false\n\t\t\t\t-configString \"global string $gMainPane; paneLayout -e -cn \\\"single\\\" -ps 1 100 100 $gMainPane;\"\n\t\t\t\t-removeAllPanels\n\t\t\t\t-ap false\n\t\t\t\t\t(localizedPanelLabel(\"Persp View\")) \n\t\t\t\t\t\"modelPanel\"\n"
 		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 1\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 1\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 16384\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -maxConstantTransparency 1\\n    -rendererName \\\"base_OpenGL_Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -shadows 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName\"\n"
 		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 1\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 1\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 16384\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -maxConstantTransparency 1\\n    -rendererName \\\"base_OpenGL_Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -shadows 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName\"\n"
-		+ "\t\t\t\t$configName;\n\n            setNamedPanelLayout (localizedPanelLabel(\"Current Layout\"));\n        }\n\n        panelHistory -e -clear mainPanelHistory;\n        setFocus `paneLayout -q -p1 $gMainPane`;\n        sceneUIReplacement -deleteRemaining;\n        sceneUIReplacement -clear;\n\t}\n\n\ttimeControl -e -displaySound 1 -sound jao_students_clean:GANGNAM_STYLE $gPlayBackSlider;\n\ngrid -spacing 5 -size 12 -divisions 5 -displayAxes yes -displayGridLines yes -displayDivisionLines yes -displayPerspectiveLabels no -displayOrthographicLabels no -displayAxesBold yes -perspectiveLabelPosition axis -orthographicLabelPosition edge;\nviewManip -drawCompass 0 -compassAngle 0 -frontParameters \"\" -homeParameters \"\" -selectionLockParameters \"\";\n}\n");
+		+ "\t\t\t\t$configName;\n\n            setNamedPanelLayout (localizedPanelLabel(\"Current Layout\"));\n        }\n\n        panelHistory -e -clear mainPanelHistory;\n        setFocus `paneLayout -q -p1 $gMainPane`;\n        sceneUIReplacement -deleteRemaining;\n        sceneUIReplacement -clear;\n\t}\n\n\ngrid -spacing 5 -size 12 -divisions 5 -displayAxes yes -displayGridLines yes -displayDivisionLines yes -displayPerspectiveLabels no -displayOrthographicLabels no -displayAxesBold yes -perspectiveLabelPosition axis -orthographicLabelPosition edge;\nviewManip -drawCompass 0 -compassAngle 0 -frontParameters \"\" -homeParameters \"\" -selectionLockParameters \"\";\n}\n");
 	setAttr ".st" 3;
 createNode script -n "sceneConfigurationScriptNode";
 	setAttr ".b" -type "string" "playbackOptions -min 1 -max 175 -ast 1 -aet 175 ";
 	setAttr ".st" 6;
+createNode reference -n "sharedReferenceNode";
+	setAttr ".ed" -type "dataReferenceEdits" 
+		"sharedReferenceNode";
 select -ne :time1;
 	setAttr ".o" 20;
 	setAttr ".unw" 20;
@@ -3415,7 +3332,9 @@ relationship "shadowLink" ":lightLinker1" ":initialShadingGroup.message" ":defau
 relationship "shadowLink" ":lightLinker1" ":initialParticleSE.message" ":defaultLightSet.message";
 connectAttr "layerManager.dli[0]" "defaultLayer.id";
 connectAttr "renderLayerManager.rlmi[0]" "defaultRenderLayer.rlid";
+connectAttr "sharedReferenceNode.sr" "jao_students_cleanRN.sr";
 connectAttr ":defaultRenderGlobals.rcb" "defaultFurGlobals.cb";
+connectAttr "sharedReferenceNode.sr" "jao_students_psyRN.sr";
 connectAttr "|nurbsCube1|bottomnurbsCube1|bottomnurbsCubeShape1.iog" ":initialShadingGroup.dsm"
 		 -na;
 connectAttr "|nurbsCube2|bottomnurbsCube1|bottomnurbsCubeShape1.iog" ":initialShadingGroup.dsm"
