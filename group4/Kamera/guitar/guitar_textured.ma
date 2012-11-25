@@ -1,6 +1,6 @@
 //Maya ASCII 2013 scene
 //Name: guitar_textured.ma
-//Last modified: Fri, Nov 02, 2012 04:14:27 PM
+//Last modified: Sun, Nov 25, 2012 02:15:58 AM
 //Codeset: 1252
 requires maya "2013";
 requires "stereoCamera" "10.0";
@@ -13,7 +13,7 @@ fileInfo "osv" "Microsoft Windows 7 Business Edition, 64-bit Windows 7 Service P
 fileInfo "license" "student";
 createNode transform -s -n "persp";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 3.8155286177360495 29.8479581415341 185.29083200692094 ;
+	setAttr ".t" -type "double3" 3.8155286177360495 29.8479581415341 185.29083200692097 ;
 	setAttr ".r" -type "double3" -9.3383527299272462 1.3999999999887336 -2.4855503070594005e-017 ;
 createNode camera -s -n "perspShape" -p "persp";
 	setAttr -k off ".v" no;
@@ -5576,11 +5576,11 @@ createNode shadingEngine -n "blinn1SG";
 	setAttr ".ro" yes;
 createNode materialInfo -n "materialInfo1";
 createNode file -n "file1";
-	setAttr ".ftn" -type "string" "C:/Projekte/Shared/mayakurs2012/group5//textures/guitar_diffuse.png";
+	setAttr ".ftn" -type "string" "C:/Projekte/Shared/mayakurs2012/group4/Kamera//guitar/textures/guitar_diffuse.png";
 createNode place2dTexture -n "place2dTexture1";
 createNode file -n "file2";
 	setAttr ".ail" yes;
-	setAttr ".ftn" -type "string" "C:/Projekte/Shared/mayakurs2012/group5//textures/guitar_normals.png";
+	setAttr ".ftn" -type "string" "C:/Projekte/Shared/mayakurs2012/group4/Kamera//guitar/textures/guitar_normals.png";
 createNode place2dTexture -n "place2dTexture2";
 createNode bump2d -n "bump2d1";
 	setAttr ".bd" 0.5;
