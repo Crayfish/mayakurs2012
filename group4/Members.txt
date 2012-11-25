@@ -1,4 +1,4 @@
- Round1:
+Round1:
 Ast: Larissa  (larissa.kalbhenn@gmx.net)
 Schwebebalken: Engin (engin.dincer@student.tuwien.ac.at)
 Perücke/Haube: Andreas (andreas@jurdak.at)
@@ -9,3 +9,24 @@ Kreuzer Felix (e0827433@student.tuwien.ac.at) - weitere modellkorrekturen, UVs k
 Nowak Kasper (kasper.nowak@gmail.com) - Haube UV Mapping, Zebra neu modelliert+texturiert: haube_UV.ma, haube_UV_snapshot.png, haube modell korrigiert, zebra_neu.ma, zebra_neu_textur.png
 Ormos Mark- Zirkus zubehör, neu modelliert, texturiert
 Töpfer Markus: SchwebebalkenWorked - Modell korrigiert, Texturen & UVMaps neugemacht, TreeWorked - Modell verbessert/korrigiert, UVMaps und Texturen neugemacht, Alte Orange eingefügt
+
+Round3: (Animation)
+Elisabeth Broneder: Animation: Gehen des Characters 1, Fallen des Characters 1 und Geste des "Hilferufes des Characters 1, Sound
+Christian Kößler: Animation: Hinsetzen des Charakters 2 + Gitarre spielen
+Larissa Kalbhenn: Tanzen des Character 1
+Mark Ormos: Hinlaufen des Characters 2, Bücken zur Gitarre, Zeichnen des Storyboards
+
+Round4: (Kameras und Video)
+Wir hatten große Probleme aus dieser Animation halbwegs etwas zu machen, denn:
+  -Die Animation war bei weitem noch nicht fertig
+  -Der Sound passte nicht dazu
+  -Sämtliche Texturen fehlten
+  -Die Animation war durch eine Pause unterbrochen
+  -Ohne das Storyboard hätten wir gar nicht verstanden was diese Animation überhaupt darstellen soll
+Daher sieht das Video auch nicht perfekt aus, bitte das zu berücksichtigen !
+
+Mitglieder der 4.Runde:
+Michael Präauer
+Daniel Cornel
+Matthias Adorjan
+Loris Zanella
