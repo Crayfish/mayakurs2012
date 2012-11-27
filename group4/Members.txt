@@ -22,8 +22,11 @@ Wir hatten große Probleme aus dieser Animation halbwegs etwas zu machen, denn:
   -Der Sound passte nicht dazu
   -Sämtliche Texturen fehlten
   -Die Animation war durch eine Pause unterbrochen
+  -Es waren nicht alle Dateien im GIT repository
   -Ohne das Storyboard hätten wir gar nicht verstanden was diese Animation überhaupt darstellen soll
 Daher sieht das Video auch nicht perfekt aus, bitte das zu berücksichtigen !
+
+Maya-File: final_scene.ma
 
 Mitglieder der 4.Runde:
 Michael Präauer
