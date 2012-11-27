@@ -1,6 +1,6 @@
 //Maya ASCII 2013 scene
 //Name: master_environment.ma
-//Last modified: Tue, Nov 27, 2012 12:23:04 PM
+//Last modified: Tue, Nov 27, 2012 12:26:28 PM
 //Codeset: UTF-8
 file -rdi 1 -ns "Environment_Group8_0_1" -rfn "Environment_Group8_0_1RN" "$MAYAKURS2012/group8/Environment-Group8_0.1.ma";
 file -rdi 1 -ns "selfdefense" -dr 1 -rfn "selfdefenseRN" "$MAYAKURS2012/group3/Animation/selfdefense.ma";
