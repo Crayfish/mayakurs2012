@@ -2,14 +2,14 @@
 //Name: drunk_fix_final_thomas.ma
 //Last modified: Tue, Nov 27, 2012 12:56:58 AM
 //Codeset: 1252
-file -rdi 1 -ns "mesh_" -rfn "mesh_RN" "../characters/male_standard/male_standard_rig_export.ma";
-file -r -ns "mesh_" -dr 1 -rfn "mesh_RN" "../characters/male_standard/male_standard_rig_export.ma";
+file -rdi 1 -ns "mesh_" -rfn "mesh_RN" "./male_standard_rig_export.ma";
+file -r -ns "mesh_" -dr 1 -rfn "mesh_RN" "./male_standard_rig_export.ma";
 requires maya "2013";
 requires "Fur" "2013 x64";
 requires "Mayatomr" "2013.0 - 3.10.1.4 ";
 requires "stereoCamera" "10.0";
 currentUnit -l centimeter -a degree -t film;
-fileInfo "exportedFrom" "L:/kuiProj/1103_JAO_NDA/4_3D/maya/scenes/characters/male_standard/male_standard_rig_animation.ma";
+fileInfo "exportedFrom" "./male_standard_rig_animation.ma";
 fileInfo "application" "maya";
 fileInfo "product" "Maya 2013";
 fileInfo "version" "2013 x64";
@@ -11244,8 +11244,8 @@ createNode renderLayer -n "defaultRenderLayer";
 	setAttr ".g" yes;
 createNode reference -n "mesh_RN";
 	setAttr -s 2 ".fn";
-	setAttr ".fn[0]" -type "string" "C:/Users/Felix/Documents/maya/git/mayakurs2012/group5/Animation/male_standard_rig_export.ma";
-	setAttr ".fn[1]" -type "string" "L:/kuiProj/1103_JAO_NDA/4_3D/maya//3_Rigs/character_male_exportRigGeo.ma";
+	setAttr ".fn[0]" -type "string" "../Animation/male_standard_rig_export.ma";
+	setAttr ".fn[1]" -type "string" "./character_male_exportRigGeo.ma";
 	setAttr -s 577 ".phl";
 	setAttr ".phl[267]" 0;
 	setAttr ".phl[268]" 0;
@@ -13875,7 +13875,7 @@ createNode mentalrayOptions -s -n "ProductionMotionblur";
 createNode FurGlobals -n "defaultFurGlobals";
 	addAttr -ci true -sn "cb" -ln "callback" -at "message";
 	setAttr ".av" 2;
-	setAttr ".pjl" -type "string" "C:/Users/Felix/Documents/maya/git/mayakurs2012/group4";
+	setAttr ".pjl" -type "string" "../../group4";
 createNode script -n "arx2Build_uiConfigurationScriptNode";
 	setAttr ".b" -type "string" (
 		"// Maya Mel UI Configuration File.\n//\n//  This script is machine generated.  Edit at your own risk.\n//\n//\n\nglobal string $gMainPane;\nif (`paneLayout -exists $gMainPane`) {\n\n\tglobal int $gUseScenePanelConfig;\n\tint    $useSceneConfig = $gUseScenePanelConfig;\n\tint    $menusOkayInPanels = `optionVar -q allowMenusInPanels`;\tint    $nVisPanes = `paneLayout -q -nvp $gMainPane`;\n\tint    $nPanes = 0;\n\tstring $editorName;\n\tstring $panelName;\n\tstring $itemFilterName;\n\tstring $panelConfig;\n\n\t//\n\t//  get current state of the UI\n\t//\n\tsceneUIReplacement -update $gMainPane;\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"Stereo\" (localizedPanelLabel(\"Stereo\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"Stereo\" -l (localizedPanelLabel(\"Stereo\")) -mbv $menusOkayInPanels `;\nstring $editorName = ($panelName+\"Editor\");\n            stereoCameraView -e \n                -editorChanged \"updateModelPanelBar\" \n                -camera \"persp\" \n                -useInteractiveMode 0\n"
@@ -19973,7 +19973,7 @@ createNode animCurveTU -n "male_normal_weapon_followFKhand";
 createNode audio -n "Circus";
 	setAttr ".ef" 480;
 	setAttr ".se" 480;
-	setAttr ".f" -type "string" "C:/Users/Felix/Documents/maya/git/mayakurs2012/group5/Animation/Circus.wav";
+	setAttr ".f" -type "string" "./Circus.wav";
 createNode animCurveTU -n "mesh_:mesh_character_01_visibility";
 	setAttr ".tan" 9;
 	setAttr ".wgt" no;
