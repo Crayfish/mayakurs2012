@@ -1,6 +1,6 @@
-Members:
+﻿Members:
 
 Johann Houszka: Referenzierung, Laden der Daten, Kamera
 Michal Londo
-Robin Müller
+Robin Müller: sky, clouds, environment, render settings
 Mark Ormos
