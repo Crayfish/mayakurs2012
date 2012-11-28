@@ -1,3 +1,4 @@
 Beschreibung:
 
-Wir verwenden die Animationen der Gruppe7 und der Gruppe 4.
+Szene zusammengesetzt aus verschiedenen Animationen. Audio wurde nochmal neu zusammengeschnitten.
+Die Szene soll eine Art Dance-Off zwischen den Charakteren darstellen.
