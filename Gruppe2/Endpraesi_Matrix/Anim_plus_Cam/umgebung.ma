@@ -1,6 +1,6 @@
 //Maya ASCII 2013 scene
 //Name: umgebung.ma
-//Last modified: Mon, Nov 26, 2012 02:19:25 PM
+//Last modified: Mon, Nov 26, 2012 07:16:25 PM
 //Codeset: 1252
 file -rdi 1 -ns "huette1" -rfn "huette1RN" "F:/studium/2012WS/Maya/endabgabe//references/huette1.mb";
 file -rdi 1 -ns "kanone" -rfn "kanoneRN" "F:/studium/2012WS/Maya/endabgabe//references/kanone.mb";
@@ -13,18 +13,18 @@ file -r -ns "zaun" -dr 1 -rfn "zaunRN" "F:/studium/2012WS/Maya/endabgabe//refere
 file -r -ns "highseat" -dr 1 -rfn "highseatRN" "F:/studium/2012WS/Maya/endabgabe//references/highseat.mb";
 file -r -ns "tree" -dr 1 -rfn "treeRN1" "F:/studium/2012WS/Maya/endabgabe//references/tree.mb";
 requires maya "2013";
-requires "Fur" "2013 x64";
+requires "Fur" "2013";
 requires "stereoCamera" "10.0";
 currentUnit -l centimeter -a degree -t film;
 fileInfo "application" "maya";
 fileInfo "product" "Maya 2013";
-fileInfo "version" "2013 x64";
-fileInfo "cutIdentifier" "201202220241-825136";
-fileInfo "osv" "Microsoft Windows 7 Home Premium Edition, 64-bit Windows 7 Service Pack 1 (Build 7601)\n";
+fileInfo "version" "2013";
+fileInfo "cutIdentifier" "201202220747-825128";
+fileInfo "osv" "Microsoft Windows 7 Business Edition, 32-bit Windows 7 Service Pack 1 (Build 7601)\n";
 fileInfo "license" "student";
 createNode transform -s -n "persp";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -898.85681365415485 348.22243583930884 626.40113431171039 ;
+	setAttr ".t" -type "double3" -2889.4716510350772 1195.6786278404034 1727.7476803271632 ;
 	setAttr ".r" -type "double3" -20.430980972178212 -61.045580992325284 -3.2849254798479269e-015 ;
 	setAttr ".rp" -type "double3" 3.5527136788005009e-014 4.9737991503207013e-014 -2.2737367544323206e-013 ;
 	setAttr ".rpt" -type "double3" -1.1433487757630551e-013 -1.5872391160947004e-013 
@@ -34,7 +34,7 @@ createNode camera -s -n "perspShape" -p "persp";
 	setAttr ".fl" 19.502985475443428;
 	setAttr ".ncp" 2;
 	setAttr ".fcp" 100000;
-	setAttr ".coi" 839.5779495405543;
+	setAttr ".coi" 3267.2710196345574;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -97,7 +97,7 @@ createNode pointLight -n "pointLightShape1" -p "pointLight1";
 createNode transform -n "ocean1";
 	setAttr ".s" -type "double3" 17.358517940191206 17.358517940191206 17.358517940191206 ;
 createNode transform -n "water" -p "ocean1";
-	setAttr ".t" -type "double3" 0 -3.6299585099887377 0 ;
+	setAttr ".t" -type "double3" 0 -5.4829551972957224 0 ;
 	setAttr -av ".ty";
 	setAttr -av ".tz";
 	setAttr ".s" -type "double3" 2847.5753105297031 0.94428314249241685 2847.5753105297031 ;
@@ -39578,9 +39578,6 @@ createNode mesh -n "wasserfass_wagen:Aufhängung_hintenShape" -p "wasserfass_wage
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
-	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
-	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 	setAttr ".sref" yes;
 	setAttr ".reff" -type "string" "F:/studium/2012WS/Maya/endabgabe/references/wasserfass_wagen.mb";
 	setAttr ".fns" -type "string" "wasserfass_wagen";
@@ -49754,8 +49751,8 @@ parent -s -nc -r -add "|lampen|laterne:lantern|laterne:lanternShape" "lantern1" 
 parent -s -nc -r -add "|lampen|laterne:lantern|laterne:lanternShape" "lantern2" ;
 parent -s -nc -r -add "|lampen|laterne:lantern|laterne:lanternShape" "lantern3" ;
 createNode lightLinker -s -n "lightLinker1";
-	setAttr -s 76 ".lnk";
-	setAttr -s 76 ".slnk";
+	setAttr -s 75 ".lnk";
+	setAttr -s 75 ".slnk";
 createNode displayLayerManager -n "layerManager";
 createNode displayLayer -n "defaultLayer";
 createNode renderLayerManager -n "renderLayerManager";
@@ -49837,32 +49834,31 @@ createNode script -n "uiConfigurationScriptNode";
 		+ "                -showAnimCurvesOnly 0\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 0\n                -showDagOnly 1\n                -showAssets 1\n                -showContainedOnly 1\n                -showPublishedAsConnected 0\n                -showContainerContents 1\n                -ignoreDagHierarchy 0\n                -expandConnections 0\n                -showUpstreamCurves 1\n                -showUnitlessCurves 1\n                -showCompounds 1\n                -showLeafs 1\n                -showNumericAttrsOnly 0\n                -highlightActive 1\n                -autoSelectNewObjects 0\n                -doNotSelectNewObjects 0\n                -dropIsParent 1\n                -transmitFilters 0\n                -setFilter \"defaultSetFilter\" \n                -showSetMembers 1\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -displayMode \"DAG\" \n"
 		+ "                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 0\n                -mapMotionTrails 0\n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"Outliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -showShapes 0\n            -showReferenceNodes 1\n            -showReferenceMembers 1\n            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n"
 		+ "            -organizeByLayer 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showContainerContents 1\n            -ignoreDagHierarchy 0\n            -expandConnections 0\n            -showUpstreamCurves 1\n            -showUnitlessCurves 1\n            -showCompounds 1\n            -showLeafs 1\n            -showNumericAttrsOnly 0\n            -highlightActive 1\n            -autoSelectNewObjects 0\n            -doNotSelectNewObjects 0\n            -dropIsParent 1\n            -transmitFilters 0\n            -setFilter \"defaultSetFilter\" \n            -showSetMembers 1\n            -allowMultiSelection 1\n            -alwaysToggleSelect 0\n            -directSelect 0\n            -displayMode \"DAG\" \n            -expandObjects 0\n            -setsIgnoreFilters 1\n            -containersIgnoreFilters 0\n            -editAttrName 0\n            -showAttrValues 0\n"
-		+ "            -highlightSecondary 0\n            -showUVAttrsOnly 0\n            -showTextureNodesOnly 0\n            -attrAlphaOrder \"default\" \n            -animLayerFilterOptions \"allAffecting\" \n            -sortOrder \"none\" \n            -longNames 0\n            -niceNames 1\n            -showNamespace 1\n            -showPinIcons 0\n            -mapMotionTrails 0\n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\tif ($useSceneConfig) {\n\t\toutlinerPanel -e -to $panelName;\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"graphEditor\" (localizedPanelLabel(\"Graph Editor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"graphEditor\" -l (localizedPanelLabel(\"Graph Editor\")) -mbv $menusOkayInPanels `;\n\n\t\t\t$editorName = ($panelName+\"OutlineEd\");\n            outlinerEditor -e \n                -showShapes 1\n                -showReferenceNodes 0\n                -showReferenceMembers 0\n                -showAttributes 1\n"
-		+ "                -showConnected 1\n                -showAnimCurvesOnly 1\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 1\n                -showDagOnly 0\n                -showAssets 1\n                -showContainedOnly 0\n                -showPublishedAsConnected 0\n                -showContainerContents 0\n                -ignoreDagHierarchy 0\n                -expandConnections 1\n                -showUpstreamCurves 1\n                -showUnitlessCurves 1\n                -showCompounds 0\n                -showLeafs 1\n                -showNumericAttrsOnly 1\n                -highlightActive 0\n                -autoSelectNewObjects 1\n                -doNotSelectNewObjects 0\n                -dropIsParent 1\n                -transmitFilters 1\n                -setFilter \"0\" \n                -showSetMembers 0\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n"
-		+ "                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 1\n                -mapMotionTrails 1\n                $editorName;\n\n\t\t\t$editorName = ($panelName+\"GraphEd\");\n            animCurveEditor -e \n                -displayKeys 1\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 1\n                -displayInfinities 0\n                -autoFit 0\n                -snapTime \"integer\" \n                -snapValue \"none\" \n                -showResults \"off\" \n"
-		+ "                -showBufferCurves \"off\" \n                -smoothness \"fine\" \n                -resultSamples 1\n                -resultScreenSamples 0\n                -resultUpdate \"delayed\" \n                -showUpstreamCurves 1\n                -stackedCurves 0\n                -stackedCurvesMin -1\n                -stackedCurvesMax 1\n                -stackedCurvesSpace 0.2\n                -displayNormalized 0\n                -preSelectionHighlight 0\n                -constrainDrag 0\n                -classicMode 1\n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Graph Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"OutlineEd\");\n            outlinerEditor -e \n                -showShapes 1\n                -showReferenceNodes 0\n                -showReferenceMembers 0\n                -showAttributes 1\n                -showConnected 1\n                -showAnimCurvesOnly 1\n                -showMuteInfo 0\n                -organizeByLayer 1\n"
-		+ "                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 1\n                -showDagOnly 0\n                -showAssets 1\n                -showContainedOnly 0\n                -showPublishedAsConnected 0\n                -showContainerContents 0\n                -ignoreDagHierarchy 0\n                -expandConnections 1\n                -showUpstreamCurves 1\n                -showUnitlessCurves 1\n                -showCompounds 0\n                -showLeafs 1\n                -showNumericAttrsOnly 1\n                -highlightActive 0\n                -autoSelectNewObjects 1\n                -doNotSelectNewObjects 0\n                -dropIsParent 1\n                -transmitFilters 1\n                -setFilter \"0\" \n                -showSetMembers 0\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n"
-		+ "                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 1\n                -mapMotionTrails 1\n                $editorName;\n\n\t\t\t$editorName = ($panelName+\"GraphEd\");\n            animCurveEditor -e \n                -displayKeys 1\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 1\n                -displayInfinities 0\n                -autoFit 0\n                -snapTime \"integer\" \n                -snapValue \"none\" \n                -showResults \"off\" \n                -showBufferCurves \"off\" \n                -smoothness \"fine\" \n                -resultSamples 1\n                -resultScreenSamples 0\n"
-		+ "                -resultUpdate \"delayed\" \n                -showUpstreamCurves 1\n                -stackedCurves 0\n                -stackedCurvesMin -1\n                -stackedCurvesMax 1\n                -stackedCurvesSpace 0.2\n                -displayNormalized 0\n                -preSelectionHighlight 0\n                -constrainDrag 0\n                -classicMode 1\n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dopeSheetPanel\" (localizedPanelLabel(\"Dope Sheet\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"dopeSheetPanel\" -l (localizedPanelLabel(\"Dope Sheet\")) -mbv $menusOkayInPanels `;\n\n\t\t\t$editorName = ($panelName+\"OutlineEd\");\n            outlinerEditor -e \n                -showShapes 1\n                -showReferenceNodes 0\n                -showReferenceMembers 0\n                -showAttributes 1\n                -showConnected 1\n                -showAnimCurvesOnly 1\n"
-		+ "                -showMuteInfo 0\n                -organizeByLayer 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 0\n                -showDagOnly 0\n                -showAssets 1\n                -showContainedOnly 0\n                -showPublishedAsConnected 0\n                -showContainerContents 0\n                -ignoreDagHierarchy 0\n                -expandConnections 1\n                -showUpstreamCurves 1\n                -showUnitlessCurves 0\n                -showCompounds 1\n                -showLeafs 1\n                -showNumericAttrsOnly 1\n                -highlightActive 0\n                -autoSelectNewObjects 0\n                -doNotSelectNewObjects 1\n                -dropIsParent 1\n                -transmitFilters 0\n                -setFilter \"0\" \n                -showSetMembers 0\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -displayMode \"DAG\" \n                -expandObjects 0\n"
-		+ "                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 0\n                -mapMotionTrails 1\n                $editorName;\n\n\t\t\t$editorName = ($panelName+\"DopeSheetEd\");\n            dopeSheetEditor -e \n                -displayKeys 1\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 0\n                -displayInfinities 0\n                -autoFit 0\n                -snapTime \"integer\" \n                -snapValue \"none\" \n                -outliner \"dopeSheetPanel1OutlineEd\" \n                -showSummary 1\n"
-		+ "                -showScene 0\n                -hierarchyBelow 0\n                -showTicks 1\n                -selectionWindow 0 0 0 0 \n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Dope Sheet\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"OutlineEd\");\n            outlinerEditor -e \n                -showShapes 1\n                -showReferenceNodes 0\n                -showReferenceMembers 0\n                -showAttributes 1\n                -showConnected 1\n                -showAnimCurvesOnly 1\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 0\n                -showDagOnly 0\n                -showAssets 1\n                -showContainedOnly 0\n                -showPublishedAsConnected 0\n                -showContainerContents 0\n                -ignoreDagHierarchy 0\n                -expandConnections 1\n"
-		+ "                -showUpstreamCurves 1\n                -showUnitlessCurves 0\n                -showCompounds 1\n                -showLeafs 1\n                -showNumericAttrsOnly 1\n                -highlightActive 0\n                -autoSelectNewObjects 0\n                -doNotSelectNewObjects 1\n                -dropIsParent 1\n                -transmitFilters 0\n                -setFilter \"0\" \n                -showSetMembers 0\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n"
-		+ "                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 0\n                -mapMotionTrails 1\n                $editorName;\n\n\t\t\t$editorName = ($panelName+\"DopeSheetEd\");\n            dopeSheetEditor -e \n                -displayKeys 1\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 0\n                -displayInfinities 0\n                -autoFit 0\n                -snapTime \"integer\" \n                -snapValue \"none\" \n                -outliner \"dopeSheetPanel1OutlineEd\" \n                -showSummary 1\n                -showScene 0\n                -hierarchyBelow 0\n                -showTicks 1\n                -selectionWindow 0 0 0 0 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"clipEditorPanel\" (localizedPanelLabel(\"Trax Editor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"clipEditorPanel\" -l (localizedPanelLabel(\"Trax Editor\")) -mbv $menusOkayInPanels `;\n"
-		+ "\t\t\t$editorName = clipEditorNameFromPanel($panelName);\n            clipEditor -e \n                -displayKeys 0\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 0\n                -displayInfinities 0\n                -autoFit 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -manageSequencer 0 \n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Trax Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = clipEditorNameFromPanel($panelName);\n            clipEditor -e \n                -displayKeys 0\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 0\n                -displayInfinities 0\n                -autoFit 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -manageSequencer 0 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n"
-		+ "\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"sequenceEditorPanel\" (localizedPanelLabel(\"Camera Sequencer\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"sequenceEditorPanel\" -l (localizedPanelLabel(\"Camera Sequencer\")) -mbv $menusOkayInPanels `;\n\n\t\t\t$editorName = sequenceEditorNameFromPanel($panelName);\n            clipEditor -e \n                -displayKeys 0\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 0\n                -displayInfinities 0\n                -autoFit 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -manageSequencer 1 \n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Camera Sequencer\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = sequenceEditorNameFromPanel($panelName);\n            clipEditor -e \n"
-		+ "                -displayKeys 0\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 0\n                -displayInfinities 0\n                -autoFit 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -manageSequencer 1 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"hyperGraphPanel\" (localizedPanelLabel(\"Hypergraph Hierarchy\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"hyperGraphPanel\" -l (localizedPanelLabel(\"Hypergraph Hierarchy\")) -mbv $menusOkayInPanels `;\n\n\t\t\t$editorName = ($panelName+\"HyperGraphEd\");\n            hyperGraph -e \n                -graphLayoutStyle \"hierarchicalLayout\" \n                -orientation \"horiz\" \n                -mergeConnections 0\n                -zoom 1\n                -animateTransition 0\n                -showRelationships 1\n"
-		+ "                -showShapes 0\n                -showDeformers 0\n                -showExpressions 0\n                -showConstraints 0\n                -showUnderworld 0\n                -showInvisible 0\n                -transitionFrames 1\n                -opaqueContainers 0\n                -freeform 0\n                -imagePosition 0 0 \n                -imageScale 1\n                -imageEnabled 0\n                -graphType \"DAG\" \n                -heatMapDisplay 0\n                -updateSelection 1\n                -updateNodeAdded 1\n                -useDrawOverrideColor 0\n                -limitGraphTraversal -1\n                -range 0 0 \n                -iconSize \"smallIcons\" \n                -showCachedConnections 0\n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Hypergraph Hierarchy\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"HyperGraphEd\");\n            hyperGraph -e \n                -graphLayoutStyle \"hierarchicalLayout\" \n"
-		+ "                -orientation \"horiz\" \n                -mergeConnections 0\n                -zoom 1\n                -animateTransition 0\n                -showRelationships 1\n                -showShapes 0\n                -showDeformers 0\n                -showExpressions 0\n                -showConstraints 0\n                -showUnderworld 0\n                -showInvisible 0\n                -transitionFrames 1\n                -opaqueContainers 0\n                -freeform 0\n                -imagePosition 0 0 \n                -imageScale 1\n                -imageEnabled 0\n                -graphType \"DAG\" \n                -heatMapDisplay 0\n                -updateSelection 1\n                -updateNodeAdded 1\n                -useDrawOverrideColor 0\n                -limitGraphTraversal -1\n                -range 0 0 \n                -iconSize \"smallIcons\" \n                -showCachedConnections 0\n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"hyperShadePanel\" (localizedPanelLabel(\"Hypershade\")) `;\n"
-		+ "\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"hyperShadePanel\" -l (localizedPanelLabel(\"Hypershade\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Hypershade\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\tif ($useSceneConfig) {\n\t\tscriptedPanel -e -to $panelName;\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"visorPanel\" (localizedPanelLabel(\"Visor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"visorPanel\" -l (localizedPanelLabel(\"Visor\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Visor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"nodeEditorPanel\" (localizedPanelLabel(\"Node Editor\")) `;\n"
-		+ "\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"nodeEditorPanel\" -l (localizedPanelLabel(\"Node Editor\")) -mbv $menusOkayInPanels `;\n\n\t\t\t$editorName = ($panelName+\"NodeEditorEd\");\n            nodeEditor -e \n                -allAttributes 0\n                -allNodes 0\n                -autoSizeNodes 1\n                -createNodeCommand \"nodeEdCreateNodeCommand\" \n                -ignoreAssets 1\n                -additiveGraphingMode 0\n                -settingsChangedCallback \"nodeEdSyncControls\" \n                -traversalDepthLimit -1\n                -keyPressCommand \"nodeEdKeyPressCommand\" \n                -popupMenuScript \"nodeEdBuildPanelMenus\" \n                -island 0\n                -showShapes 1\n                -showSGShapes 0\n                -showTransforms 1\n                -syncedSelection 1\n                -extendToShapes 1\n                $editorName;\n\t\t\tif (`objExists nodeEditorPanel1Info`) nodeEditor -e -restoreInfo nodeEditorPanel1Info $editorName;\n"
-		+ "\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Node Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"NodeEditorEd\");\n            nodeEditor -e \n                -allAttributes 0\n                -allNodes 0\n                -autoSizeNodes 1\n                -createNodeCommand \"nodeEdCreateNodeCommand\" \n                -ignoreAssets 1\n                -additiveGraphingMode 0\n                -settingsChangedCallback \"nodeEdSyncControls\" \n                -traversalDepthLimit -1\n                -keyPressCommand \"nodeEdKeyPressCommand\" \n                -popupMenuScript \"nodeEdBuildPanelMenus\" \n                -island 0\n                -showShapes 1\n                -showSGShapes 0\n                -showTransforms 1\n                -syncedSelection 1\n                -extendToShapes 1\n                $editorName;\n\t\t\tif (`objExists nodeEditorPanel1Info`) nodeEditor -e -restoreInfo nodeEditorPanel1Info $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n"
-		+ "\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"createNodePanel\" (localizedPanelLabel(\"Create Node\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"createNodePanel\" -l (localizedPanelLabel(\"Create Node\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Create Node\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"polyTexturePlacementPanel\" (localizedPanelLabel(\"UV Texture Editor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"polyTexturePlacementPanel\" -l (localizedPanelLabel(\"UV Texture Editor\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"UV Texture Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n"
-		+ "\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"blendShapePanel\" (localizedPanelLabel(\"Blend Shape\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\tblendShapePanel -unParent -l (localizedPanelLabel(\"Blend Shape\")) -mbv $menusOkayInPanels ;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tblendShapePanel -edit -l (localizedPanelLabel(\"Blend Shape\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dynRelEdPanel\" (localizedPanelLabel(\"Dynamic Relationships\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"dynRelEdPanel\" -l (localizedPanelLabel(\"Dynamic Relationships\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Dynamic Relationships\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n"
-		+ "\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"relationshipPanel\" (localizedPanelLabel(\"Relationship Editor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"relationshipPanel\" -l (localizedPanelLabel(\"Relationship Editor\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Relationship Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"referenceEditorPanel\" (localizedPanelLabel(\"Reference Editor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"referenceEditorPanel\" -l (localizedPanelLabel(\"Reference Editor\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Reference Editor\")) -mbv $menusOkayInPanels  $panelName;\n"
-		+ "\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\tif ($useSceneConfig) {\n\t\tscriptedPanel -e -to $panelName;\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"componentEditorPanel\" (localizedPanelLabel(\"Component Editor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"componentEditorPanel\" -l (localizedPanelLabel(\"Component Editor\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Component Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dynPaintScriptedPanelType\" (localizedPanelLabel(\"Paint Effects\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"dynPaintScriptedPanelType\" -l (localizedPanelLabel(\"Paint Effects\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n"
-		+ "\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Paint Effects\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"scriptEditorPanel\" (localizedPanelLabel(\"Script Editor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"scriptEditorPanel\" -l (localizedPanelLabel(\"Script Editor\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Script Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\tif ($useSceneConfig) {\n        string $configName = `getPanel -cwl (localizedPanelLabel(\"Current Layout\"))`;\n        if (\"\" != $configName) {\n\t\t\tpanelConfiguration -edit -label (localizedPanelLabel(\"Current Layout\")) \n\t\t\t\t-defaultImage \"\"\n\t\t\t\t-image \"\"\n\t\t\t\t-sc false\n\t\t\t\t-configString \"global string $gMainPane; paneLayout -e -cn \\\"single\\\" -ps 1 100 100 $gMainPane;\"\n"
-		+ "\t\t\t\t-removeAllPanels\n\t\t\t\t-ap false\n\t\t\t\t\t(localizedPanelLabel(\"Persp View\")) \n\t\t\t\t\t\"modelPanel\"\n"
+		+ "            -highlightSecondary 0\n            -showUVAttrsOnly 0\n            -showTextureNodesOnly 0\n            -attrAlphaOrder \"default\" \n            -animLayerFilterOptions \"allAffecting\" \n            -sortOrder \"none\" \n            -longNames 0\n            -niceNames 1\n            -showNamespace 1\n            -showPinIcons 0\n            -mapMotionTrails 0\n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"graphEditor\" (localizedPanelLabel(\"Graph Editor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"graphEditor\" -l (localizedPanelLabel(\"Graph Editor\")) -mbv $menusOkayInPanels `;\n\n\t\t\t$editorName = ($panelName+\"OutlineEd\");\n            outlinerEditor -e \n                -showShapes 1\n                -showReferenceNodes 0\n                -showReferenceMembers 0\n                -showAttributes 1\n                -showConnected 1\n                -showAnimCurvesOnly 1\n"
+		+ "                -showMuteInfo 0\n                -organizeByLayer 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 1\n                -showDagOnly 0\n                -showAssets 1\n                -showContainedOnly 0\n                -showPublishedAsConnected 0\n                -showContainerContents 0\n                -ignoreDagHierarchy 0\n                -expandConnections 1\n                -showUpstreamCurves 1\n                -showUnitlessCurves 1\n                -showCompounds 0\n                -showLeafs 1\n                -showNumericAttrsOnly 1\n                -highlightActive 0\n                -autoSelectNewObjects 1\n                -doNotSelectNewObjects 0\n                -dropIsParent 1\n                -transmitFilters 1\n                -setFilter \"0\" \n                -showSetMembers 0\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -displayMode \"DAG\" \n                -expandObjects 0\n"
+		+ "                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 1\n                -mapMotionTrails 1\n                $editorName;\n\n\t\t\t$editorName = ($panelName+\"GraphEd\");\n            animCurveEditor -e \n                -displayKeys 1\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 1\n                -displayInfinities 0\n                -autoFit 0\n                -snapTime \"integer\" \n                -snapValue \"none\" \n                -showResults \"off\" \n                -showBufferCurves \"off\" \n                -smoothness \"fine\" \n"
+		+ "                -resultSamples 1\n                -resultScreenSamples 0\n                -resultUpdate \"delayed\" \n                -showUpstreamCurves 1\n                -stackedCurves 0\n                -stackedCurvesMin -1\n                -stackedCurvesMax 1\n                -stackedCurvesSpace 0.2\n                -displayNormalized 0\n                -preSelectionHighlight 0\n                -constrainDrag 0\n                -classicMode 1\n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Graph Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"OutlineEd\");\n            outlinerEditor -e \n                -showShapes 1\n                -showReferenceNodes 0\n                -showReferenceMembers 0\n                -showAttributes 1\n                -showConnected 1\n                -showAnimCurvesOnly 1\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n"
+		+ "                -autoExpand 1\n                -showDagOnly 0\n                -showAssets 1\n                -showContainedOnly 0\n                -showPublishedAsConnected 0\n                -showContainerContents 0\n                -ignoreDagHierarchy 0\n                -expandConnections 1\n                -showUpstreamCurves 1\n                -showUnitlessCurves 1\n                -showCompounds 0\n                -showLeafs 1\n                -showNumericAttrsOnly 1\n                -highlightActive 0\n                -autoSelectNewObjects 1\n                -doNotSelectNewObjects 0\n                -dropIsParent 1\n                -transmitFilters 1\n                -setFilter \"0\" \n                -showSetMembers 0\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n"
+		+ "                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 1\n                -mapMotionTrails 1\n                $editorName;\n\n\t\t\t$editorName = ($panelName+\"GraphEd\");\n            animCurveEditor -e \n                -displayKeys 1\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 1\n                -displayInfinities 0\n                -autoFit 0\n                -snapTime \"integer\" \n                -snapValue \"none\" \n                -showResults \"off\" \n                -showBufferCurves \"off\" \n                -smoothness \"fine\" \n                -resultSamples 1\n                -resultScreenSamples 0\n                -resultUpdate \"delayed\" \n                -showUpstreamCurves 1\n"
+		+ "                -stackedCurves 0\n                -stackedCurvesMin -1\n                -stackedCurvesMax 1\n                -stackedCurvesSpace 0.2\n                -displayNormalized 0\n                -preSelectionHighlight 0\n                -constrainDrag 0\n                -classicMode 1\n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dopeSheetPanel\" (localizedPanelLabel(\"Dope Sheet\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"dopeSheetPanel\" -l (localizedPanelLabel(\"Dope Sheet\")) -mbv $menusOkayInPanels `;\n\n\t\t\t$editorName = ($panelName+\"OutlineEd\");\n            outlinerEditor -e \n                -showShapes 1\n                -showReferenceNodes 0\n                -showReferenceMembers 0\n                -showAttributes 1\n                -showConnected 1\n                -showAnimCurvesOnly 1\n                -showMuteInfo 0\n                -organizeByLayer 1\n"
+		+ "                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 0\n                -showDagOnly 0\n                -showAssets 1\n                -showContainedOnly 0\n                -showPublishedAsConnected 0\n                -showContainerContents 0\n                -ignoreDagHierarchy 0\n                -expandConnections 1\n                -showUpstreamCurves 1\n                -showUnitlessCurves 0\n                -showCompounds 1\n                -showLeafs 1\n                -showNumericAttrsOnly 1\n                -highlightActive 0\n                -autoSelectNewObjects 0\n                -doNotSelectNewObjects 1\n                -dropIsParent 1\n                -transmitFilters 0\n                -setFilter \"0\" \n                -showSetMembers 0\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n"
+		+ "                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 0\n                -mapMotionTrails 1\n                $editorName;\n\n\t\t\t$editorName = ($panelName+\"DopeSheetEd\");\n            dopeSheetEditor -e \n                -displayKeys 1\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 0\n                -displayInfinities 0\n                -autoFit 0\n                -snapTime \"integer\" \n                -snapValue \"none\" \n                -outliner \"dopeSheetPanel1OutlineEd\" \n                -showSummary 1\n                -showScene 0\n                -hierarchyBelow 0\n                -showTicks 1\n"
+		+ "                -selectionWindow 0 0 0 0 \n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Dope Sheet\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"OutlineEd\");\n            outlinerEditor -e \n                -showShapes 1\n                -showReferenceNodes 0\n                -showReferenceMembers 0\n                -showAttributes 1\n                -showConnected 1\n                -showAnimCurvesOnly 1\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 0\n                -showDagOnly 0\n                -showAssets 1\n                -showContainedOnly 0\n                -showPublishedAsConnected 0\n                -showContainerContents 0\n                -ignoreDagHierarchy 0\n                -expandConnections 1\n                -showUpstreamCurves 1\n                -showUnitlessCurves 0\n                -showCompounds 1\n"
+		+ "                -showLeafs 1\n                -showNumericAttrsOnly 1\n                -highlightActive 0\n                -autoSelectNewObjects 0\n                -doNotSelectNewObjects 1\n                -dropIsParent 1\n                -transmitFilters 0\n                -setFilter \"0\" \n                -showSetMembers 0\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 0\n                -mapMotionTrails 1\n"
+		+ "                $editorName;\n\n\t\t\t$editorName = ($panelName+\"DopeSheetEd\");\n            dopeSheetEditor -e \n                -displayKeys 1\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 0\n                -displayInfinities 0\n                -autoFit 0\n                -snapTime \"integer\" \n                -snapValue \"none\" \n                -outliner \"dopeSheetPanel1OutlineEd\" \n                -showSummary 1\n                -showScene 0\n                -hierarchyBelow 0\n                -showTicks 1\n                -selectionWindow 0 0 0 0 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"clipEditorPanel\" (localizedPanelLabel(\"Trax Editor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"clipEditorPanel\" -l (localizedPanelLabel(\"Trax Editor\")) -mbv $menusOkayInPanels `;\n\n\t\t\t$editorName = clipEditorNameFromPanel($panelName);\n"
+		+ "            clipEditor -e \n                -displayKeys 0\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 0\n                -displayInfinities 0\n                -autoFit 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -manageSequencer 0 \n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Trax Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = clipEditorNameFromPanel($panelName);\n            clipEditor -e \n                -displayKeys 0\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 0\n                -displayInfinities 0\n                -autoFit 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -manageSequencer 0 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"sequenceEditorPanel\" (localizedPanelLabel(\"Camera Sequencer\")) `;\n"
+		+ "\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"sequenceEditorPanel\" -l (localizedPanelLabel(\"Camera Sequencer\")) -mbv $menusOkayInPanels `;\n\n\t\t\t$editorName = sequenceEditorNameFromPanel($panelName);\n            clipEditor -e \n                -displayKeys 0\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 0\n                -displayInfinities 0\n                -autoFit 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -manageSequencer 1 \n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Camera Sequencer\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = sequenceEditorNameFromPanel($panelName);\n            clipEditor -e \n                -displayKeys 0\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 0\n                -displayInfinities 0\n"
+		+ "                -autoFit 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -manageSequencer 1 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"hyperGraphPanel\" (localizedPanelLabel(\"Hypergraph Hierarchy\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"hyperGraphPanel\" -l (localizedPanelLabel(\"Hypergraph Hierarchy\")) -mbv $menusOkayInPanels `;\n\n\t\t\t$editorName = ($panelName+\"HyperGraphEd\");\n            hyperGraph -e \n                -graphLayoutStyle \"hierarchicalLayout\" \n                -orientation \"horiz\" \n                -mergeConnections 0\n                -zoom 1\n                -animateTransition 0\n                -showRelationships 1\n                -showShapes 0\n                -showDeformers 0\n                -showExpressions 0\n                -showConstraints 0\n                -showUnderworld 0\n                -showInvisible 0\n"
+		+ "                -transitionFrames 1\n                -opaqueContainers 0\n                -freeform 0\n                -imagePosition 0 0 \n                -imageScale 1\n                -imageEnabled 0\n                -graphType \"DAG\" \n                -heatMapDisplay 0\n                -updateSelection 1\n                -updateNodeAdded 1\n                -useDrawOverrideColor 0\n                -limitGraphTraversal -1\n                -range 0 0 \n                -iconSize \"smallIcons\" \n                -showCachedConnections 0\n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Hypergraph Hierarchy\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"HyperGraphEd\");\n            hyperGraph -e \n                -graphLayoutStyle \"hierarchicalLayout\" \n                -orientation \"horiz\" \n                -mergeConnections 0\n                -zoom 1\n                -animateTransition 0\n                -showRelationships 1\n                -showShapes 0\n"
+		+ "                -showDeformers 0\n                -showExpressions 0\n                -showConstraints 0\n                -showUnderworld 0\n                -showInvisible 0\n                -transitionFrames 1\n                -opaqueContainers 0\n                -freeform 0\n                -imagePosition 0 0 \n                -imageScale 1\n                -imageEnabled 0\n                -graphType \"DAG\" \n                -heatMapDisplay 0\n                -updateSelection 1\n                -updateNodeAdded 1\n                -useDrawOverrideColor 0\n                -limitGraphTraversal -1\n                -range 0 0 \n                -iconSize \"smallIcons\" \n                -showCachedConnections 0\n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"hyperShadePanel\" (localizedPanelLabel(\"Hypershade\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"hyperShadePanel\" -l (localizedPanelLabel(\"Hypershade\")) -mbv $menusOkayInPanels `;\n"
+		+ "\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Hypershade\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"visorPanel\" (localizedPanelLabel(\"Visor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"visorPanel\" -l (localizedPanelLabel(\"Visor\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Visor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"nodeEditorPanel\" (localizedPanelLabel(\"Node Editor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"nodeEditorPanel\" -l (localizedPanelLabel(\"Node Editor\")) -mbv $menusOkayInPanels `;\n\n\t\t\t$editorName = ($panelName+\"NodeEditorEd\");\n"
+		+ "            nodeEditor -e \n                -allAttributes 0\n                -allNodes 0\n                -autoSizeNodes 1\n                -createNodeCommand \"nodeEdCreateNodeCommand\" \n                -ignoreAssets 1\n                -additiveGraphingMode 0\n                -settingsChangedCallback \"nodeEdSyncControls\" \n                -traversalDepthLimit -1\n                -keyPressCommand \"nodeEdKeyPressCommand\" \n                -popupMenuScript \"nodeEdBuildPanelMenus\" \n                -island 0\n                -showShapes 1\n                -showSGShapes 0\n                -showTransforms 1\n                -syncedSelection 1\n                -extendToShapes 1\n                $editorName;\n\t\t\tif (`objExists nodeEditorPanel1Info`) nodeEditor -e -restoreInfo nodeEditorPanel1Info $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Node Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"NodeEditorEd\");\n            nodeEditor -e \n                -allAttributes 0\n"
+		+ "                -allNodes 0\n                -autoSizeNodes 1\n                -createNodeCommand \"nodeEdCreateNodeCommand\" \n                -ignoreAssets 1\n                -additiveGraphingMode 0\n                -settingsChangedCallback \"nodeEdSyncControls\" \n                -traversalDepthLimit -1\n                -keyPressCommand \"nodeEdKeyPressCommand\" \n                -popupMenuScript \"nodeEdBuildPanelMenus\" \n                -island 0\n                -showShapes 1\n                -showSGShapes 0\n                -showTransforms 1\n                -syncedSelection 1\n                -extendToShapes 1\n                $editorName;\n\t\t\tif (`objExists nodeEditorPanel1Info`) nodeEditor -e -restoreInfo nodeEditorPanel1Info $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"createNodePanel\" (localizedPanelLabel(\"Create Node\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"createNodePanel\" -l (localizedPanelLabel(\"Create Node\")) -mbv $menusOkayInPanels `;\n"
+		+ "\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Create Node\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"polyTexturePlacementPanel\" (localizedPanelLabel(\"UV Texture Editor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"polyTexturePlacementPanel\" -l (localizedPanelLabel(\"UV Texture Editor\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"UV Texture Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"blendShapePanel\" (localizedPanelLabel(\"Blend Shape\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\tblendShapePanel -unParent -l (localizedPanelLabel(\"Blend Shape\")) -mbv $menusOkayInPanels ;\n"
+		+ "\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tblendShapePanel -edit -l (localizedPanelLabel(\"Blend Shape\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dynRelEdPanel\" (localizedPanelLabel(\"Dynamic Relationships\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"dynRelEdPanel\" -l (localizedPanelLabel(\"Dynamic Relationships\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Dynamic Relationships\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"relationshipPanel\" (localizedPanelLabel(\"Relationship Editor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"relationshipPanel\" -l (localizedPanelLabel(\"Relationship Editor\")) -mbv $menusOkayInPanels `;\n"
+		+ "\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Relationship Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"referenceEditorPanel\" (localizedPanelLabel(\"Reference Editor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"referenceEditorPanel\" -l (localizedPanelLabel(\"Reference Editor\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Reference Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"componentEditorPanel\" (localizedPanelLabel(\"Component Editor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"componentEditorPanel\" -l (localizedPanelLabel(\"Component Editor\")) -mbv $menusOkayInPanels `;\n"
+		+ "\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Component Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dynPaintScriptedPanelType\" (localizedPanelLabel(\"Paint Effects\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"dynPaintScriptedPanelType\" -l (localizedPanelLabel(\"Paint Effects\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Paint Effects\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"scriptEditorPanel\" (localizedPanelLabel(\"Script Editor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"scriptEditorPanel\" -l (localizedPanelLabel(\"Script Editor\")) -mbv $menusOkayInPanels `;\n"
+		+ "\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Script Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\tif ($useSceneConfig) {\n        string $configName = `getPanel -cwl (localizedPanelLabel(\"Current Layout\"))`;\n        if (\"\" != $configName) {\n\t\t\tpanelConfiguration -edit -label (localizedPanelLabel(\"Current Layout\")) \n\t\t\t\t-defaultImage \"\"\n\t\t\t\t-image \"\"\n\t\t\t\t-sc false\n\t\t\t\t-configString \"global string $gMainPane; paneLayout -e -cn \\\"single\\\" -ps 1 100 100 $gMainPane;\"\n\t\t\t\t-removeAllPanels\n\t\t\t\t-ap false\n\t\t\t\t\t(localizedPanelLabel(\"Persp View\")) \n\t\t\t\t\t\"modelPanel\"\n"
 		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"all\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 1\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 1\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 16384\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -maxConstantTransparency 1\\n    -rendererName \\\"ogsRenderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -shadows 1\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName\"\n"
 		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"all\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 1\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 1\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 16384\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -maxConstantTransparency 1\\n    -rendererName \\\"ogsRenderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -shadows 1\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName\"\n"
 		+ "\t\t\t\t$configName;\n\n            setNamedPanelLayout (localizedPanelLabel(\"Current Layout\"));\n        }\n\n        panelHistory -e -clear mainPanelHistory;\n        setFocus `paneLayout -q -p1 $gMainPane`;\n        sceneUIReplacement -deleteRemaining;\n        sceneUIReplacement -clear;\n\t}\n\n\ngrid -spacing 5 -size 12 -divisions 5 -displayAxes yes -displayGridLines yes -displayDivisionLines yes -displayPerspectiveLabels no -displayOrthographicLabels no -displayAxesBold yes -perspectiveLabelPosition axis -orthographicLabelPosition edge;\nviewManip -drawCompass 0 -compassAngle 0 -frontParameters \"\" -homeParameters \"\" -selectionLockParameters \"\";\n}\n");
@@ -49914,7 +49910,7 @@ createNode layeredTexture -n "layeredTexture1";
 	setAttr ".cs[0].iv" yes;
 createNode file -n "file2";
 	setAttr ".ail" yes;
-	setAttr ".ftn" -type "string" "C:/Users/Alexandra/Desktop/Gruppe4/mayakurs2012/Gruppe2/Endpraesi_Matrix/environment/textures/water_bump.jpg";
+	setAttr ".ftn" -type "string" "E:/01 TU Wien/10. Semester/Maya Kurs/Git/mayakurs2012/Gruppe2/Endpraesi_Matrix/environment/textures/water_bump.jpg";
 createNode place2dTexture -n "place2dTexture2";
 	setAttr ".re" -type "float2" 70 70 ;
 createNode bump2d -n "bump2d1";
@@ -49980,7 +49976,7 @@ createNode animCurveTL -n "Ocean_translateZ";
 createNode animCurveTL -n "Ocean_translateY";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 72.979677051479996;
+	setAttr ".ktv[0]"  1 -5.4829551972957224;
 createNode animCurveTL -n "Ocean_translateX";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
@@ -50067,7 +50063,7 @@ createNode shadingEngine -n "Environment_Group2_env0_3final:lambert2SG";
 	setAttr ".ro" yes;
 createNode materialInfo -n "Environment_Group2_env0_3final:materialInfo5";
 createNode file -n "Environment_Group2_env0_3final:file1";
-	setAttr ".ftn" -type "string" "C:/Users/Alexandra/Desktop/Gruppe4/mayakurs2012/Gruppe2/Endpraesi_Matrix/environment/textures/sand.jpg";
+	setAttr ".ftn" -type "string" "E:/01 TU Wien/10. Semester/Maya Kurs/Git/mayakurs2012/Gruppe2/Endpraesi_Matrix/environment/textures/sand.jpg";
 createNode place2dTexture -n "Environment_Group2_env0_3final:place2dTexture1";
 	setAttr ".re" -type "float2" 4 4 ;
 createNode groupId -n "Environment_Group2_env0_3final:groupId2";
@@ -50100,7 +50096,7 @@ createNode file -n "file9";
 	setAttr ".ftn" -type "string" "C:/Users/Alexandra/Desktop/Gruppe4/mayakurs2012/Gruppe2/Endpraesi_Matrix/environment/textures/skydome.jpg";
 createNode place2dTexture -n "place2dTexture9";
 createNode file -n "file10";
-	setAttr ".ftn" -type "string" "C:/Users/Alexandra/Desktop/Gruppe4/mayakurs2012/Gruppe2/Endpraesi_Matrix/environment/textures/skydome.png";
+	setAttr ".ftn" -type "string" "E:/01 TU Wien/10. Semester/Maya Kurs/Git/mayakurs2012/Gruppe2/Endpraesi_Matrix/environment/textures/skydome.png";
 createNode place2dTexture -n "place2dTexture10";
 createNode polyPlanarProj -n "polyPlanarProj2";
 	setAttr ".uopa" yes;
@@ -50428,7 +50424,7 @@ createNode FurGlobals -n "defaultFurGlobals";
 	addAttr -ci true -h true -sn "fgrf" -ln "furGlobalReference" -min 0 -max 1 -at "bool";
 	setAttr ".av" 2;
 	setAttr ".rep" -type "string" "renderData/fur/furEqualMap/umgebung";
-	setAttr ".pjl" -type "string" "C:/Users/Alexandra/Documents/maya/projects/default";
+	setAttr ".pjl" -type "string" "E:/01 TU Wien/10. Semester/Maya Kurs/Git/mayakurs2012/group9/Animation";
 	setAttr -s 3 ".fnl";
 createNode reference -n "huette1RN";
 	setAttr -s 38 ".phl";
@@ -51256,7 +51252,7 @@ createNode reference -n "huette1RN";
 		
 		2 "|huette1:Hütte_ohne_Textur:huette|huette1:Hütte_ohne_Textur:huetteShape" 
 		"furNameSpace" " -type \"string\" \"huette1\""
-		2 "huette1:file1" "fileTextureName" " -type \"string\" \"C:/Users/Alexandra/Desktop/Gruppe4/mayakurs2012/Gruppe2/Endpraesi_Matrix/environment/textures/wood.jpg\""
+		2 "huette1:file1" "fileTextureName" " -type \"string\" \"E:/01 TU Wien/10. Semester/Maya Kurs/Git/mayakurs2012/Gruppe2/Endpraesi_Matrix/environment/textures/wood.jpg\""
 		
 		5 3 "huette1RN" "huette1:lambert2SG.memberWireframeColor" "huette1RN.placeHolderList[44]" 
 		""
@@ -51416,51 +51412,6 @@ createNode reference -n "kanoneRN";
 lockNode -l 1 ;
 createNode reference -n "zaunRN";
 	setAttr -s 79 ".phl";
-	setAttr ".phl[62]" 0;
-	setAttr ".phl[63]" 0;
-	setAttr ".phl[64]" 0;
-	setAttr ".phl[65]" 0;
-	setAttr ".phl[66]" 0;
-	setAttr ".phl[67]" 0;
-	setAttr ".phl[68]" 0;
-	setAttr ".phl[69]" 0;
-	setAttr ".phl[70]" 0;
-	setAttr ".phl[71]" 0;
-	setAttr ".phl[72]" 0;
-	setAttr ".phl[73]" 0;
-	setAttr ".phl[74]" 0;
-	setAttr ".phl[75]" 0;
-	setAttr ".phl[76]" 0;
-	setAttr ".phl[77]" 0;
-	setAttr ".phl[78]" 0;
-	setAttr ".phl[79]" 0;
-	setAttr ".phl[80]" 0;
-	setAttr ".phl[81]" 0;
-	setAttr ".phl[82]" 0;
-	setAttr ".phl[83]" 0;
-	setAttr ".phl[86]" -type "TdataCompound" ;
-	setAttr ".phl[87]" -type "TdataCompound" ;
-	setAttr ".phl[88]" -type "TdataCompound" ;
-	setAttr ".phl[89]" -type "TdataCompound" ;
-	setAttr ".phl[90]" -type "TdataCompound" ;
-	setAttr ".phl[91]" -type "TdataCompound" ;
-	setAttr ".phl[92]" -type "TdataCompound" ;
-	setAttr ".phl[93]" -type "TdataCompound" ;
-	setAttr ".phl[94]" -type "TdataCompound" ;
-	setAttr ".phl[95]" -type "TdataCompound" ;
-	setAttr ".phl[96]" -type "TdataCompound" ;
-	setAttr ".phl[97]" -type "TdataCompound" ;
-	setAttr ".phl[98]" -type "TdataCompound" ;
-	setAttr ".phl[99]" -type "TdataCompound" ;
-	setAttr ".phl[100]" -type "TdataCompound" ;
-	setAttr ".phl[101]" -type "TdataCompound" ;
-	setAttr ".phl[102]" -type "TdataCompound" ;
-	setAttr ".phl[103]" -type "TdataCompound" ;
-	setAttr ".phl[104]" -type "TdataCompound" ;
-	setAttr ".phl[105]" -type "TdataCompound" ;
-	setAttr ".phl[106]" -type "TdataCompound" ;
-	setAttr ".phl[107]" -type "TdataCompound" ;
-	setAttr ".phl[108]" 0;
 	setAttr ".phl[109]" 0;
 	setAttr ".phl[110]" 0;
 	setAttr ".phl[111]" 0;
@@ -51483,7 +51434,6 @@ createNode reference -n "zaunRN";
 	setAttr ".phl[128]" 0;
 	setAttr ".phl[129]" 0;
 	setAttr ".phl[130]" 0;
-	setAttr ".phl[131]" 0;
 	setAttr ".phl[132]" 0;
 	setAttr ".phl[133]" 0;
 	setAttr ".phl[134]" 0;
@@ -51495,6 +51445,52 @@ createNode reference -n "zaunRN";
 	setAttr ".phl[140]" 0;
 	setAttr ".phl[141]" 0;
 	setAttr ".phl[142]" 0;
+	setAttr ".phl[143]" 0;
+	setAttr ".phl[144]" 0;
+	setAttr ".phl[145]" 0;
+	setAttr ".phl[146]" 0;
+	setAttr ".phl[147]" 0;
+	setAttr ".phl[148]" 0;
+	setAttr ".phl[149]" 0;
+	setAttr ".phl[150]" 0;
+	setAttr ".phl[151]" 0;
+	setAttr ".phl[152]" 0;
+	setAttr ".phl[153]" 0;
+	setAttr ".phl[154]" 0;
+	setAttr ".phl[155]" 0;
+	setAttr ".phl[156]" 0;
+	setAttr ".phl[157]" 0;
+	setAttr ".phl[158]" 0;
+	setAttr ".phl[159]" 0;
+	setAttr ".phl[160]" 0;
+	setAttr ".phl[161]" 0;
+	setAttr ".phl[162]" 0;
+	setAttr ".phl[163]" 0;
+	setAttr ".phl[164]" 0;
+	setAttr ".phl[165]" 0;
+	setAttr ".phl[166]" 0;
+	setAttr ".phl[167]" 0;
+	setAttr ".phl[168]" 0;
+	setAttr ".phl[169]" 0;
+	setAttr ".phl[170]" 0;
+	setAttr ".phl[171]" 0;
+	setAttr ".phl[172]" 0;
+	setAttr ".phl[173]" 0;
+	setAttr ".phl[174]" 0;
+	setAttr ".phl[175]" 0;
+	setAttr ".phl[176]" 0;
+	setAttr ".phl[177]" 0;
+	setAttr ".phl[178]" 0;
+	setAttr ".phl[179]" 0;
+	setAttr ".phl[180]" 0;
+	setAttr ".phl[181]" 0;
+	setAttr ".phl[182]" 0;
+	setAttr ".phl[183]" 0;
+	setAttr ".phl[184]" 0;
+	setAttr ".phl[185]" 0;
+	setAttr ".phl[186]" 0;
+	setAttr ".phl[187]" 0;
+	setAttr ".phl[188]" 0;
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"zaunRN"
 		"zaunRN" 251
@@ -51767,6 +51763,52 @@ createNode reference -n "zaunRN";
 		""
 		3 "zaun:lambert2SG.memberWireframeColor" "|zaeune|zaun:zaun|zaun:zaunShape.instObjGroups.objectGroups[0].objectGrpColor" 
 		""
+		3 "zaun:groupId1.groupId" "|zaeune|zaun:zaun|zaun:zaunShape.instObjGroups.objectGroups[0].objectGroupId" 
+		""
+		3 "zaun:lambert2SG.memberWireframeColor" "|zaeune|zaun2|zaun:zaunShape.instObjGroups.objectGroups[0].objectGrpColor" 
+		""
+		3 "zaun:lambert2SG.memberWireframeColor" "|zaeune|zaun3|zaun:zaunShape.instObjGroups.objectGroups[0].objectGrpColor" 
+		""
+		3 "zaun:lambert2SG.memberWireframeColor" "|zaeune|zaun4|zaun:zaunShape.instObjGroups.objectGroups[0].objectGrpColor" 
+		""
+		3 "zaun:lambert2SG.memberWireframeColor" "|zaeune|zaun5|zaun:zaunShape.instObjGroups.objectGroups[0].objectGrpColor" 
+		""
+		3 "zaun:lambert2SG.memberWireframeColor" "|zaeune|zaun6|zaun:zaunShape.instObjGroups.objectGroups[0].objectGrpColor" 
+		""
+		3 "zaun:lambert2SG.memberWireframeColor" "|zaeune|zaun7|zaun:zaunShape.instObjGroups.objectGroups[0].objectGrpColor" 
+		""
+		3 "zaun:lambert2SG.memberWireframeColor" "|zaeune|zaun8|zaun:zaunShape.instObjGroups.objectGroups[0].objectGrpColor" 
+		""
+		3 "zaun:lambert2SG.memberWireframeColor" "|zaeune|zaun9|zaun:zaunShape.instObjGroups.objectGroups[0].objectGrpColor" 
+		""
+		3 "zaun:lambert2SG.memberWireframeColor" "|zaeune|zaun10|zaun:zaunShape.instObjGroups.objectGroups[0].objectGrpColor" 
+		""
+		3 "zaun:lambert2SG.memberWireframeColor" "|zaeune|zaun11|zaun:zaunShape.instObjGroups.objectGroups[0].objectGrpColor" 
+		""
+		3 "zaun:lambert2SG.memberWireframeColor" "|zaeune|zaun12|zaun:zaunShape.instObjGroups.objectGroups[0].objectGrpColor" 
+		""
+		3 "zaun:lambert2SG.memberWireframeColor" "|zaeune|zaun13|zaun:zaunShape.instObjGroups.objectGroups[0].objectGrpColor" 
+		""
+		3 "zaun:lambert2SG.memberWireframeColor" "|zaeune|zaun14|zaun:zaunShape.instObjGroups.objectGroups[0].objectGrpColor" 
+		""
+		3 "zaun:lambert2SG.memberWireframeColor" "|zaeune|zaun15|zaun:zaunShape.instObjGroups.objectGroups[0].objectGrpColor" 
+		""
+		3 "zaun:lambert2SG.memberWireframeColor" "|zaeune|zaun16|zaun:zaunShape.instObjGroups.objectGroups[0].objectGrpColor" 
+		""
+		3 "zaun:lambert2SG.memberWireframeColor" "|zaeune|zaun17|zaun:zaunShape.instObjGroups.objectGroups[0].objectGrpColor" 
+		""
+		3 "zaun:lambert2SG.memberWireframeColor" "|zaeune|zaun18|zaun:zaunShape.instObjGroups.objectGroups[0].objectGrpColor" 
+		""
+		3 "zaun:lambert2SG.memberWireframeColor" "|zaeune|zaun19|zaun:zaunShape.instObjGroups.objectGroups[0].objectGrpColor" 
+		""
+		3 "zaun:lambert2SG.memberWireframeColor" "|zaeune|zaun20|zaun:zaunShape.instObjGroups.objectGroups[0].objectGrpColor" 
+		""
+		3 "zaun:lambert2SG.memberWireframeColor" "|zaeune|zaun21|zaun:zaunShape.instObjGroups.objectGroups[0].objectGrpColor" 
+		""
+		3 "zaun:lambert2SG.memberWireframeColor" "|zaeune|zaun22|zaun:zaunShape.instObjGroups.objectGroups[0].objectGrpColor" 
+		""
+		3 "zaun:lambert2SG.memberWireframeColor" "|zaeune|zaun23|zaun:zaunShape.instObjGroups.objectGroups[0].objectGrpColor" 
+		""
 		3 "|zaeune|zaun:zaun|zaun:zaunShape.worldMatrix" "zaun:polyPlanarProj1.manipMatrix" 
 		""
 		3 "|zaeune|zaun:zaun|zaun:zaunShape.instObjGroups.objectGroups[0]" "zaun:lambert2SG.dagSetMembers" 
@@ -51817,139 +51859,93 @@ createNode reference -n "zaunRN";
 		"-na"
 		3 "|zaeune|zaun23|zaun:zaunShape.instObjGroups.objectGroups[0]" "zaun:lambert2SG.dagSetMembers" 
 		"-na"
-		3 "zaun:groupId1.groupId" "|zaeune|zaun:zaun|zaun:zaunShape.instObjGroups.objectGroups[0].objectGroupId" 
+		5 3 "zaunRN" "|zaeune|zaun2|zaun:zaunShape.instObjGroups" "zaunRN.placeHolderList[109]" 
 		""
-		3 "zaun:lambert2SG.memberWireframeColor" "|zaeune|zaun2|zaun:zaunShape.instObjGroups.objectGroups[0].objectGrpColor" 
+		5 3 "zaunRN" "|zaeune|zaun3|zaun:zaunShape.instObjGroups" "zaunRN.placeHolderList[110]" 
 		""
-		3 "zaun:lambert2SG.memberWireframeColor" "|zaeune|zaun3|zaun:zaunShape.instObjGroups.objectGroups[0].objectGrpColor" 
+		5 3 "zaunRN" "|zaeune|zaun4|zaun:zaunShape.instObjGroups" "zaunRN.placeHolderList[111]" 
 		""
-		3 "zaun:lambert2SG.memberWireframeColor" "|zaeune|zaun4|zaun:zaunShape.instObjGroups.objectGroups[0].objectGrpColor" 
+		5 3 "zaunRN" "|zaeune|zaun5|zaun:zaunShape.instObjGroups" "zaunRN.placeHolderList[112]" 
 		""
-		3 "zaun:lambert2SG.memberWireframeColor" "|zaeune|zaun5|zaun:zaunShape.instObjGroups.objectGroups[0].objectGrpColor" 
+		5 3 "zaunRN" "|zaeune|zaun6|zaun:zaunShape.instObjGroups" "zaunRN.placeHolderList[113]" 
 		""
-		3 "zaun:lambert2SG.memberWireframeColor" "|zaeune|zaun6|zaun:zaunShape.instObjGroups.objectGroups[0].objectGrpColor" 
+		5 3 "zaunRN" "|zaeune|zaun7|zaun:zaunShape.instObjGroups" "zaunRN.placeHolderList[114]" 
 		""
-		3 "zaun:lambert2SG.memberWireframeColor" "|zaeune|zaun7|zaun:zaunShape.instObjGroups.objectGroups[0].objectGrpColor" 
+		5 3 "zaunRN" "|zaeune|zaun8|zaun:zaunShape.instObjGroups" "zaunRN.placeHolderList[115]" 
 		""
-		3 "zaun:lambert2SG.memberWireframeColor" "|zaeune|zaun8|zaun:zaunShape.instObjGroups.objectGroups[0].objectGrpColor" 
+		5 3 "zaunRN" "|zaeune|zaun9|zaun:zaunShape.instObjGroups" "zaunRN.placeHolderList[116]" 
 		""
-		3 "zaun:lambert2SG.memberWireframeColor" "|zaeune|zaun9|zaun:zaunShape.instObjGroups.objectGroups[0].objectGrpColor" 
+		5 3 "zaunRN" "|zaeune|zaun10|zaun:zaunShape.instObjGroups" "zaunRN.placeHolderList[117]" 
 		""
-		3 "zaun:lambert2SG.memberWireframeColor" "|zaeune|zaun10|zaun:zaunShape.instObjGroups.objectGroups[0].objectGrpColor" 
+		5 3 "zaunRN" "|zaeune|zaun11|zaun:zaunShape.instObjGroups" "zaunRN.placeHolderList[118]" 
 		""
-		3 "zaun:lambert2SG.memberWireframeColor" "|zaeune|zaun11|zaun:zaunShape.instObjGroups.objectGroups[0].objectGrpColor" 
+		5 3 "zaunRN" "|zaeune|zaun12|zaun:zaunShape.instObjGroups" "zaunRN.placeHolderList[119]" 
 		""
-		3 "zaun:lambert2SG.memberWireframeColor" "|zaeune|zaun12|zaun:zaunShape.instObjGroups.objectGroups[0].objectGrpColor" 
+		5 3 "zaunRN" "|zaeune|zaun13|zaun:zaunShape.instObjGroups" "zaunRN.placeHolderList[120]" 
 		""
-		3 "zaun:lambert2SG.memberWireframeColor" "|zaeune|zaun13|zaun:zaunShape.instObjGroups.objectGroups[0].objectGrpColor" 
+		5 3 "zaunRN" "|zaeune|zaun14|zaun:zaunShape.instObjGroups" "zaunRN.placeHolderList[121]" 
 		""
-		3 "zaun:lambert2SG.memberWireframeColor" "|zaeune|zaun14|zaun:zaunShape.instObjGroups.objectGroups[0].objectGrpColor" 
+		5 3 "zaunRN" "|zaeune|zaun15|zaun:zaunShape.instObjGroups" "zaunRN.placeHolderList[122]" 
 		""
-		3 "zaun:lambert2SG.memberWireframeColor" "|zaeune|zaun15|zaun:zaunShape.instObjGroups.objectGroups[0].objectGrpColor" 
+		5 3 "zaunRN" "|zaeune|zaun16|zaun:zaunShape.instObjGroups" "zaunRN.placeHolderList[123]" 
 		""
-		3 "zaun:lambert2SG.memberWireframeColor" "|zaeune|zaun16|zaun:zaunShape.instObjGroups.objectGroups[0].objectGrpColor" 
+		5 3 "zaunRN" "|zaeune|zaun17|zaun:zaunShape.instObjGroups" "zaunRN.placeHolderList[124]" 
 		""
-		3 "zaun:lambert2SG.memberWireframeColor" "|zaeune|zaun17|zaun:zaunShape.instObjGroups.objectGroups[0].objectGrpColor" 
+		5 3 "zaunRN" "|zaeune|zaun18|zaun:zaunShape.instObjGroups" "zaunRN.placeHolderList[125]" 
 		""
-		3 "zaun:lambert2SG.memberWireframeColor" "|zaeune|zaun18|zaun:zaunShape.instObjGroups.objectGroups[0].objectGrpColor" 
+		5 3 "zaunRN" "|zaeune|zaun19|zaun:zaunShape.instObjGroups" "zaunRN.placeHolderList[126]" 
 		""
-		3 "zaun:lambert2SG.memberWireframeColor" "|zaeune|zaun19|zaun:zaunShape.instObjGroups.objectGroups[0].objectGrpColor" 
+		5 3 "zaunRN" "|zaeune|zaun20|zaun:zaunShape.instObjGroups" "zaunRN.placeHolderList[127]" 
 		""
-		3 "zaun:lambert2SG.memberWireframeColor" "|zaeune|zaun20|zaun:zaunShape.instObjGroups.objectGroups[0].objectGrpColor" 
+		5 3 "zaunRN" "|zaeune|zaun21|zaun:zaunShape.instObjGroups" "zaunRN.placeHolderList[128]" 
 		""
-		3 "zaun:lambert2SG.memberWireframeColor" "|zaeune|zaun21|zaun:zaunShape.instObjGroups.objectGroups[0].objectGrpColor" 
+		5 3 "zaunRN" "|zaeune|zaun22|zaun:zaunShape.instObjGroups" "zaunRN.placeHolderList[129]" 
 		""
-		3 "zaun:lambert2SG.memberWireframeColor" "|zaeune|zaun22|zaun:zaunShape.instObjGroups.objectGroups[0].objectGrpColor" 
+		5 3 "zaunRN" "|zaeune|zaun23|zaun:zaunShape.instObjGroups" "zaunRN.placeHolderList[130]" 
 		""
-		3 "zaun:lambert2SG.memberWireframeColor" "|zaeune|zaun23|zaun:zaunShape.instObjGroups.objectGroups[0].objectGrpColor" 
+		5 3 "zaunRN" "|zaeune|zaun2|zaun:zaunShape.instObjGroups" "zaunRN.placeHolderList[132]" 
 		""
-		5 1 "zaunRN" "|zaeune|zaun15|zaun:zaunShape.instObjGroups" "zaunRN.placeHolderList[62]" 
+		5 3 "zaunRN" "|zaeune|zaun3|zaun:zaunShape.instObjGroups" "zaunRN.placeHolderList[133]" 
 		""
-		5 1 "zaunRN" "|zaeune|zaun11|zaun:zaunShape.instObjGroups" "zaunRN.placeHolderList[63]" 
+		5 3 "zaunRN" "|zaeune|zaun4|zaun:zaunShape.instObjGroups" "zaunRN.placeHolderList[134]" 
 		""
-		5 1 "zaunRN" "|zaeune|zaun12|zaun:zaunShape.instObjGroups" "zaunRN.placeHolderList[64]" 
+		5 3 "zaunRN" "|zaeune|zaun5|zaun:zaunShape.instObjGroups" "zaunRN.placeHolderList[135]" 
 		""
-		5 1 "zaunRN" "|zaeune|zaun13|zaun:zaunShape.instObjGroups" "zaunRN.placeHolderList[65]" 
+		5 3 "zaunRN" "|zaeune|zaun6|zaun:zaunShape.instObjGroups" "zaunRN.placeHolderList[136]" 
 		""
-		5 1 "zaunRN" "|zaeune|zaun14|zaun:zaunShape.instObjGroups" "zaunRN.placeHolderList[66]" 
+		5 3 "zaunRN" "|zaeune|zaun7|zaun:zaunShape.instObjGroups" "zaunRN.placeHolderList[137]" 
 		""
-		5 1 "zaunRN" "|zaeune|zaun10|zaun:zaunShape.instObjGroups" "zaunRN.placeHolderList[67]" 
+		5 3 "zaunRN" "|zaeune|zaun8|zaun:zaunShape.instObjGroups" "zaunRN.placeHolderList[138]" 
 		""
-		5 1 "zaunRN" "|zaeune|zaun9|zaun:zaunShape.instObjGroups" "zaunRN.placeHolderList[68]" 
+		5 3 "zaunRN" "|zaeune|zaun9|zaun:zaunShape.instObjGroups" "zaunRN.placeHolderList[139]" 
 		""
-		5 1 "zaunRN" "|zaeune|zaun16|zaun:zaunShape.instObjGroups" "zaunRN.placeHolderList[69]" 
+		5 3 "zaunRN" "|zaeune|zaun10|zaun:zaunShape.instObjGroups" "zaunRN.placeHolderList[140]" 
 		""
-		5 1 "zaunRN" "|zaeune|zaun17|zaun:zaunShape.instObjGroups" "zaunRN.placeHolderList[70]" 
+		5 3 "zaunRN" "|zaeune|zaun11|zaun:zaunShape.instObjGroups" "zaunRN.placeHolderList[141]" 
 		""
-		5 1 "zaunRN" "|zaeune|zaun18|zaun:zaunShape.instObjGroups" "zaunRN.placeHolderList[71]" 
+		5 3 "zaunRN" "|zaeune|zaun12|zaun:zaunShape.instObjGroups" "zaunRN.placeHolderList[142]" 
 		""
-		5 1 "zaunRN" "|zaeune|zaun19|zaun:zaunShape.instObjGroups" "zaunRN.placeHolderList[72]" 
+		5 3 "zaunRN" "|zaeune|zaun13|zaun:zaunShape.instObjGroups" "zaunRN.placeHolderList[143]" 
 		""
-		5 1 "zaunRN" "|zaeune|zaun20|zaun:zaunShape.instObjGroups" "zaunRN.placeHolderList[73]" 
+		5 3 "zaunRN" "|zaeune|zaun14|zaun:zaunShape.instObjGroups" "zaunRN.placeHolderList[144]" 
 		""
-		5 1 "zaunRN" "|zaeune|zaun21|zaun:zaunShape.instObjGroups" "zaunRN.placeHolderList[74]" 
+		5 3 "zaunRN" "|zaeune|zaun15|zaun:zaunShape.instObjGroups" "zaunRN.placeHolderList[145]" 
 		""
-		5 1 "zaunRN" "|zaeune|zaun22|zaun:zaunShape.instObjGroups" "zaunRN.placeHolderList[75]" 
+		5 3 "zaunRN" "|zaeune|zaun16|zaun:zaunShape.instObjGroups" "zaunRN.placeHolderList[146]" 
 		""
-		5 1 "zaunRN" "|zaeune|zaun23|zaun:zaunShape.instObjGroups" "zaunRN.placeHolderList[76]" 
+		5 3 "zaunRN" "|zaeune|zaun17|zaun:zaunShape.instObjGroups" "zaunRN.placeHolderList[147]" 
 		""
-		5 1 "zaunRN" "|zaeune|zaun8|zaun:zaunShape.instObjGroups" "zaunRN.placeHolderList[77]" 
+		5 3 "zaunRN" "|zaeune|zaun18|zaun:zaunShape.instObjGroups" "zaunRN.placeHolderList[148]" 
 		""
-		5 1 "zaunRN" "|zaeune|zaun7|zaun:zaunShape.instObjGroups" "zaunRN.placeHolderList[78]" 
+		5 3 "zaunRN" "|zaeune|zaun19|zaun:zaunShape.instObjGroups" "zaunRN.placeHolderList[149]" 
 		""
-		5 1 "zaunRN" "|zaeune|zaun6|zaun:zaunShape.instObjGroups" "zaunRN.placeHolderList[79]" 
+		5 3 "zaunRN" "|zaeune|zaun20|zaun:zaunShape.instObjGroups" "zaunRN.placeHolderList[150]" 
 		""
-		5 1 "zaunRN" "|zaeune|zaun5|zaun:zaunShape.instObjGroups" "zaunRN.placeHolderList[80]" 
+		5 3 "zaunRN" "|zaeune|zaun21|zaun:zaunShape.instObjGroups" "zaunRN.placeHolderList[151]" 
 		""
-		5 1 "zaunRN" "|zaeune|zaun4|zaun:zaunShape.instObjGroups" "zaunRN.placeHolderList[81]" 
+		5 3 "zaunRN" "|zaeune|zaun22|zaun:zaunShape.instObjGroups" "zaunRN.placeHolderList[152]" 
 		""
-		5 1 "zaunRN" "|zaeune|zaun3|zaun:zaunShape.instObjGroups" "zaunRN.placeHolderList[82]" 
-		""
-		5 1 "zaunRN" "|zaeune|zaun2|zaun:zaunShape.instObjGroups" "zaunRN.placeHolderList[83]" 
-		""
-		5 1 "zaunRN" "|zaeune|zaun2|zaun:zaunShape.instObjGroups" "zaunRN.placeHolderList[86]" 
-		""
-		5 1 "zaunRN" "|zaeune|zaun3|zaun:zaunShape.instObjGroups" "zaunRN.placeHolderList[87]" 
-		""
-		5 1 "zaunRN" "|zaeune|zaun4|zaun:zaunShape.instObjGroups" "zaunRN.placeHolderList[88]" 
-		""
-		5 1 "zaunRN" "|zaeune|zaun5|zaun:zaunShape.instObjGroups" "zaunRN.placeHolderList[89]" 
-		""
-		5 1 "zaunRN" "|zaeune|zaun6|zaun:zaunShape.instObjGroups" "zaunRN.placeHolderList[90]" 
-		""
-		5 1 "zaunRN" "|zaeune|zaun7|zaun:zaunShape.instObjGroups" "zaunRN.placeHolderList[91]" 
-		""
-		5 1 "zaunRN" "|zaeune|zaun8|zaun:zaunShape.instObjGroups" "zaunRN.placeHolderList[92]" 
-		""
-		5 1 "zaunRN" "|zaeune|zaun9|zaun:zaunShape.instObjGroups" "zaunRN.placeHolderList[93]" 
-		""
-		5 1 "zaunRN" "|zaeune|zaun10|zaun:zaunShape.instObjGroups" "zaunRN.placeHolderList[94]" 
-		""
-		5 1 "zaunRN" "|zaeune|zaun11|zaun:zaunShape.instObjGroups" "zaunRN.placeHolderList[95]" 
-		""
-		5 1 "zaunRN" "|zaeune|zaun12|zaun:zaunShape.instObjGroups" "zaunRN.placeHolderList[96]" 
-		""
-		5 1 "zaunRN" "|zaeune|zaun13|zaun:zaunShape.instObjGroups" "zaunRN.placeHolderList[97]" 
-		""
-		5 1 "zaunRN" "|zaeune|zaun14|zaun:zaunShape.instObjGroups" "zaunRN.placeHolderList[98]" 
-		""
-		5 1 "zaunRN" "|zaeune|zaun15|zaun:zaunShape.instObjGroups" "zaunRN.placeHolderList[99]" 
-		""
-		5 1 "zaunRN" "|zaeune|zaun16|zaun:zaunShape.instObjGroups" "zaunRN.placeHolderList[100]" 
-		""
-		5 1 "zaunRN" "|zaeune|zaun17|zaun:zaunShape.instObjGroups" "zaunRN.placeHolderList[101]" 
-		""
-		5 1 "zaunRN" "|zaeune|zaun18|zaun:zaunShape.instObjGroups" "zaunRN.placeHolderList[102]" 
-		""
-		5 1 "zaunRN" "|zaeune|zaun19|zaun:zaunShape.instObjGroups" "zaunRN.placeHolderList[103]" 
-		""
-		5 1 "zaunRN" "|zaeune|zaun20|zaun:zaunShape.instObjGroups" "zaunRN.placeHolderList[104]" 
-		""
-		5 1 "zaunRN" "|zaeune|zaun21|zaun:zaunShape.instObjGroups" "zaunRN.placeHolderList[105]" 
-		""
-		5 1 "zaunRN" "|zaeune|zaun22|zaun:zaunShape.instObjGroups" "zaunRN.placeHolderList[106]" 
-		""
-		5 1 "zaunRN" "|zaeune|zaun23|zaun:zaunShape.instObjGroups" "zaunRN.placeHolderList[107]" 
+		5 3 "zaunRN" "|zaeune|zaun23|zaun:zaunShape.instObjGroups" "zaunRN.placeHolderList[153]" 
 		""
 		"zaunRN" 142
 		0 "|zaun:zaun" "|zaeune" "-s -r "
@@ -52054,54 +52050,6 @@ createNode reference -n "zaunRN";
 		
 		3 "|zaeune|zaun:zaun|zaun:zaunShape.worldMatrix" "zaun:polyPlanarProj1.manipMatrix" 
 		""
-		3 "|zaeune|zaun:zaun|zaun:zaunShape.instObjGroups.objectGroups[0]" "zaun:lambert2SG.dagSetMembers" 
-		"-na"
-		3 "|zaeune|zaun1|zaun:zaunShape.instObjGroups.objectGroups[0]" "zaun:lambert2SG.dagSetMembers" 
-		"-na"
-		3 "|zaeune|zaun2|zaun:zaunShape.instObjGroups.objectGroups[0]" "zaun:lambert2SG.dagSetMembers" 
-		"-na"
-		3 "|zaeune|zaun3|zaun:zaunShape.instObjGroups.objectGroups[0]" "zaun:lambert2SG.dagSetMembers" 
-		"-na"
-		3 "|zaeune|zaun4|zaun:zaunShape.instObjGroups.objectGroups[0]" "zaun:lambert2SG.dagSetMembers" 
-		"-na"
-		3 "|zaeune|zaun5|zaun:zaunShape.instObjGroups.objectGroups[0]" "zaun:lambert2SG.dagSetMembers" 
-		"-na"
-		3 "|zaeune|zaun6|zaun:zaunShape.instObjGroups.objectGroups[0]" "zaun:lambert2SG.dagSetMembers" 
-		"-na"
-		3 "|zaeune|zaun7|zaun:zaunShape.instObjGroups.objectGroups[0]" "zaun:lambert2SG.dagSetMembers" 
-		"-na"
-		3 "|zaeune|zaun8|zaun:zaunShape.instObjGroups.objectGroups[0]" "zaun:lambert2SG.dagSetMembers" 
-		"-na"
-		3 "|zaeune|zaun9|zaun:zaunShape.instObjGroups.objectGroups[0]" "zaun:lambert2SG.dagSetMembers" 
-		"-na"
-		3 "|zaeune|zaun10|zaun:zaunShape.instObjGroups.objectGroups[0]" "zaun:lambert2SG.dagSetMembers" 
-		"-na"
-		3 "|zaeune|zaun11|zaun:zaunShape.instObjGroups.objectGroups[0]" "zaun:lambert2SG.dagSetMembers" 
-		"-na"
-		3 "|zaeune|zaun12|zaun:zaunShape.instObjGroups.objectGroups[0]" "zaun:lambert2SG.dagSetMembers" 
-		"-na"
-		3 "|zaeune|zaun13|zaun:zaunShape.instObjGroups.objectGroups[0]" "zaun:lambert2SG.dagSetMembers" 
-		"-na"
-		3 "|zaeune|zaun14|zaun:zaunShape.instObjGroups.objectGroups[0]" "zaun:lambert2SG.dagSetMembers" 
-		"-na"
-		3 "|zaeune|zaun15|zaun:zaunShape.instObjGroups.objectGroups[0]" "zaun:lambert2SG.dagSetMembers" 
-		"-na"
-		3 "|zaeune|zaun16|zaun:zaunShape.instObjGroups.objectGroups[0]" "zaun:lambert2SG.dagSetMembers" 
-		"-na"
-		3 "|zaeune|zaun17|zaun:zaunShape.instObjGroups.objectGroups[0]" "zaun:lambert2SG.dagSetMembers" 
-		"-na"
-		3 "|zaeune|zaun18|zaun:zaunShape.instObjGroups.objectGroups[0]" "zaun:lambert2SG.dagSetMembers" 
-		"-na"
-		3 "|zaeune|zaun19|zaun:zaunShape.instObjGroups.objectGroups[0]" "zaun:lambert2SG.dagSetMembers" 
-		"-na"
-		3 "|zaeune|zaun20|zaun:zaunShape.instObjGroups.objectGroups[0]" "zaun:lambert2SG.dagSetMembers" 
-		"-na"
-		3 "|zaeune|zaun21|zaun:zaunShape.instObjGroups.objectGroups[0]" "zaun:lambert2SG.dagSetMembers" 
-		"-na"
-		3 "|zaeune|zaun22|zaun:zaunShape.instObjGroups.objectGroups[0]" "zaun:lambert2SG.dagSetMembers" 
-		"-na"
-		3 "|zaeune|zaun23|zaun:zaunShape.instObjGroups.objectGroups[0]" "zaun:lambert2SG.dagSetMembers" 
-		"-na"
 		3 "zaun:lambert2SG.memberWireframeColor" "|zaeune|zaun:zaun|zaun:zaunShape.instObjGroups.objectGroups[0].objectGrpColor" 
 		""
 		3 "zaun:groupId1.groupId" "|zaeune|zaun:zaun|zaun:zaunShape.instObjGroups.objectGroups[0].objectGroupId" 
@@ -52150,69 +52098,117 @@ createNode reference -n "zaunRN";
 		""
 		3 "zaun:lambert2SG.memberWireframeColor" "|zaeune|zaun23|zaun:zaunShape.instObjGroups.objectGroups[0].objectGrpColor" 
 		""
-		5 3 "zaunRN" "|zaeune|zaun1|zaun:zaunShape.instObjGroups" "zaunRN.placeHolderList[108]" 
+		3 "|zaeune|zaun:zaun|zaun:zaunShape.instObjGroups.objectGroups[0]" "zaun:lambert2SG.dagSetMembers" 
+		"-na"
+		3 "|zaeune|zaun1|zaun:zaunShape.instObjGroups.objectGroups[0]" "zaun:lambert2SG.dagSetMembers" 
+		"-na"
+		3 "|zaeune|zaun2|zaun:zaunShape.instObjGroups.objectGroups[0]" "zaun:lambert2SG.dagSetMembers" 
+		"-na"
+		3 "|zaeune|zaun3|zaun:zaunShape.instObjGroups.objectGroups[0]" "zaun:lambert2SG.dagSetMembers" 
+		"-na"
+		3 "|zaeune|zaun4|zaun:zaunShape.instObjGroups.objectGroups[0]" "zaun:lambert2SG.dagSetMembers" 
+		"-na"
+		3 "|zaeune|zaun5|zaun:zaunShape.instObjGroups.objectGroups[0]" "zaun:lambert2SG.dagSetMembers" 
+		"-na"
+		3 "|zaeune|zaun6|zaun:zaunShape.instObjGroups.objectGroups[0]" "zaun:lambert2SG.dagSetMembers" 
+		"-na"
+		3 "|zaeune|zaun7|zaun:zaunShape.instObjGroups.objectGroups[0]" "zaun:lambert2SG.dagSetMembers" 
+		"-na"
+		3 "|zaeune|zaun8|zaun:zaunShape.instObjGroups.objectGroups[0]" "zaun:lambert2SG.dagSetMembers" 
+		"-na"
+		3 "|zaeune|zaun9|zaun:zaunShape.instObjGroups.objectGroups[0]" "zaun:lambert2SG.dagSetMembers" 
+		"-na"
+		3 "|zaeune|zaun10|zaun:zaunShape.instObjGroups.objectGroups[0]" "zaun:lambert2SG.dagSetMembers" 
+		"-na"
+		3 "|zaeune|zaun11|zaun:zaunShape.instObjGroups.objectGroups[0]" "zaun:lambert2SG.dagSetMembers" 
+		"-na"
+		3 "|zaeune|zaun12|zaun:zaunShape.instObjGroups.objectGroups[0]" "zaun:lambert2SG.dagSetMembers" 
+		"-na"
+		3 "|zaeune|zaun13|zaun:zaunShape.instObjGroups.objectGroups[0]" "zaun:lambert2SG.dagSetMembers" 
+		"-na"
+		3 "|zaeune|zaun14|zaun:zaunShape.instObjGroups.objectGroups[0]" "zaun:lambert2SG.dagSetMembers" 
+		"-na"
+		3 "|zaeune|zaun15|zaun:zaunShape.instObjGroups.objectGroups[0]" "zaun:lambert2SG.dagSetMembers" 
+		"-na"
+		3 "|zaeune|zaun16|zaun:zaunShape.instObjGroups.objectGroups[0]" "zaun:lambert2SG.dagSetMembers" 
+		"-na"
+		3 "|zaeune|zaun17|zaun:zaunShape.instObjGroups.objectGroups[0]" "zaun:lambert2SG.dagSetMembers" 
+		"-na"
+		3 "|zaeune|zaun18|zaun:zaunShape.instObjGroups.objectGroups[0]" "zaun:lambert2SG.dagSetMembers" 
+		"-na"
+		3 "|zaeune|zaun19|zaun:zaunShape.instObjGroups.objectGroups[0]" "zaun:lambert2SG.dagSetMembers" 
+		"-na"
+		3 "|zaeune|zaun20|zaun:zaunShape.instObjGroups.objectGroups[0]" "zaun:lambert2SG.dagSetMembers" 
+		"-na"
+		3 "|zaeune|zaun21|zaun:zaunShape.instObjGroups.objectGroups[0]" "zaun:lambert2SG.dagSetMembers" 
+		"-na"
+		3 "|zaeune|zaun22|zaun:zaunShape.instObjGroups.objectGroups[0]" "zaun:lambert2SG.dagSetMembers" 
+		"-na"
+		3 "|zaeune|zaun23|zaun:zaunShape.instObjGroups.objectGroups[0]" "zaun:lambert2SG.dagSetMembers" 
+		"-na"
+		5 3 "zaunRN" "|zaeune|zaun1|zaun:zaunShape.instObjGroups" "zaunRN.placeHolderList[154]" 
 		""
-		5 3 "zaunRN" "|zaeune|zaun2|zaun:zaunShape.instObjGroups" "zaunRN.placeHolderList[109]" 
+		5 3 "zaunRN" "|zaeune|zaun2|zaun:zaunShape.instObjGroups" "zaunRN.placeHolderList[155]" 
 		""
-		5 3 "zaunRN" "|zaeune|zaun3|zaun:zaunShape.instObjGroups" "zaunRN.placeHolderList[110]" 
+		5 3 "zaunRN" "|zaeune|zaun3|zaun:zaunShape.instObjGroups" "zaunRN.placeHolderList[156]" 
 		""
-		5 3 "zaunRN" "|zaeune|zaun4|zaun:zaunShape.instObjGroups" "zaunRN.placeHolderList[111]" 
+		5 3 "zaunRN" "|zaeune|zaun4|zaun:zaunShape.instObjGroups" "zaunRN.placeHolderList[157]" 
 		""
-		5 3 "zaunRN" "|zaeune|zaun5|zaun:zaunShape.instObjGroups" "zaunRN.placeHolderList[112]" 
+		5 3 "zaunRN" "|zaeune|zaun5|zaun:zaunShape.instObjGroups" "zaunRN.placeHolderList[158]" 
 		""
-		5 3 "zaunRN" "|zaeune|zaun6|zaun:zaunShape.instObjGroups" "zaunRN.placeHolderList[113]" 
+		5 3 "zaunRN" "|zaeune|zaun6|zaun:zaunShape.instObjGroups" "zaunRN.placeHolderList[159]" 
 		""
-		5 3 "zaunRN" "|zaeune|zaun7|zaun:zaunShape.instObjGroups" "zaunRN.placeHolderList[114]" 
+		5 3 "zaunRN" "|zaeune|zaun7|zaun:zaunShape.instObjGroups" "zaunRN.placeHolderList[160]" 
 		""
-		5 3 "zaunRN" "|zaeune|zaun8|zaun:zaunShape.instObjGroups" "zaunRN.placeHolderList[115]" 
+		5 3 "zaunRN" "|zaeune|zaun8|zaun:zaunShape.instObjGroups" "zaunRN.placeHolderList[161]" 
 		""
-		5 3 "zaunRN" "|zaeune|zaun9|zaun:zaunShape.instObjGroups" "zaunRN.placeHolderList[116]" 
+		5 3 "zaunRN" "|zaeune|zaun9|zaun:zaunShape.instObjGroups" "zaunRN.placeHolderList[162]" 
 		""
-		5 3 "zaunRN" "|zaeune|zaun10|zaun:zaunShape.instObjGroups" "zaunRN.placeHolderList[117]" 
+		5 3 "zaunRN" "|zaeune|zaun10|zaun:zaunShape.instObjGroups" "zaunRN.placeHolderList[163]" 
 		""
-		5 3 "zaunRN" "|zaeune|zaun11|zaun:zaunShape.instObjGroups" "zaunRN.placeHolderList[118]" 
+		5 3 "zaunRN" "|zaeune|zaun11|zaun:zaunShape.instObjGroups" "zaunRN.placeHolderList[164]" 
 		""
-		5 3 "zaunRN" "|zaeune|zaun12|zaun:zaunShape.instObjGroups" "zaunRN.placeHolderList[119]" 
+		5 3 "zaunRN" "|zaeune|zaun12|zaun:zaunShape.instObjGroups" "zaunRN.placeHolderList[165]" 
 		""
-		5 3 "zaunRN" "|zaeune|zaun13|zaun:zaunShape.instObjGroups" "zaunRN.placeHolderList[120]" 
+		5 3 "zaunRN" "|zaeune|zaun13|zaun:zaunShape.instObjGroups" "zaunRN.placeHolderList[166]" 
 		""
-		5 3 "zaunRN" "|zaeune|zaun14|zaun:zaunShape.instObjGroups" "zaunRN.placeHolderList[121]" 
+		5 3 "zaunRN" "|zaeune|zaun14|zaun:zaunShape.instObjGroups" "zaunRN.placeHolderList[167]" 
 		""
-		5 3 "zaunRN" "|zaeune|zaun15|zaun:zaunShape.instObjGroups" "zaunRN.placeHolderList[122]" 
+		5 3 "zaunRN" "|zaeune|zaun15|zaun:zaunShape.instObjGroups" "zaunRN.placeHolderList[168]" 
 		""
-		5 3 "zaunRN" "|zaeune|zaun16|zaun:zaunShape.instObjGroups" "zaunRN.placeHolderList[123]" 
+		5 3 "zaunRN" "|zaeune|zaun16|zaun:zaunShape.instObjGroups" "zaunRN.placeHolderList[169]" 
 		""
-		5 3 "zaunRN" "|zaeune|zaun17|zaun:zaunShape.instObjGroups" "zaunRN.placeHolderList[124]" 
+		5 3 "zaunRN" "|zaeune|zaun17|zaun:zaunShape.instObjGroups" "zaunRN.placeHolderList[170]" 
 		""
-		5 3 "zaunRN" "|zaeune|zaun18|zaun:zaunShape.instObjGroups" "zaunRN.placeHolderList[125]" 
+		5 3 "zaunRN" "|zaeune|zaun18|zaun:zaunShape.instObjGroups" "zaunRN.placeHolderList[171]" 
 		""
-		5 3 "zaunRN" "|zaeune|zaun19|zaun:zaunShape.instObjGroups" "zaunRN.placeHolderList[126]" 
+		5 3 "zaunRN" "|zaeune|zaun19|zaun:zaunShape.instObjGroups" "zaunRN.placeHolderList[172]" 
 		""
-		5 3 "zaunRN" "|zaeune|zaun20|zaun:zaunShape.instObjGroups" "zaunRN.placeHolderList[127]" 
+		5 3 "zaunRN" "|zaeune|zaun20|zaun:zaunShape.instObjGroups" "zaunRN.placeHolderList[173]" 
 		""
-		5 3 "zaunRN" "|zaeune|zaun21|zaun:zaunShape.instObjGroups" "zaunRN.placeHolderList[128]" 
+		5 3 "zaunRN" "|zaeune|zaun21|zaun:zaunShape.instObjGroups" "zaunRN.placeHolderList[174]" 
 		""
-		5 3 "zaunRN" "|zaeune|zaun22|zaun:zaunShape.instObjGroups" "zaunRN.placeHolderList[129]" 
+		5 3 "zaunRN" "|zaeune|zaun22|zaun:zaunShape.instObjGroups" "zaunRN.placeHolderList[175]" 
 		""
-		5 3 "zaunRN" "|zaeune|zaun23|zaun:zaunShape.instObjGroups" "zaunRN.placeHolderList[130]" 
+		5 3 "zaunRN" "|zaeune|zaun23|zaun:zaunShape.instObjGroups" "zaunRN.placeHolderList[176]" 
 		""
 		5 0 "zaunRN" "zaun:groupId1.groupId" "|zaeune|zaun:zaun|zaun:zaunShape.instObjGroups.objectGroups[0].objectGroupId" 
-		"zaunRN.placeHolderList[131]" "zaunRN.placeHolderList[132]" "|zaeune|zaun:zaun|zaun:zaunShape.iog.og[0].gid"
+		"zaunRN.placeHolderList[177]" "zaunRN.placeHolderList[178]" "|zaeune|zaun:zaun|zaun:zaunShape.iog.og[0].gid"
 		
 		5 0 "zaunRN" "zaun:lambert2SG.memberWireframeColor" "|zaeune|zaun:zaun|zaun:zaunShape.instObjGroups.objectGroups[0].objectGrpColor" 
-		"zaunRN.placeHolderList[133]" "zaunRN.placeHolderList[134]" "|zaeune|zaun:zaun|zaun:zaunShape.iog.og[0].gco"
+		"zaunRN.placeHolderList[179]" "zaunRN.placeHolderList[180]" "|zaeune|zaun:zaun|zaun:zaunShape.iog.og[0].gco"
 		
 		5 0 "zaunRN" "|zaeune|zaun:zaun|zaun:zaunShape.instObjGroups.objectGroups[0]" 
-		"zaun:lambert2SG.dagSetMembers" "zaunRN.placeHolderList[135]" "zaunRN.placeHolderList[136]" 
+		"zaun:lambert2SG.dagSetMembers" "zaunRN.placeHolderList[181]" "zaunRN.placeHolderList[182]" 
 		"zaun:lambert2SG.dsm"
 		5 0 "zaunRN" "|zaeune|zaun:zaun|zaun:zaunShape.instObjGroups.objectGroups[0]" 
-		"zaun:lambert2SG.dagSetMembers" "zaunRN.placeHolderList[137]" "zaunRN.placeHolderList[138]" 
+		"zaun:lambert2SG.dagSetMembers" "zaunRN.placeHolderList[183]" "zaunRN.placeHolderList[184]" 
 		"zaun:lambert2SG.dsm"
 		5 0 "zaunRN" "|zaeune|zaun:zaun|zaun:zaunShape.instObjGroups.objectGroups[0]" 
-		"zaun:lambert2SG.dagSetMembers" "zaunRN.placeHolderList[139]" "zaunRN.placeHolderList[140]" 
+		"zaun:lambert2SG.dagSetMembers" "zaunRN.placeHolderList[185]" "zaunRN.placeHolderList[186]" 
 		"zaun:lambert2SG.dsm"
 		5 0 "zaunRN" "|zaeune|zaun:zaun|zaun:zaunShape.worldMatrix" "zaun:polyPlanarProj1.manipMatrix" 
-		"zaunRN.placeHolderList[141]" "zaunRN.placeHolderList[142]" "zaun:polyPlanarProj1.mp";
+		"zaunRN.placeHolderList[187]" "zaunRN.placeHolderList[188]" "zaun:polyPlanarProj1.mp";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode groupId -n "groupId1";
@@ -52319,7 +52315,7 @@ createNode reference -n "highseatRN";
 		
 		2 "|highseat1|highseat:highseatShape" "furNameSpace" " -type \"string\" \"highseat\""
 		
-		2 "highseat:file2" "fileTextureName" " -type \"string\" \"C:/Users/Alexandra/Desktop/Gruppe4/mayakurs2012/Gruppe2/Endpraesi_Matrix/environment/textures/wood2.jpg\"";
+		2 "highseat:file2" "fileTextureName" " -type \"string\" \"E:/01 TU Wien/10. Semester/Maya Kurs/Git/mayakurs2012/Gruppe2/Endpraesi_Matrix/environment/textures/wood2.jpg\"";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode groupId -n "groupId38";
@@ -52381,7 +52377,7 @@ createNode reference -n "treeRN1";
 		2 "|trees|tree:tree" "rotate" " -type \"double3\" 0 49.064059 0"
 		2 "|trees|tree:tree" "scale" " -type \"double3\" 75.718899 75.718899 75.718899"
 		
-		2 "tree:file2" "fileTextureName" " -type \"string\" \"C:/Users/Alexandra/Desktop/Gruppe4/mayakurs2012/Gruppe2/Endpraesi_Matrix/environment/textures/bark.jpg\""
+		2 "tree:file2" "fileTextureName" " -type \"string\" \"E:/01 TU Wien/10. Semester/Maya Kurs/Git/mayakurs2012/Gruppe2/Endpraesi_Matrix/environment/textures/bark.jpg\""
 		
 		3 "|trees|tree:tree|tree:treeShape.instObjGroups" "tree:lambert3SG.dagSetMembers" 
 		"-na"
@@ -53092,7 +53088,7 @@ createNode groupId -n "wasserfass_wagen:groupId5";
 createNode lambert -n "wasserfass_wagen:wagen_holz";
 createNode shadingEngine -n "wasserfass_wagen:lambert2SG";
 	setAttr ".ihi" 0;
-	setAttr -s 10 ".dsm";
+	setAttr -s 8 ".dsm";
 	setAttr ".ro" yes;
 	setAttr -s 2 ".gn";
 createNode materialInfo -n "wasserfass_wagen:materialInfo1";
@@ -53100,7 +53096,7 @@ createNode file -n "wasserfass_wagen:file1";
 	setAttr ".ftn" -type "string" "C:/Users/Alexandra/Desktop/Gruppe4/mayakurs2012/Gruppe2/Endpraesi_Matrix/environment/textures/wood2.jpg";
 createNode place2dTexture -n "wasserfass_wagen:place2dTexture1";
 createNode file -n "wasserfass_wagen:file2";
-	setAttr ".ftn" -type "string" "C:/Users/Alexandra/Desktop/Gruppe4/mayakurs2012/Gruppe2/Endpraesi_Matrix/environment/textures/wood2.jpg";
+	setAttr ".ftn" -type "string" "E:/01 TU Wien/10. Semester/Maya Kurs/Git/mayakurs2012/Gruppe2/Endpraesi_Matrix/environment/textures/wood2.jpg";
 createNode place2dTexture -n "wasserfass_wagen:place2dTexture2";
 createNode polyAutoProj -n "wasserfass_wagen:polyAutoProj1";
 	setAttr ".uopa" yes;
@@ -53115,7 +53111,7 @@ createNode polyAutoProj -n "wasserfass_wagen:polyAutoProj1";
 	setAttr ".dl" yes;
 createNode shadingEngine -n "wasserfass_wagen:blinn1SG";
 	setAttr ".ihi" 0;
-	setAttr -s 12 ".dsm";
+	setAttr -s 6 ".dsm";
 	setAttr ".ro" yes;
 	setAttr -s 6 ".gn";
 createNode materialInfo -n "wasserfass_wagen:materialInfo2";
@@ -53156,7 +53152,7 @@ createNode polySoftEdge -n "wasserfass_wagen:polySoftEdge3";
 	setAttr ".uopa" yes;
 	setAttr ".ics" -type "componentList" 1 "e[0:49]";
 	setAttr ".ix" -type "matrix" 0.99431938240945184 0.10643761442688415 -6.9388939039072284e-018 0
-		 -0.16035115942118489 1.4979691781220583 -3.3306690738754696e-016 0 -4.216713147059823e-017 3.3306690738754696e-016 1.5065271829380955 0
+		 -0.16035115942118489 1.4979691781220583 -3.3306690738754696e-016 0 -4.2167131470598236e-017 3.3306690738754696e-016 1.5065271829380955 0
 		 -50.524975618490132 40.725581634185879 -73.370516022913876 1;
 	setAttr ".a" 180;
 createNode polySoftEdge -n "wasserfass_wagen:polySoftEdge4";
@@ -53196,7 +53192,7 @@ createNode polySoftEdge -n "wasserfass_wagen:polySoftEdge6";
 	setAttr ".uopa" yes;
 	setAttr ".ics" -type "componentList" 1 "e[0:49]";
 	setAttr ".ix" -type "matrix" 0.99431938240945184 0.10643761442688415 -6.9388939039072284e-018 0
-		 -0.16035115942118489 1.4979691781220583 -3.3306690738754696e-016 0 -4.216713147059823e-017 3.3306690738754696e-016 1.5065271829380955 0
+		 -0.16035115942118489 1.4979691781220583 -3.3306690738754696e-016 0 -4.2167131470598236e-017 3.3306690738754696e-016 1.5065271829380955 0
 		 -50.524975618490132 40.725581634185879 70.829967973814362 1;
 	setAttr ".a" 180;
 createNode anisotropic -n "wasserfass_wagen:anisotropic1";
@@ -53331,18 +53327,18 @@ createNode renderLayer -n "fass:defaultRenderLayer";
 createNode lambert -n "fass:fass_holz2";
 createNode shadingEngine -n "fass:fass_holz";
 	setAttr ".ihi" 0;
-	setAttr -s 84 ".dsm";
+	setAttr -s 80 ".dsm";
 	setAttr ".ro" yes;
-	setAttr -s 51 ".gn";
+	setAttr -s 29 ".gn";
 createNode materialInfo -n "fass:materialInfo1";
 createNode file -n "fass:file1";
-	setAttr ".ftn" -type "string" "C:/Users/Alexandra/Desktop/Gruppe4/mayakurs2012/Gruppe2/Endpraesi_Matrix/environment/textures/wood2.jpg";
+	setAttr ".ftn" -type "string" "E:/01 TU Wien/10. Semester/Maya Kurs/Git/mayakurs2012/Gruppe2/Endpraesi_Matrix/environment/textures/wood2.jpg";
 createNode place2dTexture -n "fass:place2dTexture1";
 createNode shadingEngine -n "fass:fass_metal2";
 	setAttr ".ihi" 0;
-	setAttr -s 15 ".dsm";
+	setAttr -s 13 ".dsm";
 	setAttr ".ro" yes;
-	setAttr -s 50 ".gn";
+	setAttr -s 28 ".gn";
 createNode materialInfo -n "fass:Fässer_ohne_History1:materialInfo3";
 createNode groupId -n "fass:Fässer_ohne_History1:groupId2";
 	setAttr ".ihi" 0;
@@ -53403,6 +53399,250 @@ createNode groupId -n "groupId278";
 	setAttr ".ihi" 0;
 createNode groupId -n "groupId279";
 	setAttr ".ihi" 0;
+createNode groupId -n "groupId280";
+	setAttr ".ihi" 0;
+createNode groupParts -n "groupParts98";
+	setAttr ".ihi" 0;
+	setAttr ".ic" -type "componentList" 1 "f[0:8658]";
+createNode groupId -n "groupId281";
+	setAttr ".ihi" 0;
+createNode groupParts -n "groupParts99";
+	setAttr ".ihi" 0;
+	setAttr ".ic" -type "componentList" 1 "f[0:149]";
+createNode groupId -n "groupId282";
+	setAttr ".ihi" 0;
+createNode groupParts -n "groupParts100";
+	setAttr ".ihi" 0;
+	setAttr ".ic" -type "componentList" 1 "f[0:149]";
+createNode groupId -n "groupId283";
+	setAttr ".ihi" 0;
+createNode groupParts -n "groupParts101";
+	setAttr ".ihi" 0;
+	setAttr ".ic" -type "componentList" 1 "f[0:149]";
+createNode groupId -n "groupId284";
+	setAttr ".ihi" 0;
+createNode groupParts -n "groupParts102";
+	setAttr ".ihi" 0;
+	setAttr ".ic" -type "componentList" 1 "f[0:149]";
+createNode groupId -n "groupId285";
+	setAttr ".ihi" 0;
+createNode groupParts -n "groupParts103";
+	setAttr ".ihi" 0;
+	setAttr ".ic" -type "componentList" 1 "f[0:149]";
+createNode groupId -n "groupId286";
+	setAttr ".ihi" 0;
+createNode groupParts -n "groupParts104";
+	setAttr ".ihi" 0;
+	setAttr ".ic" -type "componentList" 1 "f[0:149]";
+createNode groupId -n "groupId287";
+	setAttr ".ihi" 0;
+createNode groupParts -n "groupParts105";
+	setAttr ".ihi" 0;
+	setAttr ".ic" -type "componentList" 1 "f[0:149]";
+createNode groupId -n "groupId288";
+	setAttr ".ihi" 0;
+createNode groupParts -n "groupParts106";
+	setAttr ".ihi" 0;
+	setAttr ".ic" -type "componentList" 1 "f[0:149]";
+createNode groupId -n "groupId289";
+	setAttr ".ihi" 0;
+createNode groupParts -n "groupParts107";
+	setAttr ".ihi" 0;
+	setAttr ".ic" -type "componentList" 1 "f[0:149]";
+createNode groupId -n "groupId290";
+	setAttr ".ihi" 0;
+createNode groupParts -n "groupParts108";
+	setAttr ".ihi" 0;
+	setAttr ".ic" -type "componentList" 1 "f[0:149]";
+createNode groupId -n "groupId291";
+	setAttr ".ihi" 0;
+createNode groupParts -n "groupParts109";
+	setAttr ".ihi" 0;
+	setAttr ".ic" -type "componentList" 1 "f[0:149]";
+createNode groupId -n "groupId292";
+	setAttr ".ihi" 0;
+createNode groupParts -n "groupParts110";
+	setAttr ".ihi" 0;
+	setAttr ".ic" -type "componentList" 1 "f[0:149]";
+createNode groupId -n "groupId293";
+	setAttr ".ihi" 0;
+createNode groupParts -n "groupParts111";
+	setAttr ".ihi" 0;
+	setAttr ".ic" -type "componentList" 1 "f[0:149]";
+createNode groupId -n "groupId294";
+	setAttr ".ihi" 0;
+createNode groupParts -n "groupParts112";
+	setAttr ".ihi" 0;
+	setAttr ".ic" -type "componentList" 1 "f[0:149]";
+createNode groupId -n "groupId295";
+	setAttr ".ihi" 0;
+createNode groupParts -n "groupParts113";
+	setAttr ".ihi" 0;
+	setAttr ".ic" -type "componentList" 1 "f[0:149]";
+createNode groupId -n "groupId296";
+	setAttr ".ihi" 0;
+createNode groupParts -n "groupParts114";
+	setAttr ".ihi" 0;
+	setAttr ".ic" -type "componentList" 1 "f[0:149]";
+createNode groupId -n "groupId297";
+	setAttr ".ihi" 0;
+createNode groupParts -n "groupParts115";
+	setAttr ".ihi" 0;
+	setAttr ".ic" -type "componentList" 1 "f[0:149]";
+createNode groupId -n "groupId298";
+	setAttr ".ihi" 0;
+createNode groupParts -n "groupParts116";
+	setAttr ".ihi" 0;
+	setAttr ".ic" -type "componentList" 1 "f[0:149]";
+createNode groupId -n "groupId299";
+	setAttr ".ihi" 0;
+createNode groupParts -n "groupParts117";
+	setAttr ".ihi" 0;
+	setAttr ".ic" -type "componentList" 1 "f[0:149]";
+createNode groupId -n "groupId300";
+	setAttr ".ihi" 0;
+createNode groupParts -n "groupParts118";
+	setAttr ".ihi" 0;
+	setAttr ".ic" -type "componentList" 1 "f[0:149]";
+createNode groupId -n "groupId301";
+	setAttr ".ihi" 0;
+createNode groupParts -n "groupParts119";
+	setAttr ".ihi" 0;
+	setAttr ".ic" -type "componentList" 1 "f[0:149]";
+createNode groupId -n "groupId302";
+	setAttr ".ihi" 0;
+createNode groupParts -n "groupParts120";
+	setAttr ".ihi" 0;
+	setAttr ".ic" -type "componentList" 1 "f[0:149]";
+createNode groupId -n "groupId303";
+	setAttr ".ihi" 0;
+createNode groupParts -n "groupParts121";
+	setAttr ".ihi" 0;
+	setAttr ".ic" -type "componentList" 1 "f[0:149]";
+createNode groupId -n "groupId304";
+	setAttr ".ihi" 0;
+createNode groupId -n "groupId305";
+	setAttr ".ihi" 0;
+createNode groupParts -n "groupParts122";
+	setAttr ".ihi" 0;
+	setAttr ".ic" -type "componentList" 1 "f[0:8658]";
+createNode groupId -n "groupId306";
+	setAttr ".ihi" 0;
+createNode groupParts -n "groupParts123";
+	setAttr ".ihi" 0;
+	setAttr ".ic" -type "componentList" 1 "f[0:149]";
+createNode groupId -n "groupId307";
+	setAttr ".ihi" 0;
+createNode groupParts -n "groupParts124";
+	setAttr ".ihi" 0;
+	setAttr ".ic" -type "componentList" 1 "f[0:149]";
+createNode groupId -n "groupId308";
+	setAttr ".ihi" 0;
+createNode groupParts -n "groupParts125";
+	setAttr ".ihi" 0;
+	setAttr ".ic" -type "componentList" 1 "f[0:149]";
+createNode groupId -n "groupId309";
+	setAttr ".ihi" 0;
+createNode groupParts -n "groupParts126";
+	setAttr ".ihi" 0;
+	setAttr ".ic" -type "componentList" 1 "f[0:149]";
+createNode groupId -n "groupId310";
+	setAttr ".ihi" 0;
+createNode groupParts -n "groupParts127";
+	setAttr ".ihi" 0;
+	setAttr ".ic" -type "componentList" 1 "f[0:149]";
+createNode groupId -n "groupId311";
+	setAttr ".ihi" 0;
+createNode groupParts -n "groupParts128";
+	setAttr ".ihi" 0;
+	setAttr ".ic" -type "componentList" 1 "f[0:149]";
+createNode groupId -n "groupId312";
+	setAttr ".ihi" 0;
+createNode groupParts -n "groupParts129";
+	setAttr ".ihi" 0;
+	setAttr ".ic" -type "componentList" 1 "f[0:149]";
+createNode groupId -n "groupId313";
+	setAttr ".ihi" 0;
+createNode groupParts -n "groupParts130";
+	setAttr ".ihi" 0;
+	setAttr ".ic" -type "componentList" 1 "f[0:149]";
+createNode groupId -n "groupId314";
+	setAttr ".ihi" 0;
+createNode groupParts -n "groupParts131";
+	setAttr ".ihi" 0;
+	setAttr ".ic" -type "componentList" 1 "f[0:149]";
+createNode groupId -n "groupId315";
+	setAttr ".ihi" 0;
+createNode groupParts -n "groupParts132";
+	setAttr ".ihi" 0;
+	setAttr ".ic" -type "componentList" 1 "f[0:149]";
+createNode groupId -n "groupId316";
+	setAttr ".ihi" 0;
+createNode groupParts -n "groupParts133";
+	setAttr ".ihi" 0;
+	setAttr ".ic" -type "componentList" 1 "f[0:149]";
+createNode groupId -n "groupId317";
+	setAttr ".ihi" 0;
+createNode groupParts -n "groupParts134";
+	setAttr ".ihi" 0;
+	setAttr ".ic" -type "componentList" 1 "f[0:149]";
+createNode groupId -n "groupId318";
+	setAttr ".ihi" 0;
+createNode groupParts -n "groupParts135";
+	setAttr ".ihi" 0;
+	setAttr ".ic" -type "componentList" 1 "f[0:149]";
+createNode groupId -n "groupId319";
+	setAttr ".ihi" 0;
+createNode groupParts -n "groupParts136";
+	setAttr ".ihi" 0;
+	setAttr ".ic" -type "componentList" 1 "f[0:149]";
+createNode groupId -n "groupId320";
+	setAttr ".ihi" 0;
+createNode groupParts -n "groupParts137";
+	setAttr ".ihi" 0;
+	setAttr ".ic" -type "componentList" 1 "f[0:149]";
+createNode groupId -n "groupId321";
+	setAttr ".ihi" 0;
+createNode groupParts -n "groupParts138";
+	setAttr ".ihi" 0;
+	setAttr ".ic" -type "componentList" 1 "f[0:149]";
+createNode groupId -n "groupId322";
+	setAttr ".ihi" 0;
+createNode groupParts -n "groupParts139";
+	setAttr ".ihi" 0;
+	setAttr ".ic" -type "componentList" 1 "f[0:149]";
+createNode groupId -n "groupId323";
+	setAttr ".ihi" 0;
+createNode groupParts -n "groupParts140";
+	setAttr ".ihi" 0;
+	setAttr ".ic" -type "componentList" 1 "f[0:149]";
+createNode groupId -n "groupId324";
+	setAttr ".ihi" 0;
+createNode groupParts -n "groupParts141";
+	setAttr ".ihi" 0;
+	setAttr ".ic" -type "componentList" 1 "f[0:149]";
+createNode groupId -n "groupId325";
+	setAttr ".ihi" 0;
+createNode groupParts -n "groupParts142";
+	setAttr ".ihi" 0;
+	setAttr ".ic" -type "componentList" 1 "f[0:149]";
+createNode groupId -n "groupId326";
+	setAttr ".ihi" 0;
+createNode groupParts -n "groupParts143";
+	setAttr ".ihi" 0;
+	setAttr ".ic" -type "componentList" 1 "f[0:149]";
+createNode groupId -n "groupId327";
+	setAttr ".ihi" 0;
+createNode groupParts -n "groupParts144";
+	setAttr ".ihi" 0;
+	setAttr ".ic" -type "componentList" 1 "f[0:149]";
+createNode groupId -n "groupId328";
+	setAttr ".ihi" 0;
+createNode groupParts -n "groupParts145";
+	setAttr ".ihi" 0;
+	setAttr ".ic" -type "componentList" 1 "f[0:149]";
+createNode groupId -n "groupId329";
+	setAttr ".ihi" 0;
 select -ne :time1;
 	setAttr ".o" 1;
 	setAttr ".unw" 1;
@@ -53449,8 +53689,6 @@ select -ne :hardwareRenderingGlobals;
 select -ne :defaultHardwareRenderGlobals;
 	setAttr ".fn" -type "string" "im";
 	setAttr ".res" -type "string" "ntsc_4d 646 485 1.333";
-select -ne :ikSystem;
-	setAttr -s 4 ".sol";
 connectAttr "huette1RN.phl[44]" "|huette2|huetteShape.iog.og[0].gco";
 connectAttr "huette1RN.phl[45]" "|huette3|huetteShape.iog.og[0].gco";
 connectAttr "huette1RN.phl[46]" "|huette5|huette|huetteShape.iog.og[0].gco";
@@ -53489,35 +53727,35 @@ connectAttr "groupId1.msg" "huette1RN.phl[78]";
 connectAttr "groupId10.msg" "huette1RN.phl[79]";
 connectAttr "groupId11.msg" "huette1RN.phl[80]";
 connectAttr "groupId12.msg" "huette1RN.phl[81]";
-connectAttr "zaunRN.phl[108]" "wasserfass_wagen:lambert2SG.dsm" -na;
-connectAttr "zaunRN.phl[109]" "fass:fass_holz.dsm" -na;
-connectAttr "zaunRN.phl[110]" "fass:fass_holz.dsm" -na;
-connectAttr "zaunRN.phl[111]" "fass:fass_holz.dsm" -na;
-connectAttr "zaunRN.phl[112]" "fass:fass_holz.dsm" -na;
-connectAttr "zaunRN.phl[113]" "fass:fass_holz.dsm" -na;
-connectAttr "zaunRN.phl[114]" "fass:fass_holz.dsm" -na;
-connectAttr "zaunRN.phl[115]" "fass:fass_holz.dsm" -na;
-connectAttr "zaunRN.phl[116]" "fass:fass_holz.dsm" -na;
-connectAttr "zaunRN.phl[117]" "fass:fass_holz.dsm" -na;
-connectAttr "zaunRN.phl[118]" "fass:fass_holz.dsm" -na;
-connectAttr "zaunRN.phl[119]" "fass:fass_holz.dsm" -na;
-connectAttr "zaunRN.phl[120]" "fass:fass_holz.dsm" -na;
-connectAttr "zaunRN.phl[121]" "fass:fass_holz.dsm" -na;
-connectAttr "zaunRN.phl[122]" "fass:fass_holz.dsm" -na;
-connectAttr "zaunRN.phl[123]" "fass:fass_holz.dsm" -na;
-connectAttr "zaunRN.phl[124]" "fass:fass_holz.dsm" -na;
-connectAttr "zaunRN.phl[125]" "fass:fass_holz.dsm" -na;
-connectAttr "zaunRN.phl[126]" "fass:fass_holz.dsm" -na;
-connectAttr "zaunRN.phl[127]" "fass:fass_holz.dsm" -na;
-connectAttr "zaunRN.phl[128]" "fass:fass_holz.dsm" -na;
-connectAttr "zaunRN.phl[129]" "fass:fass_holz.dsm" -na;
-connectAttr "zaunRN.phl[130]" "fass:fass_holz.dsm" -na;
-connectAttr "zaunRN.phl[131]" "zaunRN.phl[132]";
-connectAttr "zaunRN.phl[133]" "zaunRN.phl[134]";
-connectAttr "zaunRN.phl[135]" "zaunRN.phl[136]";
-connectAttr "zaunRN.phl[137]" "zaunRN.phl[138]";
-connectAttr "zaunRN.phl[139]" "zaunRN.phl[140]";
-connectAttr "zaunRN.phl[141]" "zaunRN.phl[142]";
+connectAttr "zaunRN.phl[154]" "wasserfass_wagen:lambert2SG.dsm" -na;
+connectAttr "zaunRN.phl[155]" "fass:fass_holz.dsm" -na;
+connectAttr "zaunRN.phl[156]" "fass:fass_holz.dsm" -na;
+connectAttr "zaunRN.phl[157]" "fass:fass_holz.dsm" -na;
+connectAttr "zaunRN.phl[158]" "fass:fass_holz.dsm" -na;
+connectAttr "zaunRN.phl[159]" "fass:fass_holz.dsm" -na;
+connectAttr "zaunRN.phl[160]" "fass:fass_holz.dsm" -na;
+connectAttr "zaunRN.phl[161]" "fass:fass_holz.dsm" -na;
+connectAttr "zaunRN.phl[162]" "fass:fass_holz.dsm" -na;
+connectAttr "zaunRN.phl[163]" "fass:fass_holz.dsm" -na;
+connectAttr "zaunRN.phl[164]" "fass:fass_holz.dsm" -na;
+connectAttr "zaunRN.phl[165]" "fass:fass_holz.dsm" -na;
+connectAttr "zaunRN.phl[166]" "fass:fass_holz.dsm" -na;
+connectAttr "zaunRN.phl[167]" "fass:fass_holz.dsm" -na;
+connectAttr "zaunRN.phl[168]" "fass:fass_holz.dsm" -na;
+connectAttr "zaunRN.phl[169]" "fass:fass_holz.dsm" -na;
+connectAttr "zaunRN.phl[170]" "fass:fass_holz.dsm" -na;
+connectAttr "zaunRN.phl[171]" "fass:fass_holz.dsm" -na;
+connectAttr "zaunRN.phl[172]" "fass:fass_holz.dsm" -na;
+connectAttr "zaunRN.phl[173]" "fass:fass_holz.dsm" -na;
+connectAttr "zaunRN.phl[174]" "fass:fass_holz.dsm" -na;
+connectAttr "zaunRN.phl[175]" "fass:fass_holz.dsm" -na;
+connectAttr "zaunRN.phl[176]" "fass:fass_holz.dsm" -na;
+connectAttr "zaunRN.phl[177]" "zaunRN.phl[178]";
+connectAttr "zaunRN.phl[179]" "zaunRN.phl[180]";
+connectAttr "zaunRN.phl[181]" "zaunRN.phl[182]";
+connectAttr "zaunRN.phl[183]" "zaunRN.phl[184]";
+connectAttr "zaunRN.phl[185]" "zaunRN.phl[186]";
+connectAttr "zaunRN.phl[187]" "zaunRN.phl[188]";
 connectAttr "treeRN1.phl[1]" "treeRN1.phl[2]";
 connectAttr "treeRN1.phl[3]" "treeRN1.phl[4]";
 connectAttr "treeRN1.phl[5]" "treeRN1.phl[6]";
@@ -53738,6 +53976,38 @@ relationship "link" ":lightLinker1" "Feldlager:Fässer_ohne_History:lambert9SG.me
 relationship "link" ":lightLinker1" "Feldlager:Fässer_ohne_History:lambert10SG.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" "Feldlager:Fässer_ohne_History:lambert11SG.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" "Feldlager:Fässer_ohne_History:lambert12SG.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "laterne:blinn1SG.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "laterne:blinn2SG.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "laterne:phongE1SG.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "laterne:shadingMap1SG.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "laterne:phongE2SG.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "laterne:phongE3SG.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "laterne:phongE4SG.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "laterne:blinn3SG.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "laterne:blinn4SG.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "laterne:blinn5SG.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "laterne:phongE5SG.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "laterne:phongE6SG.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "laterne:blinn6SG.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "laterne:phongE7SG.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "wasserfass_wagen:lambert2SG.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "wasserfass_wagen:blinn1SG.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "laterne1:blinn1SG.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "laterne1:blinn2SG.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "laterne1:phongE1SG.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "laterne1:shadingMap1SG.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "laterne1:phongE2SG.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "laterne1:phongE3SG.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "laterne1:phongE4SG.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "laterne1:blinn3SG.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "laterne1:blinn4SG.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "laterne1:blinn5SG.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "laterne1:phongE5SG.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "laterne1:phongE6SG.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "laterne1:blinn6SG.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "laterne1:phongE7SG.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "fass:fass_holz.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "fass:fass_metal2.message" ":defaultLightSet.message";
 relationship "shadowLink" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
 relationship "shadowLink" ":lightLinker1" ":initialParticleSE.message" ":defaultLightSet.message";
 relationship "shadowLink" ":lightLinker1" "fluidShape1SG.message" ":defaultLightSet.message";
@@ -53775,6 +54045,38 @@ relationship "shadowLink" ":lightLinker1" "Feldlager:Fässer_ohne_History:lambert
 relationship "shadowLink" ":lightLinker1" "Feldlager:Fässer_ohne_History:lambert10SG.message" ":defaultLightSet.message";
 relationship "shadowLink" ":lightLinker1" "Feldlager:Fässer_ohne_History:lambert11SG.message" ":defaultLightSet.message";
 relationship "shadowLink" ":lightLinker1" "Feldlager:Fässer_ohne_History:lambert12SG.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "laterne:blinn1SG.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "laterne:blinn2SG.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "laterne:phongE1SG.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "laterne:shadingMap1SG.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "laterne:phongE2SG.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "laterne:phongE3SG.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "laterne:phongE4SG.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "laterne:blinn3SG.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "laterne:blinn4SG.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "laterne:blinn5SG.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "laterne:phongE5SG.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "laterne:phongE6SG.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "laterne:blinn6SG.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "laterne:phongE7SG.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "wasserfass_wagen:lambert2SG.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "wasserfass_wagen:blinn1SG.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "laterne1:blinn1SG.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "laterne1:blinn2SG.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "laterne1:phongE1SG.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "laterne1:shadingMap1SG.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "laterne1:phongE2SG.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "laterne1:phongE3SG.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "laterne1:phongE4SG.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "laterne1:blinn3SG.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "laterne1:blinn4SG.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "laterne1:blinn5SG.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "laterne1:phongE5SG.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "laterne1:phongE6SG.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "laterne1:blinn6SG.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "laterne1:phongE7SG.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "fass:fass_holz.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "fass:fass_metal2.message" ":defaultLightSet.message";
 connectAttr "layerManager.dli[0]" "defaultLayer.id";
 connectAttr "renderLayerManager.rlmi[0]" "defaultRenderLayer.rlid";
 connectAttr "fluidShape1SG.msg" "materialInfo1.sg";
@@ -54659,7 +54961,6 @@ connectAttr "laterne:phongE7.msg" "laterne:materialInfo14.m";
 connectAttr "wasserfass_wagen:renderLayerManager.rlmi[0]" "wasserfass_wagen:defaultRenderLayer.rlid"
 		;
 connectAttr "wasserfass_wagen:file2.oc" "wasserfass_wagen:wagen_holz.c";
-connectAttr "wasserfass_wagen:wagen_holz.oc" "wasserfass_wagen:lambert2SG.ss";
 connectAttr "wasserfass_wagen:Griff_querShape.iog" "wasserfass_wagen:lambert2SG.dsm"
 		 -na;
 connectAttr "wasserfass_wagen:GriffShape.iog" "wasserfass_wagen:lambert2SG.dsm" 
@@ -54674,10 +54975,7 @@ connectAttr "wasserfass_wagen:Achse_hintenShape.iog.og[0]" "wasserfass_wagen:lam
 		 -na;
 connectAttr "wasserfass_wagen:Achse_vorneShape.iog.og[0]" "wasserfass_wagen:lambert2SG.dsm"
 		 -na;
-connectAttr "wasserfass_wagen:Achse_hintenShape.iog.og[0]" "wasserfass_wagen:lambert2SG.dsm"
-		 -na;
-connectAttr "wasserfass_wagen:Achse_vorneShape.iog.og[0]" "wasserfass_wagen:lambert2SG.dsm"
-		 -na;
+connectAttr "wasserfass_wagen:wagen_holz.oc" "wasserfass_wagen:lambert2SG.ss";
 connectAttr "wasserfass_wagen:groupId19.msg" "wasserfass_wagen:lambert2SG.gn" -na
 		;
 connectAttr "wasserfass_wagen:groupId23.msg" "wasserfass_wagen:lambert2SG.gn" -na
@@ -54728,18 +55026,6 @@ connectAttr "wasserfass_wagen:polySurfaceShape1.o" "wasserfass_wagen:polyAutoPro
 connectAttr "wasserfass_wagen:WagenShape.wm" "wasserfass_wagen:polyAutoProj1.mp"
 		;
 connectAttr "wasserfass_wagen:anisotropic1.oc" "wasserfass_wagen:blinn1SG.ss";
-connectAttr "wasserfass_wagen:Achse_hintenShape.iog.og[1]" "wasserfass_wagen:blinn1SG.dsm"
-		 -na;
-connectAttr "|wasserfass_wagen1|wasserfass_wagen:Wagen|wasserfass_wagen:Räder_hinten|wasserfass_wagen:Achse_hinten|wasserfass_wagen:Rad1_hinten|wasserfass_wagen:Rad_hinten_Shape.iog.og[0]" "wasserfass_wagen:blinn1SG.dsm"
-		 -na;
-connectAttr "|wasserfass_wagen1|wasserfass_wagen:Wagen|wasserfass_wagen:Räder_hinten|wasserfass_wagen:Achse_hinten|wasserfass_wagen:Rad2_hinten|wasserfass_wagen:Rad_hinten_Shape.iog.og[0]" "wasserfass_wagen:blinn1SG.dsm"
-		 -na;
-connectAttr "wasserfass_wagen:Achse_vorneShape.iog.og[1]" "wasserfass_wagen:blinn1SG.dsm"
-		 -na;
-connectAttr "|wasserfass_wagen1|wasserfass_wagen:Wagen|wasserfass_wagen:Räder_vorne|wasserfass_wagen:Achse_vorne|wasserfass_wagen:Rad1_vorne|wasserfass_wagen:Rad_vorne_Shape.iog.og[0]" "wasserfass_wagen:blinn1SG.dsm"
-		 -na;
-connectAttr "|wasserfass_wagen1|wasserfass_wagen:Wagen|wasserfass_wagen:Räder_vorne|wasserfass_wagen:Achse_vorne|wasserfass_wagen:Rad2_vorne|wasserfass_wagen:Rad_vorne_Shape.iog.og[0]" "wasserfass_wagen:blinn1SG.dsm"
-		 -na;
 connectAttr "wasserfass_wagen:Achse_hintenShape.iog.og[1]" "wasserfass_wagen:blinn1SG.dsm"
 		 -na;
 connectAttr "|wasserfass_wagen1|wasserfass_wagen:Wagen|wasserfass_wagen:Räder_hinten|wasserfass_wagen:Achse_hinten|wasserfass_wagen:Rad1_hinten|wasserfass_wagen:Rad_hinten_Shape.iog.og[0]" "wasserfass_wagen:blinn1SG.dsm"
@@ -54882,63 +55168,54 @@ connectAttr "fass:Fässer_ohne_History1:expression1.out[0]" "fass:Fässer_ohne_His
 connectAttr ":time1.o" "fass:Fässer_ohne_History1:expression1.tim";
 connectAttr "fass:renderLayerManager.rlmi[0]" "fass:defaultRenderLayer.rlid";
 connectAttr "fass:file1.oc" "fass:fass_holz2.c";
-connectAttr "fass:fass_holz2.oc" "fass:fass_holz.ss";
+connectAttr "zaunRN.phl[132]" "fass:fass_holz.dsm" -na;
+connectAttr "zaunRN.phl[133]" "fass:fass_holz.dsm" -na;
+connectAttr "zaunRN.phl[134]" "fass:fass_holz.dsm" -na;
+connectAttr "zaunRN.phl[135]" "fass:fass_holz.dsm" -na;
+connectAttr "zaunRN.phl[136]" "fass:fass_holz.dsm" -na;
+connectAttr "zaunRN.phl[137]" "fass:fass_holz.dsm" -na;
+connectAttr "zaunRN.phl[138]" "fass:fass_holz.dsm" -na;
+connectAttr "zaunRN.phl[139]" "fass:fass_holz.dsm" -na;
+connectAttr "zaunRN.phl[140]" "fass:fass_holz.dsm" -na;
+connectAttr "zaunRN.phl[141]" "fass:fass_holz.dsm" -na;
+connectAttr "zaunRN.phl[142]" "fass:fass_holz.dsm" -na;
+connectAttr "zaunRN.phl[143]" "fass:fass_holz.dsm" -na;
+connectAttr "zaunRN.phl[144]" "fass:fass_holz.dsm" -na;
+connectAttr "zaunRN.phl[145]" "fass:fass_holz.dsm" -na;
+connectAttr "zaunRN.phl[146]" "fass:fass_holz.dsm" -na;
+connectAttr "zaunRN.phl[147]" "fass:fass_holz.dsm" -na;
+connectAttr "zaunRN.phl[148]" "fass:fass_holz.dsm" -na;
+connectAttr "zaunRN.phl[149]" "fass:fass_holz.dsm" -na;
+connectAttr "zaunRN.phl[150]" "fass:fass_holz.dsm" -na;
+connectAttr "zaunRN.phl[151]" "fass:fass_holz.dsm" -na;
+connectAttr "zaunRN.phl[152]" "fass:fass_holz.dsm" -na;
+connectAttr "zaunRN.phl[153]" "fass:fass_holz.dsm" -na;
+connectAttr "zaunRN.phl[109]" "fass:fass_holz.dsm" -na;
+connectAttr "zaunRN.phl[110]" "fass:fass_holz.dsm" -na;
+connectAttr "zaunRN.phl[111]" "fass:fass_holz.dsm" -na;
+connectAttr "zaunRN.phl[112]" "fass:fass_holz.dsm" -na;
+connectAttr "zaunRN.phl[113]" "fass:fass_holz.dsm" -na;
+connectAttr "zaunRN.phl[114]" "fass:fass_holz.dsm" -na;
+connectAttr "zaunRN.phl[115]" "fass:fass_holz.dsm" -na;
+connectAttr "zaunRN.phl[116]" "fass:fass_holz.dsm" -na;
+connectAttr "zaunRN.phl[117]" "fass:fass_holz.dsm" -na;
+connectAttr "zaunRN.phl[118]" "fass:fass_holz.dsm" -na;
+connectAttr "zaunRN.phl[119]" "fass:fass_holz.dsm" -na;
+connectAttr "zaunRN.phl[120]" "fass:fass_holz.dsm" -na;
+connectAttr "zaunRN.phl[121]" "fass:fass_holz.dsm" -na;
+connectAttr "zaunRN.phl[122]" "fass:fass_holz.dsm" -na;
+connectAttr "zaunRN.phl[123]" "fass:fass_holz.dsm" -na;
+connectAttr "zaunRN.phl[124]" "fass:fass_holz.dsm" -na;
+connectAttr "zaunRN.phl[125]" "fass:fass_holz.dsm" -na;
+connectAttr "zaunRN.phl[126]" "fass:fass_holz.dsm" -na;
+connectAttr "zaunRN.phl[127]" "fass:fass_holz.dsm" -na;
+connectAttr "zaunRN.phl[128]" "fass:fass_holz.dsm" -na;
+connectAttr "zaunRN.phl[129]" "fass:fass_holz.dsm" -na;
+connectAttr "zaunRN.phl[130]" "fass:fass_holz.dsm" -na;
 connectAttr "|huette5|fass:fass|fass:fassShape.ciog.cog[0]" "fass:fass_holz.dsm"
 		 -na;
 connectAttr "|huette5|fass:fass|fass:fassShape.iog.og[0]" "fass:fass_holz.dsm" -na
 		;
-connectAttr "zaunRN.phl[99]" "fass:fass_holz.dsm" -na;
-connectAttr "zaunRN.phl[95]" "fass:fass_holz.dsm" -na;
-connectAttr "zaunRN.phl[96]" "fass:fass_holz.dsm" -na;
-connectAttr "zaunRN.phl[97]" "fass:fass_holz.dsm" -na;
-connectAttr "zaunRN.phl[98]" "fass:fass_holz.dsm" -na;
-connectAttr "zaunRN.phl[94]" "fass:fass_holz.dsm" -na;
-connectAttr "zaunRN.phl[93]" "fass:fass_holz.dsm" -na;
-connectAttr "zaunRN.phl[100]" "fass:fass_holz.dsm" -na;
-connectAttr "zaunRN.phl[101]" "fass:fass_holz.dsm" -na;
-connectAttr "zaunRN.phl[102]" "fass:fass_holz.dsm" -na;
-connectAttr "zaunRN.phl[103]" "fass:fass_holz.dsm" -na;
-connectAttr "zaunRN.phl[104]" "fass:fass_holz.dsm" -na;
-connectAttr "zaunRN.phl[105]" "fass:fass_holz.dsm" -na;
-connectAttr "zaunRN.phl[106]" "fass:fass_holz.dsm" -na;
-connectAttr "zaunRN.phl[107]" "fass:fass_holz.dsm" -na;
-connectAttr "zaunRN.phl[92]" "fass:fass_holz.dsm" -na;
-connectAttr "zaunRN.phl[91]" "fass:fass_holz.dsm" -na;
-connectAttr "zaunRN.phl[90]" "fass:fass_holz.dsm" -na;
-connectAttr "zaunRN.phl[89]" "fass:fass_holz.dsm" -na;
-connectAttr "zaunRN.phl[88]" "fass:fass_holz.dsm" -na;
-connectAttr "zaunRN.phl[87]" "fass:fass_holz.dsm" -na;
-connectAttr "zaunRN.phl[86]" "fass:fass_holz.dsm" -na;
-connectAttr "|huette5|fass:fass|fass:fassShape.ciog.cog[0]" "fass:fass_holz.dsm"
-		 -na;
-connectAttr "|huette5|fass:fass|fass:fassShape.iog.og[0]" "fass:fass_holz.dsm" -na
-		;
-connectAttr "|huette5|fass:fass|fass:fassShape.ciog.cog[0]" "fass:fass_holz.dsm"
-		 -na;
-connectAttr "|huette5|fass:fass|fass:fassShape.iog.og[0]" "fass:fass_holz.dsm" -na
-		;
-connectAttr "zaunRN.phl[62]" "fass:fass_holz.dsm" -na;
-connectAttr "zaunRN.phl[63]" "fass:fass_holz.dsm" -na;
-connectAttr "zaunRN.phl[64]" "fass:fass_holz.dsm" -na;
-connectAttr "zaunRN.phl[65]" "fass:fass_holz.dsm" -na;
-connectAttr "zaunRN.phl[66]" "fass:fass_holz.dsm" -na;
-connectAttr "zaunRN.phl[67]" "fass:fass_holz.dsm" -na;
-connectAttr "zaunRN.phl[68]" "fass:fass_holz.dsm" -na;
-connectAttr "zaunRN.phl[69]" "fass:fass_holz.dsm" -na;
-connectAttr "zaunRN.phl[70]" "fass:fass_holz.dsm" -na;
-connectAttr "zaunRN.phl[71]" "fass:fass_holz.dsm" -na;
-connectAttr "zaunRN.phl[72]" "fass:fass_holz.dsm" -na;
-connectAttr "zaunRN.phl[73]" "fass:fass_holz.dsm" -na;
-connectAttr "zaunRN.phl[74]" "fass:fass_holz.dsm" -na;
-connectAttr "zaunRN.phl[75]" "fass:fass_holz.dsm" -na;
-connectAttr "zaunRN.phl[76]" "fass:fass_holz.dsm" -na;
-connectAttr "zaunRN.phl[77]" "fass:fass_holz.dsm" -na;
-connectAttr "zaunRN.phl[78]" "fass:fass_holz.dsm" -na;
-connectAttr "zaunRN.phl[79]" "fass:fass_holz.dsm" -na;
-connectAttr "zaunRN.phl[80]" "fass:fass_holz.dsm" -na;
-connectAttr "zaunRN.phl[81]" "fass:fass_holz.dsm" -na;
-connectAttr "zaunRN.phl[82]" "fass:fass_holz.dsm" -na;
-connectAttr "zaunRN.phl[83]" "fass:fass_holz.dsm" -na;
 connectAttr "|huette5|fass1|fass:fassShape.iog.og[0]" "fass:fass_holz.dsm" -na;
 connectAttr "|huette5|fass1|fass:fassShape.iog.og[1]" "fass:fass_holz.dsm" -na;
 connectAttr "|huette5|fass1|fass:fassShape.iog.og[2]" "fass:fass_holz.dsm" -na;
@@ -54951,34 +55228,13 @@ connectAttr "|huette5|fass3|fass:fassShape.iog.og[2]" "fass:fass_holz.dsm" -na;
 connectAttr "|huette5|fass4|fass:fassShape.iog.og[0]" "fass:fass_holz.dsm" -na;
 connectAttr "|huette5|fass4|fass:fassShape.iog.og[1]" "fass:fass_holz.dsm" -na;
 connectAttr "|huette5|fass4|fass:fassShape.iog.og[2]" "fass:fass_holz.dsm" -na;
+connectAttr "fass:fass_holz2.oc" "fass:fass_holz.ss";
 connectAttr "fass:Fässer_ohne_History1:groupId2.msg" "fass:fass_holz.gn" -na;
 connectAttr "fass:groupId1.msg" "fass:fass_holz.gn" -na;
 connectAttr "groupId180.msg" "fass:fass_holz.gn" -na;
 connectAttr "groupId182.msg" "fass:fass_holz.gn" -na;
 connectAttr "groupId184.msg" "fass:fass_holz.gn" -na;
 connectAttr "groupId186.msg" "fass:fass_holz.gn" -na;
-connectAttr "groupId39.msg" "fass:fass_holz.gn" -na;
-connectAttr "groupId41.msg" "fass:fass_holz.gn" -na;
-connectAttr "groupId43.msg" "fass:fass_holz.gn" -na;
-connectAttr "groupId163.msg" "fass:fass_holz.gn" -na;
-connectAttr "groupId165.msg" "fass:fass_holz.gn" -na;
-connectAttr "groupId167.msg" "fass:fass_holz.gn" -na;
-connectAttr "groupId169.msg" "fass:fass_holz.gn" -na;
-connectAttr "groupId171.msg" "fass:fass_holz.gn" -na;
-connectAttr "groupId173.msg" "fass:fass_holz.gn" -na;
-connectAttr "groupId175.msg" "fass:fass_holz.gn" -na;
-connectAttr "groupId177.msg" "fass:fass_holz.gn" -na;
-connectAttr "groupId39.msg" "fass:fass_holz.gn" -na;
-connectAttr "groupId41.msg" "fass:fass_holz.gn" -na;
-connectAttr "groupId43.msg" "fass:fass_holz.gn" -na;
-connectAttr "groupId163.msg" "fass:fass_holz.gn" -na;
-connectAttr "groupId165.msg" "fass:fass_holz.gn" -na;
-connectAttr "groupId167.msg" "fass:fass_holz.gn" -na;
-connectAttr "groupId169.msg" "fass:fass_holz.gn" -na;
-connectAttr "groupId171.msg" "fass:fass_holz.gn" -na;
-connectAttr "groupId173.msg" "fass:fass_holz.gn" -na;
-connectAttr "groupId175.msg" "fass:fass_holz.gn" -na;
-connectAttr "groupId177.msg" "fass:fass_holz.gn" -na;
 connectAttr "groupId39.msg" "fass:fass_holz.gn" -na;
 connectAttr "groupId41.msg" "fass:fass_holz.gn" -na;
 connectAttr "groupId43.msg" "fass:fass_holz.gn" -na;
@@ -55040,28 +55296,6 @@ connectAttr "groupId172.msg" "fass:fass_metal2.gn" -na;
 connectAttr "groupId174.msg" "fass:fass_metal2.gn" -na;
 connectAttr "groupId176.msg" "fass:fass_metal2.gn" -na;
 connectAttr "groupId178.msg" "fass:fass_metal2.gn" -na;
-connectAttr "groupId40.msg" "fass:fass_metal2.gn" -na;
-connectAttr "groupId42.msg" "fass:fass_metal2.gn" -na;
-connectAttr "groupId44.msg" "fass:fass_metal2.gn" -na;
-connectAttr "groupId164.msg" "fass:fass_metal2.gn" -na;
-connectAttr "groupId166.msg" "fass:fass_metal2.gn" -na;
-connectAttr "groupId168.msg" "fass:fass_metal2.gn" -na;
-connectAttr "groupId170.msg" "fass:fass_metal2.gn" -na;
-connectAttr "groupId172.msg" "fass:fass_metal2.gn" -na;
-connectAttr "groupId174.msg" "fass:fass_metal2.gn" -na;
-connectAttr "groupId176.msg" "fass:fass_metal2.gn" -na;
-connectAttr "groupId178.msg" "fass:fass_metal2.gn" -na;
-connectAttr "groupId40.msg" "fass:fass_metal2.gn" -na;
-connectAttr "groupId42.msg" "fass:fass_metal2.gn" -na;
-connectAttr "groupId44.msg" "fass:fass_metal2.gn" -na;
-connectAttr "groupId164.msg" "fass:fass_metal2.gn" -na;
-connectAttr "groupId166.msg" "fass:fass_metal2.gn" -na;
-connectAttr "groupId168.msg" "fass:fass_metal2.gn" -na;
-connectAttr "groupId170.msg" "fass:fass_metal2.gn" -na;
-connectAttr "groupId172.msg" "fass:fass_metal2.gn" -na;
-connectAttr "groupId174.msg" "fass:fass_metal2.gn" -na;
-connectAttr "groupId176.msg" "fass:fass_metal2.gn" -na;
-connectAttr "groupId178.msg" "fass:fass_metal2.gn" -na;
 connectAttr "groupId259.msg" "fass:fass_metal2.gn" -na;
 connectAttr "groupId260.msg" "fass:fass_metal2.gn" -na;
 connectAttr "groupId261.msg" "fass:fass_metal2.gn" -na;
@@ -55074,10 +55308,6 @@ connectAttr "groupId273.msg" "fass:fass_metal2.gn" -na;
 connectAttr "groupId277.msg" "fass:fass_metal2.gn" -na;
 connectAttr "groupId278.msg" "fass:fass_metal2.gn" -na;
 connectAttr "groupId279.msg" "fass:fass_metal2.gn" -na;
-connectAttr "|huette5|fass:fass|fass:fassShape.iog.og[1]" "fass:fass_metal2.dsm"
-		 -na;
-connectAttr "|huette5|fass:fass|fass:fassShape.iog.og[1]" "fass:fass_metal2.dsm"
-		 -na;
 connectAttr "|huette5|fass:fass|fass:fassShape.iog.og[1]" "fass:fass_metal2.dsm"
 		 -na;
 connectAttr "|huette5|fass1|fass:fassShape.iog.og[3]" "fass:fass_metal2.dsm" -na
@@ -55106,6 +55336,98 @@ connectAttr "|huette5|fass4|fass:fassShape.iog.og[5]" "fass:fass_metal2.dsm" -na
 		;
 connectAttr "fass:fass_metal2.msg" "fass:Fässer_ohne_History1:materialInfo3.sg";
 connectAttr "fass:fass_metal.msg" "fass:Fässer_ohne_History1:materialInfo3.m";
+connectAttr "groupId280.id" "groupParts98.gi";
+connectAttr "groupId281.id" "groupParts99.gi";
+connectAttr "groupParts99.og" "groupParts100.ig";
+connectAttr "groupId282.id" "groupParts100.gi";
+connectAttr "groupParts100.og" "groupParts101.ig";
+connectAttr "groupId283.id" "groupParts101.gi";
+connectAttr "groupParts101.og" "groupParts102.ig";
+connectAttr "groupId284.id" "groupParts102.gi";
+connectAttr "groupParts102.og" "groupParts103.ig";
+connectAttr "groupId285.id" "groupParts103.gi";
+connectAttr "groupParts103.og" "groupParts104.ig";
+connectAttr "groupId286.id" "groupParts104.gi";
+connectAttr "groupParts104.og" "groupParts105.ig";
+connectAttr "groupId287.id" "groupParts105.gi";
+connectAttr "groupParts105.og" "groupParts106.ig";
+connectAttr "groupId288.id" "groupParts106.gi";
+connectAttr "groupParts106.og" "groupParts107.ig";
+connectAttr "groupId289.id" "groupParts107.gi";
+connectAttr "groupParts107.og" "groupParts108.ig";
+connectAttr "groupId290.id" "groupParts108.gi";
+connectAttr "groupParts108.og" "groupParts109.ig";
+connectAttr "groupId291.id" "groupParts109.gi";
+connectAttr "groupParts109.og" "groupParts110.ig";
+connectAttr "groupId292.id" "groupParts110.gi";
+connectAttr "groupParts110.og" "groupParts111.ig";
+connectAttr "groupId293.id" "groupParts111.gi";
+connectAttr "groupParts111.og" "groupParts112.ig";
+connectAttr "groupId294.id" "groupParts112.gi";
+connectAttr "groupParts112.og" "groupParts113.ig";
+connectAttr "groupId295.id" "groupParts113.gi";
+connectAttr "groupParts113.og" "groupParts114.ig";
+connectAttr "groupId296.id" "groupParts114.gi";
+connectAttr "groupParts114.og" "groupParts115.ig";
+connectAttr "groupId297.id" "groupParts115.gi";
+connectAttr "groupParts115.og" "groupParts116.ig";
+connectAttr "groupId298.id" "groupParts116.gi";
+connectAttr "groupParts116.og" "groupParts117.ig";
+connectAttr "groupId299.id" "groupParts117.gi";
+connectAttr "groupParts117.og" "groupParts118.ig";
+connectAttr "groupId300.id" "groupParts118.gi";
+connectAttr "groupParts118.og" "groupParts119.ig";
+connectAttr "groupId301.id" "groupParts119.gi";
+connectAttr "groupParts119.og" "groupParts120.ig";
+connectAttr "groupId302.id" "groupParts120.gi";
+connectAttr "groupParts120.og" "groupParts121.ig";
+connectAttr "groupId303.id" "groupParts121.gi";
+connectAttr "groupId305.id" "groupParts122.gi";
+connectAttr "groupId306.id" "groupParts123.gi";
+connectAttr "groupParts123.og" "groupParts124.ig";
+connectAttr "groupId307.id" "groupParts124.gi";
+connectAttr "groupParts124.og" "groupParts125.ig";
+connectAttr "groupId308.id" "groupParts125.gi";
+connectAttr "groupParts125.og" "groupParts126.ig";
+connectAttr "groupId309.id" "groupParts126.gi";
+connectAttr "groupParts126.og" "groupParts127.ig";
+connectAttr "groupId310.id" "groupParts127.gi";
+connectAttr "groupParts127.og" "groupParts128.ig";
+connectAttr "groupId311.id" "groupParts128.gi";
+connectAttr "groupParts128.og" "groupParts129.ig";
+connectAttr "groupId312.id" "groupParts129.gi";
+connectAttr "groupParts129.og" "groupParts130.ig";
+connectAttr "groupId313.id" "groupParts130.gi";
+connectAttr "groupParts130.og" "groupParts131.ig";
+connectAttr "groupId314.id" "groupParts131.gi";
+connectAttr "groupParts131.og" "groupParts132.ig";
+connectAttr "groupId315.id" "groupParts132.gi";
+connectAttr "groupParts132.og" "groupParts133.ig";
+connectAttr "groupId316.id" "groupParts133.gi";
+connectAttr "groupParts133.og" "groupParts134.ig";
+connectAttr "groupId317.id" "groupParts134.gi";
+connectAttr "groupParts134.og" "groupParts135.ig";
+connectAttr "groupId318.id" "groupParts135.gi";
+connectAttr "groupParts135.og" "groupParts136.ig";
+connectAttr "groupId319.id" "groupParts136.gi";
+connectAttr "groupParts136.og" "groupParts137.ig";
+connectAttr "groupId320.id" "groupParts137.gi";
+connectAttr "groupParts137.og" "groupParts138.ig";
+connectAttr "groupId321.id" "groupParts138.gi";
+connectAttr "groupParts138.og" "groupParts139.ig";
+connectAttr "groupId322.id" "groupParts139.gi";
+connectAttr "groupParts139.og" "groupParts140.ig";
+connectAttr "groupId323.id" "groupParts140.gi";
+connectAttr "groupParts140.og" "groupParts141.ig";
+connectAttr "groupId324.id" "groupParts141.gi";
+connectAttr "groupParts141.og" "groupParts142.ig";
+connectAttr "groupId325.id" "groupParts142.gi";
+connectAttr "groupParts142.og" "groupParts143.ig";
+connectAttr "groupId326.id" "groupParts143.gi";
+connectAttr "groupParts143.og" "groupParts144.ig";
+connectAttr "groupId327.id" "groupParts144.gi";
+connectAttr "groupParts144.og" "groupParts145.ig";
+connectAttr "groupId328.id" "groupParts145.gi";
 connectAttr "fluidShape1SG.pa" ":renderPartition.st" -na;
 connectAttr "fluidShape2SG.pa" ":renderPartition.st" -na;
 connectAttr "oceanShader1SG.pa" ":renderPartition.st" -na;
