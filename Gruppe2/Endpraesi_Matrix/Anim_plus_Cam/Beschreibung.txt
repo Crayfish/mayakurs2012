@@ -1,0 +1,8 @@
+Herbert Moldan: mal eine kurze kamerasequenz mit zwei Cams erstellt. damit kann die paint effects bzw environment gruppe mal rumtesten und referenzieren.
+______________________________________________________________________
+Herbert Moldan: kamerasequenz fertig. war echt verda*mt viel arbeit -hats sich imho aber gelohnt.  ;-)
+______________________________________________________________________
+Herbert Moldan: video erstellt und noch mit sound-effects verschönert. noch ein paar kameraparameter an die umgebungsbedingungen (environment) angepasst.
+______________________________________________________________________
+
+Alexandra Mai: envrionment etwas verändert; anpassen von environment und figuren; paint effects getestet --> rendern dauerte jedoch dann zu lange und file war zu groß; mit Herbert zusammengearbeitet für das erstellen des videos
