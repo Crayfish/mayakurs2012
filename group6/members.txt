@@ -20,4 +20,3 @@ Thomas Adelbauer - thomas.adelbauer@gmail.com
 Bernhard Steiner - bsteiner@cg.tuwien.ac.at
 Matthias Boindl - e0727922@student.tuwien.ac.at
 Christoph Schindler	- christophschindler@gmx.at
-Andreas Walch - walch.andreas89@gmail.com
